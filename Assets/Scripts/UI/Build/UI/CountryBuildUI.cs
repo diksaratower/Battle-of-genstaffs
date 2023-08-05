@@ -80,31 +80,45 @@ public class CountryBuildUI : MonoBehaviour
                 {
                     var regionUI = Instantiate(_regionUIPrefab, _regionUIsParent);
                     regionUI.RefreshUI(region, _country.CountryBuild);
-                    var regionMeshUI = Instantiate(_regionMeshViewPrefab);
-                    regionMeshUI.RefreshView(region, region.Provinces, _insideViewColor, _insideViewColorInBuildProcess, _country.CountryBuild);
-                    _regionMeshViews.Add(regionMeshUI);
+                    DrawProvincesMeshWithBoard(region, region.Provinces);
                 }
             }
         }
         if (SelectedBuilding.Target is BuildingInProvince)
         {
-            foreach (var region in Map.Instance.MapRegions)
+            DrawMeshesForProvinceBuilding();   
+        }
+    }
+
+    private void DrawMeshesForProvinceBuilding()
+    {
+        foreach (var region in Map.Instance.MapRegions)
+        {
+            if (region.Provinces[0].Owner == _country)
             {
-                if (region.Provinces[0].Owner == _country)
+                foreach (var building in region.Buildings)
                 {
-                    foreach (var building in region.Buildings)
+                    if (building.TargetBuilding == SelectedBuilding.Target)
                     {
-                        if (building.TargetBuilding == SelectedBuilding.Target)
-                        {
-                            var regionMeshUI = Instantiate(_regionMeshViewPrefab);
-                            regionMeshUI.RefreshView(region, new List<Province>() { building.Province }, _insideViewColor, _insideViewColorInBuildProcess, _country.CountryBuild);
-                            _regionMeshViews.Add(regionMeshUI);
-                        }
+                        DrawProvincesMeshWithBoard(region, new List<Province>() { building.Province });
                     }
-                    
                 }
             }
         }
+        foreach (var slot in _country.CountryBuild.BuildingsQueue)
+        {
+            if (slot.Building == SelectedBuilding.Target)
+            {
+                DrawProvincesMeshWithBoard(slot.BuildRegion, new List<Province>() { slot.BuildingProvince });
+            }
+        }
+    }
+
+    private void DrawProvincesMeshWithBoard(Region region, List<Province> provinces)
+    {
+        var regionMeshUI = Instantiate(_regionMeshViewPrefab);
+        regionMeshUI.RefreshView(region, provinces, _insideViewColor, _insideViewColorInBuildProcess, _country.CountryBuild);
+        _regionMeshViews.Add(regionMeshUI);
     }
 
     private void DeleteRegionMeshes()
@@ -187,7 +201,8 @@ public class CountryBuildUI : MonoBehaviour
                 var region = Region.GetProvinceRegion(province);
                 if (_country.CountryBuild.CanAddBuildingToQueue(SelectedBuilding.Target, region))
                 {
-                    _country.CountryBuild.AddBuildingToBuildQueue(SelectedBuilding.Target, region);
+                    _country.CountryBuild.AddBuildingToBuildQueue(SelectedBuilding.Target, region, province);
+                    DrawRegionsMeshes();
                 }
             }
         }

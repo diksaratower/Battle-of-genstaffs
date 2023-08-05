@@ -60,7 +60,7 @@ public class RegionMeshViewBuildingUI : MonoBehaviour
         var boardOutSide = new List<Province>();
         foreach (var province in board)
         {
-            boardOutSide.AddRange(province.Contacts.FindAll(con => (region.Provinces.Contains(con) == false && boardOutSide.Contains(con) == false)));
+            boardOutSide.AddRange(province.Contacts.FindAll(con => (provinces.Contains(con) == false && boardOutSide.Contains(con) == false)));
         }
 
         DrawFrontPlanLine(board, boardOutSide);
