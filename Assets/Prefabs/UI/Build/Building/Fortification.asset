@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5d9ac7a5ae42d498a48c09c0b08302, type: 3}
   m_Name: Fortification
   m_EditorClassIdentifier: 
-  BuildCost: 1000
-  Name: 
-  BuildingImage: {fileID: 0}
-  ID: 
-  BuildingType: 0
+  BuildCost: 200
+  Name: "\u0423\u043A\u0440\u0435\u043F\u043B\u0435\u043D\u0438\u044F"
+  BuildingImage: {fileID: 21300000, guid: ef3147f5113e4a6498d38564b893e31b, type: 3}
+  ID: fortification
+  BuildingType: 3
