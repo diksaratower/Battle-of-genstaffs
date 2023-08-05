@@ -453,33 +453,8 @@ public class Map : MonoBehaviour, ISaveble
                 Provinces.Add(new ProvinceSave() { CountryOwnerID = province.Owner.ID, ContactsIDs = province.ContactsIDs, ID = province.ID });
             }
             foreach (var mapReg in map.MapRegions)
-            {
-                var regSave = new RegionSave() { Name = mapReg.Name };
-                regSave.Population = mapReg.Population;
-                foreach (var city in mapReg.Cities)
-                {
-                    regSave.CitiesSave.Add(new CitySave(city.Name, city.CityProvince.ID));
-                }
-
-                if (mapReg.RegionCapital != null)
-                {
-                    regSave.CapitalID = mapReg.Cities.IndexOf(mapReg.RegionCapital);
-                }
-                else
-                {
-                    regSave.CapitalID = -1;
-                }
-
-                foreach (var building in mapReg.Buildings)
-                {
-                    regSave.BuildingSaves.Add(new RegionBuildingSave(building.TargetBuilding.ID));
-                }
-
-                foreach (var prov in mapReg.Provinces)
-                {
-                    regSave.ProvincesID.Add(map.Provinces.IndexOf(prov));
-                }
-                Regions.Add(regSave);
+            {     
+                Regions.Add(Region.SaveRegion(mapReg));
             }
         }
 
@@ -517,40 +492,7 @@ public class Map : MonoBehaviour, ISaveble
             public int ID;
             public List<int> ContactsIDs = new List<int>();
         }
-
-        [Serializable]
-        public class RegionSave
-        {
-            public string Name;
-            public int Population;
-            public List<int> ProvincesID = new List<int>();
-            public int CapitalID = -1;
-            public List<CitySave> CitiesSave = new List<CitySave>();
-            public List<RegionBuildingSave> BuildingSaves = new List<RegionBuildingSave>();
-        }
-
-        [Serializable]
-        public class RegionBuildingSave
-        {
-            public string BuildingID;
-
-            public RegionBuildingSave(string id)
-            {
-                BuildingID = id;
-            }
-        }
-
-        [Serializable]
-        public class CitySave
-        {
-            public string Name;
-            public int ProvinceID;
-            public CitySave(string name, int provinceID) 
-            {
-                Name = name;
-                ProvinceID = provinceID;
-            }
-        }
+      
     }
 
 }

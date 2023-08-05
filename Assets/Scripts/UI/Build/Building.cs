@@ -10,9 +10,15 @@ public class Building : ScriptableObject
     public BuildingType BuildingType;
 }
 
+public class BuildingInProvince : Building
+{
+}
+
 public enum BuildingType
 {
     Factory,
     MilitaryFactory,
-    Airbase
+    Airbase,
+    Fortification
 }
+

@@ -2299,6 +2299,86 @@
                     "Count": 0
                 }
             ]
+        },
+        {
+            "Position": {
+                "x": 451.5456237792969,
+                "y": 1.0,
+                "z": 462.0
+            },
+            "TemplateIndex": 0,
+            "Organization": 600.0,
+            "CountryOwnerID": "hun",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 2000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 2000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 451.5456237792969,
+                "y": 1.0,
+                "z": 462.0
+            },
+            "TemplateIndex": 0,
+            "Organization": 600.0,
+            "CountryOwnerID": "hun",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 2000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 2000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 451.5456237792969,
+                "y": 1.0,
+                "z": 462.0
+            },
+            "TemplateIndex": 0,
+            "Organization": 600.0,
+            "CountryOwnerID": "hun",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 1293
+                },
+                {
+                    "EqType": 3,
+                    "Count": 2000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 451.5456237792969,
+                "y": 1.0,
+                "z": 462.0
+            },
+            "TemplateIndex": 0,
+            "Organization": 600.0,
+            "CountryOwnerID": "hun",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 2000
+                }
+            ]
         }
     ]
 }

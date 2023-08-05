@@ -21,7 +21,7 @@ public class CountryBuild
 
     public void AddBuildingToBuildQueue(Building building, Region region)
     {
-        var slot = new CountryBuildSlot(building, region);
+        var slot = new CountryBuildSlot(building, region, null);
         BuildingsQueue.Add(slot);
         OnAddedBuildingToQueue?.Invoke();
     }
@@ -105,18 +105,19 @@ public class CountryBuildSlot
 {
     public Building Building { get; }
     public Region BuildRegion { get; }
-
+    public Province BuildingProvince { get; }
     public float BuildProgress = 0;
 
-    public CountryBuildSlot(Building building, Region buildRegion)
+    public CountryBuildSlot(Building building, Region buildRegion, Province buildingProvince)
     {
         Building = building;
         BuildRegion = buildRegion;
+        BuildingProvince = buildingProvince;
     }
 
     public void EndBuild()
     {
-        BuildRegion.AddBuildingToRegion(Building);
+        BuildRegion.AddBuildingToRegion(Building, BuildingProvince);
     }
 
     public bool IsBuildEnd()
