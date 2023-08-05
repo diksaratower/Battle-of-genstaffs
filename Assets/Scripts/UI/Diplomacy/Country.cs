@@ -53,19 +53,12 @@ public class Country : MonoBehaviour
 
     private void Update()
     {
-        /*
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            //CapitalRegionID = Map.Instance.MapRegions.IndexOf(GetCountryRegions().Find(region => region.RegionCapital != null));
-            //Debug.Log("aaa");
-            EquipmentStorage.SetManpowerCount(Mathf.RoundToInt(((float)CountryPreset.Population / 100f) * Politics.GetÑonscriptionPercent()));
-        }*/
         if (!IsÑapitulated)
         {
             if (Diplomacy.Instance.CountryIsAtWar(this) == true)
             {
                 CapitulatePercent = CalculateCapitulatedPercent();
-                if (CapitulatePercent >= 1f)//_nationalProvinces.FindAll(p => p.Owner != this).Count > (_nationalProvinces.Count * 0.33f))
+                if (CapitulatePercent >= 1f)
                 {
                     Ñapitulate();
                 }

@@ -18,19 +18,6 @@ public class UnitsManager : MonoBehaviour, ISaveble
         Instance = this;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            var divs = new List<Division>();
-            divs.AddRange(Divisions);
-            foreach (var div in divs)
-            {
-                RemoveDivision(div);
-            }
-        }
-    }
-
     public Division AddDivision(Province province, DivisionTemplate template, Country owner)
     { 
         return AddDivision(province.Position, template, owner);
@@ -51,12 +38,10 @@ public class UnitsManager : MonoBehaviour, ISaveble
 
     private Division AddDivision(Province province, Country owner, DivisionTemplate template)
     {
-        var division = new Division(owner);//Instantiate(prefab, province.Position, new Quaternion());
+        var division = new Division(owner);
         division.Name = "Infantry division " + (Divisions.Count + 1).ToString();
         division.SetTemplate(template); 
         Divisions.Add(division);
-        // division.DivisionProvince = province;
-        //division.DivisionProvince.OnDivisonEnter(division);//DivisionsInProvince.Add(division);
         division.TeleportDivision(province);
         OnCreateDivision?.Invoke(division);
         return division;

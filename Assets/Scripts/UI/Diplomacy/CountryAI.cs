@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Country))]
 public class CountryAI : MonoBehaviour
 {
-    private int MaxDivisionsCount = 10;
+    private int _maxDivisionsCount = 10;
     private Country _country;
     private Province _spawnDivisonsProvince;
     private System.Random _randomAI = new System.Random();
@@ -15,11 +15,11 @@ public class CountryAI : MonoBehaviour
         _country = GetComponent<Country>();
         if (_country.CountryPreset.CountrySizeType == CountryAISizeData.Minor)
         {
-            MaxDivisionsCount = 4;
+            _maxDivisionsCount = 4;
         }
         if (_country.CountryPreset.CountrySizeType == CountryAISizeData.Major)
         {
-            MaxDivisionsCount = 22;
+            _maxDivisionsCount = 22;
         }
         Country.OnCountryCapitulated += delegate 
         {
@@ -41,7 +41,7 @@ public class CountryAI : MonoBehaviour
         {
             _country.CountryFabrication.AddSlot("ww1_rifle_equipment", _country.CountryBuild.GetCountryBuildings(BuildingType.MilitaryFactory));
         }
-        if (_country.CountryArmies.Armies.Count == 0 && UnitsManager.Instance.Divisions.FindAll(div => div.CountyOwner == _country).Count >= MaxDivisionsCount)
+        if (_country.CountryArmies.Armies.Count == 0 && UnitsManager.Instance.Divisions.FindAll(div => div.CountyOwner == _country).Count >= _maxDivisionsCount)
         {
             UpdateArmies();
         }
@@ -50,16 +50,22 @@ public class CountryAI : MonoBehaviour
 
     private void SpawnDivisions()
     {
+        var template = DivisionTemplateConstructorUI.GetAITemplate(4, 4);
+        if (_country.CountryPreset.CountrySizeType == CountryAISizeData.Major)
+        {
+            template = DivisionTemplateConstructorUI.GetAITemplate(5, 4);
+        }
+        _country.Templates.Templates.Clear();
         if (_country.Templates.Templates.Count == 0)
         {
-            _country.Templates.Templates.Add(DivisionTemplateConstructorUI.GetAITemplateWeak());
+            _country.Templates.Templates.Add(template);
         }
-        if (UnitsManager.Instance.Divisions.FindAll(div => div.CountyOwner == _country).Count < MaxDivisionsCount && _spawnDivisonsProvince != null
+        if (UnitsManager.Instance.Divisions.FindAll(div => div.CountyOwner == _country).Count < _maxDivisionsCount && _spawnDivisonsProvince != null
            && _spawnDivisonsProvince.Owner == _country)
         {
-            for (int i = 0; i < MaxDivisionsCount; i++)
+            for (int i = 0; i < _maxDivisionsCount; i++)
             {
-                UnitsManager.Instance.AddDivision(_spawnDivisonsProvince, _country.Templates.Templates[0], _country);
+                UnitsManager.Instance.AddDivision(_spawnDivisonsProvince, template, _country);
             }
         }
     }

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -49,6 +50,22 @@ public class DebugConsoleUI : MonoBehaviour
             var countryID = text.Remove(0, 6);
             Map.Instance.GetCountryFromId(countryID).AnnexCountry(Player.CurrentCountry);
             WriteTextToConsole($"country {countryID} annexed");
+        }
+        if (text == "delete divs")
+        {
+            var forRemove = new List<Division>();
+            foreach (var division in UnitsManager.Instance.Divisions)
+            {
+                if (division.CountyOwner != Player.CurrentCountry)
+                {
+                    forRemove.Add(division);
+                }
+            }
+            foreach (var division in forRemove)
+            {
+                division.KillDivision();
+            }
+            WriteTextToConsole("”ничтожены дивизии не игрока");
         }
     }
 

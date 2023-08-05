@@ -107,16 +107,16 @@ public class DivisionTemplateConstructorUI : MonoBehaviour
         return newTemp;
     }
 
-    public static DivisionTemplate GetAITemplateWeak()
+    public static DivisionTemplate GetAITemplate(int linesCount, int battalionsInLine)
     {
         var newTemp = new DivisionTemplate("infantry_1");
         for (int i = 0; i < 6; i++)
         {
             newTemp.DivisionLines.Add(new DivisionLine());
         }
-        for (int i = 0; i < 1; i++)
+        for (int i = 0; i < linesCount; i++)
         {
-            for (int j = 0; j < 2; j++)
+            for (int j = 0; j < battalionsInLine; j++)
             {
                 newTemp.DivisionLines[i].Battalions.Add(TechnologiesManagerSO.GetInstance().AvailableBattalions[0]);
             }

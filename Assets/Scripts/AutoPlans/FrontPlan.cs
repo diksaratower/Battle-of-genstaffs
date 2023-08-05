@@ -176,51 +176,6 @@ public class FrontPlan : PlanBase
         }
     }
 
-    public static List<FrontData> GetFrontProvincesSmart(Country ally, Country enemy)
-    {
-        var enclaves = enemy.GetCountryEnclaves();
-        var allyProvinces = Map.Instance.Provinces.FindAll(p => p.Owner == ally);
-        var result = new List<FrontData>();
-        foreach (var enclave in enclaves)
-        {
-            var frontProvinces = enclave.Provinces.FindAll(p => p.Owner == enemy && p.Contacts.Exists(pr => pr.Owner == ally));
-            var allyContacts = new List<Province>();
-            foreach (var province in frontProvinces)
-            {
-                allyContacts.AddRange(province.Contacts.FindAll(con => con.Owner == ally));
-            }
-            result.Add(new FrontData(frontProvinces, allyContacts));
-        }
-        return result;
-    }
-
-    public static async Task<List<FrontData>> GetFrontProvincesSmartAsync(Country ally, Country enemy)
-    {
-        await Task.Delay(10);
-        var enclaves = new List<Country.CountryEnclave>();
-        await Task.Run(delegate 
-        {
-            enclaves = enemy.GetCountryEnclaves();
-        });
-        await Task.Delay(20);
-        var allyProvinces = Map.Instance.Provinces.FindAll(p => p.Owner == ally);
-        var result = new List<FrontData>();
-        await Task.Run(delegate
-        {
-            foreach (var enclave in enclaves)
-            {
-                var frontProvinces = enclave.Provinces.FindAll(p => p.Owner == enemy && p.Contacts.Exists(pr => pr.Owner == ally));
-                var allyContacts = new List<Province>();
-                foreach (var province in frontProvinces)
-                {
-                    allyContacts.AddRange(province.Contacts.FindAll(con => con.Owner == ally));
-                }
-                result.Add(new FrontData(frontProvinces, allyContacts));
-            }
-        });
-        return result;
-    }
-
     public static async Task<List<FrontData>> GetFrontProvincesSuperSmartAsync(Country ally, Country enemy)
     {
         var result = new List<FrontData>();
@@ -273,12 +228,6 @@ public class FrontPlan : PlanBase
         return frontProvs;
     }
 
-    public static List<Province> SortFrontBFS(List<Province> frontProvsNotSorted)
-    {
-        var edges = GetFrontEdges(frontProvsNotSorted);
-        return BFS(edges[0], frontProvsNotSorted);
-    }
-
     public static List<Province> BFS(Province root, List<Province> allowed)
     {
         var q = new Queue<Province>();
@@ -300,75 +249,5 @@ public class FrontPlan : PlanBase
         }
 
         return visited.ToList();
-    }
-
-    public static List<Province> SortFrontBfsSmart(List<Province> allowed)
-    {
-        var result = new List<Province>();
-        var root = allowed[0];
-        var q = new Queue<Province>();
-        var visited = new HashSet<Province>();
-        Province edge = null;
-
-        q.Enqueue(root);
-        visited.Add(root);
-
-        while (q.Count > 0)
-        {
-            var node = q.Dequeue();
-            var addedToVisited = false;
-            foreach (var c in node.Contacts)
-            {
-                if (!allowed.Contains(c)) continue;
-                if (visited.Contains(c)) continue;
-                q.Enqueue(c);
-                visited.Add(c);
-                addedToVisited = true;
-            }
-            if (addedToVisited == false)
-            {
-                edge = node;
-                break;
-            }
-        }
-        if (edge != null)
-        {
-            result = BFS(edge, allowed);
-            return result;
-        }
-        return null;
-    }
-
-    public static List<Province> GetFrontEdges(List<Province> front)
-    {
-        var edgesAll = new List<Province>();
-        foreach (var p in front)
-        {
-            if(p.Contacts.FindAll(pr => front.Contains(pr) == true).Count == 1)
-            {
-                edgesAll.Add(p);
-            }
-        }
-
-        var distances = new List<float>();
-        for (int i = 0; i < edgesAll.Count; i++)
-        {
-            for (int j = 0; j < edgesAll.Count; j++)
-            {
-                distances.Add(Vector3.Distance(edgesAll[i].Position, edgesAll[j].Position));
-            }
-        }
-        var max = distances.Max();
-        for (int i = 0; i < edgesAll.Count; i++)
-        {
-            for (int j = 0; j < edgesAll.Count; j++)
-            {
-                if(Vector3.Distance(edgesAll[i].Position, edgesAll[j].Position) == max)
-                {
-                    return new List<Province>() { edgesAll[i], edgesAll[j] };
-                }
-            }
-        }
-        return null;   
     }
 }
