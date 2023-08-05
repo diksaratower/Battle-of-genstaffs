@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1890fd8755bc8e4fb0553d2ace02fa0, type: 3}
+  m_Name: SovietPoliticsPreset
+  m_EditorClassIdentifier: 
+  AvailableAdvisers:
+  - {fileID: 11400000, guid: f2155bab19bd194498325472fadf04ab, type: 2}
+  Parties:
+  - <ProcentPopularity>k__BackingField: 5
+    PartyIdeology: 1
+    Name: "\u0414\u0435\u043C\u043E\u043A\u0440\u0430\u0442\u0438\u044F"
+    PartyColor: {r: 0, g: 0.4592228, b: 1, a: 1}
+  - <ProcentPopularity>k__BackingField: 5
+    PartyIdeology: 2
+    Name: "\u0424\u0430\u0448\u0438\u0437\u043C"
+    PartyColor: {r: 0.5849056, g: 0.3449707, b: 0.17933428, a: 1}
+  - <ProcentPopularity>k__BackingField: 5
+    PartyIdeology: 5
+    Name: "\u0410\u043D\u0430\u0440\u0445\u0438\u044F"
+    PartyColor: {r: 0, g: 0, b: 0, a: 1}
+  - <ProcentPopularity>k__BackingField: 85
+    PartyIdeology: 4
+    Name: "\u041A\u043E\u043C\u043C\u0443\u043D\u0438\u0437\u043C"
+    PartyColor: {r: 0.9150943, g: 0.004316493, b: 0.004316493, a: 1}
+  Decisions:
+  - {fileID: 11400000, guid: 1c3273c411330654a9d9546d8efd116e, type: 2}
+  - {fileID: 11400000, guid: 20dc7d291beb56d49b5ca6c45c9e6f09, type: 2}
+  Laws:
+  - {fileID: 11400000, guid: 020a6cebcd96d9741b763c58d12b03b2, type: 2}
+  - {fileID: 11400000, guid: faf1d7769be0f0241a0b9944b32b27ce, type: 2}
+  - {fileID: 11400000, guid: 6a7cb29c05361b9429472d564cfd8734, type: 2}
+  ConscriptionLaws:
+  - {fileID: 11400000, guid: ad39456afa960d14b9c16a2531607fe1, type: 2}
+  - {fileID: 11400000, guid: 9d46874b201311044a222bd7721de774, type: 2}
+  - {fileID: 11400000, guid: 4fa097a3361fdbd459fc3cb5d43d12f3, type: 2}
+  FocusTree: {fileID: 11400000, guid: e31be75559a51a942bde383d9081d6f8, type: 2}
+  BaseStability: 90

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b0118907acb7b74280d6373c333ba12, type: 3}
+  m_Name: artillery
+  m_EditorClassIdentifier: 
+  Name: "\u0410\u0440\u0442\u0438\u043B\u043B\u0435\u0440\u0438\u044F"
+  Attack: 1.5
+  Defend: 2
+  Organization: 60
+  Speed: 18
+  ManPower: 700
+  BatImage: {fileID: 21300000, guid: 4bf8453b96aadcc4aa2d44760da11358, type: 3}
+  ViewType: 0
+  NeedEquipmentList:
+  - EqType: 3
+    Count: 1000
+  - EqType: 4
+    Count: 200
+  NeededTechnologies:
+  - {fileID: 11400000, guid: dd686dbbe63542042936abdc2832dd91, type: 2}

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ee3d89a6a36844eb88abd039309455, type: 3}
+  m_Name: switCountrySO
+  m_EditorClassIdentifier: 
+  Politics:
+    CountryIdeology: 1
+    FormGovernment: 1
+    ElectionsType: 1
+    PolitPower: 0
+    CountryLeader: {fileID: 11400000, guid: ae4b184428115fd4aa6b9e6660c20694, type: 2}
+    Preset: {fileID: 11400000, guid: 47fb407a7ba21f147949f4f722e5012e, type: 2}
+    Advisers: []
+    Parties: []
+  Name: "\u0428\u0432\u0435\u0439\u0446\u0430\u0440\u0438\u044F"
+  ID: swit
+  ColorInMap: {r: 0.5647059, g: 0.4105602, b: 0, a: 1}
+  CountryFlag: {fileID: 21300000, guid: decd175c545f09d4aaced4f9189806fb, type: 3}
+  Population: 6568000
+  IsAvailableForPlayer: 1
+  IsAICountry: 1
+  CountrySizeType: 0

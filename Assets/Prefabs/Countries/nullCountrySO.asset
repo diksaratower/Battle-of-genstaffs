@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ee3d89a6a36844eb88abd039309455, type: 3}
+  m_Name: nullCountrySO
+  m_EditorClassIdentifier: 
+  Politics:
+    PolitPowerGrowthSpeed: 1
+    CountryIdeology: 5
+    FormGovernment: 1
+    ElectionsType: 0
+    PolitPower: 0
+    CountryLeader: {fileID: 11400000, guid: 24d4a2d2d3878244d89ac0ad5223da6d, type: 2}
+    Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}
+    Advisers: []
+    Parties: []
+  Name: "\u0421\u043A\u043E\u0440\u043E \u0432 \u0432 \u0438\u0433\u0440\u0435"
+  ID: null
+  ColorInMap: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+  CountryFlag: {fileID: 21300000, guid: de5fc64928e1fbf4e945a310a27bb9d8, type: 3}
+  Population: 34002000
+  IsAvailableForPlayer: 0

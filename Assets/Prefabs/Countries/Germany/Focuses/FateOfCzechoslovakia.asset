@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cff5c8c1db0a89478190a4e7ccae645, type: 3}
+  m_Name: FateOfCzechoslovakia
+  m_EditorClassIdentifier: 
+  Name: "\u0417\u0430\u0445\u0432\u0430\u0442 \u0447\u0435\u0445\u043E\u0441\u043B\u043E\u0432\u0430\u043A\u0438\u0438"
+  Description: 
+  Image: {fileID: 21300000, guid: fa8f1bdfc1db8064e97ec947f08e3c59, type: 3}
+  ExecutionDurationDay: 40
+  NeedsForExecution:
+  - {fileID: 11400000, guid: 84f6efbb20b74174b92aa43c835e6c7d, type: 2}
+  FocusEffects:
+  - {fileID: 11400000, guid: 3e8063a20df19b343888970ae5038def, type: 2}

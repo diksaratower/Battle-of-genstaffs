@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ee3d89a6a36844eb88abd039309455, type: 3}
+  m_Name: yugCountrySO
+  m_EditorClassIdentifier: 
+  Politics:
+    CountryIdeology: 0
+    FormGovernment: 0
+    ElectionsType: 0
+    PolitPower: 0
+    CountryLeader: {fileID: 11400000, guid: 7e289e9ec5a52c14a891eee096b8c7ef, type: 2}
+    Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}
+    Advisers: []
+    Parties: []
+  Name: "\u042E\u0433\u043E\u0441\u043B\u0430\u0432\u0438\u044F"
+  ID: yug
+  ColorInMap: {r: 0.44313726, g: 0.29851308, b: 0, a: 1}
+  CountryFlag: {fileID: 21300000, guid: 8c973977c4e83e441a48a8fdb27c8df3, type: 3}
+  Population: 20720000
+  IsAvailableForPlayer: 0
+  IsAICountry: 0
+  CountrySizeType: 0

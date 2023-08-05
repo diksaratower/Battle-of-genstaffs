@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc0148da01a08b348a92ea7ba46ce197, type: 3}
+  m_Name: Rifl3
+  m_EditorClassIdentifier: 
+  OpenCost: 640
+  OptimalDate: 1941
+  _techName: '*use_equipment'
+  _techImage: {fileID: 0}
+  _id: '*use_equipment'
+  UnlockEquipment: {fileID: 11400000, guid: 62c188c4b0f05f54faf5d92c104a311e, type: 2}

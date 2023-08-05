@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1d8318231dea914b9f4980538c97b29, type: 3}
+  m_Name: GermanyFocusesTree
+  m_EditorClassIdentifier: 
+  NationalFocuses:
+  - {fileID: 11400000, guid: 13c4d90ba4f35c54cbeec5cbb7dc9b99, type: 2}
+  - {fileID: 11400000, guid: 402877fca2edbea4fad235c22773e17f, type: 2}
+  - {fileID: 11400000, guid: 84f6efbb20b74174b92aa43c835e6c7d, type: 2}
+  - {fileID: 11400000, guid: 07d5002c967bf2f43a00e4b6e8672e2c, type: 2}
+  BaseFocus: {fileID: 11400000, guid: 13c4d90ba4f35c54cbeec5cbb7dc9b99, type: 2}

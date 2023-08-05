@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: d70503c778e3030488ae4154f09621e5
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _standardMinister: {fileID: 11400000, guid: 68c7ad5bb0bf3dd4e93814ad53ae466a,
+      type: 2}
+  - _standardMinister1: {fileID: 11400000, guid: 7de8304ebeafe85428804fddaa819d7f,
+      type: 2}
+  - _standardMinister2: {fileID: 11400000, guid: e747b63365d9ae643b59000f746e493b,
+      type: 2}
+  - _standardMinister3: {fileID: 11400000, guid: 40d6b2c9ebd34a64caf7e0681ef21d82,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
