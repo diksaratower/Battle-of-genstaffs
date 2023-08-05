@@ -140,43 +140,7 @@ public class Division : SupplyUnit
             }
         }
     }
-/*
-    private void CalculateSupply()
-    {
-        if (Template == null) 
-        {
-            return; 
-        }
-        foreach (var equipmentHave in EquipmentInDivision)
-        {
-            var equipmentNeed = NeededEquipment.Find(slot => slot.EqType == equipmentHave.EqType);
-            if ((equipmentHave.Count + GetRequestsEquiepmentCount(equipmentHave.EqType)) < equipmentNeed.Count)
-            {
-                var request = CountyOwner.EquipmentStorage.AddSupplyRequest(equipmentNeed.Count - equipmentHave.Count, equipmentNeed.EqType, this);
-                _divisionSupplyRequests.Add(request);
-                request.OnClosedRequest += delegate
-                {
-                    _divisionSupplyRequests.Remove(request);
-                };
-                request.OnAddedEquipment += (int AddedCount) =>
-                {
-                    equipmentHave.Count += AddedCount;
-                };
-            }
-        }
-    }
 
-    private int GetRequestsEquiepmentCount(EquipmentType equipmentType)
-    {
-        var requests = _divisionSupplyRequests.FindAll(request => request.EquipmentType == equipmentType);
-        var result = 0;
-        foreach (var request in requests)
-        {
-            result += request.EquipmentCount;
-        }
-        return result;
-    }
-*/
     public void TeleportDivision(Province province)
     {
         StopDivision();
@@ -184,33 +148,6 @@ public class Division : SupplyUnit
         DivisionProvince.OnDivisonEnter(this);
         OnDivisionEnterToProvince?.Invoke(DivisionProvince);
     }
-    /*
-    public float GetEquipmentProcent()
-    {
-        float need = 0;
-        float be = 0;
-        for (int i = 0; i < EquipmentInDivision.Count; i++)
-        {
-            need += NeededEquipment[i].Count;
-            be += EquipmentInDivision[i].Count;
-        }
-        return (be / need);
-    }
-
-    public float GetEquipmentProcent(Predicate<EquipmentType> equipmentTypePredacate)
-    {
-        float need = 0;
-        float be = 0;
-        for (int i = 0; i < EquipmentInDivision.Count; i++)
-        {
-            if (equipmentTypePredacate.Invoke(EquipmentInDivision[i].EqType) == true)
-            {
-                need += NeededEquipment[i].Count;
-                be += EquipmentInDivision[i].Count;
-            }
-        }
-        return (be / need);
-    }*/
 
     public bool NeedDrawDivisionUI()
     {

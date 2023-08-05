@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using UnityEngine;
 
@@ -29,7 +28,7 @@ public class PathFindAStar
 
     private static int GetHeuristicPathLength(Province from, Province to)
     {
-        return Mathf.RoundToInt(Vector3.Distance(from.Position, to.Position));//Math.Abs(from.X - to.X) + Math.Abs(from.Y - to.Y);
+        return Mathf.RoundToInt(Vector3.Distance(from.Position, to.Position));
     }
 
     public static List<Province> FindPath(Province start, Province goal, Predicate<Province> EnterToProvinceIf = null, Division division = null)
@@ -41,7 +40,7 @@ public class PathFindAStar
                 return new List<Province>();
             }
         }
-        if (EnterToProvinceIf?.Invoke(goal) /*goal.AllowedForDivision(this)*/ == false)
+        if (EnterToProvinceIf?.Invoke(goal) == false)
         {
             return new List<Province>();
         }
@@ -106,7 +105,7 @@ public class PathFindAStar
             }
             if (EnterToProvinceIf != null)
             {
-                if (EnterToProvinceIf?.Invoke(cont) == false)//!cont.AllowedForDivision(this))
+                if (EnterToProvinceIf?.Invoke(cont) == false)
                 {
                     continue;
                 }

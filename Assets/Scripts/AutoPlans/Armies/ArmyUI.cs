@@ -225,7 +225,7 @@ public class ArmyUI : MonoBehaviour
         }
         var min = distances.Min();
         distance = min;
-        return provinces.Find(p => /*Vector3.Distance(p, targetProv)*/Vector2.Distance(new Vector2(p.x, p.z), new Vector2(targetProv.x, targetProv.z)) == min);
+        return provinces.Find(p => Vector2.Distance(new Vector2(p.x, p.z), new Vector2(targetProv.x, targetProv.z)) == min);
     }
 
     public void OnArmyClick()
