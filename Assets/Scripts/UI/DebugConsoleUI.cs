@@ -39,6 +39,11 @@ public class DebugConsoleUI : MonoBehaviour
         {
             WriteTextToConsole(text.Remove(0, 5));
         }
+        if (text.StartsWith("date"))
+        {
+            GameTimer.Instance.DTime = new DateTime(1936, 1, 1);
+            WriteTextToConsole("Дата устовлена на стандартную");
+        }
         if (text.StartsWith("annex"))
         {
             var countryID = text.Remove(0, 6);
