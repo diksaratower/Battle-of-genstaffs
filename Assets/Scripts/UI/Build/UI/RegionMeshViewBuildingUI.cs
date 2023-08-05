@@ -15,12 +15,12 @@ public class RegionMeshViewBuildingUI : MonoBehaviour
     private Color _insideViewColorInBuildProcess;
 
 
-    public void RefreshView(Region region, Color boardViewColor, Color insideViewColor, Color insideViewColorInBuildProcess, CountryBuild countryBuild)
+    public void RefreshView(Region region, List<Province> provinces, Color insideViewColor, Color insideViewColorInBuildProcess, CountryBuild countryBuild)
     {
         RegionTarget = region;
         _insideViewColorInNormal = insideViewColor;
         _insideViewColorInBuildProcess = insideViewColorInBuildProcess;
-        DrawRegionMesh(region, boardViewColor, insideViewColor);
+        DrawProvincesMesh(provinces, region, insideViewColor);
         Action updateProgressBuildingsCountDelegate = delegate
         {
             UpdateColorFromSituation(countryBuild);
@@ -42,23 +42,21 @@ public class RegionMeshViewBuildingUI : MonoBehaviour
         }
     }
 
-    private void DrawRegionMesh(Region region, Color boardViewColor, Color insideViewColor)
+    private void DrawProvincesMesh(List<Province> provinces, Region region, Color insideViewColor)
     {
-        gameObject.AddComponent<MeshFilter>().mesh = GetRegionMesh(region);
+        gameObject.AddComponent<MeshFilter>().mesh = GetRegionMesh(provinces, region);
         var insideMat = new Material(Shader.Find("Universal Render Pipeline/Lit"));
         _insideProvincesMaterial = insideMat;
         insideMat.color = insideViewColor;
-        var boardMat = new Material(Shader.Find("Universal Render Pipeline/Lit"));
-        boardMat.color = boardViewColor;
-        gameObject.AddComponent<MeshRenderer>().materials = new Material[2] { boardMat, insideMat };
+        gameObject.AddComponent<MeshRenderer>().materials = new Material[1] { insideMat };
         gameObject.AddComponent<MeshCollider>();
         RegionTarget = region;
     }
 
-    public Mesh GetRegionMesh(Region region)
+    public Mesh GetRegionMesh(List<Province> provinces, Region region)
     {
         List<CombineInstance> combines = new List<CombineInstance>();
-        var board = region.GetRegionBoard();
+        var board = Region.GetProvincesBoard(provinces);
         var boardOutSide = new List<Province>();
         foreach (var province in board)
         {
@@ -68,7 +66,7 @@ public class RegionMeshViewBuildingUI : MonoBehaviour
         DrawFrontPlanLine(board, boardOutSide);
 
         var instance = new CombineInstance();
-        instance.mesh = GetMeshFromProvinces(region.Provinces);
+        instance.mesh = GetMeshFromProvinces(provinces);
         instance.transform = Matrix4x4.Scale(Vector3.one);
         combines.Add(instance);
         var mesh = new Mesh();

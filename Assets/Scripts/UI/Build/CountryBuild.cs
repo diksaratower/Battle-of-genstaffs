@@ -19,11 +19,17 @@ public class CountryBuild
         GameTimer.HourEnd += CalculateBuild;
     }
 
-    public void AddBuildingToBuildQueue(Building building, Region region)
+    public void AddBuildingToBuildQueue(Building building, Region region, Province province = null)
     {
-        var slot = new CountryBuildSlot(building, region, null);
+        var slot = new CountryBuildSlot(building, region, province);
         BuildingsQueue.Add(slot);
         OnAddedBuildingToQueue?.Invoke();
+    }
+
+    public bool CanAddBuildingToQueue(Building building, Region region)
+    {
+        var buildingsCount = (region.GetAllBuildingsCount() + BuildingsQueue.FindAll(slot => slot.Building == building).Count);
+        return (buildingsCount < region.MaxBuildingsCount);
     }
 
     public void RemoveSlotFromBuildQueue(CountryBuildSlot buildingSlot)

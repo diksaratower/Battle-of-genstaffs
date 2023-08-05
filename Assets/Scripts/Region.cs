@@ -144,12 +144,21 @@ public class Region
         return _cashedAveragePosition;
     }
 
-    public List<Province> GetRegionBoard()
+    public static List<Province> GetRegionBoard(Region region)
     {
-        return Provinces.FindAll(prov => prov.Contacts.Exists(con => GetProvinceRegion(con) != GetProvinceRegion(prov)));
+        return region.Provinces.FindAll(prov => prov.Contacts.Exists(con => GetProvinceRegion(con) != GetProvinceRegion(prov)));
     }
 
-    private Region GetProvinceRegion(Province province)
+    public static List<Province> GetProvincesBoard(List<Province> provinces)
+    {
+        if (provinces.Count == 1)
+        {
+            return provinces;
+        }
+        return provinces.FindAll(prov => prov.Contacts.Exists(con => GetProvinceRegion(con) != GetProvinceRegion(prov)));
+    }
+
+    public static Region GetProvinceRegion(Province province)
     {
         foreach (var reg in Map.Instance.MapRegions)
         {

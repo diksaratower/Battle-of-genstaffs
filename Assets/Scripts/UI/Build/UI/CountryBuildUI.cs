@@ -23,6 +23,7 @@ public class CountryBuildUI : MonoBehaviour
     private List<BuildingQueueSlotUI> _queueSlotsUI = new List<BuildingQueueSlotUI>();
     private Country _country => Player.CurrentCountry;
 
+
     private void Start()
     {
         RefreshUI();
@@ -44,15 +45,23 @@ public class CountryBuildUI : MonoBehaviour
 
     public void SetSelectedBuilding(AvailableBuildingSlotUI newSelectingBuilding)
     {
+        if (SelectedBuilding != null)
+        {
+            if ((SelectedBuilding.Target is BuildingInProvince) != (newSelectingBuilding.Target is BuildingInProvince))
+            {
+                SelectedBuilding = newSelectingBuilding;
+                DrawRegionsMeshes();
+            }
+        }
         SelectedBuilding = newSelectingBuilding;
         OnChangeSelectionBuilding?.Invoke(newSelectingBuilding);
     }
 
     public void RefreshUI()
     {
+        RefreshAvailableBuildingsUI();
         DrawRegionsMeshes();
         RefreshQueueUI();
-        RefreshAvailableBuildingsUI();
     }
 
     private void OnDisable()
@@ -63,15 +72,37 @@ public class CountryBuildUI : MonoBehaviour
     private void DrawRegionsMeshes()
     {
         DeleteRegionMeshes();
-        foreach (var region in Map.Instance.MapRegions)
+        if (SelectedBuilding.Target is not BuildingInProvince)
         {
-            if (region.Provinces[0].Owner == _country)
+            foreach (var region in Map.Instance.MapRegions)
             {
-                var regionUI = Instantiate(_regionUIPrefab, _regionUIsParent);
-                regionUI.RefreshUI(region, _country.CountryBuild);
-                var regionMeshUI = Instantiate(_regionMeshViewPrefab);
-                regionMeshUI.RefreshView(region, _boardViewColor, _insideViewColor, _insideViewColorInBuildProcess, _country.CountryBuild);
-                _regionMeshViews.Add(regionMeshUI);
+                if (region.Provinces[0].Owner == _country)
+                {
+                    var regionUI = Instantiate(_regionUIPrefab, _regionUIsParent);
+                    regionUI.RefreshUI(region, _country.CountryBuild);
+                    var regionMeshUI = Instantiate(_regionMeshViewPrefab);
+                    regionMeshUI.RefreshView(region, region.Provinces, _insideViewColor, _insideViewColorInBuildProcess, _country.CountryBuild);
+                    _regionMeshViews.Add(regionMeshUI);
+                }
+            }
+        }
+        if (SelectedBuilding.Target is BuildingInProvince)
+        {
+            foreach (var region in Map.Instance.MapRegions)
+            {
+                if (region.Provinces[0].Owner == _country)
+                {
+                    foreach (var building in region.Buildings)
+                    {
+                        if (building.TargetBuilding == SelectedBuilding.Target)
+                        {
+                            var regionMeshUI = Instantiate(_regionMeshViewPrefab);
+                            regionMeshUI.RefreshView(region, new List<Province>() { building.Province }, _insideViewColor, _insideViewColorInBuildProcess, _country.CountryBuild);
+                            _regionMeshViews.Add(regionMeshUI);
+                        }
+                    }
+                    
+                }
             }
         }
     }
@@ -92,11 +123,17 @@ public class CountryBuildUI : MonoBehaviour
     {
         _availableBuildingsSlotsUI.ForEach(availableSlotUI => Destroy(availableSlotUI.gameObject));
         _availableBuildingsSlotsUI.Clear();
+        var oneSlot = true;
         foreach (var avalibleBuildings in BuildingsManagerSO.GetInstance().AvalibleBuildings)
         {
             var slot = Instantiate(_availableSlotUIPrefab, _availableBuildingsUIParent);
             slot.RefreshUI(avalibleBuildings, this);
             _availableBuildingsSlotsUI.Add(slot);
+            if (oneSlot == true)
+            {
+                SetSelectedBuilding(slot);
+                oneSlot = false;
+            }
         }
     }
 
@@ -114,14 +151,25 @@ public class CountryBuildUI : MonoBehaviour
 
     private void AddNewBuildings()
     {
+        if (SelectedBuilding.Target is not BuildingInProvince)
+        {
+            AddRegionBuilding();
+        }
+        if (SelectedBuilding.Target is BuildingInProvince)
+        {
+            AddProvinceBuilding();
+        }
+    }
+
+    private void AddRegionBuilding()
+    {
         if (Physics.Raycast(GameCamera.Instance.GCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
         {
             if (hit.collider.TryGetComponent(out RegionMeshViewBuildingUI regionView))
             {
                 if (SelectedBuilding != null)
                 {
-                    if ((regionView.RegionTarget.GetAllBuildingsCount() + _country.CountryBuild.BuildingsQueue.FindAll(slot => slot.Building == SelectedBuilding.Target).Count)
-                        < regionView.RegionTarget.MaxBuildingsCount)
+                    if (_country.CountryBuild.CanAddBuildingToQueue(SelectedBuilding.Target, regionView.RegionTarget))
                     {
                         _country.CountryBuild.AddBuildingToBuildQueue(SelectedBuilding.Target, regionView.RegionTarget);
                     }
@@ -130,7 +178,30 @@ public class CountryBuildUI : MonoBehaviour
         }
     }
 
+    private void AddProvinceBuilding()
+    {
+        if (GameCamera.Instance.ChekHitToProvinceWithMousePosition(out var province))
+        {
+            if (province.Owner == _country)
+            {
+                var region = Region.GetProvinceRegion(province);
+                if (_country.CountryBuild.CanAddBuildingToQueue(SelectedBuilding.Target, region))
+                {
+                    _country.CountryBuild.AddBuildingToBuildQueue(SelectedBuilding.Target, region);
+                }
+            }
+        }
+    }
+
     private void RemoveBuildings()
+    {
+        if (SelectedBuilding.Target is not BuildingInProvince)
+        {
+            RemoveRegionBuilding();
+        }
+    }
+
+    private void RemoveRegionBuilding()
     {
         if (Physics.Raycast(GameCamera.Instance.GCamera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
         {
@@ -146,5 +217,10 @@ public class CountryBuildUI : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void RemoveProvinceBuilding()
+    {
+
     }
 }
