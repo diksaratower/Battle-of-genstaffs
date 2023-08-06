@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Threading.Tasks;
-
+using System;
 
 public class ArmyUI : MonoBehaviour
 {
@@ -17,6 +17,7 @@ public class ArmyUI : MonoBehaviour
     [SerializeField] private GameObject _frontLinePrefab;
     [SerializeField] private GameObject _attackLinePrefab;
     [SerializeField] private TextMeshProUGUI _divisionCountText;
+    [SerializeField] private TextMeshProUGUI _forceFactorText;
     [SerializeField] private Toggle _doPlansToggle;
     [SerializeField] private Button _deleteArmyButton;
 
@@ -46,6 +47,7 @@ public class ArmyUI : MonoBehaviour
                 plan.OnRecalculatedFront += (List<FrontPlan.FrontData> frontDates)  =>
                 {
                     AsyncUpdateFront(plan, frontDates);
+                    _forceFactorText.text = "Фактор силы: " + Math.Round(plan.GetForceFactor(frontDates), 1);
                 };
                 plan.OnStoppedFront += delegate 
                 { 

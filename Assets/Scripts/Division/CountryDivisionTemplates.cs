@@ -1,12 +1,25 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Country;
+
 
 public class CountryDivisionTemplates
 {
     public List<DivisionTemplate> Templates = new List<DivisionTemplate>();
+
+
+    public void DeleteAllTemplatesWithDivisions()
+    {
+        foreach (var template in Templates)
+        {
+            var divisions = UnitsManager.Instance.Divisions.FindAll(division => division.Template == template);
+            foreach (var division in divisions)
+            {
+                division.KillDivision();
+            }
+        }
+        Templates.Clear();
+    }
 
     public TemplateConstrSerialize GetSerialize()
     {

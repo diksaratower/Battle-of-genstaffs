@@ -67,11 +67,14 @@ public class FrontPlan : PlanBase
         }
     }
 
-
     private async void RecalculateFront()
     {
-        await Task.Delay(20);
-        var newFrontDates = await GetFrontProvincesSuperSmartAsync(_ally, _enemy);
+        var newFrontDates = new List<FrontData>();
+        //await Task.Delay(20);
+        await Task.Run(delegate 
+        { 
+           newFrontDates = GetFrontProvincesSuperSmartAsync(_ally, _enemy);
+        });
         if (newFrontDates.Count == 0)
         {
             return;
@@ -119,7 +122,6 @@ public class FrontPlan : PlanBase
             if (divList.Count == 0) continue;
             if (frontProvs[divisionIndex] == null) continue;
             if (divList[0].DivisionProvince == frontProvs[divisionIndex]) continue;
-            //if (_frontProvs.Contains(divList[0].DivisionProvince)) continue;
             if (divList[0].MovePath.Count > 0 || divList[0].Combats.Count > 0 || divList[0].DivisionState != DivisionAnimState.Empty)
             {
                 continue;
@@ -176,28 +178,51 @@ public class FrontPlan : PlanBase
         }
     }
 
-    public static async Task<List<FrontData>> GetFrontProvincesSuperSmartAsync(Country ally, Country enemy)
+    public float GetForceFactor(List<FrontData> frontDates)
+    {
+        var enemyDivisionsInFront = new List<Division>(); 
+        foreach (var frontData in frontDates)
+        {
+            foreach (var province in frontData.FrontProvinces)
+            {
+                foreach (var division in province.DivisionsInProvince)
+                {
+                    if (division.CountyOwner == _enemy)
+                    {
+                        enemyDivisionsInFront.Add(division);
+                    }
+                }
+            }
+        }
+        var ourAttack = 0f;
+        var enemyDefens = 0.00001f;
+        AttachedDivisions.ForEach(division => { ourAttack += division.GetAttack(); });
+        enemyDivisionsInFront.ForEach(division => { enemyDefens += division.GetDefense(); });
+        return ourAttack / enemyDefens;
+    }
+
+    public static List<FrontData> GetFrontProvincesSuperSmartAsync(Country ally, Country enemy)
     {
         var result = new List<FrontData>();
         var frontProvinces = new List<Province>();
-        await Task.Run(delegate 
-        {
+        //await Task.Run(delegate 
+       // {
             frontProvinces = GetFrontProvinces(enemy, ally);
-        });
-        await Task.Delay(20);
-        await Task.Run(delegate
-        {
+        //});
+        //await Task.Delay(20);
+        ///await Task.Run(delegate
+        //{
             while (frontProvinces.Count != 0)
             {
                 var bfsProvinces = FrontPlan.BFS(frontProvinces[0], frontProvinces);
                 result.Add(new FrontData(bfsProvinces, new List<Province>()));
                 frontProvinces.RemoveAll(pr => bfsProvinces.Contains(pr));
             }
-        });
-        await Task.Delay(20);
+        //});
+        //await Task.Delay(20);
        
-        await Task.Run(delegate
-        {
+        //await Task.Run(delegate
+        //{
             foreach (var data in result)
             {
                 foreach (var province in data.FrontProvinces)
@@ -205,7 +230,7 @@ public class FrontPlan : PlanBase
                     data.FrontAllyContacts.AddRange(province.Contacts.FindAll(con => (con.Owner == ally && data.FrontAllyContacts.Contains(con) == false)));
                 }
             }
-        });
+        //});
         return result;
     }
 

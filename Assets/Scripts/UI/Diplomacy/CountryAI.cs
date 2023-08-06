@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using UnityEngine;
 
 
@@ -9,10 +11,16 @@ public class CountryAI : MonoBehaviour
     private Country _country;
     private Province _spawnDivisonsProvince;
     private System.Random _randomAI = new System.Random();
+    private float _cashedForceFactorInFront = 1.001f;
+
 
     private void Start()
     {
         _country = GetComponent<Country>();
+        if (NeedAIWork() == false)
+        {
+            return;
+        }
         if (_country.CountryPreset.CountrySizeType == CountryAISizeData.Minor)
         {
             _maxDivisionsCount = 4;
@@ -45,6 +53,20 @@ public class CountryAI : MonoBehaviour
         {
             UpdateArmies();
         }
+        if (Diplomacy.Instance.CountryIsAtWar(_country))
+        {
+            foreach (var army in _country.CountryArmies.Armies)
+            {
+                if (_cashedForceFactorInFront > 1f)
+                {
+                    army.DoPlanType = DoPlanType.Attack;
+                }
+                else
+                {
+                    army.DoPlanType = DoPlanType.Defense;
+                }
+            }
+        }
         FocusesWork();
     }
 
@@ -55,17 +77,14 @@ public class CountryAI : MonoBehaviour
         {
             template = DivisionTemplateConstructorUI.GetAITemplate(5, 4);
         }
-        _country.Templates.Templates.Clear();
-        if (_country.Templates.Templates.Count == 0)
-        {
-            _country.Templates.Templates.Add(template);
-        }
+        _country.Templates.DeleteAllTemplatesWithDivisions();
+        _country.Templates.Templates.Add(template);
         if (UnitsManager.Instance.Divisions.FindAll(div => div.CountyOwner == _country).Count < _maxDivisionsCount && _spawnDivisonsProvince != null
            && _spawnDivisonsProvince.Owner == _country)
         {
             for (int i = 0; i < _maxDivisionsCount; i++)
             {
-                UnitsManager.Instance.AddDivision(_spawnDivisonsProvince, template, _country);
+                UnitsManager.Instance.AddDivision(_spawnDivisonsProvince, _country.Templates.Templates[0], _country);
             }
         }
     }
@@ -98,6 +117,14 @@ public class CountryAI : MonoBehaviour
         var plan = new FrontPlan(army.Divisions.ToList(), Player.CurrentCountry, _country);
         army.AddPlan(plan);
         plan.Initialize();
+        
+        plan.OnRecalculatedFront += (List<FrontPlan.FrontData> frontDates) =>
+        {
+            if (Diplomacy.Instance.CountryIsAtWar(_country))
+            {
+                _cashedForceFactorInFront = plan.GetForceFactor(frontDates);
+            }
+        };
     }
 
     private void FocusesWork()
