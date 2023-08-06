@@ -37,6 +37,14 @@ public class CountryDiplomacy
         return new List<WarGoalJustificationQueueSlot>(_justificationQueue);
     }
 
+    public void DeclareWarToCountry(Country target) 
+    {
+        if (IsHaveWarGoal(target))
+        {
+            Diplomacy.Instance.DeclareWar(_country, target);
+        }
+    }
+
     public void AddWarGoal(Country target)
     {
         var warGoal = new WarGoal(target);

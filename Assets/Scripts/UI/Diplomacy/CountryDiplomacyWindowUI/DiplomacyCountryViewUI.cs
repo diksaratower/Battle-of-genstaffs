@@ -30,7 +30,8 @@ public class DiplomacyCountryViewUI : MonoBehaviour
     {
         _buttons.ForEach(button => Destroy(button));
         _buttons.Clear();
-        if (playerRelation.IsWar == false && playerCountry.CountryDiplomacy.IsHaveWarGoal(targetCountry) == false)
+        if (playerRelation.IsWar == false && playerCountry.CountryDiplomacy.IsHaveWarGoal(targetCountry) == false &&
+            playerCountry.CountryDiplomacy.GetJustificationQueue().Exists(slot => slot.Target == targetCountry) == false)
         {
             var button = Instantiate(_diplomacyActionButtonPrefab, _actionButtonsParent);
             button.GetComponentInChildren<TextMeshProUGUI>().text = "Оправдать войну";

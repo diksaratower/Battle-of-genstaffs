@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 
@@ -16,8 +17,6 @@ public class Division : SupplyUnit
     public Sprite DivisionAvatar;
     public string Name;
     public DivisionTemplate Template;
-    //public List<NeedEquipmentCountIdPair> EquipmentInDivision = new List<NeedEquipmentCountIdPair>();
-    //private List<NeedEquipmentCountIdPair> NeededEquipment =  new List<NeedEquipmentCountIdPair>();
     public float Organization;
     public List<Province> MovePath = new List<Province>();
     public List<DivisionCombat> Combats => DivisionCombat.GetDivisionCombats(this);
@@ -27,13 +26,10 @@ public class Division : SupplyUnit
     private float _speed = 0;
     private float _attack = 1;
     private float _defense = 1;
-    //private float _penetration = 1;
     private float _moveOrganizationLoss = 3;
     private float _recoverySpeedPercent = 0.03f;
-    //private GameObject _divModel;
 
     private float _passedPathProcent = 0;
-    //private List<SupplyRequest> _divisionSupplyRequests = new List<SupplyRequest>();
 
     public Division(Country country) : base(country.EquipmentStorage)
     {
@@ -246,7 +242,11 @@ public class Division : SupplyUnit
         return provinces.Find(p => Vector3.Distance(p.Position, targetProv.Position) == min);
     }
 
- 
+    public float GetDivisionStrength()
+    {
+        return (GetEquipmentProcent(eqType => eqType != EquipmentType.Manpower) * GetEquipmentProcent(eqType => eqType == EquipmentType.Manpower));
+    }
+
     public float GetAttack()
     {
         return _attack;

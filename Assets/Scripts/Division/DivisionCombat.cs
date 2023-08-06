@@ -64,8 +64,7 @@ public class DivisionCombat
         float attack = 0;
         foreach (var attacker in Attackers)
         {
-            attack += (attacker.GetAttack() * attacker.GetEquipmentProcent(eqType => eqType != EquipmentType.Manpower) *
-                attacker.GetEquipmentProcent(eqType => eqType == EquipmentType.Manpower)) * GetAviationEffectPercent(attacker);
+            attack += (attacker.GetAttack()  * GetAviationEffectPercent(attacker)) * attacker.GetDivisionStrength();
         }
         return attack;
     }
@@ -75,8 +74,7 @@ public class DivisionCombat
         float def = 0;
         foreach (var defender in Defenders)
         {
-            def += (defender.GetDefense() * defender.GetEquipmentProcent(eqType => eqType != EquipmentType.Manpower) *
-                defender.GetEquipmentProcent(eqType => eqType == EquipmentType.Manpower)) * GetAviationEffectPercent(defender);
+            def += (defender.GetDefense() * GetAviationEffectPercent(defender)) * defender.GetDivisionStrength();
         }
         return def;
     }
@@ -105,13 +103,13 @@ public class DivisionCombat
 
         foreach(var defender in Defenders)
         {
-            defender.GiveDamageToOrganization(GetAttackersAttack() / Attackers.Count);
+            defender.GiveDamageToOrganization((GetAttackersAttack() / Attackers.Count) / defender.GetDivisionStrength());
             IncurLosses(defender, 0.166f);
             
         }
         foreach (var attacker in Attackers)
         {
-            attacker.GiveDamageToOrganization((GetDefendersDefend() / Defenders.Count));
+            attacker.GiveDamageToOrganization((GetDefendersDefend() / Defenders.Count) / attacker.GetDivisionStrength());
             IncurLosses(attacker, 0.5f);
         }
     }

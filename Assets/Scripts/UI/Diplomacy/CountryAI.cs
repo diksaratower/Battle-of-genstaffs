@@ -16,6 +16,10 @@ public class CountryAI : MonoBehaviour
     private void Start()
     {
         _country = GetComponent<Country>();
+        _country.CountryDiplomacy.OnAddWarGoal += (WarGoal warGoal) => 
+        {
+            _country.CountryDiplomacy.DeclareWarToCountry(warGoal.Target);
+        };
         if (NeedAIWork() == false)
         {
             return;
