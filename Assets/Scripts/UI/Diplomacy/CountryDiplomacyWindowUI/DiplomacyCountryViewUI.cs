@@ -18,8 +18,44 @@ public class DiplomacyCountryViewUI : MonoBehaviour
     public void RefreshUI(Country targetCountry, Country playerCountry)
     {
         var playerRelation = Diplomacy.Instance.GetRelationWithCountry(playerCountry, targetCountry);
+        playerCountry.CountryDiplomacy.OnAddWarGoal += delegate
+        {
+            RefreshUI(targetCountry, playerCountry);
+        };
+        RefreshDates(targetCountry);
+        RefreshButtons(playerRelation, playerCountry, targetCountry);
+    }
 
+    private void RefreshButtons(DiplomaticRelationsWithCountry playerRelation, Country playerCountry, Country targetCountry)
+    {
+        _buttons.ForEach(button => Destroy(button));
+        _buttons.Clear();
+        if (playerRelation.IsWar == false && playerCountry.CountryDiplomacy.IsHaveWarGoal(targetCountry) == false)
+        {
+            var button = Instantiate(_diplomacyActionButtonPrefab, _actionButtonsParent);
+            button.GetComponentInChildren<TextMeshProUGUI>().text = "ќправдать войну";
+            button.onClick.AddListener(delegate
+            {
+                playerCountry.CountryDiplomacy.StartJustificationWarGoal(targetCountry);
+                RefreshUI(targetCountry, playerCountry);
+            });
+            _buttons.Add(button.gameObject);
+        }
+        if (playerRelation.IsWar == false && playerCountry.CountryDiplomacy.IsHaveWarGoal(targetCountry))
+        {
+            var button = Instantiate(_diplomacyActionButtonPrefab, _actionButtonsParent);
+            button.GetComponentInChildren<TextMeshProUGUI>().text = "ќбъ€вить войну";
+            button.onClick.AddListener(delegate
+            {
+                Diplomacy.Instance.DeclareWar(playerCountry, targetCountry);
+                RefreshUI(targetCountry, playerCountry);
+            });
+            _buttons.Add(button.gameObject);
+        }
+    }
 
+    private void RefreshDates(Country targetCountry)
+    {
         _datesUI.ForEach(dataUI => Destroy(dataUI));
         _datesUI.Clear();
         foreach (var country in Map.Instance.Countries)
@@ -38,23 +74,9 @@ public class DiplomacyCountryViewUI : MonoBehaviour
             if (country.CountryDiplomacy.GetJustificationQueue().Exists(slot => slot.Target == targetCountry))
             {
                 var justifyUI = Instantiate(_diplomacyJustifyWarGoalDataPrefab, _diplomacyDataParent);
-                justifyUI.RefreshUI(country);
+                justifyUI.RefreshUI(country, country.CountryDiplomacy.GetJustificationQueue().Find(slot => slot.Target == targetCountry));
                 _datesUI.Add(justifyUI.gameObject);
             }
         }
-
-        _buttons.ForEach(button => Destroy(button));
-        _buttons.Clear();
-        if (playerRelation.IsWar == false)
-        {
-            var button = Instantiate(_diplomacyActionButtonPrefab, _actionButtonsParent);
-            button.GetComponentInChildren<TextMeshProUGUI>().text = "ќбъ€вить войну";
-            button.onClick.AddListener(delegate
-            {
-                Diplomacy.Instance.DeclareWar(playerCountry, targetCountry);
-                RefreshUI(targetCountry, playerCountry);
-            });
-            _buttons.Add(button.gameObject);
-        }
-    }
+    }    
 }

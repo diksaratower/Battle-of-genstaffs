@@ -5,6 +5,8 @@ using System;
 
 public class NotPrefabTooltipHandlerUI : TooltipHandlerUI
 {
+    public NotPrefabTooltipHandlerData HandlerData = null;
+
     private Type _viewMenuType;
     private static TooltipsDataSO _dataCashed;
 
@@ -12,6 +14,13 @@ public class NotPrefabTooltipHandlerUI : TooltipHandlerUI
     {
         GetTooltipsData();
         _viewMenuType = typeof(T);
+    }
+
+    public void Initialize<T>(NotPrefabTooltipHandlerData handlerData) where T : TooltipViewMenu
+    {
+        GetTooltipsData();
+        _viewMenuType = typeof(T);
+        HandlerData = handlerData;
     }
 
     public override void OnPointerEnter(PointerEventData eventData)
@@ -34,4 +43,8 @@ public class NotPrefabTooltipHandlerUI : TooltipHandlerUI
         }
         return _dataCashed;
     }
+}
+
+public abstract class NotPrefabTooltipHandlerData
+{
 }

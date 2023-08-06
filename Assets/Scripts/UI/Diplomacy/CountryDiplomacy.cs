@@ -5,12 +5,13 @@ using System.Collections.Generic;
 public class CountryDiplomacy
 {
     public Action<Ultimatum> OnGetUltimatum;
+    public Action<WarGoal> OnAddWarGoal;
     public Action<UltimatumAnswerType, Ultimatum> OnGetUltimatumAnser;
 
     private List<WarGoal> _warGoals = new List<WarGoal>();
     private List<WarGoalJustificationQueueSlot> _justificationQueue = new List<WarGoalJustificationQueueSlot>();
     private List<Ultimatum> _ultimatums = new List<Ultimatum>();
-    private const int _justificationTimeDays = 25;
+    private const int _justificationTimeDays = 5;
     private Country _country;
 
     public CountryDiplomacy(Country country)
@@ -38,13 +39,20 @@ public class CountryDiplomacy
 
     public void AddWarGoal(Country target)
     {
-        _warGoals.Add(new WarGoal(target));
+        var warGoal = new WarGoal(target);
+        _warGoals.Add(warGoal);
+        OnAddWarGoal?.Invoke(warGoal);
     }
 
     public void SendUltimatum(Ultimatum ultimatum)
     {
         _ultimatums.Add(ultimatum);
         OnGetUltimatum?.Invoke(ultimatum);
+    }
+
+    public bool IsHaveWarGoal(Country countryTarget)
+    {
+        return _warGoals.Exists(warGoal => warGoal.Target == countryTarget);
     }
 
     private void CalculateUltimatums()
@@ -70,11 +78,14 @@ public class CountryDiplomacy
             slot.JustificationProgress++;
             if (slot.JustificationProgress >= slot.JustificationTimeDays)
             {
-                _warGoals.Add(new WarGoal(slot.Target));
                 forRemove.Add(slot);
             }
         }
         _justificationQueue.RemoveAll(slot => forRemove.Contains(slot));
+        forRemove.ForEach(slot => 
+        {
+            AddWarGoal(slot.Target);
+        });
     }
 }
 
