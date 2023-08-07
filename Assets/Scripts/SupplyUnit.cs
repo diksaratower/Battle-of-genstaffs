@@ -38,7 +38,8 @@ public class SupplyUnit
 
     protected void StopSupply()
     {
-        foreach (var request in _divisionSupplyRequests)
+        var requestToClose = new List<SupplyRequest>(_divisionSupplyRequests);
+        foreach (var request in requestToClose)
         {
             request.OnClosedRequest?.Invoke();
         }

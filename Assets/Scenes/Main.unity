@@ -24302,10 +24302,10 @@ RectTransform:
   - {fileID: 1994891864}
   - {fileID: 1205578550}
   - {fileID: 2030018639}
-  - {fileID: 338135536}
   - {fileID: 1348849644}
   - {fileID: 1294006535}
   - {fileID: 1235669192}
+  - {fileID: 338135536}
   - {fileID: 561144585}
   - {fileID: 1333914390}
   - {fileID: 412420396}
@@ -24363,7 +24363,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 40
     y: 20
-    width: 180
+    width: 210
     height: 200
   Provinces: []
   _gameIU: {fileID: 1178506707}

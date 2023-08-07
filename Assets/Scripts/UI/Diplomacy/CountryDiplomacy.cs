@@ -68,6 +68,11 @@ public class CountryDiplomacy
         var forRemove = new List<Ultimatum>();
         foreach (var ultimatum in _ultimatums)
         {
+            if (ultimatum.IsAnsered)
+            {
+                forRemove.Add(ultimatum);
+                continue;
+            }
             ultimatum.GetAutoAnserProgressDays++;
             if (ultimatum.GetAutoAnserProgressDays >= ultimatum.GetAutoAnserTimeDays)
             {
@@ -123,6 +128,7 @@ public class WarGoal
 public abstract class Ultimatum
 {
     public int GetAutoAnserProgressDays;
+    public bool IsAnsered { get; private set; }
     public Country Sender { get; }
     public Country Target { get; }
     public int GetAutoAnserTimeDays { get; }
@@ -148,6 +154,7 @@ public abstract class Ultimatum
 
     public void SendAnser(UltimatumAnswerType ultimatumAnswer)
     {
+        IsAnsered = true;
         AnserEffect(ultimatumAnswer);
         OnAnsered?.Invoke(ultimatumAnswer);
     }

@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: greCountrySO
   m_EditorClassIdentifier: 
   Politics:
-    CountryIdeology: 0
-    FormGovernment: 0
-    ElectionsType: 0
+    CountryIdeology: 1
+    FormGovernment: 1
+    ElectionsType: 1
     PolitPower: 0
-    CountryLeader: {fileID: 11400000, guid: 610f7caf9434f0d45930e5ccd16c23f5, type: 2}
+    CountryLeader: {fileID: 11400000, guid: 805501597859b1341978cf594ed14a62, type: 2}
     Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}
     Advisers: []
     Parties: []
   Name: "\u0413\u0440\u0435\u0446\u0438\u044F"
   ID: gre
   ColorInMap: {r: 0.4528302, g: 0, b: 0.35680476, a: 1}
-  CountryFlag: {fileID: 21300000, guid: 8c973977c4e83e441a48a8fdb27c8df3, type: 3}
+  CountryFlag: {fileID: 21300000, guid: 6c45f1f872e981b4ca9c5271b7802238, type: 3}
   Population: 20720000
   IsAvailableForPlayer: 0
   IsAICountry: 0

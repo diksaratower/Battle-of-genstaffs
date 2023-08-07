@@ -1,8 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+
 
 public class MakeRegionsTool : MonoBehaviour
 {
@@ -60,8 +59,15 @@ public class MakeRegionsTool : MonoBehaviour
         GUI.Label(new Rect(10, 100, 180, 20), "Region name:");
         _regionName = GUI.TextField(new Rect(10, 120, 150, 20), _regionName);
 
+        if (GUI.Button(new Rect(10, 140, 150, 20), "Add all country"))
+        {
+            Provinces = new List<Province>();
+            var country = Map.Instance.GetCountryFromId(_countryTag);
+            var countryProvinces = Map.Instance.Provinces.FindAll(province => province.Owner == country);
+            Provinces.AddRange(countryProvinces);
+        }
 
-        if (GUI.Button(new Rect(10, 140, 150, 20), "Create region"))
+        if (GUI.Button(new Rect(10, 160, 150, 20), "Create region"))
         {
             var region = new Region(_regionName, 0);
             region.Provinces = Provinces;

@@ -11,7 +11,7 @@ public class CountryAI : MonoBehaviour
     private Province _spawnDivisonsProvince;
     private System.Random _randomAI = new System.Random();
     private float _cashedForceFactorInFront = 1.001f;
-
+    private bool _workAI = true;
 
     private void Start()
     {
@@ -39,6 +39,14 @@ public class CountryAI : MonoBehaviour
         _spawnDivisonsProvince = GetSpawnDivisionProvince();
         SpawnDivisions();
         _country.CountryDiplomacy.OnGetUltimatum += AnserUltimatum;
+        _country.OnAnnexed += delegate
+        {
+            _workAI = false;
+        };
+        _country.OnCapitulated += delegate
+        {
+            _workAI = false;
+        };
     }
 
 
@@ -158,7 +166,7 @@ public class CountryAI : MonoBehaviour
         {
             return false;
         }
-        if (_country.Is—apitulated)
+        if (_workAI == false)
         {
             return false;
         }

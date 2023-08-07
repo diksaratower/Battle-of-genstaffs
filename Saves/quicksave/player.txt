@@ -1,1 +1,1 @@
-{"CountryID":"pol"}
+{"CountryID":"sssr"}

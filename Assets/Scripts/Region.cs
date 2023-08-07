@@ -47,6 +47,7 @@ public class Region
     public static RegionSave SaveRegion(Region mapReg)
     {
         var regSave = new RegionSave() { Name = mapReg.Name };
+        regSave.ID = Map.Instance.MapRegions.IndexOf(mapReg);
         regSave.Population = mapReg.Population;
         foreach (var city in mapReg.Cities)
         {
@@ -191,6 +192,7 @@ public class Region
 public class RegionSave
 {
     public string Name;
+    public int ID = 0;
     public int Population;
     public List<int> ProvincesID = new List<int>();
     public int CapitalID = -1;

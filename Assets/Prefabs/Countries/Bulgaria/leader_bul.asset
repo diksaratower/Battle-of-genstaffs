@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22c0704b7ae05944b9587fbe32331f22, type: 3}
-  m_Name: leader_yug
+  m_Name: leader_bul
   m_EditorClassIdentifier: 
-  _standartPortrait: {fileID: 21300000, guid: 8e21b3438b07a3f4395d7ec90265eda3, type: 3}
-  _name: leader_yug
+  Traits: []
+  _standartPortrait: {fileID: 21300000, guid: c27b3597251ed924b81cb29c662c8b9c, type: 3}
+  _name: "\u0411\u043E\u0440\u0438\u0441 \u0442\u0440\u0435\u0442\u0438\u0439"
