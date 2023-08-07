@@ -17,7 +17,7 @@ MonoBehaviour:
     FormGovernment: 0
     ElectionsType: 0
     PolitPower: 0
-    CountryLeader: {fileID: 11400000, guid: 7e289e9ec5a52c14a891eee096b8c7ef, type: 2}
+    CountryLeader: {fileID: 11400000, guid: 610f7caf9434f0d45930e5ccd16c23f5, type: 2}
     Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}
     Advisers: []
     Parties: []

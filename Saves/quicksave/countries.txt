@@ -23,11 +23,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 16920,
-                        "ID": "manpower"
-                    },
-                    {
-                        "EquipmentCount": 373734,
+                        "EquipmentCount": 19334,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -45,10 +41,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1391.4228515625
+                "ResearchPointCount": 1605.581787109375
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1587.69482421875,
+                "PolitPowerCount": 1892.2861328125,
                 "Stability": 90.0
             }
         },
@@ -75,11 +71,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 3600,
-                        "ID": "manpower"
-                    },
-                    {
-                        "EquipmentCount": 446639,
+                        "EquipmentCount": 92239,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -97,10 +89,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1391.4228515625
+                "ResearchPointCount": 1605.581787109375
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1587.69482421875,
+                "PolitPowerCount": 1892.2861328125,
                 "Stability": 90.0
             }
         },
@@ -127,11 +119,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 42744,
-                        "ID": "manpower"
-                    },
-                    {
-                        "EquipmentCount": 424484,
+                        "EquipmentCount": 70084,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -149,10 +137,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1391.4228515625
+                "ResearchPointCount": 1605.581787109375
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1587.69482421875,
+                "PolitPowerCount": 1892.2861328125,
                 "Stability": 90.0
             }
         },
@@ -181,10 +169,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1391.4228515625
+                "ResearchPointCount": 1605.581787109375
             },
             "CountryPolitics": {
-                "PolitPowerCount": 687.7068481445313,
+                "PolitPowerCount": 812.3090209960938,
                 "Stability": 90.0
             }
         },
@@ -213,10 +201,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1391.4228515625
+                "ResearchPointCount": 1605.581787109375
             },
             "CountryPolitics": {
-                "PolitPowerCount": 687.7068481445313,
+                "PolitPowerCount": 812.3090209960938,
                 "Stability": 90.0
             }
         },
@@ -245,10 +233,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1391.4228515625
+                "ResearchPointCount": 1605.581787109375
             },
             "CountryPolitics": {
-                "PolitPowerCount": 687.7068481445313,
+                "PolitPowerCount": 812.3090209960938,
                 "Stability": 90.0
             }
         },
@@ -275,7 +263,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 44,
+                        "EquipmentCount": 21,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -296,10 +284,10 @@
                         "ID": "ft-17_ww1_tank1"
                     }
                 ],
-                "ResearchPointCount": 890.9768676757813
+                "ResearchPointCount": 1104.973388671875
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1227.701171875,
+                "PolitPowerCount": 1532.29248046875,
                 "Stability": 90.0
             }
         },
@@ -311,34 +299,12 @@
             "CountryTemplates": {
                 "Templates": [
                     {
-                        "Name": "Пехота",
+                        "Name": "infantry_1",
                         "battalionLines": [
                             "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
                             "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
                             "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
                             "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[]}"
-                        ]
-                    },
-                    {
-                        "Name": "Новый шаблон 2",
-                        "battalionLines": [
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}"
-                        ]
-                    },
-                    {
-                        "Name": "Новый шаблон 3",
-                        "battalionLines": [
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[]}",
                             "{\"Battalions\":[]}",
                             "{\"Battalions\":[]}"
                         ]
@@ -348,21 +314,25 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 670000,
+                        "EquipmentCount": 222000,
                         "ID": "manpower"
-                    },
-                    {
-                        "EquipmentCount": 3291,
-                        "ID": "ww1_rifle_equipment"
                     },
                     {
                         "EquipmentCount": 34,
                         "ID": "ft-17_ww1_tank1"
+                    },
+                    {
+                        "EquipmentCount": 21,
+                        "ID": "ww1_rifle_equipment"
                     }
                 ]
             },
             "CountryArmies": {
-                "Armies": []
+                "Armies": [
+                    {
+                        "Name": "null"
+                    }
+                ]
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [
@@ -376,10 +346,10 @@
                         "ID": "ww1_fighter"
                     }
                 ],
-                "ResearchPointCount": 791.1266479492188
+                "ResearchPointCount": 1005.0244140625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1087.7012939453125,
+                "PolitPowerCount": 1312.2926025390625,
                 "Stability": 90.0
             }
         },
@@ -406,11 +376,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 14850,
-                        "ID": "manpower"
-                    },
-                    {
-                        "EquipmentCount": 44,
+                        "EquipmentCount": 21,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -428,10 +394,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1391.4228515625
+                "ResearchPointCount": 1605.581787109375
             },
             "CountryPolitics": {
-                "PolitPowerCount": 687.7068481445313,
+                "PolitPowerCount": 992.3090209960938,
                 "Stability": 90.0
             }
         },
@@ -458,7 +424,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 44,
+                        "EquipmentCount": 21,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -479,10 +445,10 @@
                         "ID": "base_artillery"
                     }
                 ],
-                "ResearchPointCount": 1191.4222412109375
+                "ResearchPointCount": 1405.5811767578125
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1227.69482421875,
+                "PolitPowerCount": 1532.2861328125,
                 "Stability": 90.0
             }
         },
@@ -511,10 +477,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1391.4228515625
+                "ResearchPointCount": 1605.581787109375
             },
             "CountryPolitics": {
-                "PolitPowerCount": 687.7068481445313,
+                "PolitPowerCount": 812.3090209960938,
                 "Stability": 90.0
             }
         },
@@ -541,11 +507,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 15356,
-                        "ID": "manpower"
-                    },
-                    {
-                        "EquipmentCount": 450733,
+                        "EquipmentCount": 96333,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -563,10 +525,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1391.4228515625
+                "ResearchPointCount": 1605.581787109375
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1587.69482421875,
+                "PolitPowerCount": 1892.2861328125,
                 "Stability": 90.0
             }
         },
@@ -595,10 +557,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1391.4228515625
+                "ResearchPointCount": 1605.581787109375
             },
             "CountryPolitics": {
-                "PolitPowerCount": 687.7068481445313,
+                "PolitPowerCount": 812.3090209960938,
                 "Stability": 90.0
             }
         },
@@ -627,10 +589,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1391.4228515625
+                "ResearchPointCount": 1605.581787109375
             },
             "CountryPolitics": {
-                "PolitPowerCount": 687.7068481445313,
+                "PolitPowerCount": 812.3090209960938,
                 "Stability": 90.0
             }
         },
@@ -667,11 +629,7 @@
                 ]
             },
             "CountryArmies": {
-                "Armies": [
-                    {
-                        "Name": "null"
-                    }
-                ]
+                "Armies": []
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [
@@ -679,10 +637,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1391.4228515625
+                "ResearchPointCount": 1605.581787109375
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1587.69482421875,
+                "PolitPowerCount": 1712.2861328125,
                 "Stability": 90.0
             }
         },
@@ -711,10 +669,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1391.4228515625
+                "ResearchPointCount": 1605.581787109375
             },
             "CountryPolitics": {
-                "PolitPowerCount": 687.7068481445313,
+                "PolitPowerCount": 812.3090209960938,
                 "Stability": 90.0
             }
         },
@@ -743,10 +701,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1391.4228515625
+                "ResearchPointCount": 1605.581787109375
             },
             "CountryPolitics": {
-                "PolitPowerCount": 687.7068481445313,
+                "PolitPowerCount": 812.3090209960938,
                 "Stability": 90.0
             }
         },
@@ -775,10 +733,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1391.4228515625
+                "ResearchPointCount": 1605.581787109375
             },
             "CountryPolitics": {
-                "PolitPowerCount": 687.7068481445313,
+                "PolitPowerCount": 812.3090209960938,
                 "Stability": 90.0
             }
         },
@@ -805,11 +763,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 1680,
-                        "ID": "manpower"
-                    },
-                    {
-                        "EquipmentCount": 450733,
+                        "EquipmentCount": 96333,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -827,10 +781,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1391.4228515625
+                "ResearchPointCount": 1605.581787109375
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1587.69482421875,
+                "PolitPowerCount": 1892.2861328125,
                 "Stability": 90.0
             }
         },
@@ -859,10 +813,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1391.4228515625
+                "ResearchPointCount": 1605.581787109375
             },
             "CountryPolitics": {
-                "PolitPowerCount": 687.7068481445313,
+                "PolitPowerCount": 812.3090209960938,
                 "Stability": 90.0
             }
         },
@@ -889,7 +843,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 38733,
+                        "EquipmentCount": 21,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -907,10 +861,125 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 814.5712890625
+                "ResearchPointCount": 1028.4744873046875
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1786.8873291015625,
+                "PolitPowerCount": 2091.478759765625,
+                "Stability": 90.0
+            }
+        },
+        {
+            "ID": "bul",
+            "Name": "Болгария",
+            "MilitaryFactoriesCount": 0,
+            "RegionCapitalID": 0,
+            "CountryTemplates": {
+                "Templates": []
+            },
+            "EquipmentStorage": {
+                "Slots": []
+            },
+            "CountryArmies": {
+                "Armies": []
+            },
+            "CountryResearch": {
+                "OpenTechnologySaves": [],
+                "ResearchPointCount": 142.05406188964845
+            },
+            "CountryPolitics": {
+                "PolitPowerCount": 82.59996795654297,
+                "Stability": 90.0
+            }
+        },
+        {
+            "ID": "gre",
+            "Name": "Греция",
+            "MilitaryFactoriesCount": 0,
+            "RegionCapitalID": 0,
+            "CountryTemplates": {
+                "Templates": []
+            },
+            "EquipmentStorage": {
+                "Slots": []
+            },
+            "CountryArmies": {
+                "Armies": []
+            },
+            "CountryResearch": {
+                "OpenTechnologySaves": [],
+                "ResearchPointCount": 142.05406188964845
+            },
+            "CountryPolitics": {
+                "PolitPowerCount": 82.59996795654297,
+                "Stability": 90.0
+            }
+        },
+        {
+            "ID": "lit",
+            "Name": "Литва",
+            "MilitaryFactoriesCount": 0,
+            "RegionCapitalID": 0,
+            "CountryTemplates": {
+                "Templates": []
+            },
+            "EquipmentStorage": {
+                "Slots": []
+            },
+            "CountryArmies": {
+                "Armies": []
+            },
+            "CountryResearch": {
+                "OpenTechnologySaves": [],
+                "ResearchPointCount": 112.2022476196289
+            },
+            "CountryPolitics": {
+                "PolitPowerCount": 65.10004425048828,
+                "Stability": 90.0
+            }
+        },
+        {
+            "ID": "latv",
+            "Name": "Латвия",
+            "MilitaryFactoriesCount": 0,
+            "RegionCapitalID": 0,
+            "CountryTemplates": {
+                "Templates": []
+            },
+            "EquipmentStorage": {
+                "Slots": []
+            },
+            "CountryArmies": {
+                "Armies": []
+            },
+            "CountryResearch": {
+                "OpenTechnologySaves": [],
+                "ResearchPointCount": 77.50012969970703
+            },
+            "CountryPolitics": {
+                "PolitPowerCount": 44.800025939941409,
+                "Stability": 90.0
+            }
+        },
+        {
+            "ID": "estn",
+            "Name": "Эстония",
+            "MilitaryFactoriesCount": 0,
+            "RegionCapitalID": 0,
+            "CountryTemplates": {
+                "Templates": []
+            },
+            "EquipmentStorage": {
+                "Slots": []
+            },
+            "CountryArmies": {
+                "Armies": []
+            },
+            "CountryResearch": {
+                "OpenTechnologySaves": [],
+                "ResearchPointCount": 51.74949645996094
+            },
+            "CountryPolitics": {
+                "PolitPowerCount": 30.100011825561525,
                 "Stability": 90.0
             }
         }
