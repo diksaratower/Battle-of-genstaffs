@@ -10,10 +10,10 @@
                     {
                         "Name": "infantry_1",
                         "battalionLines": [
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
                             "{\"Battalions\":[]}",
                             "{\"Battalions\":[]}"
                         ]
@@ -23,11 +23,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 80920,
-                        "ID": "manpower"
-                    },
-                    {
-                        "EquipmentCount": 422118,
+                        "EquipmentCount": 21,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -45,10 +41,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1373.555419921875
+                "ResearchPointCount": 1941.45947265625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1577.8955078125,
+                "PolitPowerCount": 2268.2724609375,
                 "Stability": 90.0
             }
         },
@@ -62,10 +58,10 @@
                     {
                         "Name": "infantry_1",
                         "battalionLines": [
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
                             "{\"Battalions\":[]}",
                             "{\"Battalions\":[]}"
                         ]
@@ -75,11 +71,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 67600,
-                        "ID": "manpower"
-                    },
-                    {
-                        "EquipmentCount": 495023,
+                        "EquipmentCount": 21,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -97,10 +89,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1373.555419921875
+                "ResearchPointCount": 1941.45947265625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1577.8955078125,
+                "PolitPowerCount": 2268.2724609375,
                 "Stability": 90.0
             }
         },
@@ -114,10 +106,10 @@
                     {
                         "Name": "infantry_1",
                         "battalionLines": [
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
                             "{\"Battalions\":[]}",
                             "{\"Battalions\":[]}"
                         ]
@@ -127,11 +119,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 106744,
-                        "ID": "manpower"
-                    },
-                    {
-                        "EquipmentCount": 472868,
+                        "EquipmentCount": 21,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -149,10 +137,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1373.555419921875
+                "ResearchPointCount": 1941.45947265625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1577.8955078125,
+                "PolitPowerCount": 2268.2724609375,
                 "Stability": 90.0
             }
         },
@@ -160,7 +148,7 @@
             "ID": "dan",
             "Name": "Дания",
             "MilitaryFactoriesCount": 0,
-            "RegionCapitalID": -1,
+            "RegionCapitalID": 26,
             "CountryTemplates": {
                 "Templates": []
             },
@@ -181,10 +169,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1373.555419921875
+                "ResearchPointCount": 1941.45947265625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 677.9066772460938,
+                "PolitPowerCount": 1008.3124389648438,
                 "Stability": 90.0
             }
         },
@@ -213,10 +201,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1373.555419921875
+                "ResearchPointCount": 1941.45947265625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 677.9066772460938,
+                "PolitPowerCount": 1008.3124389648438,
                 "Stability": 90.0
             }
         },
@@ -245,10 +233,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1373.555419921875
+                "ResearchPointCount": 1941.45947265625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 677.9066772460938,
+                "PolitPowerCount": 1008.3124389648438,
                 "Stability": 90.0
             }
         },
@@ -260,24 +248,13 @@
             "CountryTemplates": {
                 "Templates": [
                     {
-                        "Name": "ai_default_template",
+                        "Name": "infantry_1",
                         "battalionLines": [
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}"
-                        ]
-                    },
-                    {
-                        "Name": "Танки",
-                        "battalionLines": [
-                            "{\"Battalions\":[{\"Name\":\"tanks\"},{\"Name\":\"tanks\"},{\"Name\":\"tanks\"}]}",
-                            "{\"Battalions\":[{\"Name\":\"tanks\"},{\"Name\":\"tanks\"}]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
                             "{\"Battalions\":[]}"
                         ]
                     }
@@ -286,11 +263,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 340020,
-                        "ID": "manpower"
-                    },
-                    {
-                        "EquipmentCount": 128353,
+                        "EquipmentCount": 21,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -311,10 +284,10 @@
                         "ID": "ft-17_ww1_tank1"
                     }
                 ],
-                "ResearchPointCount": 873.1312255859375
+                "ResearchPointCount": 1440.85107421875
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1217.90185546875,
+                "PolitPowerCount": 1908.27880859375,
                 "Stability": 90.0
             }
         },
@@ -326,34 +299,12 @@
             "CountryTemplates": {
                 "Templates": [
                     {
-                        "Name": "Пехота",
+                        "Name": "infantry_1",
                         "battalionLines": [
                             "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
                             "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
                             "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
                             "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[]}"
-                        ]
-                    },
-                    {
-                        "Name": "Новый шаблон 2",
-                        "battalionLines": [
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}"
-                        ]
-                    },
-                    {
-                        "Name": "Новый шаблон 3",
-                        "battalionLines": [
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[]}",
                             "{\"Battalions\":[]}",
                             "{\"Battalions\":[]}"
                         ]
@@ -363,21 +314,21 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 670000,
-                        "ID": "manpower"
-                    },
-                    {
-                        "EquipmentCount": 3291,
-                        "ID": "ww1_rifle_equipment"
-                    },
-                    {
                         "EquipmentCount": 34,
                         "ID": "ft-17_ww1_tank1"
+                    },
+                    {
+                        "EquipmentCount": 21,
+                        "ID": "ww1_rifle_equipment"
                     }
                 ]
             },
             "CountryArmies": {
-                "Armies": []
+                "Armies": [
+                    {
+                        "Name": "null"
+                    }
+                ]
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [
@@ -391,10 +342,10 @@
                         "ID": "ww1_fighter"
                     }
                 ],
-                "ResearchPointCount": 773.281005859375
+                "ResearchPointCount": 1340.87890625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1077.9019775390625,
+                "PolitPowerCount": 1608.2789306640625,
                 "Stability": 90.0
             }
         },
@@ -404,18 +355,34 @@
             "MilitaryFactoriesCount": 0,
             "RegionCapitalID": 11,
             "CountryTemplates": {
-                "Templates": []
+                "Templates": [
+                    {
+                        "Name": "infantry_1",
+                        "battalionLines": [
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[]}",
+                            "{\"Battalions\":[]}"
+                        ]
+                    }
+                ]
             },
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 86850,
-                        "ID": "manpower"
+                        "EquipmentCount": 21,
+                        "ID": "ww1_rifle_equipment"
                     }
                 ]
             },
             "CountryArmies": {
-                "Armies": []
+                "Armies": [
+                    {
+                        "Name": "null"
+                    }
+                ]
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [
@@ -423,10 +390,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1373.555419921875
+                "ResearchPointCount": 1941.45947265625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 677.9066772460938,
+                "PolitPowerCount": 1368.298095703125,
                 "Stability": 90.0
             }
         },
@@ -438,24 +405,13 @@
             "CountryTemplates": {
                 "Templates": [
                     {
-                        "Name": "пеха",
+                        "Name": "infantry_1",
                         "battalionLines": [
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}"
-                        ]
-                    },
-                    {
-                        "Name": "арта",
-                        "battalionLines": [
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"artillery\"}]}",
-                            "{\"Battalions\":[{\"Name\":\"artillery\"},{\"Name\":\"artillery\"},{\"Name\":\"artillery\"}]}",
-                            "{\"Battalions\":[{\"Name\":\"artillery\"},{\"Name\":\"artillery\"},{\"Name\":\"artillery\"}]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
                             "{\"Battalions\":[]}"
                         ]
                     }
@@ -464,12 +420,8 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 388960,
+                        "EquipmentCount": 21,
                         "ID": "ww1_rifle_equipment"
-                    },
-                    {
-                        "EquipmentCount": 424446,
-                        "ID": "manpower"
                     }
                 ]
             },
@@ -489,10 +441,10 @@
                         "ID": "base_artillery"
                     }
                 ],
-                "ResearchPointCount": 1173.5548095703125
+                "ResearchPointCount": 1741.4588623046875
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1217.8955078125,
+                "PolitPowerCount": 1908.2724609375,
                 "Stability": 90.0
             }
         },
@@ -521,10 +473,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1373.555419921875
+                "ResearchPointCount": 1941.45947265625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 677.9066772460938,
+                "PolitPowerCount": 1008.3124389648438,
                 "Stability": 90.0
             }
         },
@@ -538,10 +490,10 @@
                     {
                         "Name": "infantry_1",
                         "battalionLines": [
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
                             "{\"Battalions\":[]}",
                             "{\"Battalions\":[]}"
                         ]
@@ -551,11 +503,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 79356,
-                        "ID": "manpower"
-                    },
-                    {
-                        "EquipmentCount": 499117,
+                        "EquipmentCount": 21,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -573,10 +521,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1373.555419921875
+                "ResearchPointCount": 1941.45947265625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1577.8955078125,
+                "PolitPowerCount": 2268.2724609375,
                 "Stability": 90.0
             }
         },
@@ -605,10 +553,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1373.555419921875
+                "ResearchPointCount": 1941.45947265625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 677.9066772460938,
+                "PolitPowerCount": 1008.3124389648438,
                 "Stability": 90.0
             }
         },
@@ -637,10 +585,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1373.555419921875
+                "ResearchPointCount": 1941.45947265625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 677.9066772460938,
+                "PolitPowerCount": 1008.3124389648438,
                 "Stability": 90.0
             }
         },
@@ -654,10 +602,10 @@
                     {
                         "Name": "infantry_1",
                         "battalionLines": [
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
                             "{\"Battalions\":[]}",
                             "{\"Battalions\":[]}"
                         ]
@@ -665,23 +613,10 @@
                 ]
             },
             "EquipmentStorage": {
-                "Slots": [
-                    {
-                        "EquipmentCount": 340020,
-                        "ID": "manpower"
-                    },
-                    {
-                        "EquipmentCount": 499117,
-                        "ID": "ww1_rifle_equipment"
-                    }
-                ]
+                "Slots": []
             },
             "CountryArmies": {
-                "Armies": [
-                    {
-                        "Name": "null"
-                    }
-                ]
+                "Armies": []
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [
@@ -689,10 +624,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1373.555419921875
+                "ResearchPointCount": 1941.45947265625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1577.8955078125,
+                "PolitPowerCount": 2088.2724609375,
                 "Stability": 90.0
             }
         },
@@ -721,10 +656,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1373.555419921875
+                "ResearchPointCount": 1941.45947265625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 677.9066772460938,
+                "PolitPowerCount": 1008.3124389648438,
                 "Stability": 90.0
             }
         },
@@ -734,18 +669,38 @@
             "MilitaryFactoriesCount": 0,
             "RegionCapitalID": 16,
             "CountryTemplates": {
-                "Templates": []
+                "Templates": [
+                    {
+                        "Name": "infantry_1",
+                        "battalionLines": [
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[]}"
+                        ]
+                    }
+                ]
             },
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 1950000,
+                        "EquipmentCount": 1446000,
                         "ID": "manpower"
+                    },
+                    {
+                        "EquipmentCount": 21,
+                        "ID": "ww1_rifle_equipment"
                     }
                 ]
             },
             "CountryArmies": {
-                "Armies": []
+                "Armies": [
+                    {
+                        "Name": "null"
+                    }
+                ]
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [
@@ -753,10 +708,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1373.555419921875
+                "ResearchPointCount": 1941.45947265625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 677.9066772460938,
+                "PolitPowerCount": 1008.3124389648438,
                 "Stability": 90.0
             }
         },
@@ -785,10 +740,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1373.555419921875
+                "ResearchPointCount": 1941.45947265625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 677.9066772460938,
+                "PolitPowerCount": 1008.3124389648438,
                 "Stability": 90.0
             }
         },
@@ -802,10 +757,10 @@
                     {
                         "Name": "infantry_1",
                         "battalionLines": [
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
                             "{\"Battalions\":[]}",
                             "{\"Battalions\":[]}"
                         ]
@@ -815,11 +770,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 65680,
-                        "ID": "manpower"
-                    },
-                    {
-                        "EquipmentCount": 499117,
+                        "EquipmentCount": 21,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -837,10 +788,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1373.555419921875
+                "ResearchPointCount": 1941.45947265625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1577.8955078125,
+                "PolitPowerCount": 2268.2724609375,
                 "Stability": 90.0
             }
         },
@@ -848,7 +799,7 @@
             "ID": "yug",
             "Name": "Югославия",
             "MilitaryFactoriesCount": 0,
-            "RegionCapitalID": -1,
+            "RegionCapitalID": 24,
             "CountryTemplates": {
                 "Templates": []
             },
@@ -869,10 +820,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 1373.555419921875
+                "ResearchPointCount": 1941.45947265625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 677.9066772460938,
+                "PolitPowerCount": 1008.3124389648438,
                 "Stability": 90.0
             }
         },
@@ -886,11 +837,11 @@
                     {
                         "Name": "infantry_1",
                         "battalionLines": [
-                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
-                            "{\"Battalions\":[]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
                             "{\"Battalions\":[]}"
                         ]
                     }
@@ -899,11 +850,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 260143,
-                        "ID": "manpower"
-                    },
-                    {
-                        "EquipmentCount": 463117,
+                        "EquipmentCount": 21,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -921,10 +868,188 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 796.7256469726563
+                "ResearchPointCount": 1364.3521728515625
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1777.0880126953125,
+                "PolitPowerCount": 2467.465087890625,
+                "Stability": 90.0
+            }
+        },
+        {
+            "ID": "bul",
+            "Name": "Болгария",
+            "MilitaryFactoriesCount": 0,
+            "RegionCapitalID": 25,
+            "CountryTemplates": {
+                "Templates": []
+            },
+            "EquipmentStorage": {
+                "Slots": []
+            },
+            "CountryArmies": {
+                "Armies": []
+            },
+            "CountryResearch": {
+                "OpenTechnologySaves": [],
+                "ResearchPointCount": 477.5569152832031
+            },
+            "CountryPolitics": {
+                "PolitPowerCount": 278.599609375,
+                "Stability": 90.0
+            }
+        },
+        {
+            "ID": "gre",
+            "Name": "Греция",
+            "MilitaryFactoriesCount": 0,
+            "RegionCapitalID": 27,
+            "CountryTemplates": {
+                "Templates": []
+            },
+            "EquipmentStorage": {
+                "Slots": []
+            },
+            "CountryArmies": {
+                "Armies": []
+            },
+            "CountryResearch": {
+                "OpenTechnologySaves": [],
+                "ResearchPointCount": 477.5569152832031
+            },
+            "CountryPolitics": {
+                "PolitPowerCount": 278.599609375,
+                "Stability": 90.0
+            }
+        },
+        {
+            "ID": "lit",
+            "Name": "Литва",
+            "MilitaryFactoriesCount": 0,
+            "RegionCapitalID": 29,
+            "CountryTemplates": {
+                "Templates": [
+                    {
+                        "Name": "infantry_1",
+                        "battalionLines": [
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[]}",
+                            "{\"Battalions\":[]}"
+                        ]
+                    }
+                ]
+            },
+            "EquipmentStorage": {
+                "Slots": [
+                    {
+                        "EquipmentCount": 21,
+                        "ID": "ww1_rifle_equipment"
+                    }
+                ]
+            },
+            "CountryArmies": {
+                "Armies": [
+                    {
+                        "Name": "null"
+                    }
+                ]
+            },
+            "CountryResearch": {
+                "OpenTechnologySaves": [],
+                "ResearchPointCount": 447.7142028808594
+            },
+            "CountryPolitics": {
+                "PolitPowerCount": 261.09930419921877,
+                "Stability": 90.0
+            }
+        },
+        {
+            "ID": "latv",
+            "Name": "Латвия",
+            "MilitaryFactoriesCount": 0,
+            "RegionCapitalID": 30,
+            "CountryTemplates": {
+                "Templates": [
+                    {
+                        "Name": "infantry_1",
+                        "battalionLines": [
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[]}",
+                            "{\"Battalions\":[]}"
+                        ]
+                    }
+                ]
+            },
+            "EquipmentStorage": {
+                "Slots": [
+                    {
+                        "EquipmentCount": 21,
+                        "ID": "ww1_rifle_equipment"
+                    }
+                ]
+            },
+            "CountryArmies": {
+                "Armies": [
+                    {
+                        "Name": "null"
+                    }
+                ]
+            },
+            "CountryResearch": {
+                "OpenTechnologySaves": [],
+                "ResearchPointCount": 413.0226745605469
+            },
+            "CountryPolitics": {
+                "PolitPowerCount": 240.79928588867188,
+                "Stability": 90.0
+            }
+        },
+        {
+            "ID": "estn",
+            "Name": "Эстония",
+            "MilitaryFactoriesCount": 0,
+            "RegionCapitalID": 31,
+            "CountryTemplates": {
+                "Templates": [
+                    {
+                        "Name": "infantry_1",
+                        "battalionLines": [
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"},{\"Name\":\"infantry\"}]}",
+                            "{\"Battalions\":[]}",
+                            "{\"Battalions\":[]}"
+                        ]
+                    }
+                ]
+            },
+            "EquipmentStorage": {
+                "Slots": [
+                    {
+                        "EquipmentCount": 21,
+                        "ID": "ww1_rifle_equipment"
+                    }
+                ]
+            },
+            "CountryArmies": {
+                "Armies": [
+                    {
+                        "Name": "null"
+                    }
+                ]
+            },
+            "CountryResearch": {
+                "OpenTechnologySaves": [],
+                "ResearchPointCount": 387.2789611816406
+            },
+            "CountryPolitics": {
+                "PolitPowerCount": 226.09934997558595,
                 "Stability": 90.0
             }
         }

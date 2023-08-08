@@ -11,9 +11,9 @@ public class GameTimer : MonoBehaviour, ISaveble
     public static Action HourEnd;
     public static Action DayEnd;
     public static GameTimer Instance;
+    public float TimeScale { get; set; } = 0.3f;
 
     private int Days;
-    private float TimeScale = 0.7f;
 
     public void StartTimer()
     {

@@ -19,4 +19,5 @@ MonoBehaviour:
   ExecutionDurationDay: 30
   NeedsForExecution:
   - {fileID: 11400000, guid: e1cfd9eac67ad1e469a3ec2160fb4031, type: 2}
-  FocusEffects: []
+  FocusEffects:
+  - {fileID: 11400000, guid: 20ab749a789bd974dbef8b79ddb8259e, type: 2}

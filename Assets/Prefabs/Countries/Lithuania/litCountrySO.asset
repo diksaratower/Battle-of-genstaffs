@@ -27,5 +27,5 @@ MonoBehaviour:
   CountryFlag: {fileID: 21300000, guid: 9e4990771126ee64e8c31f7a6efe3467, type: 3}
   Population: 20720000
   IsAvailableForPlayer: 0
-  IsAICountry: 0
+  IsAICountry: 1
   CountrySizeType: 0

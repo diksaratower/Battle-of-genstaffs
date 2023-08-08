@@ -90,7 +90,7 @@ public class Region
 
     public void AnnexRegion(Country newOwner, Country lastOwner)
     {
-        var teleportProvince = Map.Instance.Provinces.Find(province => province.Owner == lastOwner);
+        var teleportProvince = lastOwner.GetCountryCapitalRegion().RegionCapital.CityProvince;
         foreach (var province in Provinces) 
         {
             var divisions = new List<Division>(province.DivisionsInProvince);

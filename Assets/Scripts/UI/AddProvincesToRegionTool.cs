@@ -20,7 +20,7 @@ public class AddProvincesToRegionTool : MonoBehaviour
         if (_selectingProvs)
         {
             _brush.UpdateBrushPosition();
-            if (Input.GetKey(KeyCode.Mouse0))
+            if (Input.GetKey(KeyCode.Mouse1))
             {
                 var newProvinces = _brush.GetBrushProvinces(true);
                 foreach (var province in newProvinces)

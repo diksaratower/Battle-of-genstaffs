@@ -35,15 +35,7 @@ public class DateTimeUI : MonoBehaviour
         });
         _pauseButton.onClick.AddListener(delegate 
         {
-            _timer.Pause = !_timer.Pause;
-            if(_timer.Pause == true)
-            {
-                _pauseButtonText.text = "Снять с паузы";
-            }
-            if (_timer.Pause == false) 
-            {
-                _pauseButtonText.text = "Пауза";
-            }
+            SetPause();
         });
     }
 
@@ -52,10 +44,24 @@ public class DateTimeUI : MonoBehaviour
         _timerSpeedText.text = "Скорость: " + _timer.Speed;
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            _timer.Pause = !_timer.Pause;
+            SetPause();
         }
 
     }
+
+    private void SetPause()
+    {
+        _timer.Pause = !_timer.Pause;
+        if (_timer.Pause == true)
+        {
+            _pauseButtonText.text = "Снять с паузы";
+        }
+        if (_timer.Pause == false)
+        {
+            _pauseButtonText.text = "Пауза";
+        }
+    }
+
     private void TimerAnimate()
     {
         _timerText.text = _timer.DTime.ToLongDateString() + " " + _timer.DTime.ToShortTimeString();

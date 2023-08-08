@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: sssrCountrySO
   m_EditorClassIdentifier: 
   Politics:
-    PolitPowerGrowthSpeed: 1
     CountryIdeology: 4
     FormGovernment: 0
     ElectionsType: 0
@@ -28,4 +27,5 @@ MonoBehaviour:
   CountryFlag: {fileID: 21300000, guid: 706970c7dcb00054f924375d94844477, type: 3}
   Population: 195000000
   IsAvailableForPlayer: 1
-  IsAICountry: 0
+  IsAICountry: 1
+  CountrySizeType: 1

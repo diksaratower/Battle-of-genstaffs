@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4b261a206ba7114fb49bfa348a1594a, type: 3}
   m_Name: AnnexEstoniaCountryUltimatum
   m_EditorClassIdentifier: 
-  TargetCountryID: latv
+  TargetCountryID: estn

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd818bf85e5b63c49a644a0d28a93353, type: 3}
   m_Name: EastPolandAnnexEffect
   m_EditorClassIdentifier: 
-  TargetCountryID: 
-  RegionID: 0
+  TargetCountryID: pol
+  RegionID: 13
