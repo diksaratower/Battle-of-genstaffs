@@ -28,9 +28,13 @@ public class CountryAI : MonoBehaviour
         {
             _maxDivisionsCount = 4;
         }
+        if (_country.CountryPreset.CountrySizeType == CountryAISizeData.Middle)
+        {
+            _maxDivisionsCount = 15;
+        }
         if (_country.CountryPreset.CountrySizeType == CountryAISizeData.Major)
         {
-            _maxDivisionsCount = 22;
+            _maxDivisionsCount = 30;
         }
         Country.OnCountryCapitulated += delegate 
         {
@@ -180,6 +184,10 @@ public class CountryAI : MonoBehaviour
             return;
         }
         var seed = _randomAI.Next(0, 100);
+        if (ultimatum.Sender != Player.CurrentCountry)
+        {
+            seed = 1;
+        }
         if (ultimatum is AnnexCountryUltimatum)
         {
             if (seed < 95)

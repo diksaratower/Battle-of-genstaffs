@@ -38,5 +38,6 @@ public class CountrySO : ScriptableObject
 public enum CountryAISizeData
 {
     Minor,
-    Major
+    Major,
+    Middle
 }

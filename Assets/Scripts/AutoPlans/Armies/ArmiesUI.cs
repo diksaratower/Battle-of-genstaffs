@@ -118,7 +118,7 @@ public class ArmiesUI : MonoBehaviour
     private List<Division> GetSelectedNotArmiesDivisions()
     {
         var selectedNotArmiesDivisions = new List<Division>();
-        var selectedDivsions = _gameIU.GetSelectedDivisions();
+        var selectedDivsions = _gameIU.GetSelectedDivisions().FindAll(division => division.CountyOwner == Player.CurrentCountry);
         foreach (var division in selectedDivsions) 
         {
             if (_country.CountryArmies.IsDivisionsAttachedWithArmy(division) == false)

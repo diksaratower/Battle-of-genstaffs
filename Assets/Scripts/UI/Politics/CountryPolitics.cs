@@ -114,14 +114,14 @@ public class CountryPolitics
         }
         PolitPower -= law.PolitPowerCost;
         Current—onscriptionLaw = law;
-        var newManpower = Mathf.RoundToInt(((float)Player.CurrentCountry.CountryPreset.Population / 100f) * Player.CurrentCountry.Politics.Get—onscriptionPercent());
+        var newManpower = Mathf.RoundToInt(((float)Player.CurrentCountry.CountryPreset.Population / 100f) * Player.CurrentCountry.Politics.GetConscriptionPercent());
         if(newManpower - _country.EquipmentStorage.GetEquipmentCount(EquipmentType.Manpower) > 0)
         {
             _country.EquipmentStorage.AddEquipment("manpower", newManpower - _country.EquipmentStorage.GetEquipmentCount(EquipmentType.Manpower));
         }
     }
 
-    public float Get—onscriptionPercent()
+    public float GetConscriptionPercent()
     {
         foreach (var effect in Current—onscriptionLaw.LawEffects)
         {
