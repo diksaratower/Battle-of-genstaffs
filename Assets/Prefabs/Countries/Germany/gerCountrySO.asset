@@ -28,4 +28,4 @@ MonoBehaviour:
   Population: 67000000
   IsAvailableForPlayer: 1
   IsAICountry: 1
-  CountrySizeType: 0
+  CountrySizeType: 1

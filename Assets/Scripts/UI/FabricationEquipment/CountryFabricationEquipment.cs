@@ -31,7 +31,7 @@ public class CountryFabricationEquipment
         return _baseFabricationEfficiency + _country.Politics.GetPoliticCorrectionMilitaryFabrication(_baseFabricationEfficiency);
     }
 
-    public void AddSlot(string id, List<BuildingSlot> factories) 
+    public void AddSlot(string id, List<BuildingSlotRegion> factories) 
     {
         foreach(var fac in factories) 
         {
@@ -56,9 +56,9 @@ public class CountryFabricationEquipment
         return EquipmentSlots.Find(sl => sl.EquipmentID == equipment.ID) != null;
     }
 
-    public List<BuildingSlot> GetNotUseMilitaryFactories()
+    public List<BuildingSlotRegion> GetNotUseMilitaryFactories()
     {
-        var factories = new List<BuildingSlot>();
+        var factories = new List<BuildingSlotRegion>();
         foreach (var fac in _country.CountryBuild.GetCountryBuildings(BuildingType.MilitaryFactory))
         {
             if (!FactoryIsUses(fac))
@@ -69,7 +69,7 @@ public class CountryFabricationEquipment
         return factories;
     }
 
-    public bool FactoryIsUses(BuildingSlot factory)
+    public bool FactoryIsUses(BuildingSlotRegion factory)
     {
         foreach(var slot in EquipmentSlots) 
         {

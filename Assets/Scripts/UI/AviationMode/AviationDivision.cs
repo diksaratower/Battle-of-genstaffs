@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class AviationDivision : SupplyUnit
 {
-    public BuildingSlot PositionAviabase { get; private set; }
+    public BuildingSlotRegion PositionAviabase { get; private set; }
     public Country CountryOwner { get; }
     public string Name { get; }
     public float AttackDistance { get; }
 
 
-    public AviationDivision(BuildingSlot positionAviabase, Country countryOwner, string name) : base(countryOwner.EquipmentStorage)
+    public AviationDivision(BuildingSlotRegion positionAviabase, Country countryOwner, string name) : base(countryOwner.EquipmentStorage)
     {
         PositionAviabase = positionAviabase;
         CountryOwner = countryOwner;
@@ -25,7 +25,7 @@ public class AviationDivision : SupplyUnit
         GameTimer.HourEnd += CalculateSupply;
     }
 
-    public void Move(BuildingSlot newAviabase)
+    public void Move(BuildingSlotRegion newAviabase)
     {
         if (newAviabase == PositionAviabase)
         {

@@ -19,6 +19,7 @@ public enum BuildingType
     Factory,
     MilitaryFactory,
     Airbase,
-    Fortification
+    Fortification,
+    NavyBase
 }
 

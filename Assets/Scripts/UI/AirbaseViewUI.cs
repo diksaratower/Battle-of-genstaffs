@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class AirbaseViewUI : MonoBehaviour, IPointerClickHandler
 {
-    public BuildingSlot Target { get; private set; }
+    public BuildingSlotRegion Target { get; private set; }
 
     [SerializeField] private Button _baseClickButton;
     [SerializeField] private GameObject _addtionalInformationPanel;
@@ -41,7 +41,7 @@ public class AirbaseViewUI : MonoBehaviour, IPointerClickHandler
         _rectTransform.anchoredPosition = GameCamera.Instance.WorldToScreenPointResolutionTrue(_regionPosition + Vector3.up);
     }
 
-    public void RefreshUI(BuildingSlot aviabase, AirbasesViewerUI airbasesViewerUI)
+    public void RefreshUI(BuildingSlotRegion aviabase, AirbasesViewerUI airbasesViewerUI)
     {
         Target = aviabase;
         _regionPosition = Target.Region.GetProvincesAveragePostion();

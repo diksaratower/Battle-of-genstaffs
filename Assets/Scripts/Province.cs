@@ -17,6 +17,7 @@ public class Province
     public List<Vector3> Vertices = new List<Vector3>();
     public List<int> ContactsIDs = new List<int>();
     public List<Division> DivisionsInProvince = new List<Division>();
+    public List<BuildingSlotProvince> Buildings = new List<BuildingSlotProvince>();
 
     public Province(Vector2Int positionInGrid, int id, Vector3 position, Vector3 landscapeTruePosition) 
     {

@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class CountryFabricationEquipmentSlot
 {
-    public List<BuildingSlot> Factories = new List<BuildingSlot>();
+    public List<BuildingSlotRegion> Factories = new List<BuildingSlotRegion>();
     public string EquipmentID;
 
     private float _equipmentCountFabricated;
     private CountryFabricationEquipment _countryFabrication;
 
-    public CountryFabricationEquipmentSlot(string id, List<BuildingSlot> factories, CountryFabricationEquipment countryFabrication)
+    public CountryFabricationEquipmentSlot(string id, List<BuildingSlotRegion> factories, CountryFabricationEquipment countryFabrication)
     {
         _countryFabrication = countryFabrication;
         Factories = factories;

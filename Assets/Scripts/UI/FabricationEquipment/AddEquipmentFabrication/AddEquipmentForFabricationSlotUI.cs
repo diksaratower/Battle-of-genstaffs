@@ -25,7 +25,7 @@ public class AddEquipmentForFabricationSlotUI : MonoBehaviour
             if (fabricationEquipmentUI.TargetCountry.CountryFabrication.GetNotUseMilitaryFactories().Count > 0)
             {
                 fabricationEquipmentUI.TargetCountry.CountryFabrication.AddSlot(technology.ID,
-                    new List<BuildingSlot>() { fabricationEquipmentUI.TargetCountry.CountryFabrication.GetNotUseMilitaryFactories()[0] });
+                    new List<BuildingSlotRegion>() { fabricationEquipmentUI.TargetCountry.CountryFabrication.GetNotUseMilitaryFactories()[0] });
                 addForFabricationUI.RefreshUI(fabricationEquipmentUI.TargetCountry);
             }
         });

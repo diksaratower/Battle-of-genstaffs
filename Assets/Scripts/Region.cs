@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 
@@ -9,7 +10,7 @@ public class Region
     public readonly int MaxBuildingsCount = 40;
     [HideInInspector] public List<Province> Provinces = new List<Province>();
     public List<City> Cities = new List<City>();
-    public List<BuildingSlot> Buildings = new List<BuildingSlot>();
+    public List<BuildingSlotRegion> BuildingsInRegion = new List<BuildingSlotRegion>();
     [HideInInspector] public City RegionCapital;
     public string Name { get; }
     public int Population;
@@ -39,7 +40,15 @@ public class Region
         }
         foreach (var buildingSave in regionSave.BuildingSaves)
         {
-            mapRegion.Buildings.Add(buildingSave.Load(mapRegion));
+            var slot = buildingSave.Load(mapRegion);
+            if (slot is BuildingSlotRegion)
+            {
+                mapRegion.BuildingsInRegion.Add(slot as BuildingSlotRegion);
+            }
+            if (slot is BuildingSlotProvince)
+            {
+                (slot as BuildingSlotProvince).Province.Buildings.Add(slot as BuildingSlotProvince);
+            }
         }
         return mapRegion;
     }
@@ -63,9 +72,19 @@ public class Region
             regSave.CapitalID = -1;
         }
 
-        foreach (var building in mapReg.Buildings)
+        foreach (var building in mapReg.BuildingsInRegion)
         {
             regSave.BuildingSaves.Add(new RegionBuildingSave(building));
+        }
+        foreach (var province in mapReg.Provinces)
+        {
+            if (province.Buildings.Count > 0)
+            {
+                foreach (var building in province.Buildings)
+                {
+                    regSave.BuildingSaves.Add(new RegionBuildingSave(building));
+                }
+            }
         }
 
         foreach (var prov in mapReg.Provinces)
@@ -105,29 +124,24 @@ public class Region
         }
     }
 
-    public bool IsProvinceAttachToRegion(Province province)
-    {
-        return Provinces.Contains(province);
-    }
-
     public int GetAllBuildingsCount()
     {
-        return Buildings.Count;
+        return BuildingsInRegion.Count;
     }
 
-    public int GetBuildingsCount(Building building)
+    public List<BuildingSlotRegion> GetBuildings(BuildingType buildingType)
     {
-        return Buildings.FindAll(slot => slot.TargetBuilding == building).Count;
+        return BuildingsInRegion.FindAll(slot => slot.TargetBuilding.BuildingType == buildingType);
     }
 
-    public List<BuildingSlot> GetBuildings(BuildingType buildingType)
+    public void AddBuildingToRegion(Building building)
     {
-        return Buildings.FindAll(slot => slot.TargetBuilding.BuildingType == buildingType);
+        BuildingsInRegion.Add(new BuildingSlotRegion(building, this));
     }
 
-    public void AddBuildingToRegion(Building building, Province buildingProvince = null)
+    public void AddProvinceBuilding(Building building, Province buildingProvince)
     {
-        Buildings.Add(new BuildingSlot(building, this, buildingProvince));
+        buildingProvince.Buildings.Add(new BuildingSlotProvince(building, this, buildingProvince));
     }
 
     public Vector3 GetProvincesAveragePostion()
@@ -143,11 +157,6 @@ public class Region
         }
         _cashedAveragePosition = GetMeanVector(provincesPositions.ToArray());
         return _cashedAveragePosition;
-    }
-
-    public static List<Province> GetRegionBoard(Region region)
-    {
-        return region.Provinces.FindAll(prov => prov.Contacts.Exists(con => GetProvinceRegion(con) != GetProvinceRegion(prov)));
     }
 
     public static List<Province> GetProvincesBoard(List<Province> provinces)
@@ -209,9 +218,9 @@ public class RegionBuildingSave
     public RegionBuildingSave(BuildingSlot buildingSlot)
     {
         BuildingID = buildingSlot.TargetBuilding.ID;
-        if (buildingSlot.TargetBuilding is BuildingInProvince)
+        if (buildingSlot is BuildingSlotProvince)
         {
-            ProvinceID = Map.Instance.Provinces.IndexOf(buildingSlot.Province);
+            ProvinceID = Map.Instance.Provinces.IndexOf((buildingSlot as BuildingSlotProvince).Province);
         }
         else
         {
@@ -221,16 +230,17 @@ public class RegionBuildingSave
 
     public BuildingSlot Load(Region region)
     {
-        Province province = null;
+        BuildingSlot buildingSlot = null;
         if (ProvinceID != -1)
         {
-            province = Map.Instance.Provinces[ProvinceID];
+            var province = Map.Instance.Provinces[ProvinceID];
+            buildingSlot = new BuildingSlotProvince(BuildingsManagerSO.GetInstance().AvalibleBuildings.Find(building => building.ID == BuildingID), region, province);
         }
         else
         {
-            province = null;
+            buildingSlot = new BuildingSlotRegion(BuildingsManagerSO.GetInstance().AvalibleBuildings.Find(building => building.ID == BuildingID), region);
         }
-        return new BuildingSlot(BuildingsManagerSO.GetInstance().AvalibleBuildings.Find(building => building.ID == BuildingID), region, province);
+        return buildingSlot;
     }
 }
 
@@ -267,30 +277,34 @@ public enum CityType
 }
 
 [Serializable]
-public class BuildingSlot
+public abstract class BuildingSlot
 {
     public Region Region { get; }
-    public Province Province => GetProvince();
     public Building TargetBuilding { get; }
 
-    private Province _province;
-
-    public BuildingSlot(Building targetBuilding, Region region, Province province = null)
+    public BuildingSlot(Building targetBuilding, Region region)
     {
         TargetBuilding = targetBuilding;
         Region = region;
-        _province = province;
     }
+}
 
-    private Province GetProvince()
+[Serializable]
+public class BuildingSlotRegion : BuildingSlot
+{
+    public BuildingSlotRegion(Building targetBuilding, Region region) : base(targetBuilding, region)
     {
-        if (_province != null)
-        {
-            return _province;
-        }
-        else
-        {
-            return Region.RegionCapital.CityProvince;
-        }
+    }
+}
+
+public class BuildingSlotProvince : BuildingSlot
+{
+    public Province Province => _province;
+
+    private Province _province;
+
+    public BuildingSlotProvince(Building targetBuilding, Region region, Province province = null) : base(targetBuilding, region)
+    {
+        _province = province;
     }
 }

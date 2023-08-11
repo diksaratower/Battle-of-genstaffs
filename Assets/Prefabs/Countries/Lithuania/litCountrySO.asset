@@ -26,6 +26,6 @@ MonoBehaviour:
   ColorInMap: {r: 0, g: 0.17936419, b: 0.44313726, a: 1}
   CountryFlag: {fileID: 21300000, guid: 9e4990771126ee64e8c31f7a6efe3467, type: 3}
   Population: 20720000
-  IsAvailableForPlayer: 0
+  IsAvailableForPlayer: 1
   IsAICountry: 1
   CountrySizeType: 0

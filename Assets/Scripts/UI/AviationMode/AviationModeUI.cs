@@ -8,13 +8,13 @@ public class AviationModeUI : MonoBehaviour
     
     [SerializeField] private SelectedAviabaseUI _selectedAviabaseUI;
 
-    public void RefreshUI(BuildingSlot aviabase)
+    public void RefreshUI(BuildingSlotRegion aviabase)
     {
         _selectedAviationDivsions.Clear();
         _selectedAviabaseUI.RefreshUI(aviabase, this);
     }
 
-    public void MoveSelectedDivisions(BuildingSlot newAviabase)
+    public void MoveSelectedDivisions(BuildingSlotRegion newAviabase)
     {
         foreach (var selectedDivision in _selectedAviationDivsions)
         {

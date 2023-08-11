@@ -28,7 +28,7 @@ public class UnitsManager : MonoBehaviour, ISaveble
         return AddDivision(Map.GetProvinceFromPosition(position), owner, template);
     }
 
-    public AviationDivision AddAviationDivision(BuildingSlot aviabase, Country owner)
+    public AviationDivision AddAviationDivision(BuildingSlotRegion aviabase, Country owner)
     {
         var aviationDivision = new AviationDivision(aviabase, owner, $"{AviationDivisions.Count + 1} авиадивизия {owner.Name}");
         AviationDivisions.Add(aviationDivision);

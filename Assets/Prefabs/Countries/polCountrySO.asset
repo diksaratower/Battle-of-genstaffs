@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: polCountrySO
   m_EditorClassIdentifier: 
   Politics:
-    PolitPowerGrowthSpeed: 1
     CountryIdeology: 0
     FormGovernment: 0
     ElectionsType: 0
@@ -29,4 +28,4 @@ MonoBehaviour:
   Population: 34002000
   IsAvailableForPlayer: 1
   IsAICountry: 1
-  CountrySizeType: 0
+  CountrySizeType: 2

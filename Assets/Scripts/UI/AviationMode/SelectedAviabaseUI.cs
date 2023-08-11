@@ -15,7 +15,7 @@ public class SelectedAviabaseUI : MonoBehaviour
 
     private List<SelectedAviabaseAviationDivisionSlotUI> _slotsUI = new List<SelectedAviabaseAviationDivisionSlotUI>();
     private List<AviationRadiusViewUI> _aviationRadiuses = new List<AviationRadiusViewUI>();
-    private BuildingSlot _targetAviabase;
+    private BuildingSlotRegion _targetAviabase;
     private AviationModeUI _aviationUI;
 
 
@@ -35,7 +35,7 @@ public class SelectedAviabaseUI : MonoBehaviour
         ClearRadiuses();
     }
 
-    public void RefreshUI(BuildingSlot aviabase, AviationModeUI aviationUI)
+    public void RefreshUI(BuildingSlotRegion aviabase, AviationModeUI aviationUI)
     {
         if (aviabase.TargetBuilding.BuildingType != BuildingType.Airbase)
         {

@@ -45,7 +45,7 @@ public class Map : MonoBehaviour, ISaveble
             Debug.Log("add buildings");
             foreach (var region in MapRegions)
             {
-                if (region.Buildings.Count == 0)
+                if (region.BuildingsInRegion.Count == 0)
                 {
                     for (int i = 0; i < random.Next(0, 2); i++)
                     {

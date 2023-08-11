@@ -18,7 +18,7 @@ public class AirbasesViewerUI : MonoBehaviour
         RefreshAirbases();
     }
 
-    public void ActivateAviasionMode(BuildingSlot selectedAviabaseRegion)
+    public void ActivateAviasionMode(BuildingSlotRegion selectedAviabaseRegion)
     {
         _aviationModeUI.gameObject.SetActive(true);
         _aviationModeUI.RefreshUI(selectedAviabaseRegion);

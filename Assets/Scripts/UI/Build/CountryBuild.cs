@@ -43,9 +43,9 @@ public class CountryBuild
     }
 
 
-    public List<BuildingSlot> GetCountryBuildings(BuildingType building)
+    public List<BuildingSlotRegion> GetCountryBuildings(BuildingType building)
     {
-        var result = new List<BuildingSlot>();
+        var result = new List<BuildingSlotRegion>();
         var regions = Player.CurrentCountry.GetCountryRegions();
         foreach (var region in regions)
         {
@@ -123,7 +123,14 @@ public class CountryBuildSlot
 
     public void EndBuild()
     {
-        BuildRegion.AddBuildingToRegion(Building, BuildingProvince);
+        if (Building is BuildingInProvince)
+        {
+            BuildRegion.AddProvinceBuilding(Building, BuildingProvince);
+        }
+        else
+        {
+            BuildRegion.AddBuildingToRegion(Building);
+        }
     }
 
     public bool IsBuildEnd()

@@ -96,11 +96,25 @@ public class CountryBuildUI : MonoBehaviour
         {
             if (region.Provinces[0].Owner == _country)
             {
-                foreach (var building in region.Buildings)
+                /*
+                foreach (var building in region.BuildingsInRegion)
                 {
                     if (building.TargetBuilding == SelectedBuilding.Target)
                     {
                         DrawProvincesMeshWithBoard(region, new List<Province>() { building.Province });
+                    }
+                }*/
+                foreach (var province in region.Provinces)
+                {
+                    if (province.Buildings.Count > 0)
+                    {
+                        foreach (var building in province.Buildings)
+                        {
+                            if (building.TargetBuilding == SelectedBuilding.Target)
+                            {
+                                DrawProvincesMeshWithBoard(region, new List<Province>() { province });
+                            }
+                        }
                     }
                 }
             }

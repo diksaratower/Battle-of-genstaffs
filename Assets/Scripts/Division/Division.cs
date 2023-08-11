@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 
@@ -194,7 +193,7 @@ public class Division : SupplyUnit
 
         if (extendPath && MovePath.Count > 0)
         {
-            var newPath = PathFindAStar.FindPath(MovePath[MovePath.Count - 1], targetProv, allowedProvs, this);//FindPath(MovePath[MovePath.Count - 1], targetProv, allowedProvs);
+            var newPath = PathFindAStar.FindPath(MovePath[MovePath.Count - 1], targetProv, allowedProvs, this);
             if (newPath == null)
             {
                 return;
@@ -203,7 +202,7 @@ public class Division : SupplyUnit
         }
         if (extendPath == false)
         {
-            var newPath = PathFindAStar.FindPath(DivisionProvince, targetProv, allowedProvs, this);// FindPath(DivisionProvince, targetProv, allowedProvs);
+            var newPath = PathFindAStar.FindPath(DivisionProvince, targetProv, allowedProvs, this);
             if (newPath == null)
             {
                 return;
