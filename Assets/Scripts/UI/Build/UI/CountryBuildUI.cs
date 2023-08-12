@@ -96,14 +96,6 @@ public class CountryBuildUI : MonoBehaviour
         {
             if (region.Provinces[0].Owner == _country)
             {
-                /*
-                foreach (var building in region.BuildingsInRegion)
-                {
-                    if (building.TargetBuilding == SelectedBuilding.Target)
-                    {
-                        DrawProvincesMeshWithBoard(region, new List<Province>() { building.Province });
-                    }
-                }*/
                 foreach (var province in region.Provinces)
                 {
                     if (province.Buildings.Count > 0)
@@ -213,10 +205,13 @@ public class CountryBuildUI : MonoBehaviour
             if (province.Owner == _country)
             {
                 var region = Region.GetProvinceRegion(province);
-                if (_country.CountryBuild.CanAddBuildingToQueue(SelectedBuilding.Target, region))
+                if ((SelectedBuilding.Target as BuildingInProvince).CanBuildInProvince(province))
                 {
-                    _country.CountryBuild.AddBuildingToBuildQueue(SelectedBuilding.Target, region, province);
-                    DrawRegionsMeshes();
+                    if (_country.CountryBuild.CanAddBuildingToQueue(SelectedBuilding.Target, region))
+                    {
+                        _country.CountryBuild.AddBuildingToBuildQueue(SelectedBuilding.Target, region, province);
+                        DrawRegionsMeshes();
+                    }
                 }
             }
         }

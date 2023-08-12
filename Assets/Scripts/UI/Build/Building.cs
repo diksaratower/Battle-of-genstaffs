@@ -10,8 +10,9 @@ public class Building : ScriptableObject
     public BuildingType BuildingType;
 }
 
-public class BuildingInProvince : Building
+public abstract class BuildingInProvince : Building
 {
+    public abstract bool CanBuildInProvince(Province province);
 }
 
 public enum BuildingType

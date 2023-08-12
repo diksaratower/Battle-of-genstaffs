@@ -1,15 +1,17 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Threading.Tasks;
 using System;
+using System.Linq;
+
 
 public class ArmyUI : MonoBehaviour
 {
     public Army TargetArmy;
+    public bool CreationSeaLanding { get; set; }
+    public bool CreationFrontUI { get; set; }
     public ArmiesUI Owner { get; set; }
     public bool Selected { get; private set; }
 
@@ -20,6 +22,7 @@ public class ArmyUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _forceFactorText;
     [SerializeField] private Toggle _doPlansToggle;
     [SerializeField] private Button _deleteArmyButton;
+    [SerializeField] private NavyLandingPlanView _landingPlanViewPrefab;
 
     private List<GameObject> _drawedFrontLines = new List<GameObject>();
     private GameObject _drawedAttackLine;
@@ -65,14 +68,77 @@ public class ArmyUI : MonoBehaviour
     {
         _selectionOutline.enabled = Selected;
         _divisionCountText.text = TargetArmy.DivisionsCount + "/" + TargetArmy.MaxDivisionsCount;
+        if (CreationFrontUI && Selected)
+        {
+            CreatingNewFrontLine();
+        }
+        if (CreationSeaLanding && Selected)
+        {
+            CreatingNewSeaLanding();
+        }
     }
- 
+
     public void Deselect()
     {
         Selected = false;
     }
 
-    public async void AsyncUpdateFront(FrontPlan plan, List<FrontPlan.FrontData> frontDates)
+    private void CreatingNewFrontLine()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            if (GameCamera.Instance.ChekHitToProvinceWithMousePosition(out var prov))
+            {
+                if (prov.Owner == Player.CurrentCountry && prov.Owner.ID != "null")
+                {
+                    if (prov.Contacts.Find(pr => pr.Owner != prov.Owner) != null)
+                    {
+                        CreationFrontUI = false;
+                        Deselect();
+                        var enemyCountry = prov.Contacts.Find(pr => pr.Owner != prov.Owner).Owner;
+                        TargetArmy.RemoveAllPlans();
+                        var plan = new FrontPlan(TargetArmy.Divisions.ToList(), enemyCountry, Player.CurrentCountry);
+                        TargetArmy.AddPlan(plan);
+                        plan.Initialize();
+                    }
+                }
+            }
+        }
+    }
+
+    private void CreatingNewSeaLanding()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            if (GameCamera.Instance.ChekHitToProvinceWithMousePosition(out var province))
+            {
+                if (province.Owner.ID != "null")
+                {
+                    if (province.Contacts.Count < 6)
+                    {
+                        CreationSeaLanding = false;
+                        if (SeaLandingPlan.ArmyCanExecuteSeaLanding(TargetArmy, out var startNavyBase))
+                        {
+                            Deselect();
+                            TargetArmy.RemoveAllPlans();
+                            var seaLandingPlan = new SeaLandingPlan(new List<Division>(TargetArmy.Divisions), province, startNavyBase);
+                            DrawSeaLandingPlan(seaLandingPlan);
+                            TargetArmy.AddPlan(seaLandingPlan);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private NavyLandingPlanView DrawSeaLandingPlan(SeaLandingPlan seaLandingPlan)
+    {
+        var view = Instantiate(_landingPlanViewPrefab);
+        view.Refresh(seaLandingPlan);
+        return view;
+    }
+
+    private async void AsyncUpdateFront(FrontPlan plan, List<FrontPlan.FrontData> frontDates)
     {
         await Task.Delay(40);
         if (frontDates.Count != 0)
@@ -136,99 +202,6 @@ public class ArmyUI : MonoBehaviour
         }
     }
 
-    private List<Vector3> SortFromDistance(List<Vector3> allPoints) 
-    {
-        var result = new List<Vector3>();
-        var points = new List<Vector3>();
-        points.AddRange(allPoints);
-        var current = points[0];
-        points.Remove(current);
-        result.Add(current);
-        while (points.Count != 0)
-        {
-            current = FindMinDistancePoint(points, current, out _);
-            if(current == null)
-            {
-                break;
-            }
-            points.Remove(current);
-            result.Add(current);
-        }
-        return result;
-    }
-
-    private List<Vector3> SmoothFront(List<Vector3> front)
-    {
-        var forRemove = new List<Vector3>();
-        foreach (var vecOne in front)
-        {
-            foreach (var vecTwo in front)
-            {
-                if (vecOne != vecTwo)
-                {
-                    if (!forRemove.Contains(vecOne) && !forRemove.Contains(vecTwo))
-                    {
-                        var pointDistance = Vector2.Distance(new Vector2(vecOne.x, vecOne.z), new Vector2(vecTwo.x, vecTwo.z));
-                        if (pointDistance < 0.1f)
-                        {
-                            forRemove.Add(vecOne);
-                        }
-                    }
-                }
-            }
-        }
-        front.RemoveAll(pr => forRemove.Contains(pr));
-        return front;
-    }
-
-    private List<Vector3> DeleteFrontBugs(List<Vector3> front)
-    {
-        var forRemove = new List<Vector3>();
-        for (int i = 0; i < front.Count; i++)
-        {
-            if (i == (front.Count - 1))
-            {
-                break;
-            }
-            var pointDistance = Vector2.Distance(new Vector2(front[i].x, front[i].z), new Vector2(front[i + 1].x, front[i + 1].z));
-            if (pointDistance > (Map.Instance.ProvinceRadius * 2))
-            {
-                forRemove.Add(front[i]);
-            }
-        }
-        front.RemoveAll(pr => forRemove.Contains(pr));
-        return front;
-    }
-
-    public void DrawAttackPlanLine(List<Vector3> vectors)
-    {
-        if (_drawedAttackLine == null)
-        {
-            _drawedAttackLine = Instantiate(_attackLinePrefab);
-        }
-        var lr = _drawedAttackLine.GetComponent<LineRenderer>();
-        lr.transform.position = vectors[0];
-        lr.positionCount = 0;
-        lr.SetPositions(new Vector3[0]);
-        lr.positionCount = vectors.Count;
-        lr.transform.localEulerAngles = new Vector3(90, 0, 0);
-        for (int i = 0; i < vectors.Count; i++)
-        {
-            lr.SetPosition(i, vectors[i] + (Vector3.up * 0.5f));
-        }
-    }
-
-    public static Vector3 FindMinDistancePoint(List<Vector3> provinces, Vector3 targetProv, out float distance)
-    {
-        var distances = new List<float>();
-        for (int i = 0; i < provinces.Count; i++)
-        {
-            distances.Add(Vector2.Distance(new Vector2(provinces[i].x, provinces[i].z), new Vector2(targetProv.x, targetProv.z)));//Vector3.Distance(provinces[i], targetProv));
-        }
-        var min = distances.Min();
-        distance = min;
-        return provinces.Find(p => Vector2.Distance(new Vector2(p.x, p.z), new Vector2(targetProv.x, targetProv.z)) == min);
-    }
 
     public void OnArmyClick()
     {

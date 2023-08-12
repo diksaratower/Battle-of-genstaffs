@@ -14,11 +14,10 @@ public class ArmiesUI : MonoBehaviour
     [SerializeField] private Button _createFrontPlanButton;
     [SerializeField] private Button _createAttackLineButton;
     [SerializeField] private Button _deleteAllFrontPlansButton;
+    [SerializeField] private Button _createSeaLandingButton;
 
     private Country _country => Player.CurrentCountry;
     private List<ArmyUI> _armiesUI = new List<ArmyUI>();
-    private bool _creationFrontUI;
-    private bool _drawAttackLine;
 
     private void Start()
     {
@@ -30,9 +29,23 @@ public class ArmiesUI : MonoBehaviour
                 _country.CountryArmies.AddArmy(divisions);
             }
         });
-        _createFrontPlanButton.onClick.AddListener(CreateFrontPlanButtonClick);
-        _createAttackLineButton.onClick.AddListener(() => {
-            _drawAttackLine = !_drawAttackLine;
+        _createFrontPlanButton.onClick.AddListener(delegate 
+        {
+            var armyUI = GetSelectedArmy();
+            if (armyUI != null)
+            {
+                armyUI.CreationFrontUI = true;
+            }
+            //_creationFrontUI = true;
+        });
+        _createSeaLandingButton.onClick.AddListener(delegate 
+        {
+            var armyUI = GetSelectedArmy();
+            if (armyUI != null)
+            {
+                armyUI.CreationSeaLanding = true;
+            }
+            //_drawNavyLanding = true;
         });
         _deleteAllFrontPlansButton.onClick.AddListener(DeleteAllFrontPlansButtonClick);
         _country.CountryArmies.OnArmiesChanged += delegate
@@ -49,6 +62,12 @@ public class ArmiesUI : MonoBehaviour
 
     private void Update()
     {
+        var selectedArmy = GetSelectedArmy();
+        if (selectedArmy != null)
+        {
+            _createFrontPlanButton.interactable = !selectedArmy.CreationFrontUI;
+            _createSeaLandingButton.interactable = !selectedArmy.CreationSeaLanding;
+        }
         _createArmyButton.interactable = GetSelectedNotArmiesDivisions().Count > 0;
         if (_armiesUI.Find(arm => arm.Selected == true) != null)
         {
@@ -58,24 +77,7 @@ public class ArmiesUI : MonoBehaviour
         {
             _planPanel.SetActive(false);
         }
-        if (_drawAttackLine && GetSelectedArmy() != null)
-        {
-            var armyUI = GetSelectedArmy();
-            if (armyUI.TargetArmy.Plans.Count > 0)
-            {
-                if(armyUI.TargetArmy.Plans.Exists(pl => pl is FrontPlan))
-                {
-                    if (GameCamera.Instance.ChekHitToProvinceWithMousePosition(out var prov))
-                    {
-                        if (Input.GetKeyDown(KeyCode.Mouse0))
-                        {
-                            _drawAttackLine = false;
-                            armyUI.Deselect();
-                        }
-                    }
-                }
-            }
-        }
+      /*
         if (_creationFrontUI && GetSelectedArmy() != null)
         {
             var armyUI = GetSelectedArmy();
@@ -100,6 +102,29 @@ public class ArmiesUI : MonoBehaviour
                 }
             }
         }
+        if (_drawNavyLanding && GetSelectedArmy() != null)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse1))
+            {
+                var armyUI = GetSelectedArmy();
+
+                if (GameCamera.Instance.ChekHitToProvinceWithMousePosition(out var province))
+                {
+                    if (province.Owner.ID != "null")
+                    {
+                        if (province.Contacts.Count < 6)
+                        {
+                            _drawNavyLanding = false;
+                            if (SeaLandingPlan.ArmyCanExecuteSeaLanding(armyUI.TargetArmy, out var startNavyBase))
+                            {
+                                var seaLandingPlan = new SeaLandingPlan(new List<Division>(armyUI.TargetArmy.Divisions), province, startNavyBase);
+                                armyUI.DrawSeaLandingPlan(seaLandingPlan);
+                            }
+                        }
+                    }
+                }
+            }
+        }*/
     }
 
     private void RefreshArmies()
@@ -127,11 +152,6 @@ public class ArmiesUI : MonoBehaviour
             }
         }
         return selectedNotArmiesDivisions;
-    }
-
-    private void CreateFrontPlanButtonClick()
-    {
-        _creationFrontUI = true;
     }
 
     private void DeleteAllFrontPlansButtonClick()

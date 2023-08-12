@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CountryBuild
 {
+    public static Action<Building> OnAddBuilding;
     public float BaseBuildEfficiency { get; private set; } = 1f;
 
     public Action OnAddedBuildingToQueue;
@@ -131,6 +132,7 @@ public class CountryBuildSlot
         {
             BuildRegion.AddBuildingToRegion(Building);
         }
+        CountryBuild.OnAddBuilding?.Invoke(Building);
     }
 
     public bool IsBuildEnd()

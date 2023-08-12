@@ -262,6 +262,8 @@ MonoBehaviour:
   _forceFactorText: {fileID: 3813202573724505003}
   _doPlansToggle: {fileID: 8771305476330793151}
   _deleteArmyButton: {fileID: 8385206475691884387}
+  _landingPlanViewPrefab: {fileID: 7790811630626463671, guid: 7972e0bdee5c63b4a8758888dd24d17d,
+    type: 3}
 --- !u!114 &4200217557633706992
 MonoBehaviour:
   m_ObjectHideFlags: 0

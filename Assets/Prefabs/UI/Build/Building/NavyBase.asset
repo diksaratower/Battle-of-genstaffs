@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bbbffc3a0ac820409ecb827d7f8ea6a, type: 3}
   m_Name: NavyBase
   m_EditorClassIdentifier: 
-  BuildCost: 1000
-  Name: 
-  BuildingImage: {fileID: 0}
-  ID: 
-  BuildingType: 0
+  BuildCost: 400
+  Name: "\u041F\u043E\u0440\u0442"
+  BuildingImage: {fileID: 21300000, guid: 2d5ccf71700cff24dab9c46f7bcd7b05, type: 3}
+  ID: navy_base
+  BuildingType: 4
