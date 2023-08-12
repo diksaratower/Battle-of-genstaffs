@@ -9,11 +9,19 @@ public class NotPrefabTooltipHandlerUI : TooltipHandlerUI
 
     private Type _viewMenuType;
     private static TooltipsDataSO _dataCashed;
+    private Action<TooltipViewMenu> _onRefreshUI;
 
     public void Initialize<T>() where T : TooltipViewMenu
     {
         GetTooltipsData();
         _viewMenuType = typeof(T);
+    }
+
+    public void Initialize(Action<TooltipViewMenu> onRefreshUI)
+    {
+        GetTooltipsData();
+        _viewMenuType = typeof(TooltipViewMenu);
+        _onRefreshUI = onRefreshUI;
     }
 
     public void Initialize<T>(NotPrefabTooltipHandlerData handlerData) where T : TooltipViewMenu
@@ -32,6 +40,7 @@ public class NotPrefabTooltipHandlerUI : TooltipHandlerUI
         var menu = Instantiate(GetTooltipsData().MenuStandartPrefab, GetTooltipsParent().transform);
         menu.AddComponent(_viewMenuType);
         _tooltipViewMenu = menu.GetComponent<TooltipViewMenu>();
+        _tooltipViewMenu.OnRefreshUI += (TooltipViewMenu tooltipMenu) => _onRefreshUI.Invoke(tooltipMenu);
         _tooltipViewMenu.RefreshUI(this);
     }
 

@@ -10,18 +10,12 @@ public class CountryJustifyWarGoalDataUI : MonoBehaviour
     public void RefreshUI(Country country, WarGoalJustificationQueueSlot justificationQueueSlot)
     {
         _countryFlag.sprite = country.Flag;
+
         var tooltip = gameObject.AddComponent<NotPrefabTooltipHandlerUI>();
-        
-        tooltip.Initialize<WarGoalJustificationTimeTooltipView>(new JustifyWarGoalTooltipHandlerData(justificationQueueSlot));
-    }
-}
 
-public class JustifyWarGoalTooltipHandlerData : NotPrefabTooltipHandlerData
-{
-    public WarGoalJustificationQueueSlot JustificationQueueSlot { get; }
-
-    public JustifyWarGoalTooltipHandlerData(WarGoalJustificationQueueSlot justificationQueueSlot) 
-    {
-        JustificationQueueSlot = justificationQueueSlot;
+        tooltip.Initialize((TooltipViewMenu menu) =>
+        {
+            menu.AddDynamicText(() => $"Оправдание цели войны {justificationQueueSlot.JustificationProgress}/{justificationQueueSlot.JustificationTimeDays} дней", false);
+        });
     }
 }

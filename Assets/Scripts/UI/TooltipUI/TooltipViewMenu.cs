@@ -7,6 +7,8 @@ using UnityEngine.UI;
 [RequireComponent(typeof(VerticalLayoutGroup))]
 public class TooltipViewMenu : MonoBehaviour
 {
+    public Action<TooltipViewMenu> OnRefreshUI;
+
     private TooltipsDataSO _tooltipsData => NotPrefabTooltipHandlerUI.GetTooltipsData();
     [SerializeField] private VerticalLayoutGroup _verticalGroup;
 
@@ -15,6 +17,7 @@ public class TooltipViewMenu : MonoBehaviour
 
     public virtual void RefreshUI(TooltipHandlerUI tooltipHandler)
     {
+        OnRefreshUI?.Invoke(this);
         UpdatePositionFollowMouse();
     }
 
@@ -27,14 +30,14 @@ public class TooltipViewMenu : MonoBehaviour
         UpdatePositionFollowMouse();
     }
 
-    protected void AddDynamicText(Func<string> getTextFunc, bool prefferdSizeHorizontal = true)
+    public void AddDynamicText(Func<string> getTextFunc, bool prefferdSizeHorizontal = true)
     {
         var text = new DynamicText(InstantiateText(getTextFunc(), prefferdSizeHorizontal), getTextFunc);
         text.UpdateText();
         _dynamicTexts.Add(text);
     }
 
-    protected void AddSimpleText(string text, bool prefferdSizeHorizontal = true)
+    public void AddSimpleText(string text, bool prefferdSizeHorizontal = true)
     {
         InstantiateText(text, prefferdSizeHorizontal);
     }

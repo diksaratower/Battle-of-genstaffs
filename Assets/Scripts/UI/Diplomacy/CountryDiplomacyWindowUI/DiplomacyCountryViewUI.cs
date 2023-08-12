@@ -11,6 +11,7 @@ public class DiplomacyCountryViewUI : MonoBehaviour
     [SerializeField] private Transform _diplomacyDataParent;
     [SerializeField] private CountryJustifyWarGoalDataUI _diplomacyJustifyWarGoalDataPrefab;
     [SerializeField] private CountryWarDataUI _diplomacyWarDataPrefab;
+    [SerializeField] private GuaranteeIndependenceDataViewUI _guaranteeIndependenceDataPrefab;
 
     private List<GameObject> _buttons = new List<GameObject>();
     private List<GameObject> _datesUI = new List<GameObject>();
@@ -33,8 +34,7 @@ public class DiplomacyCountryViewUI : MonoBehaviour
         if (playerRelation.IsWar == false && playerCountry.CountryDiplomacy.IsHaveWarGoal(targetCountry) == false &&
             playerCountry.CountryDiplomacy.GetJustificationQueue().Exists(slot => slot.Target == targetCountry) == false)
         {
-            var button = Instantiate(_diplomacyActionButtonPrefab, _actionButtonsParent);
-            button.GetComponentInChildren<TextMeshProUGUI>().text = "ќправдать войну";
+            var button = AddActionButton("ќправдать войну");
             button.onClick.AddListener(delegate
             {
                 playerCountry.CountryDiplomacy.StartJustificationWarGoal(targetCountry);
@@ -44,8 +44,7 @@ public class DiplomacyCountryViewUI : MonoBehaviour
         }
         if (playerRelation.IsWar == false && playerCountry.CountryDiplomacy.IsHaveWarGoal(targetCountry))
         {
-            var button = Instantiate(_diplomacyActionButtonPrefab, _actionButtonsParent);
-            button.GetComponentInChildren<TextMeshProUGUI>().text = "ќбъ€вить войну";
+            var button = AddActionButton("ќбъ€вить войну");
             button.onClick.AddListener(delegate
             {
                 Diplomacy.Instance.DeclareWar(playerCountry, targetCountry);
@@ -53,6 +52,23 @@ public class DiplomacyCountryViewUI : MonoBehaviour
             });
             _buttons.Add(button.gameObject);
         }
+        if (playerRelation.IsWar == false && Diplomacy.Instance.HaveGuaranteeIndependence(playerCountry, targetCountry) == false)
+        {
+            var button = AddActionButton("√арантировать независ.");
+            button.onClick.AddListener(delegate
+            {
+                Diplomacy.Instance.GuaranteeIndependence(playerCountry, targetCountry);
+                RefreshUI(targetCountry, playerCountry);
+            });
+            _buttons.Add(button.gameObject);
+        }
+    }
+
+    private Button AddActionButton(string text)
+    {
+        var button = Instantiate(_diplomacyActionButtonPrefab, _actionButtonsParent);
+        button.GetComponentInChildren<TextMeshProUGUI>().text = text;
+        return button;
     }
 
     private void RefreshDates(Country targetCountry)
@@ -77,6 +93,12 @@ public class DiplomacyCountryViewUI : MonoBehaviour
                 var justifyUI = Instantiate(_diplomacyJustifyWarGoalDataPrefab, _diplomacyDataParent);
                 justifyUI.RefreshUI(country, country.CountryDiplomacy.GetJustificationQueue().Find(slot => slot.Target == targetCountry));
                 _datesUI.Add(justifyUI.gameObject);
+            }
+            if (Diplomacy.Instance.HaveGuaranteeIndependence(country, targetCountry))
+            {
+                var guaranteeUI = Instantiate(_guaranteeIndependenceDataPrefab, _diplomacyDataParent);
+                guaranteeUI.RefreshUI(country, targetCountry);
+                _datesUI.Add(guaranteeUI.gameObject);
             }
         }
     }    

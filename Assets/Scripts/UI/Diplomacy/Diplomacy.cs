@@ -1,15 +1,16 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 
 public class Diplomacy : MonoBehaviour
 {
     public static Diplomacy Instance { get; private set; }
-    public static List<War> Wars = new List<War>();
+    public List<War> Wars = new List<War>();
+    public List<GuaranteeIndependence> GuaranteesIndependences = new List<GuaranteeIndependence>();
 
     [SerializeField] private List<DiplomaticRelationsWithCountry> _diplomaticRelations = new List<DiplomaticRelationsWithCountry>();
+
 
     private void Awake()
     {
@@ -35,7 +36,32 @@ public class Diplomacy : MonoBehaviour
         var war = new War();
         war.AddToWar(aggressor, WarMemberType.Aggressor);
         war.AddToWar(victim, WarMemberType.Defender);
+        UseGuarantees(aggressor, victim, war);
         Wars.Add(war);
+    }
+
+    private void UseGuarantees(Country aggressor, Country victim, War war)
+    {
+        var guaranteeIndependences = GuaranteesIndependences.Find(guarantee => guarantee.Target == victim && guarantee.Guaranter != aggressor);
+        if (guaranteeIndependences != null)
+        {
+            war.AddToWar(guaranteeIndependences.Guaranter, WarMemberType.Defender);
+        }
+    }
+
+    public bool HaveGuaranteeIndependence(Country guaranter, Country target)
+    {
+        return GuaranteesIndependences.Exists(guarantee => guarantee.Guaranter == guaranter && guarantee.Target == target);
+    }
+
+    public void GuaranteeIndependence(Country guaranter, Country target)
+    {
+        if (HaveGuaranteeIndependence(guaranter, target))
+        {
+            return;
+        }
+        var guarantee = new GuaranteeIndependence(guaranter, target);
+        GuaranteesIndependences.Add(guarantee);
     }
 
     public DiplomaticRelationsWithCountry GetRelationWithCountry(Country countryA, Country countryB)
@@ -79,80 +105,14 @@ public class Diplomacy : MonoBehaviour
     }
 }
 
-public class War
+public class GuaranteeIndependence
 {
-    public Action OnEnd;
+    public Country Guaranter { get; }
+    public Country Target { get; }
 
-    private List<WarMember> _warMembers = new List<WarMember>();
-
-    public War()
+    public GuaranteeIndependence(Country guaranter, Country target)
     {
-
-    }
-
-    public List<WarMember> GetMembers()
-    {
-        return new List<WarMember>(_warMembers);
-    }
-
-    public void AddToWar(Country country, WarMemberType warMemberType)
-    {
-        _warMembers.Add(new WarMember(country, warMemberType));
-    }
-
-    public bool CountryIsWarMember(Country country)
-    {
-        return GetCountryIsWarMember(country) != null;
-    }
-
-    public WarMember GetCountryIsWarMember(Country country)
-    {
-        var member = _warMembers.Find(member => member.Country == country);
-        return member;
-    }
-
-    public bool NeedEnd()
-    {
-        var allAggressorCapitulated = _warMembers.FindAll(member => member.MemberType == WarMemberType.Aggressor).Count 
-            == _warMembers.FindAll(member => (member.MemberType == WarMemberType.Aggressor && member.Country.IsÑapitulated == true)).Count;
-
-        var allDefendersCapitulated = _warMembers.FindAll(member => member.MemberType == WarMemberType.Defender).Count
-            == _warMembers.FindAll(member => (member.MemberType == WarMemberType.Defender && member.Country.IsÑapitulated == true)).Count;
-        return allAggressorCapitulated || allDefendersCapitulated;
-    }
-
-    public void EndWar()
-    {
-        _warMembers.Clear();
-        OnEnd?.Invoke();
-    }
-
-    public string GetWarName() 
-    {
-        return $"Âîéíà {_warMembers.Find(agr => agr.MemberType == WarMemberType.Aggressor).Country.Name}-{_warMembers.Find(agr => agr.MemberType == WarMemberType.Defender).Country.Name}";
+        Guaranter = guaranter;
+        Target = target;
     }
 }
-
-public class WarMember
-{
-    public Country Country { get; }
-    public WarMemberType MemberType { get; }
-    public int ManPowerLosses { get; private set; }
-
-    public WarMember(Country country, WarMemberType memberType)
-    {
-        Country = country;
-        MemberType = memberType;
-        country.OnManpowerLosses += (int lossesCount) =>
-        {
-            ManPowerLosses += lossesCount;
-        };
-    }
-}
-
-public enum WarMemberType
-{
-    Aggressor,
-    Defender
-}
-

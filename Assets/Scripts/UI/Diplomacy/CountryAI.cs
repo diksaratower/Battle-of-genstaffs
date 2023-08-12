@@ -16,14 +16,18 @@ public class CountryAI : MonoBehaviour
     private void Start()
     {
         _country = GetComponent<Country>();
-        _country.CountryDiplomacy.OnAddWarGoal += (WarGoal warGoal) => 
-        {
-            _country.CountryDiplomacy.DeclareWarToCountry(warGoal.Target);
-        };
         if (NeedAIWork() == false)
         {
             return;
         }
+        if (_country.ID == "fra" || _country.ID == "eng")
+        {
+            Diplomacy.Instance.GuaranteeIndependence(_country, Map.Instance.GetCountryFromId("pol"));
+        }
+        _country.CountryDiplomacy.OnAddWarGoal += (WarGoal warGoal) =>
+        {
+            _country.CountryDiplomacy.DeclareWarToCountry(warGoal.Target);
+        };
         if (_country.CountryPreset.CountrySizeType == CountryAISizeData.Minor)
         {
             _maxDivisionsCount = 4;
