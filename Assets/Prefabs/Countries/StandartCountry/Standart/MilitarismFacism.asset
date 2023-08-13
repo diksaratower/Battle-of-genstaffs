@@ -15,6 +15,7 @@ MonoBehaviour:
   Name: "\u041C\u0438\u043B\u0438\u0442\u0430\u0440\u0438\u0437\u043C"
   Description: 
   Image: {fileID: 21300000, guid: 18001bd87578a7f458b5030135269024, type: 3}
-  ExecutionDurationDay: 0
+  ExecutionDurationDay: 45
   NeedsForExecution:
   - {fileID: 11400000, guid: c04d787b5722e6c4c80205cd1c708f87, type: 2}
+  FocusEffects: []
