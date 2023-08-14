@@ -73,6 +73,7 @@ public class DebugConsoleUI : MonoBehaviour
             {
                 country.EquipmentStorage.SetManpowerCount(Mathf.RoundToInt(((float)country.CountryPreset.Population / 100f) * country.Politics.GetConscriptionPercent()));
             }
+            WriteTextToConsole("Добавлены люди.");
         }
         if (text == "prom")
         {

@@ -19,6 +19,7 @@ public class ArmiesUI : MonoBehaviour
     private Country _country => Player.CurrentCountry;
     private List<ArmyUI> _armiesUI = new List<ArmyUI>();
 
+
     private void Start()
     {
         _createArmyButton.onClick.AddListener(delegate 
@@ -36,7 +37,6 @@ public class ArmiesUI : MonoBehaviour
             {
                 armyUI.CreationFrontUI = true;
             }
-            //_creationFrontUI = true;
         });
         _createSeaLandingButton.onClick.AddListener(delegate 
         {
@@ -45,7 +45,6 @@ public class ArmiesUI : MonoBehaviour
             {
                 armyUI.CreationSeaLanding = true;
             }
-            //_drawNavyLanding = true;
         });
         _deleteAllFrontPlansButton.onClick.AddListener(DeleteAllFrontPlansButtonClick);
         _country.CountryArmies.OnArmiesChanged += delegate
@@ -77,54 +76,6 @@ public class ArmiesUI : MonoBehaviour
         {
             _planPanel.SetActive(false);
         }
-      /*
-        if (_creationFrontUI && GetSelectedArmy() != null)
-        {
-            var armyUI = GetSelectedArmy();
-            
-            if (GameCamera.Instance.ChekHitToProvinceWithMousePosition(out var prov))
-            {
-                if (prov.Owner == Player.CurrentCountry && prov.Owner.ID != "null")
-                {
-                    if (prov.Contacts.Find(pr => pr.Owner != prov.Owner) != null)
-                    {
-                        if (Input.GetKeyDown(KeyCode.Mouse0))
-                        {
-                            _creationFrontUI = false;
-                            armyUI.Deselect();
-                            var enemyCountry = prov.Contacts.Find(pr => pr.Owner != prov.Owner).Owner;
-                            armyUI.TargetArmy.RemoveAllPlans();
-                            var plan = new FrontPlan(armyUI.TargetArmy.Divisions.ToList(), enemyCountry, Player.CurrentCountry);
-                            armyUI.TargetArmy.AddPlan(plan);
-                            plan.Initialize();
-                        }
-                    }
-                }
-            }
-        }
-        if (_drawNavyLanding && GetSelectedArmy() != null)
-        {
-            if (Input.GetKeyDown(KeyCode.Mouse1))
-            {
-                var armyUI = GetSelectedArmy();
-
-                if (GameCamera.Instance.ChekHitToProvinceWithMousePosition(out var province))
-                {
-                    if (province.Owner.ID != "null")
-                    {
-                        if (province.Contacts.Count < 6)
-                        {
-                            _drawNavyLanding = false;
-                            if (SeaLandingPlan.ArmyCanExecuteSeaLanding(armyUI.TargetArmy, out var startNavyBase))
-                            {
-                                var seaLandingPlan = new SeaLandingPlan(new List<Division>(armyUI.TargetArmy.Divisions), province, startNavyBase);
-                                armyUI.DrawSeaLandingPlan(seaLandingPlan);
-                            }
-                        }
-                    }
-                }
-            }
-        }*/
     }
 
     private void RefreshArmies()

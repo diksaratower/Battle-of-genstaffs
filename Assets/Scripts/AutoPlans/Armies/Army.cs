@@ -1,8 +1,6 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
+
 
 public class Army 
 {
@@ -14,10 +12,12 @@ public class Army
     public DoPlanType DoPlanType = DoPlanType.Defense;
 
     private List<PlanBase> _plans = new List<PlanBase>();
+    private CountryArmies _countryArmies;
+
 
     public Army(CountryArmies countryArmies)
     {
-
+        _countryArmies = countryArmies;
     }
 
     public void StopWorkArmy()
@@ -64,6 +64,18 @@ public class Army
 
     public void AddDivisions(List<Division> divisions)
     {
+        foreach (var division in divisions)
+        {
+            division.OnDivisionRemove += delegate
+            {
+                Divisions.Remove(division);
+                if (Divisions.Count == 0)
+                {
+                    StopWorkArmy();
+                    _countryArmies.RemoveArmy(this);
+                }
+            };
+        }
         Divisions.AddRange(divisions);
     }
 

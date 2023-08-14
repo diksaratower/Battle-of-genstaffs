@@ -25,7 +25,8 @@ public class ArmyUI : MonoBehaviour
     [SerializeField] private NavyLandingPlanView _landingPlanViewPrefab;
 
     private List<GameObject> _drawedFrontLines = new List<GameObject>();
-    private GameObject _drawedAttackLine;
+    private List<NavyLandingPlanView> _navyLandingPlanViews = new List<NavyLandingPlanView>();
+
 
     private void Start()
     {
@@ -131,11 +132,11 @@ public class ArmyUI : MonoBehaviour
         }
     }
 
-    private NavyLandingPlanView DrawSeaLandingPlan(SeaLandingPlan seaLandingPlan)
+    private void DrawSeaLandingPlan(SeaLandingPlan seaLandingPlan)
     {
         var view = Instantiate(_landingPlanViewPrefab);
         view.Refresh(seaLandingPlan);
-        return view;
+        _navyLandingPlanViews.Add(view);
     }
 
     private async void AsyncUpdateFront(FrontPlan plan, List<FrontPlan.FrontData> frontDates)
@@ -190,18 +191,26 @@ public class ArmyUI : MonoBehaviour
     {
         _frontLinePrefab = null;
         DestroyFrontView();
+        DestroyNavyLandingViews();
     }
 
     private void DestroyFrontView()
     {
         _drawedFrontLines.ForEach(line => { Destroy(line); });
         _drawedFrontLines.Clear();
-        if (_drawedAttackLine != null)
-        {
-            Destroy(_drawedAttackLine);
-        }
     }
 
+    private void DestroyNavyLandingViews()
+    {
+        _navyLandingPlanViews.ForEach(planView =>
+        {
+            if (planView != null)
+            {
+                Destroy(planView.gameObject);
+            }
+        });
+        _navyLandingPlanViews.Clear();
+    }
 
     public void OnArmyClick()
     {

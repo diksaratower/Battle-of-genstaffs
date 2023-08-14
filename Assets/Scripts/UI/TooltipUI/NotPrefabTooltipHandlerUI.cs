@@ -40,7 +40,7 @@ public class NotPrefabTooltipHandlerUI : TooltipHandlerUI
         var menu = Instantiate(GetTooltipsData().MenuStandartPrefab, GetTooltipsParent().transform);
         menu.AddComponent(_viewMenuType);
         _tooltipViewMenu = menu.GetComponent<TooltipViewMenu>();
-        _tooltipViewMenu.OnRefreshUI += (TooltipViewMenu tooltipMenu) => _onRefreshUI.Invoke(tooltipMenu);
+        _tooltipViewMenu.OnRefreshUI += (TooltipViewMenu tooltipMenu) => _onRefreshUI?.Invoke(tooltipMenu);
         _tooltipViewMenu.RefreshUI(this);
     }
 

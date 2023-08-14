@@ -129,7 +129,7 @@ public class CountryAI : MonoBehaviour
         {
             return;
         }
-
+       
         _country.CountryArmies.RemoveAllArmies();
         var army = _country.CountryArmies.AddArmy(divs);
         army.DoPlanType = DoPlanType.Defense;

@@ -17,6 +17,10 @@ public class SeaLandingPlan : PlanBase
 
     public override void DoPlan(DoPlanType doType)
     {
+        if (_isExecuted == true)
+        {
+            return;
+        }
         if (doType == DoPlanType.Attack)
         {
             foreach (var division in AttachedDivisions)
@@ -26,6 +30,7 @@ public class SeaLandingPlan : PlanBase
                     if (TargetProvince.AllowedForDivision(division))
                     {
                         division.TeleportDivision(TargetProvince);
+                        _isExecuted = true;
                     }
                 }
             }

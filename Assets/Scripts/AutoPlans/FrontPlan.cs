@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 
 public class FrontPlan : PlanBase
@@ -57,11 +58,15 @@ public class FrontPlan : PlanBase
         }
         if (doType == DoPlanType.Attack)
         {
-            foreach (var div in AttachedDivisions)
+            if (FrontCanExist(_ally, _enemy))
             {
-                if (div.MovePath.Count == 0 && div.Combats.Count == 0)
+                var frontAttackProvinces = Map.Instance.Provinces.FindAll(p => p.Owner == _enemy && p.Contacts.Exists(pr => pr.Owner == _ally));
+                foreach (var div in AttachedDivisions)
                 {
-                    AttackDivision(div);
+                    if (div.MovePath.Count == 0 && div.Combats.Count == 0)
+                    {
+                        AttackDivision(div, frontAttackProvinces);
+                    }
                 }
             }
         }
@@ -70,7 +75,6 @@ public class FrontPlan : PlanBase
     private async void RecalculateFront()
     {
         var newFrontDates = new List<FrontData>();
-        //await Task.Delay(20);
         await Task.Run(delegate 
         { 
            newFrontDates = GetFrontProvincesSuperSmartAsync(_ally, _enemy);
@@ -150,7 +154,7 @@ public class FrontPlan : PlanBase
         }
     }
 
-    private void AttackDivision(Division division)
+    private void AttackDivision(Division division, List<Province> frontProvinces)
     {
         var attackingProvs = new List<Province>();
         foreach (var div in AttachedDivisions)
@@ -164,7 +168,7 @@ public class FrontPlan : PlanBase
         attakingProf = division.DivisionProvince.Contacts.Find(p => p.Owner == _enemy && !attackingProvs.Contains(p));
         if(attakingProf == null)
         {
-            var enemyProvs = Map.Instance.Provinces.FindAll(p => p.Owner == _enemy && !attackingProvs.Contains(p));
+            var enemyProvs = frontProvinces.FindAll(p => p.Owner == _enemy && !attackingProvs.Contains(p));
             if(enemyProvs.Count == 0) 
             {
                 return;
@@ -172,7 +176,7 @@ public class FrontPlan : PlanBase
             attakingProf = Division.FindMinDistanceProv(enemyProvs, division.DivisionProvince);
         }
 
-        if (((division.Organization / division.MaxOrganization) > 0.2f) && division.Combats.Count == 0)
+        if (((division.Organization / division.MaxOrganization) > 0.25f) && division.Combats.Count == 0 && division.GetEquipmentProcent() > 0.60f)
         {
             division.MoveDivision(attakingProf);
         }
@@ -205,32 +209,23 @@ public class FrontPlan : PlanBase
     {
         var result = new List<FrontData>();
         var frontProvinces = new List<Province>();
-        //await Task.Run(delegate 
-       // {
-            frontProvinces = GetFrontProvinces(enemy, ally);
-        //});
-        //await Task.Delay(20);
-        ///await Task.Run(delegate
-        //{
-            while (frontProvinces.Count != 0)
+
+        frontProvinces = GetFrontProvinces(enemy, ally);
+
+        while (frontProvinces.Count != 0)
+        {
+            var bfsProvinces = FrontPlan.BFS(frontProvinces[0], frontProvinces);
+            result.Add(new FrontData(bfsProvinces, new List<Province>()));
+            frontProvinces.RemoveAll(pr => bfsProvinces.Contains(pr));
+        }
+
+        foreach (var data in result)
+        {
+            foreach (var province in data.FrontProvinces)
             {
-                var bfsProvinces = FrontPlan.BFS(frontProvinces[0], frontProvinces);
-                result.Add(new FrontData(bfsProvinces, new List<Province>()));
-                frontProvinces.RemoveAll(pr => bfsProvinces.Contains(pr));
+                data.FrontAllyContacts.AddRange(province.Contacts.FindAll(con => (con.Owner == ally && data.FrontAllyContacts.Contains(con) == false)));
             }
-        //});
-        //await Task.Delay(20);
-       
-        //await Task.Run(delegate
-        //{
-            foreach (var data in result)
-            {
-                foreach (var province in data.FrontProvinces)
-                {
-                    data.FrontAllyContacts.AddRange(province.Contacts.FindAll(con => (con.Owner == ally && data.FrontAllyContacts.Contains(con) == false)));
-                }
-            }
-        //});
+        }
         return result;
     }
 
@@ -246,10 +241,30 @@ public class FrontPlan : PlanBase
         }
     }
 
-    public static List<Province> GetFrontProvinces(Country ally, Country enem)
+    public static bool FrontCanExist(Country ally, Country enemy)
+    {
+        var regions = ally.GetCountryRegions();
+        if (regions.Count == 0)
+        {
+            return false;
+        }
+        foreach (var region in regions)
+        {
+            foreach (var province in region.Provinces)
+            {
+                if (province.Owner == ally && province.Contacts.Exists(pr => pr.Owner == enemy))
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static List<Province> GetFrontProvinces(Country ally, Country enemy)
     {
         var frontProvs = new List<Province>();
-        frontProvs = Map.Instance.Provinces.FindAll(p => p.Owner == ally && p.Contacts.Exists(pr => pr.Owner == enem));
+        frontProvs = Map.Instance.Provinces.FindAll(p => p.Owner == ally && p.Contacts.Exists(pr => pr.Owner == enemy));
         return frontProvs;
     }
 
