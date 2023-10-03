@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 036208fcbf9d78247ae0ce722d719ab4, type: 3}
+  m_Name: DifficultiesData
+  m_EditorClassIdentifier: 
+  Difficulties:
+  - {fileID: 11400000, guid: f2e61498dc0070144a5e49f2f7dd3231, type: 2}
+  - {fileID: 11400000, guid: c95bbe16455fc2648b8379bd89f0d5cf, type: 2}
+  - {fileID: 11400000, guid: 1012a7da42b51834e8d813420163b841, type: 2}

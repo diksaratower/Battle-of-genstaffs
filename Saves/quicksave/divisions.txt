@@ -132,7 +132,7 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 7705
+                    "Count": 7792
                 },
                 {
                     "EqType": 3,
@@ -616,7 +616,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -636,7 +636,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -656,7 +656,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -676,7 +676,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -696,7 +696,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -716,7 +716,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -736,7 +736,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -756,7 +756,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -776,7 +776,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -796,7 +796,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -816,7 +816,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -836,27 +836,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 373.4301452636719,
-                "y": 1.0,
-                "z": 570.9000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "dan",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 16000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 12890
+                    "Count": 0
                 }
             ]
         },
@@ -922,13 +902,13 @@
         },
         {
             "Position": {
-                "x": 219.10443115234376,
+                "x": 373.4301452636719,
                 "y": 1.0,
-                "z": 521.4000244140625
+                "z": 570.9000244140625
             },
             "TemplateIndex": 0,
             "Organization": 4800.0,
-            "CountryOwnerID": "eng",
+            "CountryOwnerID": "dan",
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
@@ -936,207 +916,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 219.10443115234376,
-                "y": 1.0,
-                "z": 521.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "eng",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 16000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 219.10443115234376,
-                "y": 1.0,
-                "z": 521.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "eng",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 16000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 219.10443115234376,
-                "y": 1.0,
-                "z": 521.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "eng",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 16000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 219.10443115234376,
-                "y": 1.0,
-                "z": 521.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "eng",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 16000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 219.10443115234376,
-                "y": 1.0,
-                "z": 521.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "eng",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 16000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 219.10443115234376,
-                "y": 1.0,
-                "z": 521.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "eng",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 16000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 219.10443115234376,
-                "y": 1.0,
-                "z": 521.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "eng",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 16000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 219.10443115234376,
-                "y": 1.0,
-                "z": 521.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "eng",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 16000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 219.10443115234376,
-                "y": 1.0,
-                "z": 521.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "eng",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 7133
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 219.10443115234376,
-                "y": 1.0,
-                "z": 521.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "eng",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
                     "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
                 }
             ]
         },
@@ -1152,11 +932,11 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 0
+                    "Count": 16000
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -1172,11 +952,11 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 0
+                    "Count": 16000
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -1192,11 +972,11 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 0
+                    "Count": 16000
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -1212,11 +992,231 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 0
+                    "Count": 16000
                 },
                 {
                     "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 219.10443115234376,
+                "y": 1.0,
+                "z": 521.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "eng",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
                     "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 219.10443115234376,
+                "y": 1.0,
+                "z": 521.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "eng",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 219.10443115234376,
+                "y": 1.0,
+                "z": 521.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "eng",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 219.10443115234376,
+                "y": 1.0,
+                "z": 521.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "eng",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 219.10443115234376,
+                "y": 1.0,
+                "z": 521.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "eng",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 219.10443115234376,
+                "y": 1.0,
+                "z": 521.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "eng",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 219.10443115234376,
+                "y": 1.0,
+                "z": 521.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "eng",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 219.10443115234376,
+                "y": 1.0,
+                "z": 521.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "eng",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 219.10443115234376,
+                "y": 1.0,
+                "z": 521.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "eng",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 219.10443115234376,
+                "y": 1.0,
+                "z": 521.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "eng",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 219.10443115234376,
+                "y": 1.0,
+                "z": 521.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "eng",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
                 }
             ]
         },
@@ -1236,7 +1236,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 20000
+                    "Count": 0
                 }
             ]
         },
@@ -1256,7 +1256,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 20000
+                    "Count": 0
                 }
             ]
         },
@@ -1276,7 +1276,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 20000
+                    "Count": 0
                 }
             ]
         },
@@ -1296,7 +1296,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 20000
+                    "Count": 0
                 }
             ]
         },
@@ -1316,206 +1316,6 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 40
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 485.1000061035156
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 20000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 0
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 310.55670166015627,
-                "y": 1.0,
-                "z": 488.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 20000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 0
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 306.7461853027344,
-                "y": 1.0,
-                "z": 488.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 11133
-                },
-                {
-                    "EqType": 3,
-                    "Count": 0
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 302.9356689453125,
-                "y": 1.0,
-                "z": 488.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 0
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 299.1251525878906,
-                "y": 1.0,
-                "z": 488.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 0
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 471.9000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 0
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 314.3672180175781,
-                "y": 1.0,
-                "z": 475.20001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 0
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 316.2724914550781,
-                "y": 1.0,
-                "z": 478.5
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 0
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 316.2724914550781,
-                "y": 1.0,
-                "z": 485.1000061035156
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 0
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 314.3672180175781,
-                "y": 1.0,
-                "z": 481.8000183105469
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
                     "Count": 0
                 }
             ]
@@ -1532,7 +1332,7 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 0
+                    "Count": 12316
                 },
                 {
                     "EqType": 3,
@@ -1822,6 +1622,206 @@
         },
         {
             "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 471.9000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 314.3672180175781,
+                "y": 1.0,
+                "z": 475.20001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 316.2724914550781,
+                "y": 1.0,
+                "z": 478.5
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 316.2724914550781,
+                "y": 1.0,
+                "z": 485.1000061035156
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 314.3672180175781,
+                "y": 1.0,
+                "z": 481.8000183105469
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 485.1000061035156
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 310.55670166015627,
+                "y": 1.0,
+                "z": 488.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 306.7461853027344,
+                "y": 1.0,
+                "z": 488.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 302.9356689453125,
+                "y": 1.0,
+                "z": 488.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 299.1251525878906,
+                "y": 1.0,
+                "z": 488.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
                 "x": 451.5456237792969,
                 "y": 1.0,
                 "z": 462.0
@@ -1836,7 +1836,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -1856,7 +1856,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -1876,7 +1876,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -1896,7 +1896,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -1916,7 +1916,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 20000
+                    "Count": 0
                 }
             ]
         },
@@ -1936,7 +1936,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 20000
+                    "Count": 0
                 }
             ]
         },
@@ -1956,7 +1956,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 20000
+                    "Count": 0
                 }
             ]
         },
@@ -1976,7 +1976,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 20000
+                    "Count": 0
                 }
             ]
         },
@@ -1996,7 +1996,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 20000
+                    "Count": 0
                 }
             ]
         },
@@ -2012,51 +2012,11 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 20000
+                    "Count": 12316
                 },
                 {
                     "EqType": 3,
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 373.4301452636719,
-                "y": 1.0,
-                "z": 399.3000183105469
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "ita",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 20000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 373.4301452636719,
-                "y": 1.0,
-                "z": 399.3000183105469
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "ita",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 11133
-                },
-                {
-                    "EqType": 3,
-                    "Count": 20000
+                    "Count": 0
                 }
             ]
         },
@@ -2076,7 +2036,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 20000
+                    "Count": 0
                 }
             ]
         },
@@ -2096,7 +2056,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 20000
+                    "Count": 0
                 }
             ]
         },
@@ -2116,7 +2076,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 20000
+                    "Count": 0
                 }
             ]
         },
@@ -2136,7 +2096,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 20000
+                    "Count": 0
                 }
             ]
         },
@@ -2156,7 +2116,47 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 8892
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 373.4301452636719,
+                "y": 1.0,
+                "z": 399.3000183105469
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "ita",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 373.4301452636719,
+                "y": 1.0,
+                "z": 399.3000183105469
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "ita",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
                 }
             ]
         },
@@ -2516,7 +2516,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -2536,7 +2536,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -2556,7 +2556,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -2576,7 +2576,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -2596,7 +2596,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -2616,7 +2616,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -2636,7 +2636,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -2656,7 +2656,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -2676,7 +2676,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -2696,7 +2696,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -2716,7 +2716,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -2736,7 +2736,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -2756,7 +2756,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -2772,11 +2772,11 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 7133
+                    "Count": 16000
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -2792,11 +2792,11 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 0
+                    "Count": 16000
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -2812,11 +2812,11 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 0
+                    "Count": 16000
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -2832,11 +2832,11 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 0
+                    "Count": 16000
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -2852,11 +2852,11 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 0
+                    "Count": 16000
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -2872,17 +2872,57 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
                     "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
                 }
             ]
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 489.6507568359375,
+                "y": 1.0,
+                "z": 554.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 20000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 487.7455139160156,
+                "y": 1.0,
+                "z": 557.7000122070313
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 20000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
@@ -2902,9 +2942,9 @@
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 489.6507568359375,
                 "y": 1.0,
-                "z": 561.0
+                "z": 554.4000244140625
             },
             "TemplateIndex": 0,
             "Organization": 6000.0,
@@ -2922,9 +2962,9 @@
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 487.7455139160156,
                 "y": 1.0,
-                "z": 561.0
+                "z": 557.7000122070313
             },
             "TemplateIndex": 0,
             "Organization": 6000.0,
@@ -2942,7 +2982,7 @@
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
@@ -2952,7 +2992,7 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 20000
+                    "Count": 12316
                 },
                 {
                     "EqType": 3,
@@ -2962,9 +3002,9 @@
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 489.6507568359375,
                 "y": 1.0,
-                "z": 561.0
+                "z": 554.4000244140625
             },
             "TemplateIndex": 0,
             "Organization": 6000.0,
@@ -2972,7 +3012,7 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 20000
+                    "Count": 0
                 },
                 {
                     "EqType": 3,
@@ -2982,9 +3022,9 @@
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 487.7455139160156,
                 "y": 1.0,
-                "z": 561.0
+                "z": 557.7000122070313
             },
             "TemplateIndex": 0,
             "Organization": 6000.0,
@@ -2992,7 +3032,7 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 20000
+                    "Count": 0
                 },
                 {
                     "EqType": 3,
@@ -3002,47 +3042,7 @@
         },
         {
             "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 20000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 11133
-                },
-                {
-                    "EqType": 3,
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
@@ -3062,7 +3062,47 @@
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 489.6507568359375,
+                "y": 1.0,
+                "z": 554.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 487.7455139160156,
+                "y": 1.0,
+                "z": 557.7000122070313
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
@@ -3082,7 +3122,47 @@
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 489.6507568359375,
+                "y": 1.0,
+                "z": 554.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 487.7455139160156,
+                "y": 1.0,
+                "z": 557.7000122070313
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
@@ -3102,7 +3182,47 @@
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 489.6507568359375,
+                "y": 1.0,
+                "z": 554.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 487.7455139160156,
+                "y": 1.0,
+                "z": 557.7000122070313
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
@@ -3122,7 +3242,47 @@
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 489.6507568359375,
+                "y": 1.0,
+                "z": 554.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 487.7455139160156,
+                "y": 1.0,
+                "z": 557.7000122070313
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
@@ -3142,7 +3302,47 @@
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 489.6507568359375,
+                "y": 1.0,
+                "z": 554.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 487.7455139160156,
+                "y": 1.0,
+                "z": 557.7000122070313
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
@@ -3162,7 +3362,47 @@
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 489.6507568359375,
+                "y": 1.0,
+                "z": 554.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 487.7455139160156,
+                "y": 1.0,
+                "z": 557.7000122070313
+            },
+            "TemplateIndex": 0,
+            "Organization": 6000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 0
+                },
+                {
+                    "EqType": 3,
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
@@ -3182,9 +3422,9 @@
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 489.6507568359375,
                 "y": 1.0,
-                "z": 561.0
+                "z": 554.4000244140625
             },
             "TemplateIndex": 0,
             "Organization": 6000.0,
@@ -3202,9 +3442,9 @@
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 487.7455139160156,
                 "y": 1.0,
-                "z": 561.0
+                "z": 557.7000122070313
             },
             "TemplateIndex": 0,
             "Organization": 6000.0,
@@ -3222,247 +3462,7 @@
         },
         {
             "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 6000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
@@ -3496,7 +3496,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -3516,7 +3516,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -3536,7 +3536,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -3556,7 +3556,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -3656,207 +3656,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 175.28353881835938,
-                "y": 1.0,
-                "z": 372.8999938964844
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "isp",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 16000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 175.28353881835938,
-                "y": 1.0,
-                "z": 372.8999938964844
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "isp",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 16000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 175.28353881835938,
-                "y": 1.0,
-                "z": 372.8999938964844
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "isp",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 16000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 175.28353881835938,
-                "y": 1.0,
-                "z": 372.8999938964844
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "isp",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 16000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 175.28353881835938,
-                "y": 1.0,
-                "z": 372.8999938964844
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "isp",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 16000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 175.28353881835938,
-                "y": 1.0,
-                "z": 372.8999938964844
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "isp",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 16000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 175.28353881835938,
-                "y": 1.0,
-                "z": 372.8999938964844
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "isp",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 16000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 175.28353881835938,
-                "y": 1.0,
-                "z": 372.8999938964844
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "isp",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 16000
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 175.28353881835938,
-                "y": 1.0,
-                "z": 372.8999938964844
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "isp",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
-                    "Count": 7133
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 175.28353881835938,
-                "y": 1.0,
-                "z": 372.8999938964844
-            },
-            "TemplateIndex": 0,
-            "Organization": 4800.0,
-            "CountryOwnerID": "isp",
-            "EquipmentInDivision": [
-                {
-                    "EqType": 0,
                     "Count": 0
-                },
-                {
-                    "EqType": 3,
-                    "Count": 16000
                 }
             ]
         },
@@ -3872,11 +3672,11 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 0
+                    "Count": 16000
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -3892,11 +3692,11 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 0
+                    "Count": 16000
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -3912,11 +3712,11 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 0
+                    "Count": 16000
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -3932,11 +3732,211 @@
             "EquipmentInDivision": [
                 {
                     "EqType": 0,
-                    "Count": 0
+                    "Count": 16000
                 },
                 {
                     "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 175.28353881835938,
+                "y": 1.0,
+                "z": 372.8999938964844
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "isp",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
                     "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 175.28353881835938,
+                "y": 1.0,
+                "z": 372.8999938964844
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "isp",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 175.28353881835938,
+                "y": 1.0,
+                "z": 372.8999938964844
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "isp",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 175.28353881835938,
+                "y": 1.0,
+                "z": 372.8999938964844
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "isp",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 175.28353881835938,
+                "y": 1.0,
+                "z": 372.8999938964844
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "isp",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 175.28353881835938,
+                "y": 1.0,
+                "z": 372.8999938964844
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "isp",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 175.28353881835938,
+                "y": 1.0,
+                "z": 372.8999938964844
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "isp",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 175.28353881835938,
+                "y": 1.0,
+                "z": 372.8999938964844
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "isp",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 175.28353881835938,
+                "y": 1.0,
+                "z": 372.8999938964844
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "isp",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 175.28353881835938,
+                "y": 1.0,
+                "z": 372.8999938964844
+            },
+            "TemplateIndex": 0,
+            "Organization": 4800.0,
+            "CountryOwnerID": "isp",
+            "EquipmentInDivision": [
+                {
+                    "EqType": 0,
+                    "Count": 16000
+                },
+                {
+                    "EqType": 3,
+                    "Count": 0
                 }
             ]
         },
@@ -4116,7 +4116,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 10810
+                    "Count": 0
                 }
             ]
         },
@@ -4196,7 +4196,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 16000
+                    "Count": 0
                 }
             ]
         },
@@ -4216,7 +4216,7 @@
                 },
                 {
                     "EqType": 3,
-                    "Count": 13670
+                    "Count": 0
                 }
             ]
         },

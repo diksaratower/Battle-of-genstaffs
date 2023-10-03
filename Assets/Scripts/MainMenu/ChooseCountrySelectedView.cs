@@ -1,4 +1,3 @@
-using IJunior.TypedScenes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,9 +10,11 @@ public class ChooseCountrySelectedView : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _leaderNameText;
     [SerializeField] private TextMeshProUGUI _countryDescriptionText;
     [SerializeField] private Button _startWithCountryButton;
+    [SerializeField] private ChooseDifficultiesUI _chooseDifficultiesUI;
 
     public void RefreshUI(CountrySO country)
     {
+        _chooseDifficultiesUI.RefreshUI();
         _countryNameText.text = country.Name;
         _flagImage.sprite = country.CountryFlag;
         _leaderImage.sprite = country.Politics.CountryLeader.Portrait;
