@@ -21,8 +21,7 @@ public class ChooseCountrySelectedView : MonoBehaviour
         _leaderNameText.text = country.Politics.CountryLeader.Name;
         _startWithCountryButton.onClick.AddListener(delegate 
         {
-            FindObjectOfType<SinglePlayerModMenu>().LoadGameSceneUpdateQuick(country.ID);
+            FindObjectOfType<SinglePlayerModMenu>().LoadGameSceneUpdateQuick(country.ID, _chooseDifficultiesUI.GetChoosedDifficultie());
         });
     }
-
 }

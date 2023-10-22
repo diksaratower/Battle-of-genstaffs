@@ -72,26 +72,6 @@ public class GameCamera : MonoBehaviour
     public Vector3 WorldToScreenPointResolutionTrue(Vector3 worldPosition)
     {
         Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPosition);
-        /*float refWidth = CanvasScaler.referenceResolution.x;
-        float refHeight = CanvasScaler.referenceResolution.y; 
-        bool matchWidth = true; //true if screen match mode is set to match the width, 
-                                //false if is set to match the height
-        if(Screen.width == refWidth && Screen.height == refHeight)
-        {
-            return screenPos;
-        }
-
-        if (matchWidth)
-        {
-            screenPos.x *= refWidth / Screen.width;
-            screenPos.y *= refWidth / Screen.width;
-        }
-        else
-        {
-            screenPos.x *= refHeight / Screen.height;
-            screenPos.y *= refHeight / Screen.height;
-        }
-        return screenPos;*/
         return CorrectScreenPointResolutionTrue(screenPos);
     }
 

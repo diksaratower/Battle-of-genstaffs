@@ -1,9 +1,7 @@
 using IJunior.TypedScenes;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 
 public class GameSessionInitializer : MonoBehaviour, ISceneLoadHandler<GameEntryData>
 {
@@ -46,6 +44,7 @@ public class GameSessionInitializer : MonoBehaviour, ISceneLoadHandler<GameEntry
             GameSave.SetSavePlayerCountryIDInQuickSave(entry.CountryID);
             _gameSave.QuickLoad();
         }
+        Player.CurrentDifficultie = entry.Difficultie;
         _gameTimer.StartTimer();
     }
 
@@ -62,11 +61,20 @@ public class GameEntryData
 {
     public GameEntryType EntryType { get; }
     public string CountryID { get; }
+    public Difficultie Difficultie { get; }
 
-    public GameEntryData(GameEntryType entryType, string countryID)
+    public GameEntryData(GameEntryType entryType, string countryID, Difficultie difficultie = null)
     {
         EntryType = entryType;
         CountryID = countryID;
+        if (difficultie != null)
+        {
+            Difficultie = difficultie;
+        }
+        else
+        {
+            Difficultie = DifficultiesData.GetInstance().Difficulties[0];
+        }
     }
 }
 

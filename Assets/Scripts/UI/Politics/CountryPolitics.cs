@@ -53,7 +53,6 @@ public class CountryPolitics
         FormGovernment = original.FormGovernment;
         ElectionsType = original.ElectionsType;
         CountryLeader = original.CountryLeader;
-        //PolitPowerGrowthSpeed = original.PolitPowerGrowthSpeed;
         BaseStability = Preset.BaseStability;
     }
 
@@ -153,6 +152,10 @@ public class CountryPolitics
     public float ApplyPolitPowerGrowthEffects(float baseGrowth)
     {
         var correctedGrowth = baseGrowth;
+        if (_country == Player.CurrentCountry)
+        {
+            correctedGrowth += (baseGrowth * (Player.CurrentDifficultie.PolitPowerBonusPercent / 100f));
+        }
         var effects = GetAdvisersTraitEffects<PolitPowerGrowthTraitEffect>();
         effects.ForEach((PolitPowerGrowthTraitEffect effect) =>
         {

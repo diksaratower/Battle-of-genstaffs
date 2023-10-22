@@ -5,4 +5,5 @@ public class Difficultie : ScriptableObject
 {
     public string Name;
     public float PolitPowerBonusPercent;
+    public float ProductionFactor;
 }

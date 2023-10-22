@@ -12,6 +12,12 @@ public class ChooseDifficultiesUI : MonoBehaviour
 
     private List<ChooseDifficultiesButtonUI> _chooseDifficultiesButtons = new List<ChooseDifficultiesButtonUI>();
 
+
+    public Difficultie GetChoosedDifficultie()
+    {
+        return Selected.TargetDifficultie;
+    }
+
     public void RefreshUI()
     {
         _chooseDifficultiesButtons.ForEach(button => Destroy(button.gameObject));

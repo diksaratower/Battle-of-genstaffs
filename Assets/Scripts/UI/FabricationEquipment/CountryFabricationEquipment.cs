@@ -26,9 +26,20 @@ public class CountryFabricationEquipment
         }
     }
 
+    public float GetBaseFabricationEfficiency()
+    {
+        return _baseFabricationEfficiency;
+    }
+
     public float GetCorrectFabricationEfficiency()
     {
-        return _baseFabricationEfficiency + _country.Politics.GetPoliticCorrectionMilitaryFabrication(_baseFabricationEfficiency);
+        var effeciency = _baseFabricationEfficiency;
+        effeciency += _country.Politics.GetPoliticCorrectionMilitaryFabrication(_baseFabricationEfficiency);
+        if (_country == Player.CurrentCountry)
+        {
+            effeciency += Player.CurrentDifficultie.ProductionFactor;
+        }
+        return effeciency;
     }
 
     public void AddSlot(string id, List<BuildingSlotRegion> factories) 

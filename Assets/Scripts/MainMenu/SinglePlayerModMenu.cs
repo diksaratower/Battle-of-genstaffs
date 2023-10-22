@@ -40,7 +40,7 @@ public class SinglePlayerModMenu : MonoBehaviour
         }
     }
 
-    public void LoadGameSceneUpdateQuick(string id)
+    public void LoadGameSceneUpdateQuick(string id, Difficultie difficultie)
     {
         if (_isLoadingScene)//чтобы избежать двойной загрузки
         {
@@ -48,7 +48,7 @@ public class SinglePlayerModMenu : MonoBehaviour
         }
         //Debug.Log("scene loading");
         _isLoadingScene = true;
-        var operation = Main.LoadAsync(new GameEntryData(GameEntryType.StartFromStandart, id), LoadSceneMode.Additive);
+        var operation = Main.LoadAsync(new GameEntryData(GameEntryType.StartFromStandart, id, difficultie), LoadSceneMode.Additive);
         _loadScreen.StartMonitoringLoading(operation);
     }
 

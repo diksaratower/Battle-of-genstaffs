@@ -6,12 +6,6 @@ public class Player : MonoBehaviour, ISaveble
     public static Country CurrentCountry;
     public static Difficultie CurrentDifficultie;
 
-
-    public void InitializePlayer(Country startCountry)
-    {
-        CurrentCountry = startCountry;
-    }
-
     string ISaveble.GetFileName()
     {
         return "player";

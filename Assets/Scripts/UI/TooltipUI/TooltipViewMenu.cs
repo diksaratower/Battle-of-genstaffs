@@ -60,7 +60,15 @@ public class TooltipViewMenu : MonoBehaviour
     protected void UpdatePositionFollowMouse()
     {
         var rectTransform = (transform as RectTransform);
-        var mousePos = GameCamera.Instance.CorrectScreenPointResolutionTrue(Input.mousePosition);
+        var mousePos = Vector3.zero;
+        if (GameCamera.Instance != null)
+        {
+            mousePos = GameCamera.Instance.CorrectScreenPointResolutionTrue(Input.mousePosition);
+        }
+        else
+        {
+            mousePos = Input.mousePosition;
+        }
         rectTransform.anchoredPosition = mousePos + new Vector3(rectTransform.rect.size.x / 2, -(rectTransform.rect.size.y / 2)) + _offest;
     }
 

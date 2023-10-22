@@ -11,6 +11,7 @@ public class FabricationEfficiencyTooltipViewUI : TooltipViewMenu
         }
         var fabrication = (tooltipHandler as FabricationEfficiencyTooltipHandlerUI).FabricationEquipmentUI;
         AddSimpleText($"Эффективность производства {fabrication.TargetCountry.CountryFabrication.GetCorrectFabricationEfficiency() * 100}%", false);
+        AddSimpleText($"Базовое значение эффективности {fabrication.TargetCountry.CountryFabrication.GetBaseFabricationEfficiency() * 100}%");
         foreach (var effect in GetFabricatioyEffectsDescriptionsForUI(fabrication.TargetCountry))
         {
             AddSimpleText(effect, false);
@@ -21,6 +22,7 @@ public class FabricationEfficiencyTooltipViewUI : TooltipViewMenu
     public List<string> GetFabricatioyEffectsDescriptionsForUI(Country country)
     {
         var result = new List<string>();
+        result.Add($"Бонус от сложности {Player.CurrentDifficultie.Name} {GameIU.FloatToStringAddPlus(Player.CurrentDifficultie.ProductionFactor * 100)}%");
         foreach (var effect in country.Politics.CurrentEconomicLaw.LawEffects)
         {
             if (effect is MilitaryFabricationLawEffect)

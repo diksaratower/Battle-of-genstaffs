@@ -12,6 +12,7 @@ public class PolitPowerTooltipUI : TooltipViewMenu
             AddSimpleText(effect, false);
         }
         AddSimpleText($"Базовое значение {Player.CurrentCountry.Politics.PolitPowerGrowthSpeed}", false);
+        AddSimpleText($"Сложность {Player.CurrentDifficultie.Name} {GameIU.FloatToStringAddPlus(Player.CurrentDifficultie.PolitPowerBonusPercent)}%", false);
         AddSimpleText("Полит. власть нужна для принятия решений ротации министров и тд.", false);
         base.RefreshUI(tooltipHandler);
     }

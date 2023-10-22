@@ -44,11 +44,6 @@ public class ChooseCountryMenu : MonoBehaviour
         }
     }
 
-    public void StartWithCountry()
-    {
-
-    }
-
     public void SetSelectedCountry(CountrySO newSelectedCountry)
     {
         _selectedCountry = newSelectedCountry;
