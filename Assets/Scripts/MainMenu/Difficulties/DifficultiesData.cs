@@ -6,6 +6,7 @@ using UnityEngine;
 public class DifficultiesData : ScriptableObject
 {
     public List<Difficultie> Difficulties = new List<Difficultie>();
+    public Difficultie StandartDifficultie;
 
     public static DifficultiesData GetInstance()
     {

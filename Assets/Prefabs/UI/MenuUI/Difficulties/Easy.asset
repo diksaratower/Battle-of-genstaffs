@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Easy
   m_EditorClassIdentifier: 
   Name: "\u041B\u0435\u0433\u043A\u043E"
+  ID: easy
   PolitPowerBonusPercent: 50
+  ProductionFactor: 0.3

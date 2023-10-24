@@ -73,7 +73,7 @@ public class GameEntryData
         }
         else
         {
-            Difficultie = DifficultiesData.GetInstance().Difficulties[0];
+            Difficultie = DifficultiesData.GetInstance().StandartDifficultie;
         }
     }
 }

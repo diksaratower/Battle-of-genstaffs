@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Normal
   m_EditorClassIdentifier: 
   Name: "\u041D\u043E\u0440\u043C\u0430\u043B\u044C\u043D\u043E"
+  ID: normal
   PolitPowerBonusPercent: 0
+  ProductionFactor: 0

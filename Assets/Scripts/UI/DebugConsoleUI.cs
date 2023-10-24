@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Video;
+using static System.Net.Mime.MediaTypeNames;
 
 public class DebugConsoleUI : MonoBehaviour
 {
@@ -29,6 +29,7 @@ public class DebugConsoleUI : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            WriteTextToConsole("user: " + _consoleInputField.text);
             OnConsoleEnterText?.Invoke(_consoleInputField.text);
             _consoleInputField.text = "";
         }
@@ -36,6 +37,18 @@ public class DebugConsoleUI : MonoBehaviour
 
     private void ProcessConsoleInput(string text)
     {
+        if (text.StartsWith("help"))
+        {
+            WriteTextToConsole(@"
+echo - эхо
+date - поставить стандрт. дату
+annex - аннексировать
+delete divs - удалить дивизию 
+manpower - чуваков нарожать
+prom - промышленность
+pp_all_zero - всем полит власть на ноль
+");
+        }
         if (text.StartsWith("echo"))
         {
             WriteTextToConsole(text.Remove(0, 5));
@@ -92,6 +105,14 @@ public class DebugConsoleUI : MonoBehaviour
                 }
             }
             WriteTextToConsole("ƒобавлена промка");
+        }
+        if (text == "pp_all_zero")
+        {
+            foreach(var country in Map.Instance.Countries)
+            {
+                country.Politics.PolitPower = 0f;
+            }
+            WriteTextToConsole("” всех стран обнулена политка");
         }
     }
 
