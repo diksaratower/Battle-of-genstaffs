@@ -46,7 +46,6 @@ public class SinglePlayerModMenu : MonoBehaviour
         {
             return;
         }
-        //Debug.Log("scene loading");
         _isLoadingScene = true;
         var operation = Main.LoadAsync(new GameEntryData(GameEntryType.StartFromStandart, id, difficultie), LoadSceneMode.Additive);
         _loadScreen.StartMonitoringLoading(operation);

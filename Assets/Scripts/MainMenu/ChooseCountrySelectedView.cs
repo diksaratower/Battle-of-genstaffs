@@ -19,6 +19,7 @@ public class ChooseCountrySelectedView : MonoBehaviour
         _flagImage.sprite = country.CountryFlag;
         _leaderImage.sprite = country.Politics.CountryLeader.Portrait;
         _leaderNameText.text = country.Politics.CountryLeader.Name;
+        _startWithCountryButton.onClick.RemoveAllListeners();//чтобы не загружалась левая страна
         _startWithCountryButton.onClick.AddListener(delegate 
         {
             FindObjectOfType<SinglePlayerModMenu>().LoadGameSceneUpdateQuick(country.ID, _chooseDifficultiesUI.GetChoosedDifficultie());
