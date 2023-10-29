@@ -86,6 +86,10 @@ public class DivisionTemplateConstructorUI : MonoBehaviour
 
     public void RemoveBatalion(DivisionLine line, Battalion battalion)
     {
+        if(TargetTemplate.Battalions.Count == 1)
+        {
+            return;
+        }
         line.Battalions.Remove(battalion);
         RefreshBatalions(TargetTemplate);
     }
