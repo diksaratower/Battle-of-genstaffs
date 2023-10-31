@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Drawing.Design;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +8,7 @@ public class GameCamera : MonoBehaviour
     public static GameCamera Instance;
     public CanvasScaler CanvasScaler;
     public Camera GCamera { get => _camera; }
+    public float CameraSpeedFactor;
 
     [SerializeField] private Camera _camera;
     [SerializeField] private float _cameraSpeed;
@@ -23,6 +23,7 @@ public class GameCamera : MonoBehaviour
 
     private void Start()
     {
+        CameraSpeedFactor = SettingsSave.LoadSettingsSave().CameraSpeedFactor;
         SetCameraWithCurrentCountry();
     }
 
@@ -136,7 +137,7 @@ public class GameCamera : MonoBehaviour
         {
             correctedDirection = direction;
         }
-        transform.position += correctedDirection * Time.deltaTime * _cameraSpeed;
+        transform.position += correctedDirection * Time.deltaTime * (_cameraSpeed * CameraSpeedFactor);
     }
 
     private Vector3 GetCorrectedDirectionFromWorldBounds(Vector3 direction)

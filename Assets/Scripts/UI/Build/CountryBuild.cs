@@ -29,6 +29,10 @@ public class CountryBuild
 
     public bool CanAddBuildingToQueue(Building building, Region region)
     {
+        if (region == null)
+        {
+            return false;
+        }
         var buildingsCount = (region.GetAllBuildingsCount() + BuildingsQueue.FindAll(slot => slot.Building == building).Count);
         return (buildingsCount < region.MaxBuildingsCount);
     }

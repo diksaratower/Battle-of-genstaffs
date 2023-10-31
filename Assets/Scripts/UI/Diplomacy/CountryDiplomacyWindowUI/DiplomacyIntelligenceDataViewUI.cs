@@ -11,10 +11,12 @@ public class DiplomacyIntelligenceDataViewUI : MonoBehaviour
     [SerializeField] private Image _focusExecuteFill;
 
     private Country _country;
+    private NationalFocus _executingFocus;
 
     public void RefreshUI(Country target)
     {
         _country = target;
+        _executingFocus = _country.Politics.ExecutingFocus;
         if(target.Politics.ExecutingFocus == null)
         {
             _currentFocusImage.sprite = null;
@@ -32,6 +34,10 @@ public class DiplomacyIntelligenceDataViewUI : MonoBehaviour
         if (_country != null)
         {
             _focusExecuteFill.fillAmount = _country.Politics.GetProcentOfExecuteFocus();
+            if (_executingFocus != _country.Politics.ExecutingFocus)
+            {
+                RefreshUI(_country);
+            }
         }
     }
 }

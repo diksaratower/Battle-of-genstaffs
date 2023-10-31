@@ -1,4 +1,3 @@
-using System.IO;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -14,7 +13,7 @@ public class SoundSettingsLoader : MonoBehaviour
 
     private void LoadSettings()
     {
-        var settingsSave = JsonUtility.FromJson<SettingsSave>(File.ReadAllText("./Saves/settings.json"));
+        var settingsSave = SettingsSave.LoadSettingsSave();
         _audioMixer.SetFloat("MasterVolume", Mathf.Lerp(-80, 0, settingsSave.MasterVolume));
         _audioMixer.SetFloat("MusicVolume", Mathf.Lerp(-80, 0, settingsSave.MusicVolume));
     }

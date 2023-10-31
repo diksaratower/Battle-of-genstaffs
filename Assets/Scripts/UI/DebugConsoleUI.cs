@@ -114,6 +114,15 @@ pp_all_zero - всем полит власть на ноль
             }
             WriteTextToConsole("У всех стран обнулена политка");
         }
+        if (text == "event")
+        {
+            var panel = FindObjectOfType<EventsViewUI>().ViewNewsEvent("Ивент вызван из консоли для проверки этой системы.");
+            panel.AddCloseButton("Закрыть").CloseButton.onClick.AddListener(delegate
+            {
+                panel.gameObject.SetActive(false);
+            });
+            WriteTextToConsole("Отображен тестовый ивент");
+        }
     }
 
     private void WriteTextToConsole(string text)
