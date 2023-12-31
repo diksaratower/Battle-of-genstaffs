@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using UnityEngine;
 
 
@@ -44,10 +43,12 @@ public class Region
             if (slot is BuildingSlotRegion)
             {
                 mapRegion.BuildingsInRegion.Add(slot as BuildingSlotRegion);
+                BuildingSlot.OnAddedBuilding?.Invoke(slot as BuildingSlotRegion);
             }
             if (slot is BuildingSlotProvince)
             {
                 (slot as BuildingSlotProvince).Province.Buildings.Add(slot as BuildingSlotProvince);
+                BuildingSlot.OnAddedBuilding?.Invoke(slot as BuildingSlotProvince);
             }
         }
         return mapRegion;
@@ -136,12 +137,16 @@ public class Region
 
     public void AddBuildingToRegion(Building building)
     {
-        BuildingsInRegion.Add(new BuildingSlotRegion(building, this));
+        var slot = new BuildingSlotRegion(building, this);
+        BuildingsInRegion.Add(slot);
+        BuildingSlot.OnAddedBuilding?.Invoke(slot);
     }
 
     public void AddProvinceBuilding(Building building, Province buildingProvince)
     {
-        buildingProvince.Buildings.Add(new BuildingSlotProvince(building, this, buildingProvince));
+        var slot = new BuildingSlotProvince(building, this, buildingProvince);
+        buildingProvince.Buildings.Add(slot);
+        BuildingSlot.OnAddedBuilding?.Invoke(slot);
     }
 
     public Vector3 GetProvincesAveragePostion()
@@ -279,6 +284,8 @@ public enum CityType
 [Serializable]
 public abstract class BuildingSlot
 {
+    public static Action<BuildingSlot> OnAddedBuilding;
+
     public Region Region { get; }
     public Building TargetBuilding { get; }
 

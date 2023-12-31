@@ -123,6 +123,21 @@ pp_all_zero - всем полит власть на ноль
             });
             WriteTextToConsole("Отображен тестовый ивент");
         }
+        if (text == "marine_reg")
+        {
+            Map.Instance.MarineRegions.RecalculateMarineRegions();
+            WriteTextToConsole("Рассчитаны морские регионы.");
+        }
+        if (text == "view_sea")
+        {
+            Map.Instance.MarineRegions.ViewSelectedRegionProvinces = (!Map.Instance.MarineRegions.ViewSelectedRegionProvinces);
+            WriteTextToConsole($"Просмотр берегов {Map.Instance.MarineRegions.ViewSelectedRegionProvinces}.");
+        }
+        if (text == "view_sea_cont")
+        {
+            Map.Instance.MarineRegions.ViewSelectedRegionContacts = (!Map.Instance.MarineRegions.ViewSelectedRegionContacts);
+            WriteTextToConsole($"Просмотр контактов морей {Map.Instance.MarineRegions.ViewSelectedRegionContacts}.");
+        }
     }
 
     private void WriteTextToConsole(string text)

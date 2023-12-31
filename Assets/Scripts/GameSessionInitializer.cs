@@ -11,6 +11,7 @@ public class GameSessionInitializer : MonoBehaviour, ISceneLoadHandler<GameEntry
     [SerializeField] private GameSave _gameSave;
     [SerializeField] private GameTimer _gameTimer;
     [SerializeField] private Player _player;
+    [SerializeField] private MarineRegions _marineRegions;
 
     private bool _gameInitialized;
 
@@ -34,6 +35,7 @@ public class GameSessionInitializer : MonoBehaviour, ISceneLoadHandler<GameEntry
     {
         _map.InitializeMap();
         _map.CreateCountries();
+        _marineRegions.Initialize();
         if (entry.EntryType == GameEntryType.Continue)
         {
             _gameSave.QuickLoad();

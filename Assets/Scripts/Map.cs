@@ -11,6 +11,7 @@ public class Map : MonoBehaviour, ISaveble
     public List<Province> Provinces => _provinces;
     public float ProvinceRadius;
     public List<Region> MapRegions = new List<Region>();
+    public MarineRegions MarineRegions;
 
     [SerializeField] private Vector2Int _gridSize = new Vector2Int(2, 2);
     [SerializeField] private Vector3 _meshesRotation = new Vector3(0, 0, -90);
@@ -27,41 +28,6 @@ public class Map : MonoBehaviour, ISaveble
     private List<Province> _provinces = new List<Province>();
     private Texture2D _mainTexture;
     private Province[,] _map = null;
-
-    private void Update()
-    {
-        /*if (Input.GetKey(KeyCode.J))
-        {
-            
-            foreach (var province in _provinces)
-            {
-                var provs = GetProvinceContacts(province);
-                province.ContactsIDs = provs;
-            }
-        }*/
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            var random = new System.Random();
-            Debug.Log("add buildings");
-            foreach (var region in MapRegions)
-            {
-                if (region.BuildingsInRegion.Count == 0)
-                {
-                    for (int i = 0; i < random.Next(0, 2); i++)
-                    {
-                        region.AddBuildingToRegion(_factory);
-                    }
-                    for (int i = 0; i < random.Next(0, 3); i++)
-                    {
-                        region.AddBuildingToRegion(_militaryFactory);
-                    }
-                }
-            }
-        }
-        if (_drawMapSize)
-        {
-        }
-    }
 
     public void InitializeMap()
     {

@@ -94,7 +94,20 @@ public class PathFindAStar
     private static List<PathNode> GetNeighbours(PathNode pathNode, Province goal, Predicate<Province> EnterToProvinceIf, Division division)
     {
         var result = new List<PathNode>();
-        foreach (var cont in pathNode.Position.Contacts)
+        var contacts = new List<Province>();
+        contacts.AddRange(pathNode.Position.Contacts);
+
+        var navyBase = pathNode.Position.Buildings.Find(building => building.TargetBuilding is NavyBase);
+        if (navyBase != null)
+        {
+            var bases = Map.Instance.MarineRegions.NavyBases.FindAll(nBase => nBase != navyBase);
+            foreach (var nBase in bases)
+            {
+                contacts.Add((nBase as BuildingSlotProvince).Province);
+            }
+        }
+
+        foreach (var cont in contacts)
         {
             if (division != null)
             {
