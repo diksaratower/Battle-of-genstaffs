@@ -7,11 +7,13 @@ public abstract class Ship
     public ShipType Type { get; }
     public Country Country { get; }
     public string Name;
+    public MarineRegion ShipPosition;
 
-    public Ship(ShipType shipType, Country country)
+    public Ship(ShipType shipType, Country country, string name)
     {
         Type = shipType;
         Country = country;
+        Name = name;
     }
 }
 

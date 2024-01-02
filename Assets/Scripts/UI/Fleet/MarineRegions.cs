@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +7,9 @@ public class MarineRegions : MonoBehaviour
 {
     public List<MarineRegion> MarineRegionsList = new List<MarineRegion>();
     public List<BuildingSlot> NavyBases = new List<BuildingSlot>();
+    public List<Ship> Ships = new List<Ship>();
+    public Action<Ship> OnCreateShip;
+    public Action<Ship> OnRemoveShip;
     public bool ViewSelectedRegionProvinces;
     public bool ViewSelectedRegionContacts;
 
@@ -93,6 +97,19 @@ public class MarineRegions : MonoBehaviour
                 }
             }
         }
+    }
+
+    public Ship AddShip(Ship ship)
+    {
+        Ships.Add(ship);
+        OnCreateShip?.Invoke(ship);
+        return ship;
+    }
+
+    public void RemoveShip(Ship ship)
+    {
+        Ships.Remove(ship);
+        OnRemoveShip?.Invoke(ship);
     }
 
     private List<Vector3> GenerateHex(float radius)

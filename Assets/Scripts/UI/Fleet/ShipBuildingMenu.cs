@@ -25,7 +25,9 @@ public class ShipBuildingMenu : MonoBehaviour
     {
         ShipType shipType = _availableShipTypes[_shipTypeDropdown.value];
 
-        Ship ship = new Battleship(Player.CurrentCountry);
+        Ship ship = new Battleship(Player.CurrentCountry, name);
         ship.Name = "Новый корабль";
+        ship.ShipPosition = Map.Instance.MarineRegions.MarineRegionsList[0];
+        Map.Instance.MarineRegions.AddShip(ship);
     }
 }

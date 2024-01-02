@@ -21,6 +21,7 @@ public class Country : MonoBehaviour
     public CountryBuild CountryBuild;
     public CountryCreationDivisions CreationDivisions;
     public CountryResearch Research;
+    public CountryFleet Fleet;
     public CountrySO CountryPreset;
     public string Name => CountryPreset.Name;
     public string ID => CountryPreset.ID;
@@ -40,6 +41,7 @@ public class Country : MonoBehaviour
         CountryFabrication = new CountryFabricationEquipment(this);
         CountryBuild = new CountryBuild(this);
         Research = new CountryResearch();
+        Fleet = new CountryFleet();
     }
 
     private void Start()

@@ -1,7 +1,7 @@
 
 public class Submarine : Ship
 {
-    public Submarine(Country country) : base(ShipType.Submarine, country)
+    public Submarine(Country country, string name) : base(ShipType.Submarine, country, name)
     {
     }
 }

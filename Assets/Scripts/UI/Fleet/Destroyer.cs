@@ -2,7 +2,7 @@
 
 public class Destroyer : Ship
 {
-    public Destroyer(Country country) : base(ShipType.Destroyer, country)
+    public Destroyer(Country country, string name) : base(ShipType.Destroyer, country, name)
     {
     }
 }

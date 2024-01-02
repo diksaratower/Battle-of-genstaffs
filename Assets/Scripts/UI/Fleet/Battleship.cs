@@ -4,7 +4,7 @@ public class Battleship : Ship
 {
 
 
-    public Battleship(Country country) : base(ShipType.Battleship, country)
+    public Battleship(Country country, string name) : base(ShipType.Battleship, country, name)
     {
     }
 }

@@ -1,7 +1,7 @@
-using UnityEngine;
+using System.Collections.Generic;
 
 
-public class CountryFleet : MonoBehaviour
+public class CountryFleet
 {
-   
+   public List<TacticalFleetUnit> TacticalFleetUnits = new List<TacticalFleetUnit>();
 }
