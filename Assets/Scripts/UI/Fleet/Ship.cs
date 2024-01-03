@@ -2,8 +2,8 @@
 
 public abstract class Ship
 {
-    public int Power { get; set; }
-    public int Armor { get; set; }
+    public float Power { get; set; }
+    public float Armor { get; set; }
     public ShipType Type { get; }
     public Country Country { get; }
     public string Name;
@@ -14,6 +14,7 @@ public abstract class Ship
         Type = shipType;
         Country = country;
         Name = name;
+        Power = 100f;
     }
 }
 

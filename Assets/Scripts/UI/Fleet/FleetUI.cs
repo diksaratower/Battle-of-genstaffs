@@ -31,11 +31,7 @@ public class FleetUI : MonoBehaviour
             Map.Instance.MarineRegions.AddShip(ship);
         }
         RefreshUI();
-        foreach (var region in Map.Instance.MarineRegions.MarineRegionsList)
-        {
-            var regionUI = Instantiate(_regionUIPrefab, _regionsUIParent);
-            regionUI.SetTarget(region);
-        }
+        CreateMarineRegionsUI();
     }
 
     private void Update()
@@ -62,7 +58,7 @@ public class FleetUI : MonoBehaviour
         _removeShipMenu.SetShip(ship);
     }
 
-    private void RefreshUI()
+    public void RefreshUI()
     {
         var lastSelectedShips = GetSelectedFreeShips();
     
@@ -102,6 +98,15 @@ public class FleetUI : MonoBehaviour
             };
             RefreshUI();
         });
+    }
+
+    private void CreateMarineRegionsUI()
+    {
+        foreach (var region in Map.Instance.MarineRegions.MarineRegionsList)
+        {
+            var regionUI = Instantiate(_regionUIPrefab, _regionsUIParent);
+            regionUI.SetTarget(region);
+        }
     }
 
     private void SetUpReactionToChangeShipsCount()

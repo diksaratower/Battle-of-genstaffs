@@ -688,6 +688,7 @@ MonoBehaviour:
   _shipName: {fileID: 9123318098697999296}
   _shipImage: {fileID: 2651032590982438739}
   _deleteButton: {fileID: 5626451478398176475}
+  _removeShipFromUnit: {fileID: 2827639975021914621}
 --- !u!1 &7832475189646352602
 GameObject:
   m_ObjectHideFlags: 0
