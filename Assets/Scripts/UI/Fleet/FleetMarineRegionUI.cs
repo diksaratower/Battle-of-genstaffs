@@ -27,6 +27,18 @@ public class FleetMarineRegionUI : MonoBehaviour
         _targetPosition = marineRegion.Center.position;
 
         _regionName.text = marineRegion.Name;
+        var tooltip = gameObject.AddComponent<NotPrefabTooltipHandlerUI>();
+        tooltip.Initialize((TooltipViewMenu menu) =>
+        {
+            var allShipsCount = marineRegion.GetRegionShips().Count;
+            var ourShipsCount = marineRegion.GetRegionShips().FindAll(ship => ship.Country == Player.CurrentCountry).Count;
+            _target.IsDominate(Player.CurrentCountry, out var percentDomination, out var enemyPower, out var countryPower);
+            menu.AddDynamicText(() => $@"{_target.Name} 
+В регионе {allShipsCount} кораблей из них наших {ourShipsCount}.
+Превосходство врага: {enemyPower}
+Наше превосходство: {countryPower}
+Процент превосходства {Math.Round(percentDomination * 100, 2)}%.", false);
+        });
     }
 
     private void CalculateProcentDomination()

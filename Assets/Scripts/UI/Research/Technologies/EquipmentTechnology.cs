@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 [CreateAssetMenu(fileName = "EquipmentTechnology", menuName = "ScriptableObjects/Technologies/EquipmentTechnology", order = 1)]
 public class EquipmentTechnology : Technology

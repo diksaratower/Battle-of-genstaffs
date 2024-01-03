@@ -1,10 +1,12 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/TechnologiesManager", order = 1)]
 public class TechnologiesManagerSO : ScriptableObject
 {
     public List<Technology> TechnologyList = new List<Technology>();
+    public List<TechnologiesTree> TechnologiesTrees = new List<TechnologiesTree>();
     public List<Battalion> AvailableBattalions = new List<Battalion>();
 
     private static TechnologiesManagerSO _instance;

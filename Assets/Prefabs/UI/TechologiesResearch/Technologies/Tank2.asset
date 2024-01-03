@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc0148da01a08b348a92ea7ba46ce197, type: 3}
-  m_Name: Rifl2
+  m_Name: Tank2
   m_EditorClassIdentifier: 
-  OpenCost: 340
+  OpenCost: 2200
   OptimalDate: 1936
+  NeededTech:
+  - {fileID: 11400000, guid: 7354794c7d57beb42aa112503c1f7271, type: 2}
   _techName: '*use_equipment'
   _techImage: {fileID: 0}
   _id: '*use_equipment'
-  UnlockEquipment: {fileID: 11400000, guid: f96295294684e7f45b18644cc3ffb812, type: 2}
+  UnlockEquipment: {fileID: 11400000, guid: 2bfed58c69c40e64094f85397b72a066, type: 2}

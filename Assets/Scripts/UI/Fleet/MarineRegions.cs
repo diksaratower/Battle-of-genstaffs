@@ -12,6 +12,9 @@ public class MarineRegions : MonoBehaviour
     public Action<Ship> OnRemoveShip;
     public bool ViewSelectedRegionProvinces;
     public bool ViewSelectedRegionContacts;
+    public Material NeutralDominationColor;
+    public Material OurDominationColor;
+    public Material EnemyDominationColor;
 
     [SerializeField] private LayerMask _marineLayerMask;
 

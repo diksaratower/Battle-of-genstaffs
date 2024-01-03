@@ -6,24 +6,26 @@ using UnityEngine.UI;
 
 public class ResearchTechnologyUI : MonoBehaviour
 {
+    public Technology TargetTechnology { get; private set; }
+
     [SerializeField] private TextMeshProUGUI _costText;
     [SerializeField] private TextMeshProUGUI _nameText;
     [SerializeField] private TextMeshProUGUI _alreadyResearchText;
     [SerializeField] private Image _techImage;
     [SerializeField] private Button _buyButton;
-    [SerializeField] private Technology _technology;
 
     private Country _country;
+
+
     private void Start()
     {
         _country = Player.CurrentCountry;
-        RefreshUI();
         _buyButton.onClick.AddListener(ByTech);
     }
 
     private void Update()
     {
-        if(_country.Research.AlreadyResearched(_technology))
+        if(_country.Research.AlreadyResearched(TargetTechnology))
         {
             _buyButton.gameObject.SetActive(false);
             _alreadyResearchText.gameObject.SetActive(true);
@@ -34,22 +36,30 @@ public class ResearchTechnologyUI : MonoBehaviour
             _buyButton.gameObject.SetActive(true);
             _alreadyResearchText.gameObject.SetActive(false) ;
         }
-        var canBuy =  (_country.Research.ResearchPointCount - _technology.OpenCost) > 0;
+        var canBuy =  (_country.Research.ResearchPointCount - TargetTechnology.OpenCost) > 0;
+        if (TargetTechnology.NeededTech.Count > 0)
+        {
+            if (TargetTechnology.NeededTech.FindAll(tech => _country.Research.AlreadyResearched(tech)).Count != TargetTechnology.NeededTech.Count)
+            {
+                canBuy = false;
+            }   
+        }
         _buyButton.interactable = canBuy;
     }
 
-    public void RefreshUI()
+    public void RefreshUI(Technology technology)
     {
-        _costText.text = "Купить: " + _technology.OpenCost.ToString();
-        _nameText.text = _technology.TechName.ToString();
-        _techImage.sprite = _technology.TechImage;
+        TargetTechnology = technology;
+        _costText.text = "Купить: " + TargetTechnology.OpenCost.ToString();
+        _nameText.text = TargetTechnology.TechName.ToString();
+        _techImage.sprite = TargetTechnology.TechImage;
     }
 
     private void ByTech()
     {
-        if ((_country.Research.ResearchPointCount - _technology.OpenCost) > 0)
+        if ((_country.Research.ResearchPointCount - TargetTechnology.OpenCost) > 0)
         {
-            _country.Research.BuyTech(_technology);
+            _country.Research.BuyTech(TargetTechnology);
         }
     }
 }

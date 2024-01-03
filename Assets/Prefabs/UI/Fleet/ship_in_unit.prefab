@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8948813153334074341}
   - component: {fileID: 1345972638292131474}
   - component: {fileID: 5626451478398176475}
+  - component: {fileID: 5459661443731383304}
   m_Layer: 5
   m_Name: delete_ship
   m_TagString: Untagged
@@ -122,6 +123,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5459661443731383304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921540020954528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a25e7eb3e52d44999a4490e2d5e68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetButton: {fileID: 0}
 --- !u!1 &1982017749015726971
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,6 +148,7 @@ GameObject:
   - component: {fileID: 2011959734407986018}
   - component: {fileID: 3138545731875846926}
   - component: {fileID: 2827639975021914621}
+  - component: {fileID: 4751892197639773172}
   m_Layer: 5
   m_Name: remove_from_unit
   m_TagString: Untagged
@@ -244,6 +259,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4751892197639773172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982017749015726971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a25e7eb3e52d44999a4490e2d5e68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetButton: {fileID: 0}
 --- !u!1 &2995415992743896103
 GameObject:
   m_ObjectHideFlags: 0

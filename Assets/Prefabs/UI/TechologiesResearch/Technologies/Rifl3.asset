@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OpenCost: 640
   OptimalDate: 1941
+  NeededTech:
+  - {fileID: 11400000, guid: efb8b2acac02517429c596220b004ddd, type: 2}
   _techName: '*use_equipment'
   _techImage: {fileID: 0}
   _id: '*use_equipment'

@@ -10,10 +10,12 @@ public class MarineRegion : MonoBehaviour
     public Transform Center { get; private set; }
     
     [SerializeField] private Transform _center;
-
+    
+    private MeshRenderer _regionRenderer;
 
     private void Awake()
     {
+        _regionRenderer = GetComponent<MeshRenderer>();
         if (_center != null)
         {
             Center = _center;
@@ -29,26 +31,33 @@ public class MarineRegion : MonoBehaviour
         IsDominate(Player.CurrentCountry, out var percentDomination);
         if (percentDomination == 0f)
         {
-            ColoredRegion(Color.gray);
+            ColoredRegion(Map.Instance.MarineRegions.NeutralDominationColor);
         }
         if (percentDomination > 0.5f)
         {
-            ColoredRegion(Color.green);
+            ColoredRegion(Map.Instance.MarineRegions.OurDominationColor);
         }
         if (percentDomination <= 0.5f && percentDomination != 0)
         {
-            ColoredRegion(Color.red);
+            ColoredRegion(Map.Instance.MarineRegions.EnemyDominationColor);
         }
     }
 
     public bool IsDominate(Country country, out float percentDomination)
     {
-        var isDominate = IsDominate(country, new List<Country>(), out var percent);
+        var isDominate = IsDominate(country, new List<Country>(), out var percent, out _, out _);
         percentDomination = percent;
         return isDominate;
     }
 
-    public bool IsDominate(Country country, List<Country> countryEnemies, out float percentDomination)
+    public bool IsDominate(Country country, out float percentDomination, out float enemyPower, out float countryPower)
+    {
+        var isDominate = IsDominate(country, new List<Country>(), out var percent, out enemyPower, out countryPower);
+        percentDomination = percent;
+        return isDominate;
+    }
+
+    public bool IsDominate(Country country, List<Country> countryEnemies, out float percentDomination, out float enemyDomination, out float countryDomination)
     {
         GetBaseDomination(country, countryEnemies, out var countryPower, out var enemyPower);
 
@@ -65,7 +74,14 @@ public class MarineRegion : MonoBehaviour
         }
         var isDominate = CalculateDominationWithPowers(countryPower, enemyPower, out var percent);
         percentDomination = percent;
+        enemyDomination = enemyPower;
+        countryDomination = countryPower;
         return isDominate;
+    }
+
+    public List<Ship> GetRegionShips()
+    {
+        return Map.Instance.MarineRegions.Ships.FindAll(ship => ship.ShipPosition == this);
     }
 
     private void GetBaseDomination(Country country, List<Country> countryEnemies, out float countryBasePower, out float enemyBasePower)
@@ -127,11 +143,6 @@ public class MarineRegion : MonoBehaviour
         return countryPower > enemyPower;
     }
 
-    private List<Ship> GetRegionShips()
-    {
-        return Map.Instance.MarineRegions.Ships.FindAll(ship => ship.ShipPosition == this);
-    }
-
     private float GetInfluenceOfPhantomShips(Country country)
     {
         var phantomFactor = 0f;
@@ -147,9 +158,10 @@ public class MarineRegion : MonoBehaviour
         return phantomFactor;
     }
 
-    private void ColoredRegion(Color color)
+    private void ColoredRegion(Material color)
     {
-        GetComponent<MeshRenderer>().material.color = color;
+        //_regionRenderer.material.
+        _regionRenderer.material = color;
     }
 
     private bool IsNeed—onsideShip(Ship ship)

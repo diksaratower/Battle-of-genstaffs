@@ -20,6 +20,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 75c4299749cc9c04b98ac19fc0bfb19c, type: 2}
   - {fileID: 11400000, guid: dd686dbbe63542042936abdc2832dd91, type: 2}
   - {fileID: 11400000, guid: 7b7d1ed4d6f679c4ab77949b30fa34fc, type: 2}
+  TechnologiesTrees:
+  - {fileID: 11400000, guid: 51e8c2109d0c25f478b3061f2b2a8fde, type: 2}
+  - {fileID: 11400000, guid: 65dd811e361f7ab4d87b8e303df9b02c, type: 2}
+  - {fileID: 11400000, guid: 559e521931b5d70468018d1b3c2aed31, type: 2}
+  - {fileID: 11400000, guid: 032f043572131f14f9d71aa0d998653b, type: 2}
   AvailableBattalions:
   - {fileID: 11400000, guid: c86fbdad4aca83245a6bfb10e5aea756, type: 2}
   - {fileID: 11400000, guid: afbb814ab07a6ce42995d3faa07ef673, type: 2}

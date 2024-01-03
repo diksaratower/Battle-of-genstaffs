@@ -63,7 +63,7 @@ public class NationalFocusTreeUI : MonoBehaviour
                 {
                     if (focUIOne.Focus.NeedsForExecution.Contains(focUITwo.Focus))
                     {
-                        MakeLine(focUIOne.GetComponent<RectTransform>(), focUITwo.GetComponent<RectTransform>(), Color.red);
+                        UILineCreation.MakeLine(focUIOne.GetComponent<RectTransform>(), focUITwo.GetComponent<RectTransform>(), _focusesConnectionsParent, Color.red);
                     }
                 }
             }
@@ -93,10 +93,20 @@ public class NationalFocusTreeUI : MonoBehaviour
         _focusesUILevels.Add(new FocusUILevel() { Focuses = focusesUI, FocLayoutGroup = layout});
     }
 
-    private void MakeLine(RectTransform rectTransformA, RectTransform rectTransformB, Color col, float lineWidth = 0.1f)
+
+    private class FocusUILevel
+    {
+        public HorizontalLayoutGroup FocLayoutGroup;
+        public List<NationalFocusUI> Focuses = new List<NationalFocusUI>();
+    }
+}
+
+public static class UILineCreation
+{
+    public static GameObject MakeLine(RectTransform rectTransformA, RectTransform rectTransformB, Transform lineParent, Color col, float lineWidth = 0.1f)
     {
         GameObject lineObj = new GameObject();
-        lineObj.transform.SetParent(_focusesConnectionsParent);
+        lineObj.transform.SetParent(lineParent);
         Image lineImage = lineObj.AddComponent<Image>();
         lineImage.color = col;
 
@@ -107,12 +117,6 @@ public class NationalFocusTreeUI : MonoBehaviour
         rect.LookAt(rectTransformB, Vector3.right);
         Vector3 dif = rectTransformA.position - rectTransformB.position;
         rect.rotation = Quaternion.Euler(new Vector3(0, 0, 180 * Mathf.Atan(dif.y / dif.x) / Mathf.PI));
-    }
-
-
-    private class FocusUILevel
-    {
-        public HorizontalLayoutGroup FocLayoutGroup;
-        public List<NationalFocusUI> Focuses = new List<NationalFocusUI>();
+        return lineObj;
     }
 }
