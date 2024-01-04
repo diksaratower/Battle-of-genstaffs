@@ -15,5 +15,5 @@ MonoBehaviour:
   FabricationCost: -1
   Name: "\u041B\u044E\u0434\u0441\u043A\u0438\u0435 \u0440\u0435\u0441\u0443\u0440\u0441\u044B"
   ID: manpower
-  EquipmentImage: {fileID: 21300000, guid: 9d31557f1a84850468d0b81612d4ed3f, type: 3}
+  EquipmentImage: {fileID: 21300000, guid: 6050140683e87d943aaa0e0a3ba32211, type: 3}
   EqType: 3

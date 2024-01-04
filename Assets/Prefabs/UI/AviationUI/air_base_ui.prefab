@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 5822465947351453655}
   - component: {fileID: 4045467541055351935}
   - component: {fileID: 2004897946931660804}
+  - component: {fileID: -3940605712609489861}
   m_Layer: 5
   m_Name: air_base_ui
   m_TagString: Untagged
@@ -351,3 +352,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-3940605712609489861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6975083599394512742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a25e7eb3e52d44999a4490e2d5e68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetButton: {fileID: 2004897946931660804}

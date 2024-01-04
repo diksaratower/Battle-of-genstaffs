@@ -248,12 +248,28 @@ public class Division : SupplyUnit
 
     public float GetAttack()
     {
-        return _attack;
+        var attack = 0f;
+        foreach (var equipmnet in EquipmentInDivision)
+        {
+            if (equipmnet.Equipment is IGroundCombatEquipment)
+            {
+                attack += ((equipmnet.Equipment as IGroundCombatEquipment).Attack) * equipmnet.Count;
+            }
+        }
+        return attack;
     }
 
     public float GetDefense()
     {
-        return _defense;
+        var defense = 0f;
+        foreach (var equipmnet in EquipmentInDivision)
+        {
+            if (equipmnet.Equipment is IGroundCombatEquipment)
+            {
+                defense += ((equipmnet.Equipment as IGroundCombatEquipment).Defens) * equipmnet.Count;
+            }
+        }
+        return defense;
     }
 
     public void GiveDamageToOrganization(float damage)
@@ -311,11 +327,11 @@ public class Division : SupplyUnit
         Template = template;
         _neededEquipment = Template.GetTemplateNeedEquipment();
         EquipmentInDivision.Clear();
-        EquipmentInDivision.AddRange(Template.GetTemplateNeedEquipment());
+        /*EquipmentInDivision.AddRange(Template.GetTemplateNeedEquipment());
         for (int i = 0; i < EquipmentInDivision.Count; i++)
         {
-            EquipmentInDivision[i] = new NeedEquipmentCountIdPair(EquipmentInDivision[i].EqType, 0);
-        }
+            EquipmentInDivision[i] = new TypedEquipmentCountIdPair(EquipmentInDivision[i].EqType, 0);
+        }*/
        
         DivisionAvatar = template.GetAvatar();
         _attack = template.Attack;

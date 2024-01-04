@@ -97,7 +97,7 @@ public class UnitsManager : MonoBehaviour, ISaveble
                     CountryOwnerID = division.CountyOwner.ID,
                     Organization = division.Organization
                 };
-                ser.EquipmentInDivision = division.EquipmentInDivision;
+                //ser.EquipmentInDivision = division.EquipmentInDivision;
                 Divisions.Add(ser);
             }
         }
@@ -119,7 +119,7 @@ public class UnitsManager : MonoBehaviour, ISaveble
                 var divOwner = Map.Instance.GetCountryFromId(divison.CountryOwnerID);
                 var div = manager.AddDivision(divison.Position, divOwner.Templates.Templates[divison.TemplateIndex], divOwner);
                 div.Organization = divison.Organization;
-                div.EquipmentInDivision = divison.EquipmentInDivision;
+                //div.EquipmentInDivision = divison.EquipmentInDivision;
             }
         }
 
@@ -135,7 +135,7 @@ public class UnitsManager : MonoBehaviour, ISaveble
             public int TemplateIndex;
             public float Organization;
             public string CountryOwnerID;
-            public List<NeedEquipmentCountIdPair> EquipmentInDivision = new List<NeedEquipmentCountIdPair>();
+            public List<TypedEquipmentCountIdPair> EquipmentInDivision = new List<TypedEquipmentCountIdPair>();
         }
     }
 }

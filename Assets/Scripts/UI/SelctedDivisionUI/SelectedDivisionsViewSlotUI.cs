@@ -1,8 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class SelectedDivisionsViewSlotUI : MonoBehaviour
 {
@@ -13,6 +13,8 @@ public class SelectedDivisionsViewSlotUI : MonoBehaviour
     [SerializeField] private Image _organizationField;
     [SerializeField] private Image _equipmentField;
     [SerializeField] private Button _onClickButton;
+    [SerializeField] private Button _openDivisionDetailsWindow;
+
 
     private void Update()
     {
@@ -29,6 +31,12 @@ public class SelectedDivisionsViewSlotUI : MonoBehaviour
         {
             gameIU.DeselectedAllDivisions();
             gameIU.SelectDivisions(new List<Division>(1) { Division });
+        });
+        _openDivisionDetailsWindow.onClick.AddListener(delegate 
+        {
+            var divisionDescriptionUI = FindObjectOfType<DivisionDescriptionUI>();
+            divisionDescriptionUI.gameObject.SetActive(true);
+            divisionDescriptionUI.RefreshUI(division);
         });
     }
 }

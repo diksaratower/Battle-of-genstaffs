@@ -285,6 +285,7 @@ GameObject:
   - component: {fileID: 6986892159912754750}
   - component: {fileID: 795858491245047690}
   - component: {fileID: 1544021595206796712}
+  - component: {fileID: 1162090635723145787}
   m_Layer: 5
   m_Name: delete_slot
   m_TagString: Untagged
@@ -395,6 +396,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1162090635723145787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608980859651597627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a25e7eb3e52d44999a4490e2d5e68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetButton: {fileID: 0}
 --- !u!1 &1230898214427969976
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,6 +421,7 @@ GameObject:
   - component: {fileID: 1230898214427969980}
   - component: {fileID: 1230898214427969979}
   - component: {fileID: 1230898214427969978}
+  - component: {fileID: 6605877353917060193}
   m_Layer: 5
   m_Name: add_factory
   m_TagString: Untagged
@@ -517,6 +532,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6605877353917060193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230898214427969976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a25e7eb3e52d44999a4490e2d5e68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetButton: {fileID: 0}
 --- !u!1 &1230898214806237289
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,6 +829,7 @@ GameObject:
   - component: {fileID: 1230898215033191547}
   - component: {fileID: 1230898215033191546}
   - component: {fileID: 1230898215033191545}
+  - component: {fileID: 1595877331252449912}
   m_Layer: 5
   m_Name: remove_factory
   m_TagString: Untagged
@@ -911,6 +940,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1595877331252449912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230898215033191495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a25e7eb3e52d44999a4490e2d5e68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetButton: {fileID: 0}
 --- !u!1 &1230898215964615350
 GameObject:
   m_ObjectHideFlags: 0
@@ -1367,6 +1409,8 @@ MonoBehaviour:
   _removeSlotButton: {fileID: 1544021595206796712}
   _fabricationFill: {fileID: 7467191967443087675}
   _fabricationFillGO: {fileID: 7089277606420385129}
+  _equipmentCountDefaultColor: {r: 0.49803922, g: 0.9137255, b: 0, a: 1}
+  _equipmentCountNegativeColor: {r: 0.9137255, g: 0.17254902, b: 0.16078432, a: 1}
 --- !u!1 &4730984618495366418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,8 +1446,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -182.18959, y: -30.1}
-  m_SizeDelta: {x: 51.5431, y: 16.343}
+  m_AnchoredPosition: {x: -144.2036, y: -29.8}
+  m_SizeDelta: {x: 145.9268, y: 19.559}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2248686721766874649
 CanvasRenderer:
@@ -1443,8 +1487,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278249855
-  m_fontColor: {r: 0.49764475, g: 0.9150943, b: 0, a: 1}
+    rgba: 4280888553
+  m_fontColor: {r: 0.9150943, g: 0.17351182, b: 0.15970986, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1461,8 +1505,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9.35
-  m_fontSizeBase: 9.35
+  m_fontSize: 12.3
+  m_fontSizeBase: 12.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

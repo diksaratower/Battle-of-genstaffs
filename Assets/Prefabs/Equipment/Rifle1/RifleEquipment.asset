@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeaad9a737509564587fa5ab6dde5d5b, type: 3}
   m_Name: RifleEquipment
   m_EditorClassIdentifier: 
-  FabricationCost: 16
+  FabricationCost: 3.5
   Name: "\u0412\u0438\u043D\u0442\u043E\u0432\u043A\u0430 \u041F\u0412\u041C"
   ID: ww1_rifle_equipment
   EquipmentImage: {fileID: 21300000, guid: 15be9d8ef2ad6ce4cb20996ea8dc763f, type: 3}
   EqType: 0
-  Attack: 1
+  Attack: 0.2
+  Defens: 0.2

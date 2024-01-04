@@ -58,6 +58,18 @@ pp_all_zero - всем полит власть на ноль
             GameTimer.Instance.DTime = new DateTime(1936, 1, 1);
             WriteTextToConsole("ƒата устовлена на стандартную");
         }
+        if (text.StartsWith("rp"))
+        {
+            if ("rp".Length == 2)
+            {
+                Player.CurrentCountry.Research.ResearchPointCount += 10000;
+            }
+            else
+            {
+                Player.CurrentCountry.Research.ResearchPointCount += int.Parse(text.Remove(0, 3));
+            }
+            WriteTextToConsole("ƒобавили очки исследований.");
+        }
         if (text.StartsWith("annex"))
         {
             var countryID = text.Remove(0, 6);

@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeaad9a737509564587fa5ab6dde5d5b, type: 3}
   m_Name: RifleEquipment2
   m_EditorClassIdentifier: 
-  FabricationCost: 30
+  FabricationCost: 23.1
   Name: "\u0411\u0430\u0437\u043E\u0432\u0430\u044F \u0432\u0438\u043D\u0442\u043E\u0432\u043A\u0430
     1935"
   ID: rifle2_based
   EquipmentImage: {fileID: 21300000, guid: 6ca93ba52f693924ea01b9e41f3ff33e, type: 3}
-  Attack: 3
+  EqType: 0
+  Attack: 1
+  Defens: 1

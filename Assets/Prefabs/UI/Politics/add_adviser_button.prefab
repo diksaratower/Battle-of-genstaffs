@@ -422,6 +422,7 @@ GameObject:
   - component: {fileID: -912952921682030059}
   - component: {fileID: 8509585869831580659}
   - component: {fileID: -114878066952387602}
+  - component: {fileID: 8163246400068776056}
   m_Layer: 5
   m_Name: add_adviser_button
   m_TagString: Untagged
@@ -567,6 +568,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tooltipViewMenuPrefab: {fileID: 6277429999821054299, guid: 7079a715a85154840a41d307ac6e40fd,
     type: 3}
+--- !u!114 &8163246400068776056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7095717476720715398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a25e7eb3e52d44999a4490e2d5e68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetButton: {fileID: 8509585869831580659}
 --- !u!1 &7095717477139211255
 GameObject:
   m_ObjectHideFlags: 0

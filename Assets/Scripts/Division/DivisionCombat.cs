@@ -64,7 +64,7 @@ public class DivisionCombat
         float attack = 0;
         foreach (var attacker in Attackers)
         {
-            attack += (attacker.GetAttack()  * GetAviationEffectPercent(attacker)) * attacker.GetDivisionStrength();
+            attack += (attacker.GetAttack() * GetAviationEffectPercent(attacker));
         }
         return attack;
     }
@@ -74,7 +74,7 @@ public class DivisionCombat
         float def = 0;
         foreach (var defender in Defenders)
         {
-            def += (defender.GetDefense() * GetAviationEffectPercent(defender)) * defender.GetDivisionStrength();
+            def += (defender.GetDefense() * GetAviationEffectPercent(defender));
         }
         return def;
     }
@@ -187,7 +187,7 @@ public class DivisionCombat
             {
                 equipment.Count -= losses;
             }
-            if (equipment.EqType == EquipmentType.Manpower)
+            if (equipment.Equipment.EqType == EquipmentType.Manpower)
             {
                 division.CountyOwner.OnManpowerLosses?.Invoke(losses);
             }

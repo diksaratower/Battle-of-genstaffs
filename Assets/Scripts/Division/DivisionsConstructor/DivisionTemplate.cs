@@ -134,9 +134,9 @@ public class DivisionTemplate
         return list;
     }
 
-    public List<NeedEquipmentCountIdPair> GetTemplateNeedEquipment()
+    public List<TypedEquipmentCountIdPair> GetTemplateNeedEquipment()
     {
-        var list = new List<NeedEquipmentCountIdPair>();
+        var list = new List<TypedEquipmentCountIdPair>();
         var types = Enum.GetValues(typeof(EquipmentType));
         for (int i = 0; i < types.Length; i++)
         {
@@ -154,7 +154,7 @@ public class DivisionTemplate
             if (eqNeedCount > 0)
             {
                // var typePair = new KeyValuePair<string, int>(types.GetValue(i).ToString(), eqNeedCount);
-                list.Add(new NeedEquipmentCountIdPair((EquipmentType)types.GetValue(i), eqNeedCount));
+                list.Add(new TypedEquipmentCountIdPair((EquipmentType)types.GetValue(i), eqNeedCount));
             }
         }
         return list;

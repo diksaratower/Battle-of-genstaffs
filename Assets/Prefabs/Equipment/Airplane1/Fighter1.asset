@@ -17,3 +17,4 @@ MonoBehaviour:
   ID: ww1_fighter
   EquipmentImage: {fileID: 21300000, guid: 1ee2250f0677e60449f28bd2dcfd50b6, type: 3}
   EqType: 5
+  AttackDistance: 87

@@ -17,4 +17,6 @@ MonoBehaviour:
     1941"
   ID: rifle3_ppsh
   EquipmentImage: {fileID: 21300000, guid: e2d49210de85cc64cbb2eaa4151d52a6, type: 3}
-  Attack: 10
+  EqType: 0
+  Attack: 3
+  Defens: 4

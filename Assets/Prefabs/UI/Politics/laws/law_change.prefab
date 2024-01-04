@@ -302,6 +302,7 @@ GameObject:
   - component: {fileID: 1583345795286747530}
   - component: {fileID: 1244373191585524353}
   - component: {fileID: 8946511153833085499}
+  - component: {fileID: 8321649156240395294}
   m_Layer: 5
   m_Name: law_change
   m_TagString: Untagged
@@ -432,3 +433,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8321649156240395294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6181465031656836310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a25e7eb3e52d44999a4490e2d5e68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetButton: {fileID: 0}

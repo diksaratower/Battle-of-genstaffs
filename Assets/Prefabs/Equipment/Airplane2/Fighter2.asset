@@ -17,3 +17,4 @@ MonoBehaviour:
   ID: 1940_fighter
   EquipmentImage: {fileID: 21300000, guid: aefa5dd16ed75aa4cb8bffdf5b3e7bbd, type: 3}
   EqType: 5
+  AttackDistance: 100

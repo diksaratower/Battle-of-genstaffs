@@ -15,6 +15,8 @@ public class CountryFabricationEquipmentSlotUI : MonoBehaviour
     [SerializeField] private Button _removeSlotButton;
     [SerializeField] private Image _fabricationFill;
     [SerializeField] private GameObject _fabricationFillGO;
+    [SerializeField] private Color _equipmentCountDefaultColor;
+    [SerializeField] private Color _equipmentCountNegativeColor;
 
     private CountryFabricationEquipmentSlot _fabricationSlot;
     private Country _country;
@@ -101,7 +103,16 @@ public class CountryFabricationEquipmentSlotUI : MonoBehaviour
                 _equipmentInStorage.gameObject.SetActive(true);
             }
             var equipmentType = (_fabricationSlot.Fabricatable as Equipment).EqType;
-            _equipmentInStorage.text = _country.EquipmentStorage.GetEquipmentCountWithDeficit(equipmentType).ToString();
+            var equipmentCount = _country.EquipmentStorage.GetEquipmentCountWithDeficit(equipmentType);
+            _equipmentInStorage.text = equipmentCount.ToString();
+            if (equipmentCount < 0)
+            {
+                _equipmentInStorage.color = _equipmentCountNegativeColor;
+            }
+            else
+            {
+                _equipmentInStorage.color = _equipmentCountDefaultColor;
+            }
         }
         else
         {

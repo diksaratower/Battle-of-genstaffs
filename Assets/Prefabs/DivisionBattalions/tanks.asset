@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: tanks
   m_EditorClassIdentifier: 
   Name: "\u0422\u0430\u043D\u043A\u0438"
-  Attack: 8
+  Attack: 40
   Defend: 7
-  Organization: 200
+  Organization: 800
   Speed: 40
   ManPower: 700
   BatImage: {fileID: 21300000, guid: 7f24205a50c234d4d8944e612cef0585, type: 3}

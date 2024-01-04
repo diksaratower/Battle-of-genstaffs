@@ -14,7 +14,7 @@ public class Battalion : ScriptableObject
     public int ManPower = 1000;
     public Sprite BatImage;
     public DivisionViewType ViewType;
-    public List<NeedEquipmentCountIdPair> NeedEquipmentList = new List<NeedEquipmentCountIdPair>();
+    public List<TypedEquipmentCountIdPair> NeedEquipmentList = new List<TypedEquipmentCountIdPair>();
     public List<Technology> NeededTechnologies = new List<Technology>();
 
     public bool CanUsed(Country country)
@@ -32,14 +32,27 @@ public class Battalion : ScriptableObject
 
 
 [Serializable]
-public class NeedEquipmentCountIdPair
+public class TypedEquipmentCountIdPair
 {
     public EquipmentType EqType;
     public int Count;
 
-    public NeedEquipmentCountIdPair(EquipmentType eqType, int count)
+    public TypedEquipmentCountIdPair(EquipmentType eqType, int count)
     {
         EqType = eqType;
+        Count = count;
+    }
+}
+
+[Serializable]
+public class EquipmentCountIdPair
+{
+    public Equipment Equipment;
+    public int Count;
+
+    public EquipmentCountIdPair(Equipment equipment, int count)
+    {
+        Equipment = equipment;
         Count = count;
     }
 }

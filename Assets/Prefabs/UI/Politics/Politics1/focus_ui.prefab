@@ -377,6 +377,7 @@ GameObject:
   - component: {fileID: 2545810913600308338}
   - component: {fileID: 8679473217198366704}
   - component: {fileID: 9116250724409699763}
+  - component: {fileID: 2481102027316835371}
   m_Layer: 5
   m_Name: focus_ui
   m_TagString: Untagged
@@ -506,3 +507,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2481102027316835371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2463205282343274563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a25e7eb3e52d44999a4490e2d5e68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetButton: {fileID: 0}

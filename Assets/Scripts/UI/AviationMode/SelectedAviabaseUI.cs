@@ -88,6 +88,13 @@ public class SelectedAviabaseUI : MonoBehaviour
             {
                 var radiusView = Instantiate(_aviationRadiusViewPrefab);
                 radiusView.UpdateRadiusView(aviationDivision);
+                aviationDivision.OnGetSupply += delegate
+                {
+                    if (radiusView != null)
+                    {
+                        radiusView.UpdateRadiusView(aviationDivision);
+                    }
+                };
                 _aviationRadiuses.Add(radiusView);
             }
         }

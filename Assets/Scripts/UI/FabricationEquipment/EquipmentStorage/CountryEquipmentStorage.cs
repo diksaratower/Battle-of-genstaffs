@@ -17,13 +17,13 @@ public class CountryEquipmentStorage
     {
         foreach (var request in _supplyRequests)
         {
-            RemoveHowMuchIsAvailable(request.EquipmentCount, request.EquipmentType, out var getedCount);
+            var getedEquipment = RemoveHowMuchIsAvailableDeteil(request.EquipmentCount, request.EquipmentType, out var getedCount);
             if (getedCount == 0)
             {
                 continue;
             }
             request.EquipmentCount -= getedCount;
-            request.OnAddedEquipment?.Invoke(getedCount);
+            request.OnAddedEquipment?.Invoke(getedEquipment);
             if (request.EquipmentCount <= 0)
             {
                 request.OnClosedRequest?.Invoke();
@@ -156,6 +156,47 @@ public class CountryEquipmentStorage
         }
     }
 
+    private List<EquipmentCountIdPair> RemoveEquipmentDetail(EquipmentType equipmentType, int count)
+    {
+        var list = new List<EquipmentCountIdPair>();
+        if (GetEquipmentCount(equipmentType) < count)
+        {
+            throw new System.Exception("You try get non-existent equipment");
+        }
+        foreach (var sl in _equipmentSlots)
+        {
+            var equipment = EquipmentManagerSO.GetEquipmentFromID(sl.ID);
+            if (equipment.EqType == equipmentType)
+            {
+                var difference = sl.EquipmentCount - count;
+                if (difference >= 0)
+                {
+                    sl.EquipmentCount -= count;
+                    list.Add(new EquipmentCountIdPair(equipment, count));
+                    break;
+                }
+                if (difference < 0)
+                {
+                    sl.EquipmentCount = 0;
+                    if (list.Find(eq => eq.Equipment == equipment) == null)
+                    {
+                        list.Add(new EquipmentCountIdPair(equipment, sl.EquipmentCount));
+                    }
+                    else
+                    {
+                        list.Find(eq => eq.Equipment == equipment).Count += sl.EquipmentCount;
+                    }
+                    count -= sl.EquipmentCount;
+                }
+            }
+            if (count == 0)
+            {
+                break;
+            }
+        }
+        return list;
+    }
+
     private void RemoveHowMuchIsAvailable(int needCount, EquipmentType equipmentType, out int getCount)
     {
         if(GetEquipmentCount(equipmentType) >= needCount)
@@ -168,6 +209,22 @@ public class CountryEquipmentStorage
             getCount = GetEquipmentCount(equipmentType);
             RemoveEquipment(equipmentType, getCount);
         }
+    }
+
+    private List<EquipmentCountIdPair> RemoveHowMuchIsAvailableDeteil(int needCount, EquipmentType equipmentType, out int getCount)
+    {
+        var list = new List<EquipmentCountIdPair>();
+        if (GetEquipmentCount(equipmentType) >= needCount)
+        {
+            list.AddRange(RemoveEquipmentDetail(equipmentType, needCount));
+            getCount = needCount;
+        }
+        else
+        {
+            getCount = GetEquipmentCount(equipmentType);
+            list.AddRange(RemoveEquipmentDetail(equipmentType, getCount));
+        }
+        return list;
     }
 
     public CountryEquipmentStorageSave GetSerialize()
@@ -242,7 +299,7 @@ public class SupplyRequest
     public SupplyRequestType RequestType { get; }
     public bool RequestClosed { get; private set; }
     public Action OnClosedRequest;
-    public Action<int> OnAddedEquipment;
+    public Action<List<EquipmentCountIdPair>> OnAddedEquipment;
     public int EquipmentCount;
 
     public SupplyRequest(int equipmentCount, EquipmentType equipmentType)
