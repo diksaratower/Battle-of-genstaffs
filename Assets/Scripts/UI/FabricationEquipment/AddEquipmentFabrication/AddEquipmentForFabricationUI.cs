@@ -1,7 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
+
 
 public class AddEquipmentForFabricationUI : MonoBehaviour
 {
@@ -32,15 +31,15 @@ public class AddEquipmentForFabricationUI : MonoBehaviour
     {
         _slotsUI.ForEach(sl => { Destroy(sl.gameObject); });
         _slotsUI.Clear();
-        var techs = country.Research.GetOpenedTechnologies();
-        foreach (var tech in techs) 
+        var technologies = country.Research.GetOpenedTechnologies();
+        foreach (var technology in technologies) 
         {
-            if (tech is EquipmentTechnology)
+            if (technology.CanFabricatable)
             {
-                if (!country.CountryFabrication.EquipmentIsFabricating((tech as EquipmentTechnology).UnlockEquipment))
+                if (!country.CountryFabrication.EquipmentIsFabricating(technology.Fabricatable))
                 {
                     var slot = Instantiate(_slotUIPrefab, _slotsParent);
-                    slot.RefreshUI(tech, _fabricationEquipmentUI, this);
+                    slot.RefreshUI(technology.Fabricatable, _fabricationEquipmentUI, this);
                     _slotsUI.Add(slot);
                 }
             }

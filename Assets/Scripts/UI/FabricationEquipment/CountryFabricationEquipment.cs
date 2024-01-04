@@ -21,8 +21,18 @@ public class CountryFabricationEquipment
     {
         foreach (var slot in EquipmentSlots) 
         {
-            var newEquipment = Mathf.RoundToInt(slot.Fabricate());
-            _country.EquipmentStorage.AddEquipment(slot.EquipmentID, newEquipment);
+            var newEquipmentCount = slot.Fabricate();
+            if (slot.Fabricatable is Equipment)
+            {
+                _country.EquipmentStorage.AddEquipment((slot.Fabricatable as Equipment).ID, newEquipmentCount);
+            }
+            if (slot.Fabricatable is ShipSO)
+            {
+                for (int i = 0; i < newEquipmentCount; i++)
+                {
+                    Map.Instance.MarineRegions.AddShip((slot.Fabricatable as ShipSO).CreateShip(_country));
+                }
+            }
         }
     }
 
@@ -42,17 +52,17 @@ public class CountryFabricationEquipment
         return effeciency;
     }
 
-    public void AddSlot(string id, List<BuildingSlotRegion> factories) 
+    public void AddSlot(IFabricatable fabricatable, List<BuildingSlotRegion> factories) 
     {
-        foreach(var fac in factories) 
+        foreach(var factory in factories) 
         {
-            if(FactoryIsUses(fac))
+            if(FactoryIsUses(factory))
             {
                 throw new System.Exception("Factory already use");
             }
         }
-        if (EquipmentSlots.Exists(sl => sl.EquipmentID == id)) return;
-        EquipmentSlots.Add(new CountryFabricationEquipmentSlot(id, factories, this));
+        if (EquipmentSlots.Exists(sl => sl.Fabricatable == fabricatable)) return;
+        EquipmentSlots.Add(new CountryFabricationEquipmentSlot(fabricatable, factories, this));
         OnAddedSlot?.Invoke();
     }
 
@@ -62,9 +72,9 @@ public class CountryFabricationEquipment
         OnRemovedSlot?.Invoke();
     }
 
-    public bool EquipmentIsFabricating(Equipment equipment)
+    public bool EquipmentIsFabricating(IFabricatable fabricatble)
     {
-        return EquipmentSlots.Find(sl => sl.EquipmentID == equipment.ID) != null;
+        return EquipmentSlots.Find(sl => sl.Fabricatable == fabricatble) != null;
     }
 
     public List<BuildingSlotRegion> GetNotUseMilitaryFactories()
@@ -94,4 +104,13 @@ public class CountryFabricationEquipment
         }
         return false;
     }
+}
+
+
+public interface IFabricatable
+{
+    public float FabricationCost { get; }
+    public string ID { get; }
+    public string Name { get; }
+    public Sprite ItemImage { get; }
 }

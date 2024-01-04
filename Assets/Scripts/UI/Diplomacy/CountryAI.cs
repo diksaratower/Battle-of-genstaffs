@@ -66,7 +66,8 @@ public class CountryAI : MonoBehaviour
         }
         if (_country.CountryFabrication.EquipmentSlots.Count == 0)
         {
-            _country.CountryFabrication.AddSlot("ww1_rifle_equipment", _country.CountryBuild.GetCountryBuildings(BuildingType.MilitaryFactory));
+            _country.CountryFabrication.AddSlot(EquipmentManagerSO.GetAllEquipment().Find(equipment => equipment.ID == "ww1_rifle_equipment"),
+                _country.CountryBuild.GetCountryBuildings(BuildingType.MilitaryFactory));
         }
         if (_country.CountryArmies.Armies.Count == 0 && UnitsManager.Instance.Divisions.FindAll(div => div.CountyOwner == _country).Count >= _maxDivisionsCount)
         {

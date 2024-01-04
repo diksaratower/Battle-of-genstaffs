@@ -13,6 +13,8 @@ public class CountryFabricationEquipmentSlotUI : MonoBehaviour
     [SerializeField] private Button _addFactoryButton;
     [SerializeField] private Button _removeFactoryButton;
     [SerializeField] private Button _removeSlotButton;
+    [SerializeField] private Image _fabricationFill;
+    [SerializeField] private GameObject _fabricationFillGO;
 
     private CountryFabricationEquipmentSlot _fabricationSlot;
     private Country _country;
@@ -21,9 +23,8 @@ public class CountryFabricationEquipmentSlotUI : MonoBehaviour
     {
         _fabricationSlot = fabricationSlot;
         _country = country;
-        var equipment = EquipmentManagerSO.GetEquipmentFromID(fabricationSlot.EquipmentID);
-        _equipmentImage.sprite = equipment.EquipmentImage;
-        _equipmentName.text = equipment.Name;
+        _equipmentImage.sprite = fabricationSlot.Fabricatable.ItemImage;
+        _equipmentName.text = fabricationSlot.Fabricatable.Name;
         UpdateFactoriesCount(fabricationSlot);
         _addFactoryButton.onClick.AddListener(() =>
         {
@@ -53,8 +54,62 @@ public class CountryFabricationEquipmentSlotUI : MonoBehaviour
 
     private void Update()
     {
-        _fabricationPerHour.text = "Производится: " + _fabricationSlot.GetEquipmentFabricationPerHour() + " ед/час";
-        _equipmentInStorage.text = _country.EquipmentStorage.GetEquipmentCountWithDeficit(EquipmentManagerSO.GetEquipmentFromID(_fabricationSlot.EquipmentID).EqType).ToString();
+        UpdateFabricationWithTime();
+        UpdateFabricationFill();
+        CountInStorageUpdate();
+    }
+
+    private void UpdateFabricationWithTime()
+    {
+        var fabricationPerHour = _fabricationSlot.GetEquipmentFabricationCountPerHour();
+        if (fabricationPerHour >= 1f)
+        {
+            _fabricationPerHour.text = "Производится: " + fabricationPerHour + " ед/час";
+        }
+        if (fabricationPerHour < 1f)
+        {
+            _fabricationPerHour.text = "Производится: " + (fabricationPerHour * 24) + " ед/день";
+        }
+        if ((fabricationPerHour * 24) < 1f)
+        {
+            _fabricationPerHour.text = "Производится: " + ((fabricationPerHour * 24) * 30) + " ед/месяц";
+        }
+    }
+
+    private void UpdateFabricationFill()
+    {
+        if (_fabricationSlot.GetEquipmentFabricationCountPerHour() < 0.05f)
+        {
+            _fabricationFillGO.SetActive(true);
+            _fabricationFill.fillAmount = _fabricationSlot.GetFabricationPercent();
+        }
+        else
+        {
+            if (_fabricationFillGO.activeSelf == true)
+            {
+                _fabricationFillGO.SetActive(false);
+            }
+        }
+    }
+
+    private void CountInStorageUpdate()
+    {
+        if (_fabricationSlot.Fabricatable is Equipment)
+        {
+            if (_equipmentInStorage.gameObject.activeSelf == false)
+            {
+                _equipmentInStorage.gameObject.SetActive(true);
+            }
+            var equipmentType = (_fabricationSlot.Fabricatable as Equipment).EqType;
+            _equipmentInStorage.text = _country.EquipmentStorage.GetEquipmentCountWithDeficit(equipmentType).ToString();
+        }
+        else
+        {
+            if (_equipmentInStorage.gameObject.activeSelf == true)
+            {
+                _equipmentInStorage.gameObject.SetActive(false);
+            }
+        }
     }
 
     private void UpdateFactoriesCount(CountryFabricationEquipmentSlot fabricationSlot)

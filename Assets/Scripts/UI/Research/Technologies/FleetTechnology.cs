@@ -8,4 +8,7 @@ public class FleetTechnology : Technology
     public override string ID => UnlockShip.ID;
     public override Sprite TechImage => UnlockShip.ShipImage;
     public override string TechName => UnlockShip.Name;
+
+    public override bool CanFabricatable => true;
+    public override IFabricatable Fabricatable => UnlockShip;
 }

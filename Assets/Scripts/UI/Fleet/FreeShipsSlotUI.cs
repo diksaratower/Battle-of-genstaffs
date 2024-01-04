@@ -33,6 +33,7 @@ public class FreeShipsSlotUI : MonoBehaviour, FleetUISlot
     {
         Ship = ship;
         _divisionName.text = ship.Name;
+        _shipImage.sprite = ship.ShipImage;
         _regionPositionName.text = ship.ShipPosition.Name;
         _deleteButton.onClick.AddListener(delegate 
         {

@@ -17,4 +17,4 @@ MonoBehaviour:
   BuildingImage: {fileID: 21300000, guid: 3e45da5cb5acf014da5e186c301f74d9, type: 3}
   ID: military_factory
   BuildingType: 1
-  FabricationPerHour: 250
+  FabricationPerHour: 10

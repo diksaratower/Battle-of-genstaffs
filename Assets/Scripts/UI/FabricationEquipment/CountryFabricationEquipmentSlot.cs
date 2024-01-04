@@ -1,39 +1,51 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CountryFabricationEquipmentSlot
 {
     public List<BuildingSlotRegion> Factories = new List<BuildingSlotRegion>();
-    public string EquipmentID;
+    public IFabricatable Fabricatable;
 
     private float _equipmentCountFabricated;
     private CountryFabricationEquipment _countryFabrication;
 
-    public CountryFabricationEquipmentSlot(string id, List<BuildingSlotRegion> factories, CountryFabricationEquipment countryFabrication)
+    public CountryFabricationEquipmentSlot(IFabricatable fabricatable, List<BuildingSlotRegion> factories, CountryFabricationEquipment countryFabrication)
     {
         _countryFabrication = countryFabrication;
         Factories = factories;
-        EquipmentID = id;
+        Fabricatable = fabricatable;
     }
 
-    public float GetEquipmentFabricationPerHour()
+    public float GetEquipmentFabricationCountPerHour()
+    {
+        var newEquipmentCount = GetFabricationCostPerHour() / Fabricatable.FabricationCost;
+        return newEquipmentCount;
+    }
+
+    public float GetFabricationPercent()
+    {
+        return _equipmentCountFabricated / Fabricatable.FabricationCost;
+    }
+
+    public int Fabricate()
+    {
+        var newEquipmenCount = 0;
+        _equipmentCountFabricated += GetFabricationCostPerHour();
+        if ((_equipmentCountFabricated / Fabricatable.FabricationCost) > 1)
+        {
+            newEquipmenCount += Mathf.RoundToInt(_equipmentCountFabricated / Fabricatable.FabricationCost);
+            _equipmentCountFabricated -= (Fabricatable.FabricationCost * newEquipmenCount);
+        }
+        return newEquipmenCount;
+    }
+
+    private float GetFabricationCostPerHour()
     {
         float eqFabrication = 0;
         foreach (var factory in Factories)
         {
             eqFabrication += (((MilitaryFactory)factory.TargetBuilding).FabricationPerHour * _countryFabrication.GetCorrectFabricationEfficiency());
         }
-        var newEquipmentCount = eqFabrication / EquipmentManagerSO.GetEquipmentFromID(EquipmentID).FabricationCost;
-        return newEquipmentCount;
-    }
-
-    public int Fabricate()
-    {
-        _equipmentCountFabricated += GetEquipmentFabricationPerHour();
-        var newEquipmentInt = (int)Math.Truncate(_equipmentCountFabricated);
-        _equipmentCountFabricated -= newEquipmentInt;
-        return newEquipmentInt;
+        return eqFabrication;
     }
 }

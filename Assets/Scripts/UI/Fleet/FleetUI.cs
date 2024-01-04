@@ -24,13 +24,6 @@ public class FleetUI : MonoBehaviour
         SetUpReactionToChangeShipsCount();
 
         SetUpCreatingTacticalUnits();
-
-        for (int i = 0; i < 10; i++)
-        {
-            var ship = new Battleship(Player.CurrentCountry, $"Линкор {i}");
-            ship.ShipPosition = Map.Instance.MarineRegions.MarineRegionsList[0];
-            Map.Instance.MarineRegions.AddShip(ship);
-        }
         RefreshUI();
         CreateMarineRegionsUI();
     }
@@ -47,7 +40,10 @@ public class FleetUI : MonoBehaviour
 
     private void OnDisable()
     {
-        _marineRegions.SetActive(false);
+        if (_marineRegions)
+        {
+            _marineRegions.SetActive(false);
+        }
     }
 
     public void AddSelectedToTacticalUnit(TacticalFleetUnitSlotUI tacticalFleetUnitUI)

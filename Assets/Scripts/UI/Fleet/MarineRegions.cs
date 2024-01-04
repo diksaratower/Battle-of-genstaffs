@@ -104,6 +104,10 @@ public class MarineRegions : MonoBehaviour
 
     public Ship AddShip(Ship ship)
     {
+        if (ship.ShipPosition == null)
+        {
+            ship.ShipPosition = MarineRegionsList[0];
+        }
         Ships.Add(ship);
         OnCreateShip?.Invoke(ship);
         return ship;

@@ -8,4 +8,6 @@ public class EquipmentTechnology : Technology
     public override string ID { get => UnlockEquipment.ID; }
     public override string TechName { get => UnlockEquipment.Name; }
     public override Sprite TechImage { get => UnlockEquipment.EquipmentImage; }
+    public override bool CanFabricatable => true;
+    public override IFabricatable Fabricatable => UnlockEquipment; 
 }

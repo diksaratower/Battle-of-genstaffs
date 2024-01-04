@@ -10,4 +10,6 @@ public abstract class Technology : ScriptableObject
     public abstract Sprite TechImage { get; } 
     public abstract string TechName { get; }
     public abstract string ID { get; }
+    public abstract bool CanFabricatable { get; }
+    public abstract IFabricatable Fabricatable { get; }
 }

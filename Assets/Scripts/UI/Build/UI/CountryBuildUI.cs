@@ -164,7 +164,7 @@ public class CountryBuildUI : MonoBehaviour
         foreach (var queueSlot in _country.CountryBuild.BuildingsQueue)
         {
             var slot = Instantiate(_queueSlotUIPrefab, _queueSlotsParent);
-            slot.RefreshUI(queueSlot);
+            slot.RefreshUI(queueSlot, _country.CountryBuild);
             _queueSlotsUI.Add(slot);
         }
     }

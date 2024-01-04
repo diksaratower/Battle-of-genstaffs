@@ -16,3 +16,4 @@ MonoBehaviour:
   ShipImage: {fileID: 21300000, guid: 713f2557923e92b4881008cdc2831a2a, type: 3}
   Name: "\u042D\u0441\u043C\u0438\u043D\u0435\u0446"
   ID: destroyer_1939
+  BuildCost: 40000
