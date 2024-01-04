@@ -20,6 +20,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 75c4299749cc9c04b98ac19fc0bfb19c, type: 2}
   - {fileID: 11400000, guid: dd686dbbe63542042936abdc2832dd91, type: 2}
   - {fileID: 11400000, guid: 7b7d1ed4d6f679c4ab77949b30fa34fc, type: 2}
+  - {fileID: 11400000, guid: e64f3fb8716672c4a82858ffe23d57ce, type: 2}
+  - {fileID: 11400000, guid: b758bf93ffa189841816173b2e3af719, type: 2}
   TechnologiesTrees:
   - {fileID: 11400000, guid: 51e8c2109d0c25f478b3061f2b2a8fde, type: 2}
   - {fileID: 11400000, guid: 65dd811e361f7ab4d87b8e303df9b02c, type: 2}

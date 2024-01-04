@@ -15,5 +15,6 @@ MonoBehaviour:
   Technologies:
   - {fileID: 11400000, guid: 7354794c7d57beb42aa112503c1f7271, type: 2}
   - {fileID: 11400000, guid: 4ab77b3be64b96548a1363da75cda14f, type: 2}
+  - {fileID: 11400000, guid: e64f3fb8716672c4a82858ffe23d57ce, type: 2}
   BaseTechnology: {fileID: 11400000, guid: 7354794c7d57beb42aa112503c1f7271, type: 2}
   Category: 1

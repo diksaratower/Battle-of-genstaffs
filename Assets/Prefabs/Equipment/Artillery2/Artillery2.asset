@@ -9,11 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9473e36ffd07efd4c8f1504ee2b47ee3, type: 3}
-  m_Name: ArtilleryTree
+  m_Script: {fileID: 11500000, guid: dc0148da01a08b348a92ea7ba46ce197, type: 3}
+  m_Name: Artillery2
   m_EditorClassIdentifier: 
-  Technologies:
+  OpenCost: 600
+  OptimalDate: 1940
+  NeededTech:
   - {fileID: 11400000, guid: b758bf93ffa189841816173b2e3af719, type: 2}
-  - {fileID: 11400000, guid: dd686dbbe63542042936abdc2832dd91, type: 2}
-  BaseTechnology: {fileID: 11400000, guid: b758bf93ffa189841816173b2e3af719, type: 2}
-  Category: 0
+  _techName: '*use_equipment'
+  _techImage: {fileID: 0}
+  _id: '*use_equipment'
+  UnlockEquipment: {fileID: 11400000, guid: 6803f5b85229d844db95097d8c6c4729, type: 2}

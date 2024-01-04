@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc0148da01a08b348a92ea7ba46ce197, type: 3}
-  m_Name: Artillery
+  m_Name: Tank3
   m_EditorClassIdentifier: 
-  OpenCost: 200
-  OptimalDate: 1936
+  OpenCost: 3000
+  OptimalDate: 1941
+  NeededTech:
+  - {fileID: 11400000, guid: 4ab77b3be64b96548a1363da75cda14f, type: 2}
   _techName: '*use_equipment'
   _techImage: {fileID: 0}
   _id: '*use_equipment'
-  UnlockEquipment: {fileID: 11400000, guid: 6803f5b85229d844db95097d8c6c4729, type: 2}
+  UnlockEquipment: {fileID: 11400000, guid: f969eb74356fb3445b6b777b461bb8eb, type: 2}
