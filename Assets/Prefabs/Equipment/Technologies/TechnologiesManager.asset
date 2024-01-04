@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6c7082d3ee29a44bcdb019d8d427bf, type: 3}
+  m_Name: TechnologiesManager
+  m_EditorClassIdentifier: 
+  TechnologiesTrees:
+  - {fileID: 11400000, guid: 51e8c2109d0c25f478b3061f2b2a8fde, type: 2}
+  - {fileID: 11400000, guid: 65dd811e361f7ab4d87b8e303df9b02c, type: 2}
+  - {fileID: 11400000, guid: 559e521931b5d70468018d1b3c2aed31, type: 2}
+  - {fileID: 11400000, guid: 032f043572131f14f9d71aa0d998653b, type: 2}
+  - {fileID: 11400000, guid: fc5babd891c70654da1f6f9c80aa32e1, type: 2}
+  AvailableBattalions:
+  - {fileID: 11400000, guid: c86fbdad4aca83245a6bfb10e5aea756, type: 2}
+  - {fileID: 11400000, guid: afbb814ab07a6ce42995d3faa07ef673, type: 2}
+  - {fileID: 11400000, guid: 212382501537c164d91136583136668e, type: 2}
+  kek:
+    rid: -2
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }

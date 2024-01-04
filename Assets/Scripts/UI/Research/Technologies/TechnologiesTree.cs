@@ -14,5 +14,6 @@ public enum TechnologyCategory
 {
     Infantry,
     Tanks,
-    Aviation
+    Aviation, 
+    Fleet
 }

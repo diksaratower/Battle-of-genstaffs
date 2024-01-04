@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37867e7b2bd16634993b0c3fd6b33eef, type: 3}
+  m_Name: DestroerTechnology
+  m_EditorClassIdentifier: 
+  OpenCost: 1500
+  OptimalDate: 1936
+  NeededTech:
+  - {fileID: 11400000, guid: 3925eeccdff720348986335d79bfd5df, type: 2}
+  UnlockShip: {fileID: 11400000, guid: 7ee7ff666750b624c8571fae23111e5e, type: 2}

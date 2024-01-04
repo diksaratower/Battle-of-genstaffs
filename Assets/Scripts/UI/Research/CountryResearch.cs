@@ -87,10 +87,9 @@ public class CountryResearch
                 return;
             }
             var research = (CountryResearch)objTarget;
-            var manager = TechnologiesManagerSO.GetInstance();
             foreach (var techSave in OpenTechnologySaves)
             {
-                var tech = manager.TechnologyList.Find(t => t.ID == techSave.ID);
+                var tech = TechnologiesManagerSO.GetAllTechs().Find(t => t.ID == techSave.ID);
                 if (tech != null)
                 {
                     research._openedTechnologies.Add(tech);

@@ -5,7 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/TechnologiesManager", order = 1)]
 public class TechnologiesManagerSO : ScriptableObject
 {
-    public List<Technology> TechnologyList = new List<Technology>();
     public List<TechnologiesTree> TechnologiesTrees = new List<TechnologiesTree>();
     public List<Battalion> AvailableBattalions = new List<Battalion>();
 
@@ -13,13 +12,17 @@ public class TechnologiesManagerSO : ScriptableObject
 
     public static Technology GetTechFromID(string id)
     {
-        return GetInstance().TechnologyList.Find(x => x.ID == id);
+        return GetAllTechs().Find(x => x.ID == id);
     }
 
     public static List<Technology> GetAllTechs()
     {
         var list = new List<Technology>();
-        list.AddRange(GetInstance().TechnologyList);
+        var trees = GetInstance().TechnologiesTrees;
+        foreach (var tree in trees)
+        {
+            list.AddRange(tree.Technologies);
+        }
         return list;
     }
 

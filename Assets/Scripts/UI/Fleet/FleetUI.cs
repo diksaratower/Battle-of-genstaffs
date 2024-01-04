@@ -14,6 +14,7 @@ public class FleetUI : MonoBehaviour
     [SerializeField] private RemoveShipMenuUI _removeShipMenu;
     [SerializeField] private FleetMarineRegionUI _regionUIPrefab;
     [SerializeField] private Transform _regionsUIParent;
+    [SerializeField] private GameObject _marineRegions;
 
     private List<FleetUISlot> _fleetSlotsUI = new List<FleetUISlot>();
 
@@ -37,6 +38,16 @@ public class FleetUI : MonoBehaviour
     private void Update()
     {
         _shipsCountText.text = $"В нашем славном флоте {Map.Instance.MarineRegions.Ships.Count} кораблей!";
+    }
+
+    private void OnEnable()
+    {
+        _marineRegions.SetActive(true);
+    }
+
+    private void OnDisable()
+    {
+        _marineRegions.SetActive(false);
     }
 
     public void AddSelectedToTacticalUnit(TacticalFleetUnitSlotUI tacticalFleetUnitUI)
