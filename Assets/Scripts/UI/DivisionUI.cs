@@ -86,7 +86,7 @@ public class DivisionUI : MonoBehaviour
         var amountsSumm = 0f;
         foreach (Division division in _targetView.Divisions)
         {
-            var amount = division.GetEquipmentProcent();
+            var amount = division.GetBattleStrengh();
             amountsSumm += amount;
             amountList.Add(amount);
         }

@@ -21,7 +21,7 @@ public class SelectedDivisionsViewSlotUI : MonoBehaviour
         _divisionNameText.text = Division.Name;
         _divisionImage.sprite = Division.DivisionAvatar;
         _organizationField.fillAmount = (Division.Organization / Division.MaxOrganization);
-        _equipmentField.fillAmount = Division.GetEquipmentProcent();
+        _equipmentField.fillAmount = Division.GetBattleStrengh();
     }
 
     public void RefreshUI(Division division, GameIU gameIU)

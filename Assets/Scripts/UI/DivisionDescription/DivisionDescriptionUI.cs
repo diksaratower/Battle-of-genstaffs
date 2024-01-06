@@ -49,13 +49,20 @@ public class DivisionDescriptionUI : MonoBehaviour
         {
             if (_windowGO.activeSelf == true)
             {
-                UpdateEquipmentDetails(division);
+                if (division == _division)
+                {
+                    UpdateEquipmentDetails(division);
+                }
             }
         };
     }
 
     private void UpdateEquipmentDetails(Division division)
     {
+        if (division != _division)
+        {
+            return;
+        }
         _equipmentSlots.ForEach(slotUI =>
         {
             Destroy(slotUI.gameObject);

@@ -1,7 +1,6 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 
 [CreateAssetMenu(fileName = "Decision", menuName = "ScriptableObjects/Decision/Simple", order = 1)]
 public class Decision : ScriptableObject
@@ -13,15 +12,14 @@ public class Decision : ScriptableObject
 
     public void ActivaieDecision(Country country)
     {
+        if (country.Politics.PolitPower < PolitPowerCost)
+        {
+            return;
+        }
         country.Politics.PolitPower -= PolitPowerCost;
         foreach (DecisionEffect effect in Effects) 
         {
             effect.ExecuteDecisionEffect(country);
         }
-        /*
-        Player.CurrentCountry.Politics.CountryIdeology = Ideology.Democracy;
-        Player.CurrentCountry.Politics.FormGovernment = FormOfGovernment.Democracy;
-        Player.CurrentCountry.Politics.ElectionsType = CuntryElectionsType.Constantly;
-     */   
     }
 }

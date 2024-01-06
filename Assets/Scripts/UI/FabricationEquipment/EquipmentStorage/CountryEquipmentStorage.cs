@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 
 
@@ -15,22 +17,45 @@ public class CountryEquipmentStorage
 
     private void CalculateSupply()
     {
-        foreach (var request in _supplyRequests)
+        var typesEuipment = Enum.GetValues(typeof(EquipmentType)).Cast<EquipmentType>();
+        foreach (var type in typesEuipment)
         {
-            var getedEquipment = RemoveHowMuchIsAvailableDeteil(request.EquipmentCount, request.EquipmentType, out var getedCount);
-            if (getedCount == 0)
+            var typeRequests = _supplyRequests.FindAll(req => req.EquipmentType == type);
+            var allNeed = 0;
+            foreach (var request in typeRequests)
             {
-                continue;
+                allNeed += request.EquipmentCount;
             }
-            request.EquipmentCount -= getedCount;
-            request.OnAddedEquipment?.Invoke(getedEquipment);
-            if (request.EquipmentCount <= 0)
+            if (typeRequests.Count > 0)
             {
-                request.OnClosedRequest?.Invoke();
-                continue;
+                var getedEquipment = RemoveHowMuchIsAvailableDeteil(allNeed, type, out var getedCount);
+                foreach (var equipment in getedEquipment)
+                {
+                    foreach (var request in typeRequests)
+                    {
+                        AddEquipmentToRequest(request, new List<EquipmentCountIdPair>(1) { equipment });
+                    }
+                }
             }
+
         }
+        
         _supplyRequests.RemoveAll(request => (request.RequestClosed == true));
+    }
+
+    private void AddEquipmentToRequest(SupplyRequest request, List<EquipmentCountIdPair> getedEquipment)
+    {
+        if (getedEquipment.Count == 0)
+        {
+            return;
+        }
+        request.EquipmentCount -= getedEquipment.Count;
+        request.OnAddedEquipment?.Invoke(getedEquipment);
+        if (request.EquipmentCount <= 0)
+        {
+            request.OnClosedRequest?.Invoke();
+            return;
+        }
     }
 
     public SupplyRequest AddSupplyRequest(int equipmentCount, EquipmentType equipmentType)

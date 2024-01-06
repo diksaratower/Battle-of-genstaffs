@@ -155,4 +155,11 @@ public class SupplyUnit
         }
         return (be / need);
     }
+
+    public float GetBattleStrengh()
+    {
+        var equipmentPercent = GetEquipmentProcent(eqType => eqType != EquipmentType.Manpower);
+        var manpowerPercent = GetEquipmentProcent(eqType => eqType == EquipmentType.Manpower);
+        return equipmentPercent * manpowerPercent;
+    }
 }
