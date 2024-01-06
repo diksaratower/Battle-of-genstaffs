@@ -8,17 +8,19 @@ public abstract class Ship
     public ShipType Type { get; }
     public Country Country { get; }
     public Sprite ShipImage { get; }
+    public string ShipTypeID { get; private set; }
 
     public string Name;
     public MarineRegion ShipPosition;
 
-    public Ship(ShipType shipType, Country country, string name, float power, Sprite shipImage)
+    public Ship(Country country, string name, ShipSO shipSO)
     {
-        Type = shipType;
         Country = country;
         Name = name;
-        Power = power;
-        ShipImage = shipImage;
+        Power = shipSO.Power;
+        ShipImage = shipSO.ShipImage;
+        ShipTypeID = shipSO.ID;
+        Type = shipSO.ShipType;
     }
 }
 

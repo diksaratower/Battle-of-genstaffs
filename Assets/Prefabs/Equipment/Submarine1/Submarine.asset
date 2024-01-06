@@ -17,3 +17,4 @@ MonoBehaviour:
   Name: "\u041F\u043E\u0434\u0432\u043E\u0434\u043D\u0430\u044F \u043B\u043E\u0434\u043A\u0430"
   ID: submarine_1940
   BuildCost: 16000
+  ShipType: 4

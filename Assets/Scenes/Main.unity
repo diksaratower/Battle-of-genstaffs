@@ -2178,6 +2178,7 @@ MonoBehaviour:
   - {fileID: 77137657}
   - {fileID: 77137653}
   - {fileID: 77137656}
+  - {fileID: 77137664}
 --- !u!114 &77137662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2241,9 +2242,14 @@ MonoBehaviour:
   OurDominationColor: {fileID: 2100000, guid: eec35c20f7a318d45be6f9a900a19048, type: 2}
   EnemyDominationColor: {fileID: 2100000, guid: 241b37dce1baf1047bb3beb4083f56c3,
     type: 2}
+  _regionsParent: {fileID: 919132149239654827}
   _marineLayerMask:
     serializedVersion: 2
     m_Bits: 256
+  _shipsSO:
+  - {fileID: 11400000, guid: b1c55400f93e7164cbab7fdcff524823, type: 2}
+  - {fileID: 11400000, guid: 7ee7ff666750b624c8571fae23111e5e, type: 2}
+  - {fileID: 11400000, guid: a29e9d668103c6f49ad8c397d325e3dd, type: 2}
 --- !u!1 &81549608
 GameObject:
   m_ObjectHideFlags: 0
@@ -7916,7 +7922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 303974986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.84, y: -0.26, z: 0}
+  m_LocalPosition: {x: 0.4, y: -0.165, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -54240,7 +54246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!33 &1118680286099938704
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -54523,6 +54529,7 @@ MonoBehaviour:
   - {fileID: 9067004123654225320}
   - {fileID: 9120207431003279933}
   - {fileID: 7235923794391223044}
+  ID: eastern_atlantic2
   _center: {fileID: 0}
 --- !u!64 &2290882507581264991
 MeshCollider:
@@ -55048,6 +55055,7 @@ MonoBehaviour:
   - {fileID: 8566109610508302887}
   - {fileID: 5931674035575654513}
   - {fileID: 9130687487412677576}
+  ID: middle_mediterranean_sea
   _center: {fileID: 951155951}
 --- !u!64 &5727111925764454653
 MeshCollider:
@@ -55231,6 +55239,7 @@ MonoBehaviour:
   Contacts:
   - {fileID: 5727111925764454652}
   - {fileID: 7849053594892507980}
+  ID: eastern_mediterranean_sea
   _center: {fileID: 935821539}
 --- !u!64 &5931674035575654514
 MeshCollider:
@@ -55487,6 +55496,7 @@ MonoBehaviour:
   - {fileID: 8737082982356687619}
   - {fileID: 9014684774332133480}
   - {fileID: 7975383646436020773}
+  ID: southern_north_sea
   _center: {fileID: 1319316045}
 --- !u!64 &6894370211882506710
 MeshCollider:
@@ -55668,6 +55678,7 @@ MonoBehaviour:
   Provinces: []
   Contacts:
   - {fileID: 7849053594892507980}
+  ID: black_sea
   _center: {fileID: 0}
 --- !u!64 &7189614521923471135
 MeshCollider:
@@ -55728,6 +55739,7 @@ MonoBehaviour:
   Contacts:
   - {fileID: 2290882507581264990}
   - {fileID: 8566109610508302887}
+  ID: eastern_atlantic
   _center: {fileID: 686827135}
 --- !u!64 &7235923794391223045
 MeshCollider:
@@ -55826,6 +55838,7 @@ MonoBehaviour:
   Provinces: []
   Contacts:
   - {fileID: 7975383646436020773}
+  ID: finish_bay
   _center: {fileID: 0}
 --- !u!64 &7624020386675320671
 MeshCollider:
@@ -55908,6 +55921,7 @@ MonoBehaviour:
   Contacts:
   - {fileID: 5931674035575654513}
   - {fileID: 7189614521923471134}
+  ID: aegean_sea
   _center: {fileID: 2075737265}
 --- !u!64 &7849053594892507981
 MeshCollider:
@@ -56021,6 +56035,7 @@ MonoBehaviour:
   Contacts:
   - {fileID: 7624020386675320670}
   - {fileID: 6894370211882506709}
+  ID: baltic_sea
   _center: {fileID: 454392195}
 --- !u!64 &7975383646436020774
 MeshCollider:
@@ -56331,6 +56346,7 @@ MonoBehaviour:
   Contacts:
   - {fileID: 7235923794391223044}
   - {fileID: 5727111925764454652}
+  ID: western_mediterranean_sea
   _center: {fileID: 1894933430}
 --- !u!64 &8566109610508302888
 MeshCollider:
@@ -56395,6 +56411,7 @@ MonoBehaviour:
   Contacts:
   - {fileID: 6894370211882506709}
   - {fileID: 9067004123654225320}
+  ID: english_channel
   _center: {fileID: 303974987}
 --- !u!64 &8737082982356687620
 MeshCollider:
@@ -56471,6 +56488,7 @@ MonoBehaviour:
   Provinces: []
   Contacts:
   - {fileID: 6894370211882506709}
+  ID: northern_north_sea
   _center: {fileID: 0}
 --- !u!64 &9014684774332133481
 MeshCollider:
@@ -56562,6 +56580,7 @@ MonoBehaviour:
   - {fileID: 8737082982356687619}
   - {fileID: 9120207431003279933}
   - {fileID: 2290882507581264990}
+  ID: western_approaches
   _center: {fileID: 0}
 --- !u!64 &9067004123654225321
 MeshCollider:
@@ -56630,6 +56649,7 @@ MonoBehaviour:
   Contacts:
   - {fileID: 9067004123654225320}
   - {fileID: 2290882507581264990}
+  ID: bay_of_biscay
   _center: {fileID: 0}
 --- !u!64 &9120207431003279934
 MeshCollider:
@@ -56712,6 +56732,7 @@ MonoBehaviour:
   Provinces: []
   Contacts:
   - {fileID: 5727111925764454652}
+  ID: adriatic_sea
   _center: {fileID: 0}
 --- !u!64 &9130687487412677577
 MeshCollider:

@@ -11,9 +11,13 @@ public class NavyLandingPlanView : MonoBehaviour
     public void Refresh(SeaLandingPlan seaLandingPlan)
     {
         TargetPlan = seaLandingPlan;
-        _startToTargetLine.positionCount = 3;
+        var landingMarinePath = seaLandingPlan.FindPathMarineLandingWithSea();
+        _startToTargetLine.positionCount = (2 + landingMarinePath.Count);
         _startToTargetLine.SetPosition(0, seaLandingPlan.StartNavyBase.Province.Position);
-        _startToTargetLine.SetPosition(1, Vector3Extend.GetMiddlePoint(seaLandingPlan.StartNavyBase.Province.Position, seaLandingPlan.TargetProvince.Position) + (Vector3.up * 6));
-        _startToTargetLine.SetPosition(2, seaLandingPlan.TargetProvince.Position);
+        for (int i = 0; i < landingMarinePath.Count ; i++)
+        {
+            _startToTargetLine.SetPosition(i + 1, landingMarinePath[i].Center.position + (Vector3.up * 3));
+        }
+        _startToTargetLine.SetPosition((2 + landingMarinePath.Count) - 1, seaLandingPlan.TargetProvince.Position);
     }
 }

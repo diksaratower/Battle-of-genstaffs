@@ -23,6 +23,7 @@ public class CountryAI : MonoBehaviour
         if (_country.ID == "fra" || _country.ID == "eng")
         {
             Diplomacy.Instance.GuaranteeIndependence(_country, Map.Instance.GetCountryFromId("pol"));
+            SetUpFleet();
         }
         _country.CountryDiplomacy.OnAddWarGoal += (WarGoal warGoal) =>
         {
@@ -56,7 +57,6 @@ public class CountryAI : MonoBehaviour
             _workAI = false;
         };
     }
-
 
     private void Update()
     {
@@ -215,5 +215,41 @@ public class CountryAI : MonoBehaviour
                 ultimatum.SendAnser(UltimatumAnswerType.No);
             }
         }
+    }
+
+    private void SetUpFleet()
+    {
+        var countryMarineRegions = GetCountryMarineRegions();
+        if (countryMarineRegions.Count == 0)
+        {
+            return;
+        }
+        var tacticalUnit = new TacticalFleetUnit();
+        tacticalUnit.Name = $"Тактическое соеденение ({_country.Fleet.TacticalFleetUnits.Count + 1})";
+        _country.Fleet.TacticalFleetUnits.Add(tacticalUnit);
+        foreach (var ship in Map.Instance.MarineRegions.Ships)
+        {
+            if (ship.Country == _country)
+            {
+                tacticalUnit.AddShip(ship);
+            }
+        }
+        foreach (var region in countryMarineRegions)
+        {
+            tacticalUnit.AddRegionDominationOrder(region);
+        }
+    }
+
+    private List<MarineRegion> GetCountryMarineRegions()
+    {
+        var regions = new List<MarineRegion>();
+        foreach (var region in Map.Instance.MarineRegions.MarineRegionsList)
+        {
+            if (region.Provinces.Exists(province => province.Owner == _country))
+            {
+                regions.Add(region);
+            }
+        }
+        return regions;
     }
 }

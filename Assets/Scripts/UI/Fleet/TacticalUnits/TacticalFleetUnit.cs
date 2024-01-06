@@ -41,6 +41,10 @@ public class TacticalFleetUnit
 
     public void AddRegionDominationOrder(MarineRegion targetRegion)
     {
+        if (IsAlreadyContainedInOrder(targetRegion))
+        {
+            throw new Exception("Region already have in list.");
+        }
         Order = FleetOrders.Domination;
         _targetRegionsDomination.Add(targetRegion);
         foreach (var ship in _ships)
@@ -48,6 +52,11 @@ public class TacticalFleetUnit
             ship.ShipPosition = targetRegion;
         }
         RecalculateShipsPositions(_targetRegionsDomination, _ships);
+    }
+
+    public bool IsAlreadyContainedInOrder(MarineRegion region)
+    {
+        return _targetRegionsDomination.Contains(region);
     }
 
     public void DropOrder()

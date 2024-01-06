@@ -17,3 +17,4 @@ MonoBehaviour:
   Name: "\u042D\u0441\u043C\u0438\u043D\u0435\u0446"
   ID: destroyer_1939
   BuildCost: 40000
+  ShipType: 3

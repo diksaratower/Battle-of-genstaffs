@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEngine;
 
 public class CountryFabricationEquipmentSlot
@@ -30,7 +31,13 @@ public class CountryFabricationEquipmentSlot
     public int Fabricate()
     {
         var newEquipmenCount = 0;
-        _equipmentCountFabricated += GetFabricationCostPerHour();
+        var productionCheetFactor = 1f;
+        if (Cheats.InstantBuildFleet == true && (Fabricatable is ShipSO))
+        {
+            productionCheetFactor = 100f;
+        }
+        
+        _equipmentCountFabricated += GetFabricationCostPerHour() * productionCheetFactor;
         if ((_equipmentCountFabricated / Fabricatable.FabricationCost) > 1)
         {
             newEquipmenCount += Mathf.RoundToInt(_equipmentCountFabricated / Fabricatable.FabricationCost);

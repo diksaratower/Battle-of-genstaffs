@@ -8,6 +8,7 @@ public abstract class ShipSO : ScriptableObject, IFabricatable
     public string Name;
     public string ID;
     public float BuildCost = 1000;
+    public ShipType ShipType;
 
     float IFabricatable.FabricationCost => BuildCost;
     string IFabricatable.ID => ID;

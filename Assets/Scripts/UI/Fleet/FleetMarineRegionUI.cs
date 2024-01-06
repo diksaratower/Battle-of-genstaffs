@@ -32,7 +32,8 @@ public class FleetMarineRegionUI : MonoBehaviour
         {
             var allShipsCount = marineRegion.GetRegionShips().Count;
             var ourShipsCount = marineRegion.GetRegionShips().FindAll(ship => ship.Country == Player.CurrentCountry).Count;
-            _target.IsDominate(Player.CurrentCountry, out var percentDomination, out var enemyPower, out var countryPower);
+            _target.IsDominate(Player.CurrentCountry, Diplomacy.Instance.GetCountryWarEnemies(Player.CurrentCountry),
+                out var percentDomination, out var enemyPower, out var countryPower);
             menu.AddDynamicText(() => $@"{_target.Name} 
 В регионе {allShipsCount} кораблей из них наших {ourShipsCount}.
 Превосходство врага: {enemyPower}
@@ -43,7 +44,7 @@ public class FleetMarineRegionUI : MonoBehaviour
 
     private void CalculateProcentDomination()
     {
-        _target.IsDominate(Player.CurrentCountry, out var percentDomination);
+        _target.IsDominate(Player.CurrentCountry, Diplomacy.Instance.GetCountryWarEnemies(Player.CurrentCountry), out var percentDomination);
         if (percentDomination == 0f)
         {
             _procentDominationText.color = _neutralDominationColor;

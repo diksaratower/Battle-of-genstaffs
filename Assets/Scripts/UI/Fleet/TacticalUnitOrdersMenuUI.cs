@@ -52,7 +52,10 @@ public class TacticalUnitOrdersMenuUI : MonoBehaviour
                 {
                     if (hit.collider.TryGetComponent<MarineRegion>(out var marineRegion))
                     {
-                        _targetUnit.AddRegionDominationOrder(marineRegion);
+                        if (_targetUnit.IsAlreadyContainedInOrder(marineRegion) == false)
+                        {
+                            _targetUnit.AddRegionDominationOrder(marineRegion);
+                        }
                     }
                 }
             }

@@ -117,14 +117,24 @@ public class ArmyUI : MonoBehaviour
                 {
                     if (province.Contacts.Count < 6)
                     {
-                        CreationSeaLanding = false;
-                        if (SeaLandingPlan.ArmyCanExecuteSeaLanding(TargetArmy, out var startNavyBase))
+                        if (Map.Instance.MarineRegions.MarineRegionsList.Exists(region => region.Provinces.Contains(province)))
                         {
-                            Deselect();
-                            TargetArmy.RemoveAllPlans();
-                            var seaLandingPlan = new SeaLandingPlan(new List<Division>(TargetArmy.Divisions), province, startNavyBase);
-                            DrawSeaLandingPlan(seaLandingPlan);
-                            TargetArmy.AddPlan(seaLandingPlan);
+                            CreationSeaLanding = false;
+                            if (SeaLandingPlan.ArmyCanExecuteSeaLanding(TargetArmy, out var startNavyBase))
+                            {
+                                Deselect();
+                                TargetArmy.RemoveAllPlans();
+                                var seaLandingPlan = new SeaLandingPlan(new List<Division>(TargetArmy.Divisions), province, startNavyBase, Player.CurrentCountry);
+                                var sealandingUI = DrawSeaLandingPlan(seaLandingPlan);
+                                seaLandingPlan.OnRemoveLanding += delegate
+                                {
+                                    if (sealandingUI != null)
+                                    {
+                                        Destroy(sealandingUI.gameObject);
+                                    }
+                                };
+                                TargetArmy.AddPlan(seaLandingPlan);
+                            }
                         }
                     }
                 }
@@ -132,11 +142,12 @@ public class ArmyUI : MonoBehaviour
         }
     }
 
-    private void DrawSeaLandingPlan(SeaLandingPlan seaLandingPlan)
+    private NavyLandingPlanView DrawSeaLandingPlan(SeaLandingPlan seaLandingPlan)
     {
         var view = Instantiate(_landingPlanViewPrefab);
         view.Refresh(seaLandingPlan);
         _navyLandingPlanViews.Add(view);
+        return view;
     }
 
     private async void AsyncUpdateFront(FrontPlan plan, List<FrontPlan.FrontData> frontDates)

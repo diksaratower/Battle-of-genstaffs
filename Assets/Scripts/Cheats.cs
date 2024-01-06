@@ -7,4 +7,5 @@ public class Cheats
     public const bool InstantBuilding = false;
     public const bool InstantTraingDivision = false;
     public const bool InstantFocusesDoing = false;
+    public const bool InstantBuildFleet = false;
 }

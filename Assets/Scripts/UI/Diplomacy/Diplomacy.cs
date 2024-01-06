@@ -40,6 +40,22 @@ public class Diplomacy : MonoBehaviour
         Wars.Add(war);
     }
 
+    public List<Country> GetCountryWarEnemies(Country country)
+    {
+        var result = new List<Country>();
+        foreach (var mapCountry in Map.Instance.Countries)
+        {
+            if (mapCountry != country)
+            {
+                if (GetRelationWithCountry(country, mapCountry).IsWar == true)
+                {
+                    result.Add(mapCountry);
+                }
+            }
+        }
+        return result;
+    }
+
     private void UseGuarantees(Country aggressor, Country victim, War war)
     {
         var guaranteeIndependences = GuaranteesIndependences.Find(guarantee => guarantee.Target == victim && guarantee.Guaranter != aggressor);

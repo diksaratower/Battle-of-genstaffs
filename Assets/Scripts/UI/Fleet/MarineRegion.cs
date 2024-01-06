@@ -5,15 +5,33 @@ using UnityEngine;
 public class MarineRegion : MonoBehaviour
 {
     public string Name;
-    public List<Province> Provinces = new List<Province>();
+    [HideInInspector] public List<Province> Provinces = new List<Province>();
     public List<MarineRegion> Contacts = new List<MarineRegion>();
     public Transform Center { get; private set; }
-    
+    public string ID;
+
     [SerializeField] private Transform _center;
     
     private MeshRenderer _regionRenderer;
 
-    private void Awake()
+    private void Update()
+    {
+        IsDominate(Player.CurrentCountry, Diplomacy.Instance.GetCountryWarEnemies(Player.CurrentCountry), out var percentDomination, out var enemyPower, out var ourPower);
+        if (percentDomination == 0f && enemyPower == 0f && ourPower == 0f)
+        {
+            ColoredRegion(Map.Instance.MarineRegions.NeutralDominationColor);
+        }
+        if (percentDomination > 0.5f)
+        {
+            ColoredRegion(Map.Instance.MarineRegions.OurDominationColor);
+        }
+        if (percentDomination <= 0.5f && (enemyPower != 0f || ourPower != 0f))
+        {
+            ColoredRegion(Map.Instance.MarineRegions.EnemyDominationColor);
+        }
+    }
+
+    public void SetUpCenter()
     {
         _regionRenderer = GetComponent<MeshRenderer>();
         if (_center != null)
@@ -26,33 +44,9 @@ public class MarineRegion : MonoBehaviour
         }
     }
 
-    private void Update()
+    public bool IsDominate(Country country, List<Country> countryEnemies, out float percentDomination)
     {
-        IsDominate(Player.CurrentCountry, out var percentDomination);
-        if (percentDomination == 0f)
-        {
-            ColoredRegion(Map.Instance.MarineRegions.NeutralDominationColor);
-        }
-        if (percentDomination > 0.5f)
-        {
-            ColoredRegion(Map.Instance.MarineRegions.OurDominationColor);
-        }
-        if (percentDomination <= 0.5f && percentDomination != 0)
-        {
-            ColoredRegion(Map.Instance.MarineRegions.EnemyDominationColor);
-        }
-    }
-
-    public bool IsDominate(Country country, out float percentDomination)
-    {
-        var isDominate = IsDominate(country, new List<Country>(), out var percent, out _, out _);
-        percentDomination = percent;
-        return isDominate;
-    }
-
-    public bool IsDominate(Country country, out float percentDomination, out float enemyPower, out float countryPower)
-    {
-        var isDominate = IsDominate(country, new List<Country>(), out var percent, out enemyPower, out countryPower);
+        var isDominate = IsDominate(country, countryEnemies, out var percent, out _, out _);
         percentDomination = percent;
         return isDominate;
     }
@@ -133,11 +127,11 @@ public class MarineRegion : MonoBehaviour
         percentDomination = 0;
         if (countryPower > enemyPower)
         {
-            percentDomination = countryPower / enemyPower;
+            percentDomination = enemyPower / countryPower;
         }
         if (countryPower < enemyPower)
         {
-            percentDomination = enemyPower / countryPower;
+            percentDomination = countryPower / enemyPower;
         }
 
         return countryPower > enemyPower;
@@ -177,3 +171,4 @@ public class MarineRegion : MonoBehaviour
         return false;
     }
 }
+

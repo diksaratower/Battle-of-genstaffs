@@ -17,3 +17,4 @@ MonoBehaviour:
   Name: "\u041B\u0438\u043D\u043A\u043E\u0440"
   ID: battleship_1939
   BuildCost: 100000
+  ShipType: 1

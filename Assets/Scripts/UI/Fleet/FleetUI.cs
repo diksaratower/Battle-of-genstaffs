@@ -78,9 +78,12 @@ public class FleetUI : MonoBehaviour
         }
         foreach (var ship in Map.Instance.MarineRegions.Ships)
         {
-            if (alreadyAdded.Contains(ship) == false)
+            if (ship.Country == Player.CurrentCountry)
             {
-                AddFreeShipUI(ship);
+                if (alreadyAdded.Contains(ship) == false)
+                {
+                    AddFreeShipUI(ship);
+                }
             }
         }
         RestoreSelectedShips(lastSelectedShips);
