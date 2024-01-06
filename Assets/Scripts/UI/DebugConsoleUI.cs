@@ -70,6 +70,14 @@ pp_all_zero - всем полит власть на ноль
             }
             WriteTextToConsole("ƒобавили очки исследований.");
         }
+        if (text.StartsWith("rpClear"))
+        {
+            foreach (var country in Map.Instance.Countries)
+            {
+                country.Research.ResearchPointCount = 0;
+            }
+            WriteTextToConsole("ƒобавили очки исследований.");
+        }
         if (text.StartsWith("annex"))
         {
             var countryID = text.Remove(0, 6);

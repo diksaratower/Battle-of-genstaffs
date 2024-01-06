@@ -90,15 +90,18 @@ public class UnitsManager : MonoBehaviour, ISaveble
         {
             foreach (var division in manager.Divisions)
             {
-                var ser = new DivisionSave()
+                var serialize = new DivisionSave()
                 {
                     Position = division.DivisionProvince.Position,
                     TemplateIndex = division.CountyOwner.Templates.Templates.IndexOf(division.Template),
                     CountryOwnerID = division.CountyOwner.ID,
                     Organization = division.Organization
                 };
-                //ser.EquipmentInDivision = division.EquipmentInDivision;
-                Divisions.Add(ser);
+                foreach (var equipment in division.EquipmentInDivision)
+                {
+                    serialize.EquipmentInDivision.Add(new EquipmentCountIdPairSave(equipment));
+                }
+                Divisions.Add(serialize);
             }
         }
 
@@ -114,13 +117,17 @@ public class UnitsManager : MonoBehaviour, ISaveble
             {
                 manager.RemoveDivision(manager.Divisions[0]);
             }
-            foreach (var divison in Divisions)
+            foreach (var divisonSave in Divisions)
             {
-                var divOwner = Map.Instance.GetCountryFromId(divison.CountryOwnerID);
-                var div = manager.AddDivision(divison.Position, divOwner.Templates.Templates[divison.TemplateIndex], divOwner);
-                div.Organization = divison.Organization;
-                //div.EquipmentInDivision = divison.EquipmentInDivision;
-            }
+                var divOwner = Map.Instance.GetCountryFromId(divisonSave.CountryOwnerID);
+                var division = manager.AddDivision(divisonSave.Position, divOwner.Templates.Templates[divisonSave.TemplateIndex], divOwner);
+                division.Organization = divisonSave.Organization;
+
+                foreach (var equipmentSave in divisonSave.EquipmentInDivision)
+                {
+                    division.EquipmentInDivision.Add(new EquipmentCountIdPair(EquipmentManagerSO.GetEquipmentFromID(equipmentSave.EquipmentID), equipmentSave.Count));
+                }
+            }  
         }
 
         public override string SaveToJson()
@@ -135,7 +142,20 @@ public class UnitsManager : MonoBehaviour, ISaveble
             public int TemplateIndex;
             public float Organization;
             public string CountryOwnerID;
-            public List<TypedEquipmentCountIdPair> EquipmentInDivision = new List<TypedEquipmentCountIdPair>();
+            public List<EquipmentCountIdPairSave> EquipmentInDivision = new List<EquipmentCountIdPairSave>();
+        }
+
+        [Serializable]
+        public class EquipmentCountIdPairSave
+        {
+            public string EquipmentID;
+            public int Count;
+
+            public EquipmentCountIdPairSave(EquipmentCountIdPair countIdPair)
+            {
+                EquipmentID = countIdPair.Equipment.ID;
+                Count = countIdPair.Count;
+            }
         }
     }
 }
