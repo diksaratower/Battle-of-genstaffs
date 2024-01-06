@@ -127,7 +127,11 @@ public class MarineRegion : MonoBehaviour
         percentDomination = 0;
         if (countryPower > enemyPower)
         {
-            percentDomination = enemyPower / countryPower;
+            percentDomination = countryPower / enemyPower;
+            if (percentDomination > 1f)
+            {
+                percentDomination = 1f;
+            }
         }
         if (countryPower < enemyPower)
         {

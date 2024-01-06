@@ -24,5 +24,5 @@ MonoBehaviour:
   - EqType: 3
     Count: 1000
   - EqType: 0
-    Count: 1000
+    Count: 700
   NeededTechnologies: []

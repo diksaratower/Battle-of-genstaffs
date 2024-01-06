@@ -8,61 +8,22 @@ using UnityEngine;
 public class CountryEquipmentStorage
 {
     private List<CountryEquipmentStorageSlot> _equipmentSlots = new List<CountryEquipmentStorageSlot>();
-    private List<SupplyRequest> _supplyRequests = new List<SupplyRequest>();
+
+    private Country _country;
 
     public CountryEquipmentStorage(Country country)
     {
-        GameTimer.HourEnd += CalculateSupply;
+        GameTimer.DayEnd += CalculateSupply;
+        _country = country;
     }
 
     private void CalculateSupply()
     {
-        var typesEuipment = Enum.GetValues(typeof(EquipmentType)).Cast<EquipmentType>();
-        foreach (var type in typesEuipment)
-        {
-            var typeRequests = _supplyRequests.FindAll(req => req.EquipmentType == type);
-            var allNeed = 0;
-            foreach (var request in typeRequests)
-            {
-                allNeed += request.EquipmentCount;
-            }
-            if (typeRequests.Count > 0)
-            {
-                var getedEquipment = RemoveHowMuchIsAvailableDeteil(allNeed, type, out var getedCount);
-                foreach (var equipment in getedEquipment)
-                {
-                    foreach (var request in typeRequests)
-                    {
-                        AddEquipmentToRequest(request, new List<EquipmentCountIdPair>(1) { equipment });
-                    }
-                }
-            }
-
-        }
-        
-        _supplyRequests.RemoveAll(request => (request.RequestClosed == true));
-    }
-
-    private void AddEquipmentToRequest(SupplyRequest request, List<EquipmentCountIdPair> getedEquipment)
-    {
-        if (getedEquipment.Count == 0)
-        {
-            return;
-        }
-        request.EquipmentCount -= getedEquipment.Count;
-        request.OnAddedEquipment?.Invoke(getedEquipment);
-        if (request.EquipmentCount <= 0)
-        {
-            request.OnClosedRequest?.Invoke();
-            return;
-        }
-    }
-
-    public SupplyRequest AddSupplyRequest(int equipmentCount, EquipmentType equipmentType)
-    {
-        var request = new SupplyRequest(equipmentCount, equipmentType);
-        _supplyRequests.Add(request);
-        return request;
+        var typesEquipment = Enum.GetValues(typeof(EquipmentType)).Cast<EquipmentType>().ToList();
+        var divisions = UnitsManager.Instance.Divisions.FindAll(d => d.CountyOwner == _country);
+        var aviationDivisions = UnitsManager.Instance.AviationDivisions.FindAll(d => d.CountryOwner == _country);
+        SupplyDivisions(typesEquipment, divisions);
+        SupplyAviation(aviationDivisions);
     }
 
     public int GetEquipmentCountWithDeficit(EquipmentType equipmentType)
@@ -97,12 +58,10 @@ public class CountryEquipmentStorage
     public int GetEquipmentDeficit(EquipmentType equipmentType)
     {
         var deficit = 0;
-        foreach (var request in _supplyRequests)
+        var divisions = UnitsManager.Instance.Divisions.FindAll(d => d.CountyOwner == _country);
+        foreach (var division in divisions)
         {
-            if (request.EquipmentType == equipmentType)
-            {
-                deficit += request.EquipmentCount;
-            }
+            deficit += -(division.GetDefficit(equipmentType));
         }
         return deficit;
     }
@@ -133,18 +92,56 @@ public class CountryEquipmentStorage
         }
     }
 
-    private void RemoveEquipment(string id, int count)
+    private void SupplyDivisions(List<EquipmentType> typesEquipment, List<Division> divisions)
     {
-        if (GetEquipmentCount(id) < count) 
+        foreach (var type in typesEquipment)
         {
-            throw new System.Exception("You try get non-existent equipment");
+            var allNeed = 0;
+            foreach (var division in divisions)
+            {
+                allNeed += (division.GetDefficit(type) * -1);
+            }
+            var getedEquipment = RemoveHowMuchIsAvailableDeteil(allNeed, type, out var getedCount);
+            foreach (var equipment in getedEquipment)
+            {
+                while (true)
+                {
+                    if (equipment.Count == 0 || equipment.Count < 0)
+                    {
+                        break;
+                    }
+                    foreach (var division in divisions)
+                    {
+                        if (division.GetDefficit(type) == 0)
+                        {
+                            continue;
+                        }
+                        if (equipment.Count == 0)
+                        {
+                            break;
+                        }
+                        equipment.Count -= 1;
+                        division.AddEquipment(new EquipmentCountIdPair(equipment.Equipment, 1));
+                    }
+                }
+            }
         }
-        if(GetEquipmentCount(id) - count == 0)
+        foreach (var division in divisions)
         {
-            _equipmentSlots.Remove(_equipmentSlots.Find(eq => eq.ID == id));
-            return;
+            division.OnGetSupply?.Invoke();
         }
-        _equipmentSlots.Find(eq => eq.ID == id).EquipmentCount -= count;
+    }
+
+    private void SupplyAviation(List<AviationDivision> aviationDivisions)
+    {
+        foreach (var aviationDivision in aviationDivisions)
+        {
+            var getedEquipment = RemoveHowMuchIsAvailableDeteil((aviationDivision.GetDefficit(EquipmentType.Fighter) * -1), EquipmentType.Fighter, out var getedCount);
+            foreach (var equipment in getedEquipment)
+            {
+                aviationDivision.AddEquipment(equipment);
+            }
+        }
     }
 
     private void RemoveEquipment(EquipmentType equipmentType, int count)
@@ -318,28 +315,3 @@ public class CountryEquipmentStorage
     }
 }
 
-public class SupplyRequest
-{
-    public EquipmentType EquipmentType { get; }
-    public SupplyRequestType RequestType { get; }
-    public bool RequestClosed { get; private set; }
-    public Action OnClosedRequest;
-    public Action<List<EquipmentCountIdPair>> OnAddedEquipment;
-    public int EquipmentCount;
-
-    public SupplyRequest(int equipmentCount, EquipmentType equipmentType)
-    {
-        EquipmentCount = equipmentCount;
-        EquipmentType = equipmentType;
-        RequestType = SupplyRequestType.Division;
-        OnClosedRequest += delegate
-        {
-            RequestClosed = true;
-        };
-    }
-}
-
-public enum SupplyRequestType
-{
-    Division
-}

@@ -34,7 +34,7 @@ public class Division : SupplyUnit
     {
         CountyOwner = country;
         Organization = MaxOrganization;
-        GameTimer.HourEnd += CalculateSupply;
+       
         GameTimer.HourEnd += CalculateMovement;
         GameTimer.HourEnd += CalculateOrganization;
         OnDivisionRemove += delegate
@@ -343,7 +343,6 @@ public class Division : SupplyUnit
 
     public void KillDivision()
     {
-        GameTimer.HourEnd -= CalculateSupply;
         GameTimer.HourEnd -= CalculateMovement;
         GameTimer.HourEnd -= CalculateOrganization;
         OnDivisionRemove?.Invoke();

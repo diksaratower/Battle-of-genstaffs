@@ -9,8 +9,6 @@ public class SupplyUnit
 
     protected List<TypedEquipmentCountIdPair> _neededEquipment = new List<TypedEquipmentCountIdPair>(); 
     
-
-    private List<SupplyRequest> _divisionSupplyRequests = new List<SupplyRequest>();
     private CountryEquipmentStorage _supplyStorage { get; }
 
     protected SupplyUnit(CountryEquipmentStorage supplyStorage) 
@@ -18,47 +16,26 @@ public class SupplyUnit
         _supplyStorage = supplyStorage;
     }
 
-    protected void CalculateSupply()
+    public int GetDefficit(EquipmentType eqType)
     {
-        var typesList = Enum.GetValues(typeof(EquipmentType)).Cast<EquipmentType>().ToList();
-        foreach (var eqType in typesList)
+        if (_neededEquipment.Exists(pair => pair.EqType == eqType) == false)
         {
-            var equipmentNeed = _neededEquipment.Find(slot => slot.EqType == eqType);
-            if (equipmentNeed == null)
-            {
-                continue;
-            }
-            if ((GetHaveCountWithType(eqType) + GetRequestsEquiepmentCount(eqType)) < equipmentNeed.Count)
-            {
-                var request = _supplyStorage.AddSupplyRequest(equipmentNeed.Count - GetHaveCountWithType(eqType), equipmentNeed.EqType);
-                _divisionSupplyRequests.Add(request);
-                request.OnClosedRequest += delegate
-                {
-                    _divisionSupplyRequests.Remove(request);
-                };
-                request.OnAddedEquipment += (List<EquipmentCountIdPair> countIdPairs) =>
-                {
-                    foreach (var pair in countIdPairs)
-                    {
-                        AddEquipment(pair);
-                    }
-                    OnGetSupply?.Invoke();
-                };
-            }
+            return 0;
         }
-        
+        var defficit = GetHaveCountWithType(eqType) - _neededEquipment.Find(pair => pair.EqType == eqType).Count;
+        if (defficit > 0)
+        {
+            throw new Exception("Defficit many 0");
+        }
+        return defficit;
     }
 
     protected void StopSupply()
     {
-        var requestToClose = new List<SupplyRequest>(_divisionSupplyRequests);
-        foreach (var request in requestToClose)
-        {
-            request.OnClosedRequest?.Invoke();
-        }
+        
     }
 
-    private void AddEquipment(EquipmentCountIdPair countIdPair)
+    public void AddEquipment(EquipmentCountIdPair countIdPair)
     {
         if (EquipmentInDivision.Find(eq => eq.Equipment == countIdPair.Equipment) == null)
         {
@@ -107,17 +84,6 @@ public class SupplyUnit
             }
         }
         return list;
-    }
-
-    private int GetRequestsEquiepmentCount(EquipmentType equipmentType)
-    {
-        var requests = _divisionSupplyRequests.FindAll(request => request.EquipmentType == equipmentType);
-        var result = 0;
-        foreach (var request in requests)
-        {
-            result += request.EquipmentCount;
-        }
-        return result;
     }
 
     public float GetEquipmentProcent()

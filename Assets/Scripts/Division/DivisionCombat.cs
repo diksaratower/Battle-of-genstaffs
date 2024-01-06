@@ -7,6 +7,7 @@ using UnityEngine;
 public class DivisionCombat
 {
     public static List<DivisionCombat> Combats = new List<DivisionCombat>();
+    public static System.Random CombatRandom = new System.Random();
 
     public List<Division> Attackers = new List<Division>();
     public List<Division> Defenders = new List<Division>();
@@ -180,16 +181,27 @@ public class DivisionCombat
 
     private void IncurLosses(Division division, float lossesProcent)
     {
-        foreach (var equipment in division.EquipmentInDivision)
+        IncurLossesToEquipmentType(division, EquipmentType.Manpower, CombatRandom.Next(0, 5));
+        IncurLossesToEquipmentType(division, EquipmentType.Rifle, CombatRandom.Next(0, 3));
+        IncurLossesToEquipmentType(division, EquipmentType.Tank, CombatRandom.Next(0, 1));
+    }
+
+    private void IncurLossesToEquipmentType(Division division, EquipmentType equipmentType, int lossCount)
+    {
+        var equipmentCountIdPair = division.EquipmentInDivision.Find(equipment => equipment.Equipment.EqType == equipmentType);
+        if(equipmentCountIdPair == null)
         {
-            int losses = Mathf.RoundToInt((equipment.Count / 100f) * lossesProcent);
-            if (equipment.Count - losses > 0)
+            return;
+        }
+        for (int i = 0; i < lossCount; i++)
+        {
+            if (equipmentCountIdPair.Count > 0)
             {
-                equipment.Count -= losses;
+                equipmentCountIdPair.Count -= 1;
             }
-            if (equipment.Equipment.EqType == EquipmentType.Manpower)
+            else
             {
-                division.CountyOwner.OnManpowerLosses?.Invoke(losses);
+                break;
             }
         }
     }

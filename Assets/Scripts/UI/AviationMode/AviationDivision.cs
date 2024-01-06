@@ -21,7 +21,7 @@ public class AviationDivision : SupplyUnit
         _neededEquipment.Add(new TypedEquipmentCountIdPair(EquipmentType.Fighter, 100));
         _neededEquipment.Add(new TypedEquipmentCountIdPair(EquipmentType.Manpower, 200));
         
-        GameTimer.HourEnd += CalculateSupply;
+        //GameTimer.HourEnd += CalculateSupply;
     }
 
     public void Move(BuildingSlotRegion newAviabase)
