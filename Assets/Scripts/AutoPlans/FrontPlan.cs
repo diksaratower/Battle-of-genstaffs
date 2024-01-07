@@ -147,6 +147,12 @@ public class FrontPlan : PlanBase
                 {
                     break;
                 }
+                if (divisions[0].MovePath.Count > 0 || divisions[0].Combats.Count > 0 || divisions[0].DivisionState != DivisionAnimState.Empty)
+                {
+                    divisions.Remove(divisions[0]);
+                    continue;
+                }
+
                 divisions[0].MoveDivision(frontProvs[i], false, pr => pr.Owner == Ally);
                 divisions.Remove(divisions[0]);
             }
@@ -199,8 +205,8 @@ public class FrontPlan : PlanBase
         }
         var ourAttack = 0f;
         var enemyDefens = 0.00001f;
-        AttachedDivisions.ForEach(division => { ourAttack += division.GetAttack(); });
-        enemyDivisionsInFront.ForEach(division => { enemyDefens += division.GetDefense(); });
+        AttachedDivisions.ForEach(division => { ourAttack += (division.GetAttack() * division.GetDivisionStrength()); });
+        enemyDivisionsInFront.ForEach(division => { enemyDefens += (division.GetDefense() * division.GetDivisionStrength()); });
         return ourAttack / enemyDefens;
     }
 

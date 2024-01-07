@@ -108,6 +108,20 @@ pp_all_zero - всем полит власть на ноль
             }
             WriteTextToConsole("Добавлены люди.");
         }
+        if (text == "divisions")
+        {
+            foreach (var division in UnitsManager.Instance.Divisions)
+            {
+                var r = new System.Random();
+                if (division.GetEquipmentProcent(equipment => equipment == EquipmentType.Rifle) < 0.15f)
+                {
+                    var coof = (float)r.Next(40, 50) / 100f; 
+                    var count = Mathf.RoundToInt((float)Math.Abs(division.GetDefficit(EquipmentType.Rifle)) * coof);
+                    division.CountyOwner.EquipmentStorage.AddEquipment("ww1_rifle_equipment", count);
+                }
+            }
+            WriteTextToConsole("Добавлено оснащение в дивизии.");
+        }
         if (text == "prom")
         {
             var factory = BuildingsManagerSO.GetInstance().AvalibleBuildings.Find(building => building.BuildingType == BuildingType.Factory);

@@ -158,7 +158,7 @@ public class Country : MonoBehaviour
         var countryDivisions = UnitsManager.Instance.Divisions.FindAll(division => division.CountyOwner == this);
         foreach (var division in countryDivisions)
         {
-            division.KillDivision();
+            division.KillDivision(false);
         }
         var provinces = _nationalProvinces.FindAll(p => p.Owner == this);
         foreach (var province in provinces)
@@ -207,7 +207,7 @@ public class Country : MonoBehaviour
         var countryDivisions = UnitsManager.Instance.Divisions.FindAll(division => division.CountyOwner == this);
         foreach (var division in countryDivisions)
         {
-            division.KillDivision();
+            division.KillDivision(false);
         }
         var provs = Map.Instance.Provinces.FindAll(p => p.Owner == this);
         foreach (var province in provs)

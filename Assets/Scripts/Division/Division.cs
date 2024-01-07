@@ -97,7 +97,7 @@ public class Division : SupplyUnit
             {
                 if (MovePath[0].FriendlyForDivision(this) == false)
                 {
-                    KillDivision();
+                    KillDivision(false);
                     return;
                 }
             }
@@ -313,7 +313,7 @@ public class Division : SupplyUnit
         
         if (stepBackProv == null)
         {
-            KillDivision();
+            KillDivision(false);
             return;
         }
         MovePath = new List<Province>();
@@ -327,11 +327,7 @@ public class Division : SupplyUnit
         Template = template;
         _neededEquipment = Template.GetTemplateNeedEquipment();
         EquipmentInDivision.Clear();
-        /*EquipmentInDivision.AddRange(Template.GetTemplateNeedEquipment());
-        for (int i = 0; i < EquipmentInDivision.Count; i++)
-        {
-            EquipmentInDivision[i] = new TypedEquipmentCountIdPair(EquipmentInDivision[i].EqType, 0);
-        }*/
+   
        
         DivisionAvatar = template.GetAvatar();
         _attack = template.Attack;
@@ -341,13 +337,26 @@ public class Division : SupplyUnit
         OnSetTemplate?.Invoke(template);
     }
 
-    public void KillDivision()
+    public void KillDivision(bool returnEquipment = true)
     {
+        if (returnEquipment == true)
+        {
+            ReturnEquipmentToStorage();
+        }
+
         GameTimer.HourEnd -= CalculateMovement;
         GameTimer.HourEnd -= CalculateOrganization;
         OnDivisionRemove?.Invoke();
         UnitsManager.Instance.RemoveDivision(this);
         IsDeleted = true;
+    }
+
+    private void ReturnEquipmentToStorage()
+    {
+        foreach (var equipment in EquipmentInDivision)
+        {
+            CountyOwner.EquipmentStorage.AddEquipment(equipment.Equipment.ID, equipment.Count);
+        }
     }
 
     private void SetState(DivisionAnimState divisionState)
