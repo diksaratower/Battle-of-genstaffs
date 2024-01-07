@@ -12,6 +12,7 @@ public class NationalFocusTreeUI : MonoBehaviour
     [SerializeField] private GridLayoutGroup _focusesLevelsLayout;
     [SerializeField] private Transform _focusesConnectionsParent;
     [SerializeField] private StartNationalFocusMenu _startFocusMenu;
+    [SerializeField] private GameObject _focusesConflictUI;
 
     private List<FocusUILevel> _focusesUILevels = new List<FocusUILevel>();
     private Country _country => Player.CurrentCountry;
@@ -86,13 +87,20 @@ public class NationalFocusTreeUI : MonoBehaviour
         var focusesUI = new List<NationalFocusUI>();
         foreach (var focus in focuses) 
         {
+            var focusIndex = focuses.IndexOf(focus);
+            if (focusIndex != 0)
+            {
+                if (focus.ConflictWithFocuses.Contains(focuses[focusIndex - 1]))
+                {
+                    Instantiate(_focusesConflictUI, layout.transform);
+                }
+            }
             var focusUI = Instantiate(_focusUIPrefab, layout.transform);
             focusesUI.Add(focusUI);
             focusUI.RefreshUI(focus, _country.Politics, _startFocusMenu);
         }
         _focusesUILevels.Add(new FocusUILevel() { Focuses = focusesUI, FocLayoutGroup = layout});
     }
-
 
     private class FocusUILevel
     {

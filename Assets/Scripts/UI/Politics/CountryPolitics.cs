@@ -69,6 +69,10 @@ public class CountryPolitics
 
     public bool CanExecute(NationalFocus focus)
     {
+        if (_executedFocuses.Exists(foc => focus.ConflictWithFocuses.Contains(foc)) == true)
+        {
+            return false;
+        }
         var needFocusesExecuted = 0;
         foreach (var need in focus.NeedsForExecution)
         {
@@ -232,10 +236,9 @@ public class CountryPolitics
         _executingFocusProgressDays += 1;
         if(ExecutingFocus.ExecutionDurationDay == _executingFocusProgressDays || Cheats.InstantFocusesDoing)
         {
-            _executedFocuses.Add(ExecutingFocus);
-            ExecutingFocus.ExecuteFocus(_country);
+            var focus = ExecutingFocus;
             ExecutingFocus = null;
-            OnFocusExecuted?.Invoke();
+            ExecuteFocus(focus);
         }
     }
 
@@ -244,6 +247,13 @@ public class CountryPolitics
         var correctedStability = baseStability;
 
         return correctedStability;
+    }
+
+    private void ExecuteFocus(NationalFocus nationalFocus)
+    {
+        _executedFocuses.Add(nationalFocus);
+        nationalFocus.ExecuteFocus(_country);
+        OnFocusExecuted?.Invoke();
     }
 
     public CountryPoliticsSerialize GetSerialize()
@@ -265,23 +275,116 @@ public class CountryPolitics
     {
         public float PolitPowerCount;
         public float Stability;
+        public PersonageSave Leader;
+        public LawSave EconomisLaw;
+        public LawSave ConscriptionLaw;
+        public List<PersonageSave> Advisers = new List<PersonageSave>();
+        public List<FocusSave> ExecutedFocuses = new List<FocusSave>();
+
 
         public CountryPoliticsSerialize(CountryPolitics politics)
         {
             PolitPowerCount = politics.PolitPower;
             Stability = politics.BaseStability;
+            Leader = new PersonageSave(politics.CountryLeader);
+            EconomisLaw = new LawSave(politics.CurrentEconomicLaw);
+            ConscriptionLaw = new LawSave(politics.CurrentÑonscriptionLaw);
+            foreach (var adviser in politics.Advisers)
+            {
+                Advisers.Add(new PersonageSave(adviser));
+            }
+            foreach (var focus in politics._executedFocuses)
+            {
+                ExecutedFocuses.Add(new FocusSave(focus));
+            }
         }
 
         public override void Load(object objTarget)
         {
             var politics = (CountryPolitics)objTarget;
             politics.PolitPower = PolitPowerCount;
-            //politics.Stability = Stability;
+            var politicsData = PoliticsDataSO.GetInstance();
+            politics.CountryLeader = politicsData.Personages.Find(personage => personage.ID == Leader.ID);
+            LoadLaws(politics);
+            LoadAdviser(politics);
+            LoadExecutedFocus(politics);
         }
 
         public override string SaveToJson()
         {
             return JsonUtility.ToJson(this);
+        }
+
+        private void LoadLaws(CountryPolitics politics)
+        {
+            foreach (var economicLaw in politics.EconomicsLaws)
+            {
+                if (EconomisLaw.ID == economicLaw.ID)
+                {
+                    politics.CurrentEconomicLaw = economicLaw;
+                }
+            }
+            foreach (var conscriptionLaw in politics.ÑonscriptionLaws)
+            {
+                if (EconomisLaw.ID == conscriptionLaw.ID)
+                {
+                    politics.CurrentÑonscriptionLaw = conscriptionLaw;
+                }
+            }
+        }
+
+        private void LoadAdviser(CountryPolitics politics)
+        {
+            foreach (var adviseSave in Advisers)
+            {
+                politics.AddAdviser(politics.Preset.AvailableAdvisers.Find(personage => personage.ID == adviseSave.ID));
+            }
+        }
+
+        private void LoadExecutedFocus(CountryPolitics politics)
+        {
+            foreach (var focusSave in ExecutedFocuses)
+            {
+                var focus = politics.Preset.FocusTree.NationalFocuses.Find(f => focusSave.ID == f.ID);
+                if (focus == null)
+                {
+                    throw new Exception("Focuses load excption.");
+                }
+                politics._executedFocuses.Add(focus);
+            }
+        }
+    }
+
+    [Serializable]
+    public class PersonageSave
+    {
+        public string ID;
+
+        public PersonageSave(Personage personage) 
+        { 
+            ID = personage.ID;
+        }
+    }
+
+    [Serializable]
+    public class LawSave
+    {
+        public string ID;
+
+        public LawSave(Law law) 
+        {
+            ID = law.ID;
+        }
+    }
+
+    [Serializable] 
+    public class FocusSave
+    {
+        public string ID;
+
+        public FocusSave(NationalFocus nationalFocus)
+        {
+            ID = nationalFocus.ID;
         }
     }
 }

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: leader_hun
   m_EditorClassIdentifier: 
   Traits: []
+  ID: miklosh_horty
   _standartPortrait: {fileID: 21300000, guid: 7f1863a4abd1be745bcb7c7a3ae1527a, type: 3}
   _name: "\u041C\u0438\u043A\u043B\u043E\u0448 \u0425\u043E\u0440\u0442\u0438"

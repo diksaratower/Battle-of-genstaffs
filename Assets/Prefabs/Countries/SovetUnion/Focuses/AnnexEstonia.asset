@@ -15,9 +15,11 @@ MonoBehaviour:
   Name: "\u041F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u0438\u0442\u044C
     \u042D\u0441\u0442\u043E\u043D\u0438\u044E"
   Description: 
+  ID: annex_estonia
   Image: {fileID: 21300000, guid: 50380007cb7b75b4281dba34ae3d8297, type: 3}
   ExecutionDurationDay: 30
   NeedsForExecution:
   - {fileID: 11400000, guid: e1cfd9eac67ad1e469a3ec2160fb4031, type: 2}
+  ConflictWithFocuses: []
   FocusEffects:
   - {fileID: 11400000, guid: 20ab749a789bd974dbef8b79ddb8259e, type: 2}

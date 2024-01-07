@@ -14,6 +14,7 @@ public class CountrySO : ScriptableObject
     public bool IsAvailableForPlayer = true;
     public bool IsAICountry = false;
     public CountryAISizeData CountrySizeType;
+    public Ideology HistoryIdealogyForAI;
 
 #if UNITY_EDITOR
     public static CountrySO CreateMyAsset(string assetName, Country country)

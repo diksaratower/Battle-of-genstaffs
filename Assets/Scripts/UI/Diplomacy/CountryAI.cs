@@ -190,6 +190,17 @@ public class CountryAI : MonoBehaviour
         {
             foreach (var focus in _country.Politics.Preset.FocusTree.NationalFocuses)
             {
+                if (_country.CountryPreset.Politics.Preset.FocusTree == CountryAIDataSO.GetInstance().StandartFocusTree)
+                {
+                    var idealogyVariant = CountryAIDataSO.GetInstance().ChoosingIdeologyVariantsInStandardTree.Find(variant => variant.Focus == focus);
+                    if (idealogyVariant != null)
+                    {
+                        if (idealogyVariant.FocusIdealogy != _country.CountryPreset.HistoryIdealogyForAI)
+                        {
+                            continue;
+                        }
+                    }
+                }
                 if (_country.Politics.CanExecute(focus))
                 {
                     _country.Politics.SetExecutingFocus(focus);

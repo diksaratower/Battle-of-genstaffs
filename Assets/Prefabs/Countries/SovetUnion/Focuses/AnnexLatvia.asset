@@ -15,9 +15,11 @@ MonoBehaviour:
   Name: "\u041F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u0438\u0442\u044C
     \u041B\u0430\u0442\u0432\u0438\u044E"
   Description: 
+  ID: annex_latvia
   Image: {fileID: 21300000, guid: 4370f989dbbed324d823c566c4183ec8, type: 3}
   ExecutionDurationDay: 30
   NeedsForExecution:
   - {fileID: 11400000, guid: 197865ed20257bf45b862aedc3e89dee, type: 2}
+  ConflictWithFocuses: []
   FocusEffects:
   - {fileID: 11400000, guid: fd94fc345ce663d4b91c0e79dbb82ce9, type: 2}

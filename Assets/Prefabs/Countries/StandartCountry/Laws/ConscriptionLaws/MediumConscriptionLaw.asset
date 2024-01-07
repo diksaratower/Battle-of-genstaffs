@@ -15,6 +15,6 @@ MonoBehaviour:
   LawEffects:
   - {fileID: 11400000, guid: 8a856c8e47909d74babd795602365d8f, type: 2}
   Name: "\u0421\u0440\u0435\u0434\u043D\u0438\u0439 \u043F\u0440\u0438\u0437\u044B\u0432"
-  ID: 
+  ID: medium_conscription_law
   PolitPowerCost: 200
   LawImage: {fileID: 21300000, guid: 70fd0f781fd1ae44d8ab044e8bb86845, type: 3}

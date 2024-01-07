@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "\u0421\u0438\u043B\u044C\u043D\u044B\u0439 \u043B\u0438\u0434\u0435\u0440"
   Description: 
+  ID: strong_leader_facism
   Image: {fileID: 21300000, guid: 567ac4f8bd73fc74bb171396ce79b8da, type: 3}
   ExecutionDurationDay: 20
   NeedsForExecution:
   - {fileID: 11400000, guid: 6fe836c93c4037942afe737ae05b8b36, type: 2}
+  ConflictWithFocuses: []
   FocusEffects: []

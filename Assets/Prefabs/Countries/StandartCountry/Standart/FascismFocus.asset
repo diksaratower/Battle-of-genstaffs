@@ -14,9 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "\u0422\u0440\u0435\u0442\u0438\u0439 \u043F\u0443\u0442\u044C"
   Description: 
+  ID: fascism_focus
   Image: {fileID: 21300000, guid: a28efb727b1c4684281d313d4f7fa6bb, type: 3}
   ExecutionDurationDay: 60
   NeedsForExecution:
   - {fileID: 11400000, guid: 346408a92856b3a4bbca4be6a55f2c37, type: 2}
+  ConflictWithFocuses:
+  - {fileID: 11400000, guid: 5b19a20a96f92b5409c8cce4284fe02e, type: 2}
+  - {fileID: 11400000, guid: 9a9ac95c32252ab498948d683bd38ddf, type: 2}
   FocusEffects:
   - {fileID: 11400000, guid: 8f7e8906cae74ab4abf726a65d897578, type: 2}
+  - {fileID: 11400000, guid: bd6cb253bbca0ee48b8ae92151253eab, type: 2}

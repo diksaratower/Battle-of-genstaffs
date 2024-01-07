@@ -17,5 +17,5 @@ MonoBehaviour:
   ID: ft-17_ww1_tank1
   EquipmentImage: {fileID: 21300000, guid: 17300804b9f56684d8dc35332efd1c28, type: 3}
   EqType: 1
-  Attack: 1
-  Defens: 1
+  Attack: 2.5
+  Defens: 3

@@ -14,9 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "\u0423\u043F\u043E\u0440 \u043D\u0430 \u043A\u043E\u043C\u043C\u0443\u043D\u0438\u0437\u043C"
   Description: 
+  ID: communism_focus
   Image: {fileID: 21300000, guid: f1beeb305e3012e4ab91b3a689971433, type: 3}
   ExecutionDurationDay: 60
   NeedsForExecution:
   - {fileID: 11400000, guid: 346408a92856b3a4bbca4be6a55f2c37, type: 2}
+  ConflictWithFocuses:
+  - {fileID: 11400000, guid: 9a9ac95c32252ab498948d683bd38ddf, type: 2}
+  - {fileID: 11400000, guid: 6fe836c93c4037942afe737ae05b8b36, type: 2}
   FocusEffects:
   - {fileID: 11400000, guid: f0add4f0c868e2b4b889074823478371, type: 2}
+  - {fileID: 11400000, guid: a98268261c1ee3b4fa3e60086f05eafc, type: 2}

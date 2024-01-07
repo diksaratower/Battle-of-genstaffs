@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: leader_yug
   m_EditorClassIdentifier: 
   Traits: []
+  ID: petr_2
   _standartPortrait: {fileID: 21300000, guid: b168db469abf9184195bea56143ad5d9, type: 3}
   _name: "\u041F\u0451\u0442\u0440 II"

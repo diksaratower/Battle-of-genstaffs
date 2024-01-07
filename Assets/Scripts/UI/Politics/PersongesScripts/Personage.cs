@@ -8,6 +8,7 @@ public class Personage : ScriptableObject
     public Sprite Portrait => _standartPortrait;
     public string Name => _name;
     public List<PersonageTrait> Traits = new List<PersonageTrait>();
+    public string ID;
 
     [SerializeField] private Sprite _standartPortrait;
     [SerializeField] private string _name;

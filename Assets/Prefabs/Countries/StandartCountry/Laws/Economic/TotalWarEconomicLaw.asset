@@ -16,6 +16,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 63dd77e227494b34ab8a366137ca4305, type: 2}
   Name: "\u042D\u043A\u043E\u043D\u043E\u043C\u0438\u043A\u0430 \u0442\u043E\u0442\u0430\u043B\u044C\u043D\u043E\u0439
     \u0432\u043E\u0439\u043D\u044B"
-  ID: 
+  ID: total_war_economic_law
   PolitPowerCost: 400
   LawImage: {fileID: 21300000, guid: 8b3237ee5d707e041b412edb7effc4ff, type: 3}

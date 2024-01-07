@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c0704b7ae05944b9587fbe32331f22, type: 3}
   m_Name: AdolfHilter
   m_EditorClassIdentifier: 
+  Traits: []
+  ID: adolf_hilter
   _standartPortrait: {fileID: 21300000, guid: e0f8e3d0c334272458b1d7f19cdf7935, type: 3}
   _name: Adolf Hilter

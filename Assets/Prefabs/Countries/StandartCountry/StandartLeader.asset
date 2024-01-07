@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: StandartLeader
   m_EditorClassIdentifier: 
   Traits: []
+  ID: standart_leader
   _standartPortrait: {fileID: 21300000, guid: bf2633636958b5c4a93e2effc6650637, type: 3}
   _name: Ben Nitonov

@@ -27,7 +27,7 @@
                         "ID": "ww1_rifle_equipment"
                     },
                     {
-                        "EquipmentCount": 80920,
+                        "EquipmentCount": 0,
                         "ID": "manpower"
                     }
                 ]
@@ -45,11 +45,22 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 4624.0693359375,
-                "Stability": 90.0
+                "PolitPowerCount": 4632.4716796875,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "hubert_peirlot"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -75,11 +86,11 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 34,
+                        "EquipmentCount": 68,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
-                        "EquipmentCount": 67600,
+                        "EquipmentCount": 0,
                         "ID": "manpower"
                     }
                 ]
@@ -97,11 +108,22 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 4624.0693359375,
-                "Stability": 90.0
+                "PolitPowerCount": 4632.4716796875,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "kur_von_schushnik"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -127,11 +149,11 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 34,
+                        "EquipmentCount": 170,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
-                        "EquipmentCount": 106744,
+                        "EquipmentCount": 0,
                         "ID": "manpower"
                     }
                 ]
@@ -149,11 +171,22 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 4624.0693359375,
-                "Stability": 90.0
+                "PolitPowerCount": 4632.4716796875,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "edvard_benesh"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -179,11 +212,11 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 34,
+                        "EquipmentCount": 102,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
-                        "EquipmentCount": 38445,
+                        "EquipmentCount": 0,
                         "ID": "manpower"
                     }
                 ]
@@ -201,11 +234,22 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 3364.074951171875,
-                "Stability": 90.0
+                "PolitPowerCount": 3372.474365234375,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "kristian_10"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -231,11 +275,11 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 447905,
+                        "EquipmentCount": 0,
                         "ID": "manpower"
                     },
                     {
-                        "EquipmentCount": 34,
+                        "EquipmentCount": 68,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -262,11 +306,22 @@
                         "ID": "battleship_1939"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 2824.0751953125,
-                "Stability": 90.0
+                "PolitPowerCount": 2832.474609375,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "stanley_baldwin"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -294,11 +349,22 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1564.0750732421875,
-                "Stability": 90.0
+                "PolitPowerCount": 1572.4744873046875,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "aimo_cajander"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -324,17 +390,21 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 18,
+                        "EquipmentCount": 272,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
-                        "EquipmentCount": 340020,
+                        "EquipmentCount": 0,
                         "ID": "manpower"
                     }
                 ]
             },
             "CountryArmies": {
-                "Armies": []
+                "Armies": [
+                    {
+                        "Name": "null"
+                    }
+                ]
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [
@@ -354,11 +424,22 @@
                         "ID": "battleship_1939"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 4084.0400390625,
-                "Stability": 90.0
+                "PolitPowerCount": 4092.439453125,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "pierre_laval"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -388,11 +469,11 @@
                         "ID": "ft-17_ww1_tank1"
                     },
                     {
-                        "EquipmentCount": 670000,
+                        "EquipmentCount": 70000,
                         "ID": "manpower"
                     },
                     {
-                        "EquipmentCount": 34,
+                        "EquipmentCount": 306,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -425,11 +506,22 @@
                         "ID": "battleship_1939"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 2864.040283203125,
-                "Stability": 90.0
+                "PolitPowerCount": 2872.439697265625,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "adolf_hilter"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -455,11 +547,11 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 34,
+                        "EquipmentCount": 68,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
-                        "EquipmentCount": 86850,
+                        "EquipmentCount": 0,
                         "ID": "manpower"
                     }
                 ]
@@ -477,11 +569,22 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 3724.059326171875,
-                "Stability": 90.0
+                "PolitPowerCount": 3732.458740234375,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "miklosh_horty"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -507,11 +610,11 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 34,
+                        "EquipmentCount": 68,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
-                        "EquipmentCount": 424446,
+                        "EquipmentCount": 0,
                         "ID": "manpower"
                     }
                 ]
@@ -532,11 +635,22 @@
                         "ID": "base_artillery"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 4264.03466796875,
-                "Stability": 90.0
+                "PolitPowerCount": 4272.43701171875,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "benito_mussolini"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -564,11 +678,22 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1564.0750732421875,
-                "Stability": 90.0
+                "PolitPowerCount": 1572.4744873046875,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "joseph_besh"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -598,7 +723,7 @@
                         "ID": "ww1_rifle_equipment"
                     },
                     {
-                        "EquipmentCount": 79356,
+                        "EquipmentCount": 0,
                         "ID": "manpower"
                     }
                 ]
@@ -616,11 +741,22 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 4624.0693359375,
-                "Stability": 90.0
+                "PolitPowerCount": 4632.4716796875,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "hendrikus_colijn"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -648,11 +784,22 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1564.0750732421875,
-                "Stability": 90.0
+                "PolitPowerCount": 1572.4744873046875,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "johan_nygaardsvold"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -680,11 +827,22 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1564.0750732421875,
-                "Stability": 90.0
+                "PolitPowerCount": 1572.4744873046875,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "leader_null"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -710,11 +868,11 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 34,
+                        "EquipmentCount": 102,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
-                        "EquipmentCount": 340020,
+                        "EquipmentCount": 0,
                         "ID": "manpower"
                     }
                 ]
@@ -732,11 +890,22 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 4444.05859375,
-                "Stability": 90.0
+                "PolitPowerCount": 4452.4609375,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "ignacy_mosciki"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -764,11 +933,22 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1564.0750732421875,
-                "Stability": 90.0
+                "PolitPowerCount": 1572.4744873046875,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "karol_2"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -794,11 +974,11 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 1950000,
+                        "EquipmentCount": 0,
                         "ID": "manpower"
                     },
                     {
-                        "EquipmentCount": 34,
+                        "EquipmentCount": 340,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -816,11 +996,22 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1564.0750732421875,
-                "Stability": 90.0
+                "PolitPowerCount": 1572.4744873046875,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "joseph_stalin"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -848,11 +1039,22 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1564.0750732421875,
-                "Stability": 90.0
+                "PolitPowerCount": 1572.4744873046875,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "per_alibin_hanos"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -882,7 +1084,7 @@
                         "ID": "ww1_rifle_equipment"
                     },
                     {
-                        "EquipmentCount": 65680,
+                        "EquipmentCount": 0,
                         "ID": "manpower"
                     }
                 ]
@@ -900,11 +1102,22 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 4624.0693359375,
-                "Stability": 90.0
+                "PolitPowerCount": 4632.4716796875,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "swit_parlament"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -930,7 +1143,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 207200,
+                        "EquipmentCount": 0,
                         "ID": "manpower"
                     },
                     {
@@ -952,11 +1165,22 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 3184.074951171875,
-                "Stability": 90.0
+                "PolitPowerCount": 3192.474365234375,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "petr_2"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -982,11 +1206,11 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 34,
+                        "EquipmentCount": 68,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
-                        "EquipmentCount": 260143,
+                        "EquipmentCount": 0,
                         "ID": "manpower"
                     }
                 ]
@@ -1004,11 +1228,22 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 4823.275390625,
-                "Stability": 90.0
+                "PolitPowerCount": 4831.677734375,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "huan_negrin"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -1034,11 +1269,11 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 207200,
+                        "EquipmentCount": 0,
                         "ID": "manpower"
                     },
                     {
-                        "EquipmentCount": 34,
+                        "EquipmentCount": 68,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -1052,11 +1287,22 @@
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 2634.376953125,
-                "Stability": 90.0
+                "PolitPowerCount": 2642.7763671875,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "boris_3"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -1082,11 +1328,11 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 207200,
+                        "EquipmentCount": 0,
                         "ID": "manpower"
                     },
                     {
-                        "EquipmentCount": 34,
+                        "EquipmentCount": 0,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -1100,11 +1346,22 @@
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 2634.376953125,
-                "Stability": 90.0
+                "PolitPowerCount": 2642.7763671875,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "ionis_metakas"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -1144,11 +1401,22 @@
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1896.876708984375,
-                "Stability": 90.0
+                "PolitPowerCount": 1905.276123046875,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "standart_leader"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -1188,11 +1456,22 @@
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1876.576416015625,
-                "Stability": 90.0
+                "PolitPowerCount": 1884.975830078125,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "standart_leader"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -1232,11 +1511,22 @@
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1501.876220703125,
-                "Stability": 90.0
+                "PolitPowerCount": 1510.275634765625,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "standart_leader"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -1262,11 +1552,11 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 34,
+                        "EquipmentCount": 68,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
-                        "EquipmentCount": 10810,
+                        "EquipmentCount": 0,
                         "ID": "manpower"
                     }
                 ]
@@ -1280,11 +1570,22 @@
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1523.0960693359375,
-                "Stability": 90.0
+                "PolitPowerCount": 1531.4954833984375,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "king_zogu"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         },
         {
@@ -1314,7 +1615,7 @@
                         "ID": "ww1_rifle_equipment"
                     },
                     {
-                        "EquipmentCount": 29670,
+                        "EquipmentCount": 0,
                         "ID": "manpower"
                     }
                 ]
@@ -1328,11 +1629,22 @@
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [],
-                "ResearchPointCount": 66.84947967529297
+                "ResearchPointCount": 81.0003433227539
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1323.09912109375,
-                "Stability": 90.0
+                "PolitPowerCount": 1331.49853515625,
+                "Stability": 90.0,
+                "Leader": {
+                    "ID": "imon_de_valera"
+                },
+                "EconomisLaw": {
+                    "ID": "civil_economy_law"
+                },
+                "ConscriptionLaw": {
+                    "ID": "volunteer_conscription_law"
+                },
+                "Advisers": [],
+                "ExecutedFocuses": []
             }
         }
     ]

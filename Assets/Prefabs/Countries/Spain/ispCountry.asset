@@ -29,3 +29,4 @@ MonoBehaviour:
   IsAvailableForPlayer: 1
   IsAICountry: 1
   CountrySizeType: 2
+  HistoryIdealogyForAI: 2

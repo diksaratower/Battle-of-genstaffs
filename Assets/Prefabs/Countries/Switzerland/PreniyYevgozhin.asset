@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Traits:
   - {fileID: 11400000, guid: 913a4c8fc143f114a92423c957381b5f, type: 2}
+  ID: preniy_yevgozhin
   _standartPortrait: {fileID: 21300000, guid: c2fa5ff6f33f7694b99b2a15c05824ba, type: 3}
   _name: Preny Yevgozhin

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: leader_dan
   m_EditorClassIdentifier: 
   Traits: []
+  ID: kristian_10
   _standartPortrait: {fileID: 21300000, guid: 2b9302f6bdd79d744a65ba0b00f1918b, type: 3}
   _name: "\u041A\u0440\u0438\u0441\u0442\u0438\u0430\u043D \u0434\u0435\u0441\u044F\u0442\u044B\u0439"

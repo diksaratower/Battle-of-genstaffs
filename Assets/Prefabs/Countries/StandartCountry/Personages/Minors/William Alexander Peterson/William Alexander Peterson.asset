@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Traits:
   - {fileID: 11400000, guid: ef0c1db3e51bca140936cd9c2df2ae0c, type: 2}
+  ID: william_alexander_peterson
   _standartPortrait: {fileID: 21300000, guid: 61a5030914b503c4fbd843dc03841f9a, type: 3}
   _name: William Alexander Peterson

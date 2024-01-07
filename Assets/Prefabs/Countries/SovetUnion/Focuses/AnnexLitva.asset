@@ -15,9 +15,11 @@ MonoBehaviour:
   Name: "\u041F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u0438\u0442\u044C
     \u041B\u0438\u0442\u0432\u0443"
   Description: 
+  ID: annex_litva
   Image: {fileID: 21300000, guid: 9be998206c8608d4086d314d586ffc60, type: 3}
   ExecutionDurationDay: 30
   NeedsForExecution:
   - {fileID: 11400000, guid: 6a2dbf0d8120e4f4aa24da254cc82bd3, type: 2}
+  ConflictWithFocuses: []
   FocusEffects:
   - {fileID: 11400000, guid: ac602f20bf93f6847942221416d5fe86, type: 2}

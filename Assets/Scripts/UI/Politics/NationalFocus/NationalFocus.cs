@@ -6,9 +6,11 @@ public class NationalFocus : ScriptableObject
 {
     public string Name;
     public string Description;
+    public string ID;
     public Sprite Image;
     public int ExecutionDurationDay;
     public List<NationalFocus> NeedsForExecution = new List<NationalFocus>();
+    public List<NationalFocus> ConflictWithFocuses = new List<NationalFocus>();
     public List<NationalFocusEffect> FocusEffects = new List<NationalFocusEffect>();
 
     public void ExecuteFocus(Country country)

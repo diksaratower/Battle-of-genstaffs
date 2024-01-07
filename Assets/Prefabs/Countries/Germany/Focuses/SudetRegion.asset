@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "\u0421\u0443\u0434\u0435\u0442\u0441\u043A\u0430\u044F \u043E\u0431\u043B\u0430\u0441\u0442\u044C"
   Description: 
+  ID: annex_sudet
   Image: {fileID: 21300000, guid: 8f2b085b759aba348bb2dfbd949d15eb, type: 3}
   ExecutionDurationDay: 30
   NeedsForExecution:
   - {fileID: 11400000, guid: 402877fca2edbea4fad235c22773e17f, type: 2}
+  ConflictWithFocuses: []
   FocusEffects:
   - {fileID: 11400000, guid: f46bb687b77ee23498c2292a4eee93e6, type: 2}

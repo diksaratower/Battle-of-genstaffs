@@ -32648,10 +32648,10 @@ RectTransform:
   m_Father: {fileID: 1178506706}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 24.950928}
-  m_SizeDelta: {x: -722.6145, y: -445.6785}
+  m_SizeDelta: {x: 1197.3855, y: 634.32153}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1235669193
 MonoBehaviour:
@@ -32672,6 +32672,8 @@ MonoBehaviour:
   _focusesLevelsLayout: {fileID: 971948768}
   _focusesConnectionsParent: {fileID: 1467569886}
   _startFocusMenu: {fileID: 868856861}
+  _focusesConflictUI: {fileID: 4625065340490789969, guid: 33d02c080c2ee184f8fc17e44364a1e5,
+    type: 3}
 --- !u!114 &1235669194
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "\u0410\u043D\u0448\u043B\u044E\u0441 \u0410\u0432\u0441\u0442\u0440\u0438\u0438"
   Description: 
+  ID: anshlus_austria
   Image: {fileID: 21300000, guid: 83d796a9efc0c66478816881a0b75ff4, type: 3}
   ExecutionDurationDay: 68
   NeedsForExecution:
   - {fileID: 11400000, guid: 13c4d90ba4f35c54cbeec5cbb7dc9b99, type: 2}
+  ConflictWithFocuses: []
   FocusEffects:
   - {fileID: 11400000, guid: ed1be139deac00f4fba3941b2caf15da, type: 2}

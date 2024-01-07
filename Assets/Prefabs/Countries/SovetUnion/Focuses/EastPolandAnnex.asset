@@ -15,9 +15,11 @@ MonoBehaviour:
   Name: "\u041F\u0440\u0438\u0441\u043E\u0435\u0434\u0438\u043D\u0438\u0442\u044C
     \u0412\u0441\u0442. \u041F\u043E\u043B\u044C\u0448\u0443"
   Description: 
+  ID: annex_east_poland
   Image: {fileID: 21300000, guid: 6d836ac7c81cf3947aac0c9a5c2768f1, type: 3}
   ExecutionDurationDay: 25
   NeedsForExecution:
   - {fileID: 11400000, guid: 99c8a621536ab234bbf67d31f003fb64, type: 2}
+  ConflictWithFocuses: []
   FocusEffects:
   - {fileID: 11400000, guid: 12ed7954268ff8d41b7d76ac5e44ec73, type: 2}

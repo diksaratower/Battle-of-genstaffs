@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c0704b7ae05944b9587fbe32331f22, type: 3}
   m_Name: BenitoMussolini
   m_EditorClassIdentifier: 
+  Traits: []
+  ID: benito_mussolini
   _standartPortrait: {fileID: 21300000, guid: d9d5ad5d7a4a4c447bf65294ae21afac, type: 3}
   _name: Benito Mussolini
