@@ -51,7 +51,7 @@ public class CountryBuild
     public List<BuildingSlotRegion> GetCountryBuildings(BuildingType building)
     {
         var result = new List<BuildingSlotRegion>();
-        var regions = Player.CurrentCountry.GetCountryRegions();
+        var regions = _country.GetCountryRegions();
         foreach (var region in regions)
         {
             result.AddRange(region.GetBuildings(building));
@@ -71,10 +71,15 @@ public class CountryBuild
 
     private void CalculateBuild()
     {
-        var efficiencyToSlot = (GetBuildEfficiency() * (float)GetCountryBuildings(BuildingType.Factory).Count) / ((float)BuildingsQueue.Count);
+        var efficiencyToSlot = (GetBuildEfficiency() * (float)GetCountryBuildings(BuildingType.Factory).Count) / ((float)4);
         var forRemove = new List<CountryBuildSlot>();
-        foreach (var slot in BuildingsQueue)
+        for (int i = 0; i < 4; i++)
         {
+            if (i >= BuildingsQueue.Count)
+            {
+                break;
+            }
+            var slot = BuildingsQueue[i];
             slot.BuildProgress += efficiencyToSlot;
             if (slot.IsBuildEnd() || Cheats.InstantBuilding)
             {

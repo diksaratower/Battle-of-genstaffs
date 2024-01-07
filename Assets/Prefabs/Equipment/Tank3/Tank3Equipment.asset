@@ -17,3 +17,5 @@ MonoBehaviour:
   ID: t34_tank2
   EquipmentImage: {fileID: 21300000, guid: 1cf3d61e3b7f0e2469704261da0ce3bf, type: 3}
   EqType: 1
+  Attack: 2
+  Defens: 2

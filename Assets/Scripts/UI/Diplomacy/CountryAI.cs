@@ -66,8 +66,7 @@ public class CountryAI : MonoBehaviour
         }
         if (_country.CountryFabrication.EquipmentSlots.Count == 0)
         {
-            _country.CountryFabrication.AddSlot(EquipmentManagerSO.GetAllEquipment().Find(equipment => equipment.ID == "ww1_rifle_equipment"),
-                _country.CountryBuild.GetCountryBuildings(BuildingType.MilitaryFactory));
+            UpdateFabrication();
         }
         if (_country.CountryArmies.Armies.Count == 0 && UnitsManager.Instance.Divisions.FindAll(div => div.CountyOwner == _country).Count >= _maxDivisionsCount)
         {
@@ -86,6 +85,10 @@ public class CountryAI : MonoBehaviour
                     army.DoPlanType = DoPlanType.Defense;
                 }
             }
+        }
+        if (_country.CountryBuild.BuildingsQueue.Count == 0)
+        {
+            BuildWork();
         }
         FocusesWork();
     }
@@ -145,6 +148,36 @@ public class CountryAI : MonoBehaviour
                 _cashedForceFactorInFront = plan.GetForceFactor(frontDates);
             }
         };
+    }
+
+    private void BuildWork()
+    {
+        if (_country.CountryBuild.BuildingsQueue.Count > 0)
+        {
+            return;
+        }
+        if (NeedAIWork() == false)
+        {
+            return;
+        }
+        var building = BuildingsManagerSO.GetInstance().AvalibleBuildings.Find(b => b.BuildingType == BuildingType.MilitaryFactory);
+        var contryRegions = _country.GetCountryRegions();
+        foreach (var region in contryRegions)
+        {
+            _country.CountryBuild.AddBuildingToBuildQueue(building, region);
+        }
+        UpdateFabrication();
+    }
+
+    private void UpdateFabrication()
+    {
+        var slots = new List<CountryFabricationEquipmentSlot>(_country.CountryFabrication.EquipmentSlots);
+        foreach (var slot in slots)
+        {
+            _country.CountryFabrication.RemoveSlot(slot);
+        }
+        _country.CountryFabrication.AddSlot(EquipmentManagerSO.GetAllEquipment().Find(equipment => equipment.ID == "ww1_rifle_equipment"),
+                _country.CountryBuild.GetCountryBuildings(BuildingType.MilitaryFactory));
     }
 
     private void FocusesWork()

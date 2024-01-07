@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: "\u041F\u0435\u0445\u043E\u0442\u0430"
   Attack: 15
   Defend: 1
-  Organization: 800
+  Organization: 4000
   Speed: 18
   ManPower: 1000
   BatImage: {fileID: 21300000, guid: 7474b4036e382ac4da983b4129f5b5d6, type: 3}
