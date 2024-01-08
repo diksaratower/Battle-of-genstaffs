@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CreateDivisionTemplateViewSlot : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _templateName;
+    [SerializeField] private Image _templateImage;
     [SerializeField] private Button _editTemplateButton;
     [SerializeField] private Button _createDivisionButton;
 
@@ -26,6 +27,7 @@ public class CreateDivisionTemplateViewSlot : MonoBehaviour
         _editTemplateButton.onClick.AddListener(delegate { 
             createDivisionWindow.OpenDivisionEditor(templ);
         });
+        _templateImage.sprite = templ.GetAverageBattlion().BatImage;
     }
 
 }

@@ -95,6 +95,10 @@ public class CountryAI : MonoBehaviour
 
     private void SpawnDivisions()
     {
+        if (UnitsManager.Instance.Divisions.FindAll(div => div.CountyOwner == _country).Count == _maxDivisionsCount)
+        {
+            return;
+        }
         var template = DivisionTemplateConstructorUI.GetAITemplate(4, 4);
         if (_country.CountryPreset.CountrySizeType == CountryAISizeData.Major)
         {

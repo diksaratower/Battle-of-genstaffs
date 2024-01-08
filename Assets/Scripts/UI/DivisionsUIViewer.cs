@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -127,6 +128,21 @@ public class DivisionsUIViewer : MonoBehaviour
     private void RemoveNotNeeedDivisionsUI()
     {
         var removeDivisionsUI = _divisionsUI.FindAll(divUI => divUI.Divisions.Count == 0);
+
+        foreach (var oneDivisionUI in _divisionsUI)
+        {
+            foreach (var twoDivisionUI in _divisionsUI)
+            {
+                if (oneDivisionUI == twoDivisionUI)
+                {
+                    continue;
+                }
+                if(oneDivisionUI.Divisions.All(division => twoDivisionUI.Divisions.Contains(division)))
+                {
+                    removeDivisionsUI.Add(twoDivisionUI);
+                }
+            }
+        }
         foreach (var divisionUI in removeDivisionsUI)
         {
             _divisionsUI.Remove(divisionUI);

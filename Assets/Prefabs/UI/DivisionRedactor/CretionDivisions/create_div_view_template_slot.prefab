@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 3670052514314980404}
   - component: {fileID: 3670052514314980403}
   m_Layer: 5
-  m_Name: divsion_image
+  m_Name: division_image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -371,7 +371,7 @@ RectTransform:
   - {fileID: 11722283143401353}
   - {fileID: 8905845170850449654}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -473,6 +473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _templateName: {fileID: 3670052514017683077}
+  _templateImage: {fileID: 3670052514314980403}
   _editTemplateButton: {fileID: 4686240727061572214}
   _createDivisionButton: {fileID: 8369096943716662924}
 --- !u!1 &3873906788259347551
