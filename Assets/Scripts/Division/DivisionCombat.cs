@@ -181,7 +181,9 @@ public class DivisionCombat
 
     private void IncurLosses(Division division, float lossesProcent)
     {
-        IncurLossesToEquipmentType(division, EquipmentType.Manpower, CombatRandom.Next(0, 5));
+        var manpowerLosses = CombatRandom.Next(0, 7);
+        IncurLossesToEquipmentType(division, EquipmentType.Manpower, manpowerLosses);
+        division.CountyOwner.OnManpowerLosses?.Invoke(manpowerLosses);
         IncurLossesToEquipmentType(division, EquipmentType.Rifle, CombatRandom.Next(0, 3));
         IncurLossesToEquipmentType(division, EquipmentType.Tank, CombatRandom.Next(0, 1));
     }

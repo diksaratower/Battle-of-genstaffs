@@ -2160,6 +2160,7 @@ MonoBehaviour:
   _gameTimer: {fileID: 77137656}
   _player: {fileID: 77137651}
   _marineRegions: {fileID: 77137664}
+  _divisionsUIViewer: {fileID: 1231569304}
 --- !u!114 &77137661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6229,17 +6230,17 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1850831601}
+  - {fileID: 335193872}
   - {fileID: 1616919985}
   - {fileID: 1982665039}
   - {fileID: 1335332829}
   - {fileID: 1236368391}
   - {fileID: 1559411610}
   - {fileID: 950019173}
-  - {fileID: 335193872}
+  - {fileID: 1850831601}
   - {fileID: 362474045}
-  - {fileID: 1031017557}
   - {fileID: 554684035}
+  - {fileID: 1031017557}
   - {fileID: 551642787}
   - {fileID: 1783272540}
   m_Father: {fileID: 1178506706}
@@ -15181,10 +15182,10 @@ RectTransform:
   m_Children:
   - {fileID: 1798653788}
   - {fileID: 819194378}
-  - {fileID: 124370050}
-  - {fileID: 587702802}
-  - {fileID: 63357624}
   - {fileID: 1117337300}
+  - {fileID: 587702802}
+  - {fileID: 124370050}
+  - {fileID: 63357624}
   m_Father: {fileID: 1178506706}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -30534,25 +30535,25 @@ RectTransform:
   m_Children:
   - {fileID: 1231569302}
   - {fileID: 1676472045}
-  - {fileID: 338135536}
-  - {fileID: 160620236}
   - {fileID: 696965575}
-  - {fileID: 721701979}
-  - {fileID: 307823961}
-  - {fileID: 1994891864}
-  - {fileID: 1348849644}
-  - {fileID: 1294006535}
-  - {fileID: 561144585}
+  - {fileID: 160620236}
   - {fileID: 1077628290}
-  - {fileID: 1333914390}
-  - {fileID: 412420396}
-  - {fileID: 295142421}
+  - {fileID: 721701979}
+  - {fileID: 338135536}
+  - {fileID: 307823961}
   - {fileID: 1205578550}
-  - {fileID: 1236303880}
+  - {fileID: 1348849644}
+  - {fileID: 1994891864}
+  - {fileID: 561144585}
+  - {fileID: 1333914390}
+  - {fileID: 1294006535}
+  - {fileID: 295142421}
   - {fileID: 1929446707}
-  - {fileID: 2030018639}
   - {fileID: 230912864}
+  - {fileID: 1236303880}
   - {fileID: 740854264}
+  - {fileID: 412420396}
+  - {fileID: 2030018639}
   - {fileID: 1235669192}
   - {fileID: 414354050}
   - {fileID: 345005273}
@@ -47952,8 +47953,8 @@ RectTransform:
   - {fileID: 49373286}
   - {fileID: 1482148814}
   - {fileID: 1709350014}
-  - {fileID: 1217145820}
   - {fileID: 2076220981}
+  - {fileID: 1217145820}
   m_Father: {fileID: 1178506706}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

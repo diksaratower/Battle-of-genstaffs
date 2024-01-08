@@ -30,6 +30,7 @@ public class SelectedDivisionsViewUI : MonoBehaviour
         {
             divisions.Add(slot.Division);
         }
+        GameIU.Instance.DeselectDivisions(divisions);
         var removeCount = 0;
         foreach (var division in divisions)
         {

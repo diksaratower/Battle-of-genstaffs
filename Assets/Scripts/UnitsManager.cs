@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class UnitsManager : MonoBehaviour, ISaveble
 {
+    public static Action<Division, Province> OnDivisionEnterToProvince;
+
     public List<Division> Divisions = new List<Division>();
     public List<AviationDivision> AviationDivisions = new List<AviationDivision>();
     public Action<AviationDivision> OnCreateAviationDivision;
@@ -39,6 +41,10 @@ public class UnitsManager : MonoBehaviour, ISaveble
     private Division AddDivision(Province province, Country owner, DivisionTemplate template)
     {
         var division = new Division(owner);
+        division.OnDivisionEnterToProvince += (Province enteredProvince) =>
+        {
+            OnDivisionEnterToProvince?.Invoke(division, enteredProvince);
+        };
         division.Name = "Infantry division " + (Divisions.Count + 1).ToString();
         division.SetTemplate(template); 
         Divisions.Add(division);

@@ -23,8 +23,6 @@ public class Division : SupplyUnit
     public bool IsDeleted { get; private set; } = false;
 
     private float _speed = 0;
-    private float _attack = 1;
-    private float _defense = 1;
     private float _moveOrganizationLoss = 3;
     private float _recoverySpeedPercent = 0.03f;
 
@@ -330,8 +328,6 @@ public class Division : SupplyUnit
    
        
         DivisionAvatar = template.GetAvatar();
-        _attack = template.Attack;
-        _defense = template.Defend;
         MaxOrganization = template.Organization;
         _speed = template.Speed;
         OnSetTemplate?.Invoke(template);

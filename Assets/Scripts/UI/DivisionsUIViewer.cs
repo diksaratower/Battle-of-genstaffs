@@ -16,10 +16,17 @@ public class DivisionsUIViewer : MonoBehaviour
     private bool _selectedRectDraw;
 
 
+    public void Start()
+    {
+        foreach (var division in UnitsManager.Instance.Divisions)
+        {
+            OnDivisionEnterToProvince(division, division.DivisionProvince);
+        }
+        UnitsManager.OnDivisionEnterToProvince += OnDivisionEnterToProvince;
+    }
+
     private void Update()
     {
-        UpdateDivisionsUI();
-        RemoveNotNeeedDivisionsUI();
         UpdateSelectedDivisionsViewUI();
     }
 
@@ -73,39 +80,42 @@ public class DivisionsUIViewer : MonoBehaviour
         }
     }
 
-    private void UpdateDivisionsUI()
+    private void OnDivisionEnterToProvince(Division division, Province province)
     {
-        var divisionsAll = UnitsManager.Instance.Divisions.FindAll(d => d.NeedDrawDivisionUI());
-        var provinces = new List<Province>();
-        divisionsAll.ForEach(div =>
+        if (division.NeedDrawDivisionUI() == false)
         {
-            if (provinces.Contains(div.DivisionProvince) == false)
-            {
-                provinces.Add(div.DivisionProvince);
-            }
-        });
-        foreach (var province in provinces)
-        {
-            var divisionsForSlot = divisionsAll.FindAll(d => d.DivisionProvince == province);
-            if (_divisionsUI.Exists(dUI => (dUI.TargetProvince == province && ListIsEquals(dUI.Divisions, divisionsForSlot))) == false)
-            {
-                var divUI = Instantiate(_divisionViewPrefab);
-                divUI.Initialize(divisionsForSlot, GameIU.Instance, province, _divisionsUI, _divisionUIPrefab, _divisionsUIParent);
-                _divisionsUI.Add(divUI);
-            }
-            else
-            {
-            }
+            return;
         }
-    }
-
-    private bool ListIsEquals(List<Division> list1, List<Division> list2)
-    {
-        if (list1.Count != list2.Count)
+        if (_divisionsUI.Exists(dUI => dUI.Divisions.Contains(division)))
         {
-            return false;
+            _divisionsUI.Find(dUI => dUI.Divisions.Contains(division)).Divisions.Remove(division);
         }
-        return list1.FindAll(element => list2.Contains(element)).Count == list1.Count;
+        var divisionUI = _divisionsUI.Find(dUI => dUI.TargetProvince == province);
+        if (divisionUI != null)
+        {
+            divisionUI.Divisions.Add(division);
+            division.OnDivisionRemove += delegate 
+            {
+                divisionUI.Divisions.Remove(division);
+                RemoveNotNeeedDivisionsUI();
+            };
+        }
+        else
+        {
+            var divUI = Instantiate(_divisionViewPrefab);
+            divUI.Initialize(new List<Division>(1) { division }, GameIU.Instance, province, _divisionUIPrefab, _divisionsUIParent);
+            division.OnDivisionRemove += delegate 
+            {
+                divUI.Divisions.Remove(division);
+                RemoveNotNeeedDivisionsUI();
+            };
+            _divisionsUI.Add(divUI);
+        }
+        RemoveNotNeeedDivisionsUI();
+        if (division.CountyOwner == Player.CurrentCountry)
+        {
+            UpdateNotPlayerDivisions();
+        }
     }
 
     private void UpdateSelectedDivisionsViewUI()
@@ -125,24 +135,28 @@ public class DivisionsUIViewer : MonoBehaviour
         }
     }
 
-    private void RemoveNotNeeedDivisionsUI()
+    private void UpdateNotPlayerDivisions()
     {
-        var removeDivisionsUI = _divisionsUI.FindAll(divUI => divUI.Divisions.Count == 0);
-
-        foreach (var oneDivisionUI in _divisionsUI)
+        foreach (var division in UnitsManager.Instance.Divisions)
         {
-            foreach (var twoDivisionUI in _divisionsUI)
+            if (division.CountyOwner != Player.CurrentCountry && division.DivisionProvince.Contacts.Exists(p => p.Owner == Player.CurrentCountry))
             {
-                if (oneDivisionUI == twoDivisionUI)
+                OnDivisionEnterToProvince(division, division.DivisionProvince);
+            }
+
+            if (division.CountyOwner != Player.CurrentCountry && !division.NeedDrawDivisionUI())
+            {
+                if (_divisionsUI.Exists(dUI => dUI.Divisions.Contains(division)))
                 {
-                    continue;
-                }
-                if(oneDivisionUI.Divisions.All(division => twoDivisionUI.Divisions.Contains(division)))
-                {
-                    removeDivisionsUI.Add(twoDivisionUI);
+                    _divisionsUI.Find(dUI => dUI.Divisions.Contains(division)).Divisions.Remove(division);
                 }
             }
         }
+    }
+
+    private void RemoveNotNeeedDivisionsUI()
+    {
+        var removeDivisionsUI = _divisionsUI.FindAll(divUI => divUI.Divisions.Count == 0);
         foreach (var divisionUI in removeDivisionsUI)
         {
             _divisionsUI.Remove(divisionUI);

@@ -97,34 +97,6 @@ public class DivisionUI : MonoBehaviour
     public void RefreshUI(DivisionView divisionView, GameIU UI)
     {
         _targetView = divisionView;
-        /*
-        Divisions.Clear();
-        Divisions.AddRange(target);
-        TargetProvince = province;
-        foreach (Division division in Divisions)
-        {
-            division.OnDivisionRemove += delegate 
-            {
-                if (Divisions.Contains(division))
-                {
-                    Divisions.Remove(division);
-                }
-            };
-            division.OnDivisionEnterToProvince += (Province pr) =>
-            {
-                if (pr != TargetProvince)
-                {
-                    if (Divisions.Contains(division))
-                    {
-                        Divisions.Remove(division);
-                    }
-                    if (divisionsUI.Exists(dUI => dUI.TargetProvince == pr))
-                    {
-                        divisionsUI.Find(dUI => dUI.TargetProvince == pr).Divisions.Add(division);
-                    }
-                }
-            };
-        }*/
         _rectTransform.anchoredPosition = GameCamera.Instance.WorldToScreenPointResolutionTrue(_targetView.Divisions[0].DivisionProvince.Position);
         _divisionsCountText.text = _targetView.Divisions.Count.ToString();
         _gameIU = UI;
