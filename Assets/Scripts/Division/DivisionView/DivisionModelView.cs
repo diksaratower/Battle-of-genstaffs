@@ -23,6 +23,11 @@ public class DivisionModelView : MonoBehaviour
         }
     }
 
+    public void SetTarget(DivisionView divisionView)
+    {
+        _divisionView = divisionView;
+    }
+
     protected void RotateDivisionToTarget()
     {
         var viewPos = GetViewPosition();

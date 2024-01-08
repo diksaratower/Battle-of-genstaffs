@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class InfantryDivisionView : DivisionModelView
 {
-    [SerializeField] private Animator _footsAnimator;
     [SerializeField] private Animator _bodyAnimator;
 
     protected override void Update()
@@ -20,14 +19,6 @@ public class InfantryDivisionView : DivisionModelView
         if (_owner == null)
         {
             return;
-        }
-        if (state == DivisionAnimState.Move)
-        {
-            _footsAnimator.SetTrigger("Walk");
-        }
-        if (state != DivisionAnimState.Move)
-        {
-            _footsAnimator.SetTrigger("Idle");
         }
 
         if (state == DivisionAnimState.Empty)

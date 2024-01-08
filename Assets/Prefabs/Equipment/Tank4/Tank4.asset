@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc0148da01a08b348a92ea7ba46ce197, type: 3}
-  m_Name: Tank3
+  m_Name: Tank4
   m_EditorClassIdentifier: 
-  OpenCost: 2000
-  OptimalDate: 1941
+  OpenCost: 10000
+  OptimalDate: 1943
   NeededTech:
-  - {fileID: 11400000, guid: 4ab77b3be64b96548a1363da75cda14f, type: 2}
-  UnlockEquipment: {fileID: 11400000, guid: f969eb74356fb3445b6b777b461bb8eb, type: 2}
+  - {fileID: 11400000, guid: e64f3fb8716672c4a82858ffe23d57ce, type: 2}
+  UnlockEquipment: {fileID: 11400000, guid: afba8236651df0c459aff5af1c69b793, type: 2}

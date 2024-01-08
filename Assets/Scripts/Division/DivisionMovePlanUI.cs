@@ -12,8 +12,8 @@ public class DivisionMovePlanUI : MonoBehaviour
     [SerializeField] private Color _color;
     [SerializeField] private GameObject _movePlanEndPrefab;
     [SerializeField] private float _upperMap;
-    [SerializeField] private InfantryDivisionView _infantryDivisionView;
-    [SerializeField] private TanksDivisionView _tankDivisionView;
+    [SerializeField] private InfantryDivisionView _infantryDivisionViewPrefab;
+    [SerializeField] private TanksDivisionView _tankDivisionViewPrefab;
 
     private List<Province> _drawedMovePath = new List<Province>();
     private LineRenderer _movePlanLineRender;
@@ -47,21 +47,53 @@ public class DivisionMovePlanUI : MonoBehaviour
             return;
         }
         CalculateMoveLine();
+        CalculateView();
+    }
+
+    private void CalculateView()
+    {
+        if (Owner.Template.GetAverageBattlion().ViewType != DivisionViewType.Tanks)
+        {
+            return;
+        }
+        if (Owner.Template.GetAverageBattlion().ViewType == DivisionViewType.Tanks)
+        {
+            
+        }
     }
 
     private void SetTemplateView(DivisionTemplate template)
     {
-        _infantryDivisionView.gameObject.SetActive(false);
-        _tankDivisionView.gameObject.SetActive(false);
         if (template.GetAverageBattlion().ViewType != DivisionViewType.Tanks)
         {
-            _divisionModelView = _infantryDivisionView;
+            _divisionModelView = Instantiate(_infantryDivisionViewPrefab, transform);
+            _divisionModelView.SetTarget(_divisionView);
         }
         if (template.GetAverageBattlion().ViewType == DivisionViewType.Tanks)
         {
-            _divisionModelView = _tankDivisionView;
+            //_divisionModelView = Instantiate(_tankDivisionViewPrefab, transform);
+            //_divisionModelView.SetTarget(_divisionView);
         }
-        _divisionModelView.gameObject.SetActive(true);
+    }
+
+    private Equipment GetAverageEquipmentInDivision(Division division, EquipmentType equipmentType)
+    {
+        var equipments = new List<EquipmentCountIdPair>();
+        foreach (var equipment in division.EquipmentInDivision)
+        {
+            if (equipment.Equipment.EqType == equipmentType)
+            {
+                equipments.Add(equipment);
+            }
+        }
+        var counts = new List<int>();
+        foreach (var equipment in equipments) 
+        {
+            counts.Add(equipment.Count);
+        }
+        var max = counts.Max();
+        var average = equipments.Find(pair => pair.Count == max);
+        return average.Equipment;
     }
 
     private void CalculateMoveLine()
