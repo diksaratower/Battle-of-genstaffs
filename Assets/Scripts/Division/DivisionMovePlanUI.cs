@@ -58,7 +58,28 @@ public class DivisionMovePlanUI : MonoBehaviour
         }
         if (Owner.Template.GetAverageBattlion().ViewType == DivisionViewType.Tanks)
         {
-            
+            var equipmentForView = GetAverageEquipmentInDivision(Owner, EquipmentType.Tank) as TankEquipment;
+            if (equipmentForView == null)
+            {
+                return;
+            }
+            if (_divisionModelView is TanksDivisionView)
+            {
+                if ((_divisionModelView as TanksDivisionView).ViewedTankEquipment == equipmentForView)
+                {
+                    return;
+                }
+            }
+            if (equipmentForView.EquipmentViewPrefab != null)
+            {
+                if (_divisionModelView != null)
+                {
+                    Destroy(_divisionModelView.gameObject);
+                }
+                _divisionModelView = Instantiate(equipmentForView.EquipmentViewPrefab, transform);
+                _divisionModelView.SetTarget(_divisionView);
+                (_divisionModelView as TanksDivisionView).ViewedTankEquipment = equipmentForView;
+            }
         }
     }
 
@@ -71,8 +92,8 @@ public class DivisionMovePlanUI : MonoBehaviour
         }
         if (template.GetAverageBattlion().ViewType == DivisionViewType.Tanks)
         {
-            //_divisionModelView = Instantiate(_tankDivisionViewPrefab, transform);
-            //_divisionModelView.SetTarget(_divisionView);
+            _divisionModelView = Instantiate(_tankDivisionViewPrefab, transform);
+            _divisionModelView.SetTarget(_divisionView);
         }
     }
 
@@ -90,6 +111,10 @@ public class DivisionMovePlanUI : MonoBehaviour
         foreach (var equipment in equipments) 
         {
             counts.Add(equipment.Count);
+        }
+        if (counts.Count == 0)
+        {
+            return null;
         }
         var max = counts.Max();
         var average = equipments.Find(pair => pair.Count == max);

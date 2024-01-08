@@ -19,3 +19,5 @@ MonoBehaviour:
   EqType: 1
   Attack: 10
   Defens: 10
+  EquipmentViewPrefab: {fileID: 8787065316557518695, guid: 9d0b268143fea63499e135e851b36abc,
+    type: 3}

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc0148da01a08b348a92ea7ba46ce197, type: 3}
   m_Name: Tank4
   m_EditorClassIdentifier: 
-  OpenCost: 10000
+  OpenCost: 2100
   OptimalDate: 1943
   NeededTech:
   - {fileID: 11400000, guid: e64f3fb8716672c4a82858ffe23d57ce, type: 2}

@@ -2,17 +2,601 @@
     "Divisions": [
         {
             "Position": {
-                "x": 289.5989074707031,
+                "x": 308.6514587402344,
                 "y": 1.0,
-                "z": 498.3000183105469
+                "z": 491.70001220703127
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
-            "CountryOwnerID": "belg",
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
+                    "Count": 6284
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6284
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6284
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 308.6514587402344,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6284
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6284
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6284
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 308.6514587402344,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6283
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6283
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6283
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 308.6514587402344,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6283
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6283
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6283
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 308.6514587402344,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6280
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6280
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6280
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 308.6514587402344,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6280
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6280
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6280
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 308.6514587402344,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6280
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6280
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6280
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 308.6514587402344,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6279
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6279
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6279
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 308.6514587402344,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6278
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6278
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6278
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 308.6514587402344,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6278
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6278
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 491.70001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "ger",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6278
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -23,28 +607,16 @@
                 "z": 498.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "belg",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 289.5989074707031,
-                "y": 1.0,
-                "z": 498.3000183105469
-            },
-            "TemplateIndex": 0,
-            "Organization": 64000.0,
-            "CountryOwnerID": "belg",
-            "EquipmentInDivision": [
+                    "Count": 5881
+                },
                 {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -52,143 +624,219 @@
             "Position": {
                 "x": 293.409423828125,
                 "y": 1.0,
-                "z": 498.3000183105469
+                "z": 504.9000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "belg",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
+                    "Count": 5881
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
         {
             "Position": {
-                "x": 417.25103759765627,
+                "x": 291.504150390625,
                 "y": 1.0,
-                "z": 475.20001220703127
+                "z": 501.6000061035156
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
+            "CountryOwnerID": "belg",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 5881
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 295.3146667480469,
+                "y": 1.0,
+                "z": 508.20001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 144000.0,
+            "CountryOwnerID": "belg",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 5880
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 339.13555908203127,
+                "y": 1.0,
+                "z": 465.3000183105469
+            },
+            "TemplateIndex": 0,
+            "Organization": 144000.0,
             "CountryOwnerID": "aust",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 96
+                    "Count": 6581
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
         {
             "Position": {
-                "x": 417.25103759765627,
+                "x": 350.56707763671877,
                 "y": 1.0,
-                "z": 475.20001220703127
+                "z": 465.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "aust",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 96
+                    "Count": 6581
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
         {
             "Position": {
-                "x": 417.25103759765627,
+                "x": 367.7143859863281,
                 "y": 1.0,
-                "z": 475.20001220703127
+                "z": 468.6000061035156
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "aust",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 96
+                    "Count": 6581
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
         {
             "Position": {
-                "x": 417.25103759765627,
+                "x": 379.1459045410156,
                 "y": 1.0,
                 "z": 475.20001220703127
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "aust",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 96
+                    "Count": 6581
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
         {
             "Position": {
-                "x": 392.48272705078127,
+                "x": 382.9564208984375,
                 "y": 1.0,
-                "z": 498.3000183105469
+                "z": 488.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "cze",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 240
+                    "Count": 8878
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
         {
             "Position": {
-                "x": 392.48272705078127,
+                "x": 375.33538818359377,
                 "y": 1.0,
-                "z": 498.3000183105469
+                "z": 501.6000061035156
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "cze",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 240
+                    "Count": 8878
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
         {
             "Position": {
-                "x": 392.48272705078127,
+                "x": 398.198486328125,
                 "y": 1.0,
-                "z": 498.3000183105469
+                "z": 508.20001220703127
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "cze",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 240
+                    "Count": 8877
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
         {
             "Position": {
-                "x": 392.48272705078127,
+                "x": 419.15631103515627,
                 "y": 1.0,
                 "z": 498.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "cze",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 240
+                    "Count": 8877
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -199,12 +847,16 @@
                 "z": 570.9000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "dan",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 144
+                    "Count": 7365
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -215,12 +867,16 @@
                 "z": 570.9000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "dan",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 144
+                    "Count": 7365
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -231,12 +887,16 @@
                 "z": 570.9000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "dan",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 144
+                    "Count": 7365
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -247,12 +907,16 @@
                 "z": 570.9000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "dan",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 144
+                    "Count": 7365
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -263,12 +927,16 @@
                 "z": 521.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "eng",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 28
+                    "Count": 5304
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -279,12 +947,16 @@
                 "z": 521.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "eng",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 28
+                    "Count": 5304
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -295,12 +967,16 @@
                 "z": 521.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "eng",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 28
+                    "Count": 5304
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -311,12 +987,16 @@
                 "z": 521.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "eng",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 28
+                    "Count": 5304
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -327,12 +1007,16 @@
                 "z": 521.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "eng",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 28
+                    "Count": 5304
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -343,12 +1027,16 @@
                 "z": 521.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "eng",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 28
+                    "Count": 5303
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -359,12 +1047,16 @@
                 "z": 521.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "eng",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 24
+                    "Count": 5303
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -375,12 +1067,16 @@
                 "z": 521.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "eng",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 24
+                    "Count": 5303
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -391,12 +1087,16 @@
                 "z": 521.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "eng",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 24
+                    "Count": 5303
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -407,12 +1107,16 @@
                 "z": 521.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "eng",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 24
+                    "Count": 5303
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -423,12 +1127,16 @@
                 "z": 521.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "eng",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 24
+                    "Count": 5303
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -439,12 +1147,16 @@
                 "z": 521.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "eng",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 24
+                    "Count": 5303
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -455,12 +1167,16 @@
                 "z": 521.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "eng",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 24
+                    "Count": 5295
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -471,12 +1187,16 @@
                 "z": 521.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "eng",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 24
+                    "Count": 5295
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -487,60 +1207,196 @@
                 "z": 521.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "eng",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 24
+                    "Count": 5295
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
         {
             "Position": {
-                "x": 295.3146667480469,
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 471.9000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6936
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 314.3672180175781,
+                "y": 1.0,
+                "z": 475.20001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6936
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 316.2724914550781,
+                "y": 1.0,
+                "z": 478.5
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6936
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 316.2724914550781,
+                "y": 1.0,
+                "z": 485.1000061035156
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6936
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 314.3672180175781,
+                "y": 1.0,
+                "z": 481.8000183105469
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6936
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 485.1000061035156
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6936
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 310.55670166015627,
                 "y": 1.0,
                 "z": 488.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "fra",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
+                    "Count": 6936
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 289.5989074707031,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 291.504150390625,
+                "x": 306.7461853027344,
                 "y": 1.0,
                 "z": 488.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "fra",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
+                    "Count": 6936
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 302.9356689453125,
+                "y": 1.0,
+                "z": 488.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6936
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -551,76 +1407,196 @@
                 "z": 488.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "fra",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
+                    "Count": 6936
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 287.6936340332031,
+                "x": 312.46197509765627,
                 "y": 1.0,
-                "z": 495.0
+                "z": 471.9000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "fra",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
+                    "Count": 6936
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 295.3146667480469,
+                "x": 314.3672180175781,
+                "y": 1.0,
+                "z": 475.20001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6936
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 316.2724914550781,
+                "y": 1.0,
+                "z": 478.5
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6936
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 316.2724914550781,
+                "y": 1.0,
+                "z": 485.1000061035156
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6936
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 314.3672180175781,
+                "y": 1.0,
+                "z": 481.8000183105469
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6936
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 485.1000061035156
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6936
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 310.55670166015627,
                 "y": 1.0,
                 "z": 488.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "fra",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
+                    "Count": 6936
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 289.5989074707031,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 291.504150390625,
+                "x": 306.7461853027344,
                 "y": 1.0,
                 "z": 488.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "fra",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
+                    "Count": 6936
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 302.9356689453125,
+                "y": 1.0,
+                "z": 488.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6928
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -631,76 +1607,196 @@
                 "z": 488.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "fra",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
+                    "Count": 6928
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 287.6936340332031,
+                "x": 312.46197509765627,
                 "y": 1.0,
-                "z": 495.0
+                "z": 471.9000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "fra",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
+                    "Count": 6928
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 295.3146667480469,
+                "x": 314.3672180175781,
+                "y": 1.0,
+                "z": 475.20001220703127
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6928
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 316.2724914550781,
+                "y": 1.0,
+                "z": 478.5
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6928
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 316.2724914550781,
+                "y": 1.0,
+                "z": 485.1000061035156
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6927
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 314.3672180175781,
+                "y": 1.0,
+                "z": 481.8000183105469
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6927
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 312.46197509765627,
+                "y": 1.0,
+                "z": 485.1000061035156
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6927
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 310.55670166015627,
                 "y": 1.0,
                 "z": 488.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "fra",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
+                    "Count": 6927
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 289.5989074707031,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 291.504150390625,
+                "x": 306.7461853027344,
                 "y": 1.0,
                 "z": 488.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "fra",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
+                    "Count": 6927
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 302.9356689453125,
+                "y": 1.0,
+                "z": 488.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "fra",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 6927
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -711,864 +1807,12 @@
                 "z": 488.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "fra",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 287.6936340332031,
-                "y": 1.0,
-                "z": 495.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 295.3146667480469,
-                "y": 1.0,
-                "z": 488.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 289.5989074707031,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 291.504150390625,
-                "y": 1.0,
-                "z": 488.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 299.1251525878906,
-                "y": 1.0,
-                "z": 488.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 287.6936340332031,
-                "y": 1.0,
-                "z": 495.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 295.3146667480469,
-                "y": 1.0,
-                "z": 488.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 289.5989074707031,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 291.504150390625,
-                "y": 1.0,
-                "z": 488.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 299.1251525878906,
-                "y": 1.0,
-                "z": 488.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 52
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 287.6936340332031,
-                "y": 1.0,
-                "z": 495.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 295.3146667480469,
-                "y": 1.0,
-                "z": 488.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 289.5989074707031,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 291.504150390625,
-                "y": 1.0,
-                "z": 488.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 299.1251525878906,
-                "y": 1.0,
-                "z": 488.4000244140625
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 287.6936340332031,
-                "y": 1.0,
-                "z": 495.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "fra",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 308.6514587402344,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 50
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 50
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 50
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 308.6514587402344,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 50
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 50
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 50
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 308.6514587402344,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 50
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 50
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 50
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 308.6514587402344,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 50
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 50
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 50
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 308.6514587402344,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 47
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 47
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 47
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 308.6514587402344,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 47
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 47
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 47
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 308.6514587402344,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 47
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 47
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 47
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 308.6514587402344,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 47
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 47
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 47
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 308.6514587402344,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 46
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 46
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 46
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 308.6514587402344,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 46
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 46
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 20000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 312.46197509765627,
-                "y": 1.0,
-                "z": 491.70001220703127
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "ger",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 46
+                    "Count": 6927
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1583,12 +1827,16 @@
                 "z": 462.0
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "hun",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 96
+                    "Count": 6330
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -1599,12 +1847,16 @@
                 "z": 462.0
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "hun",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 96
+                    "Count": 6330
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -1615,12 +1867,16 @@
                 "z": 462.0
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "hun",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 96
+                    "Count": 6329
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -1631,12 +1887,16 @@
                 "z": 462.0
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "hun",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 96
+                    "Count": 6329
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -1647,12 +1907,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 16
+                    "Count": 6411
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1663,12 +1927,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 16
+                    "Count": 6411
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1679,12 +1947,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 16
+                    "Count": 6411
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1695,12 +1967,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 16
+                    "Count": 6411
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1711,12 +1987,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 16
+                    "Count": 6411
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1727,12 +2007,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 16
+                    "Count": 6411
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1743,12 +2027,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6411
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1759,12 +2047,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6411
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1775,12 +2067,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6410
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1791,12 +2087,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6410
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1807,12 +2107,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6410
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1823,12 +2127,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6410
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1839,12 +2147,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6402
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1855,12 +2167,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6402
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1871,12 +2187,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6402
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1887,12 +2207,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6402
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1903,12 +2227,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6402
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1919,12 +2247,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6402
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1935,12 +2267,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6402
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1951,12 +2287,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6402
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1967,12 +2307,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6402
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1983,12 +2327,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6402
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -1999,12 +2347,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6402
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -2015,12 +2367,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6402
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -2031,12 +2387,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6402
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -2047,12 +2407,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6402
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -2063,12 +2427,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6402
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -2079,12 +2447,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6402
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -2095,12 +2467,16 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6402
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
@@ -2111,76 +2487,316 @@
                 "z": 399.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "ita",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 12
+                    "Count": 6402
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 283.88311767578127,
+                "x": 293.409423828125,
                 "y": 1.0,
-                "z": 528.0
+                "z": 511.5
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "nidr",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
+                    "Count": 5434
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
         {
             "Position": {
-                "x": 283.88311767578127,
+                "x": 299.1251525878906,
                 "y": 1.0,
-                "z": 528.0
+                "z": 521.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "nidr",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
+                    "Count": 5433
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
         {
             "Position": {
-                "x": 283.88311767578127,
+                "x": 301.0304260253906,
                 "y": 1.0,
-                "z": 528.0
+                "z": 524.7000122070313
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "nidr",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
+                    "Count": 5433
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
         {
             "Position": {
-                "x": 283.88311767578127,
+                "x": 306.7461853027344,
                 "y": 1.0,
-                "z": 528.0
+                "z": 534.6000366210938
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "nidr",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
+                    "Count": 5433
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 443.92462158203127,
+                "y": 1.0,
+                "z": 495.0
+            },
+            "TemplateIndex": 0,
+            "Organization": 144000.0,
+            "CountryOwnerID": "pol",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 5555
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 447.7351379394531,
+                "y": 1.0,
+                "z": 501.6000061035156
+            },
+            "TemplateIndex": 0,
+            "Organization": 144000.0,
+            "CountryOwnerID": "pol",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 5555
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 438.2088623046875,
+                "y": 1.0,
+                "z": 511.5
+            },
+            "TemplateIndex": 0,
+            "Organization": 144000.0,
+            "CountryOwnerID": "pol",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 5555
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 430.58782958984377,
+                "y": 1.0,
+                "z": 518.1000366210938
+            },
+            "TemplateIndex": 0,
+            "Organization": 144000.0,
+            "CountryOwnerID": "pol",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 5547
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 421.0615539550781,
+                "y": 1.0,
+                "z": 521.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 144000.0,
+            "CountryOwnerID": "pol",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 5547
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 413.4405212402344,
+                "y": 1.0,
+                "z": 528.0
+            },
+            "TemplateIndex": 0,
+            "Organization": 144000.0,
+            "CountryOwnerID": "pol",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 5547
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 419.15631103515627,
+                "y": 1.0,
+                "z": 531.2999877929688
+            },
+            "TemplateIndex": 0,
+            "Organization": 144000.0,
+            "CountryOwnerID": "pol",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 5547
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 432.4930725097656,
+                "y": 1.0,
+                "z": 541.2000122070313
+            },
+            "TemplateIndex": 0,
+            "Organization": 144000.0,
+            "CountryOwnerID": "pol",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 5547
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 436.3035888671875,
+                "y": 1.0,
+                "z": 547.7999877929688
+            },
+            "TemplateIndex": 0,
+            "Organization": 144000.0,
+            "CountryOwnerID": "pol",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 5547
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 457.26141357421877,
+                "y": 1.0,
+                "z": 537.9000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 144000.0,
+            "CountryOwnerID": "pol",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 5547
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 464.8824462890625,
+                "y": 1.0,
+                "z": 537.9000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 144000.0,
+            "CountryOwnerID": "pol",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 5546
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -2188,903 +2804,759 @@
             "Position": {
                 "x": 468.6929626464844,
                 "y": 1.0,
-                "z": 518.1000366210938
+                "z": 537.9000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "pol",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 40
+                    "Count": 5546
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
         {
             "Position": {
-                "x": 468.6929626464844,
+                "x": 445.82989501953127,
                 "y": 1.0,
-                "z": 518.1000366210938
+                "z": 551.1000366210938
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "pol",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 40
+                    "Count": 5546
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
         {
             "Position": {
-                "x": 468.6929626464844,
+                "x": 482.02972412109377,
                 "y": 1.0,
-                "z": 518.1000366210938
+                "z": 541.2000122070313
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "pol",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 40
+                    "Count": 5546
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
         {
             "Position": {
-                "x": 468.6929626464844,
+                "x": 493.4612731933594,
                 "y": 1.0,
-                "z": 518.1000366210938
+                "z": 547.7999877929688
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "pol",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 40
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 468.6929626464844,
-                "y": 1.0,
-                "z": 518.1000366210938
-            },
-            "TemplateIndex": 0,
-            "Organization": 64000.0,
-            "CountryOwnerID": "pol",
-            "EquipmentInDivision": [
+                    "Count": 5546
+                },
                 {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 40
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
         {
             "Position": {
-                "x": 468.6929626464844,
+                "x": 489.6507568359375,
                 "y": 1.0,
-                "z": 518.1000366210938
+                "z": 554.4000244140625
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
-            "CountryOwnerID": "pol",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 40
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 468.6929626464844,
-                "y": 1.0,
-                "z": 518.1000366210938
-            },
-            "TemplateIndex": 0,
-            "Organization": 64000.0,
-            "CountryOwnerID": "pol",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 40
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 468.6929626464844,
-                "y": 1.0,
-                "z": 518.1000366210938
-            },
-            "TemplateIndex": 0,
-            "Organization": 64000.0,
-            "CountryOwnerID": "pol",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 40
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 468.6929626464844,
-                "y": 1.0,
-                "z": 518.1000366210938
-            },
-            "TemplateIndex": 0,
-            "Organization": 64000.0,
-            "CountryOwnerID": "pol",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 40
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 468.6929626464844,
-                "y": 1.0,
-                "z": 518.1000366210938
-            },
-            "TemplateIndex": 0,
-            "Organization": 64000.0,
-            "CountryOwnerID": "pol",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 36
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 468.6929626464844,
-                "y": 1.0,
-                "z": 518.1000366210938
-            },
-            "TemplateIndex": 0,
-            "Organization": 64000.0,
-            "CountryOwnerID": "pol",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 36
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 468.6929626464844,
-                "y": 1.0,
-                "z": 518.1000366210938
-            },
-            "TemplateIndex": 0,
-            "Organization": 64000.0,
-            "CountryOwnerID": "pol",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 36
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 468.6929626464844,
-                "y": 1.0,
-                "z": 518.1000366210938
-            },
-            "TemplateIndex": 0,
-            "Organization": 64000.0,
-            "CountryOwnerID": "pol",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 36
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 468.6929626464844,
-                "y": 1.0,
-                "z": 518.1000366210938
-            },
-            "TemplateIndex": 0,
-            "Organization": 64000.0,
-            "CountryOwnerID": "pol",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 36
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 468.6929626464844,
-                "y": 1.0,
-                "z": 518.1000366210938
-            },
-            "TemplateIndex": 0,
-            "Organization": 64000.0,
-            "CountryOwnerID": "pol",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 36
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "sssr",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
+                    "Count": 7239
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 5000
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 487.7455139160156,
                 "y": 1.0,
-                "z": 561.0
+                "z": 557.7000122070313
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "sssr",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
+                    "Count": 7239
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 5000
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "sssr",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
+                    "Count": 7239
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 5000
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 489.6507568359375,
+                "y": 1.0,
+                "z": 554.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 7239
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 487.7455139160156,
+                "y": 1.0,
+                "z": 557.7000122070313
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 7239
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "sssr",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
+                    "Count": 7239
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 5000
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 489.6507568359375,
+                "y": 1.0,
+                "z": 554.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 7239
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 487.7455139160156,
+                "y": 1.0,
+                "z": 557.7000122070313
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 7239
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "sssr",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
+                    "Count": 7239
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 5000
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 489.6507568359375,
+                "y": 1.0,
+                "z": 554.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 7239
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 487.7455139160156,
+                "y": 1.0,
+                "z": 557.7000122070313
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 7239
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "sssr",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
+                    "Count": 7239
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 5000
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 489.6507568359375,
+                "y": 1.0,
+                "z": 554.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 7239
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 487.7455139160156,
+                "y": 1.0,
+                "z": 557.7000122070313
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 7239
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "sssr",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
+                    "Count": 7239
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 5000
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 489.6507568359375,
+                "y": 1.0,
+                "z": 554.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 7239
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 487.7455139160156,
+                "y": 1.0,
+                "z": 557.7000122070313
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 7239
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "sssr",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
+                    "Count": 7239
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 5000
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 489.6507568359375,
+                "y": 1.0,
+                "z": 554.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 7239
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 487.7455139160156,
+                "y": 1.0,
+                "z": 557.7000122070313
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 7239
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "sssr",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
+                    "Count": 7239
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 5000
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 489.6507568359375,
+                "y": 1.0,
+                "z": 554.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 7239
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 487.7455139160156,
+                "y": 1.0,
+                "z": 557.7000122070313
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 7239
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "sssr",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
+                    "Count": 7238
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 5000
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 489.6507568359375,
+                "y": 1.0,
+                "z": 554.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 7238
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 487.7455139160156,
+                "y": 1.0,
+                "z": 557.7000122070313
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 7238
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "sssr",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
+                    "Count": 7238
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 5000
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 489.6507568359375,
+                "y": 1.0,
+                "z": 554.4000244140625
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 7238
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 487.7455139160156,
+                "y": 1.0,
+                "z": 557.7000122070313
+            },
+            "TemplateIndex": 0,
+            "Organization": 180000.0,
+            "CountryOwnerID": "sssr",
+            "EquipmentInDivision": [
+                {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 7238
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 20000
+                }
+            ]
+        },
+        {
+            "Position": {
+                "x": 485.8402404785156,
                 "y": 1.0,
                 "z": 561.0
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
+            "Organization": 180000.0,
             "CountryOwnerID": "sssr",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
+                    "Count": 7238
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 5000
+                    "Count": 20000
                 }
             ]
         },
         {
             "Position": {
-                "x": 554.4295043945313,
+                "x": 331.5145263671875,
                 "y": 1.0,
-                "z": 561.0
+                "z": 465.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 5000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 5000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 5000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 5000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 5000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 5000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 5000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 5000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 5000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 5000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 5000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 5000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 5000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 5000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 5000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 5000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 5000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 554.4295043945313,
-                "y": 1.0,
-                "z": 561.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 80000.0,
-            "CountryOwnerID": "sssr",
-            "EquipmentInDivision": [
-                {
-                    "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 64
-                },
-                {
-                    "EquipmentID": "manpower",
-                    "Count": 5000
-                }
-            ]
-        },
-        {
-            "Position": {
-                "x": 325.7987365722656,
-                "y": 1.0,
-                "z": 462.0
-            },
-            "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "swit",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
+                    "Count": 5909
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
         {
             "Position": {
-                "x": 325.7987365722656,
+                "x": 335.3250427246094,
                 "y": 1.0,
-                "z": 462.0
+                "z": 465.3000183105469
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "swit",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
+                    "Count": 5908
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
         {
             "Position": {
-                "x": 325.7987365722656,
+                "x": 321.9882507324219,
                 "y": 1.0,
-                "z": 462.0
+                "z": 468.6000061035156
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "swit",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
+                    "Count": 5908
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
         {
             "Position": {
-                "x": 325.7987365722656,
+                "x": 318.177734375,
                 "y": 1.0,
-                "z": 462.0
+                "z": 468.6000061035156
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "swit",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
+                    "Count": 5908
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -3095,16 +3567,16 @@
                 "z": 429.0
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "yug",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
+                    "Count": 5937
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 3800
+                    "Count": 16000
                 }
             ]
         },
@@ -3115,16 +3587,16 @@
                 "z": 429.0
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "yug",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
+                    "Count": 5937
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 3800
+                    "Count": 16000
                 }
             ]
         },
@@ -3135,16 +3607,16 @@
                 "z": 429.0
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "yug",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
+                    "Count": 5936
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 3800
+                    "Count": 16000
                 }
             ]
         },
@@ -3155,16 +3627,16 @@
                 "z": 429.0
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "yug",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
+                    "Count": 5936
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 3800
+                    "Count": 16000
                 }
             ]
         },
@@ -3175,12 +3647,16 @@
                 "z": 372.8999938964844
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "isp",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 28
+                    "Count": 5311
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -3191,12 +3667,16 @@
                 "z": 372.8999938964844
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "isp",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 28
+                    "Count": 5311
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -3207,12 +3687,16 @@
                 "z": 372.8999938964844
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "isp",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 28
+                    "Count": 5311
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -3223,12 +3707,16 @@
                 "z": 372.8999938964844
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "isp",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 28
+                    "Count": 5311
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -3239,12 +3727,16 @@
                 "z": 372.8999938964844
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "isp",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 28
+                    "Count": 5311
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -3255,12 +3747,16 @@
                 "z": 372.8999938964844
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "isp",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 28
+                    "Count": 5311
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -3271,12 +3767,16 @@
                 "z": 372.8999938964844
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "isp",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 24
+                    "Count": 5311
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -3287,12 +3787,16 @@
                 "z": 372.8999938964844
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "isp",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 24
+                    "Count": 5311
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -3303,12 +3807,16 @@
                 "z": 372.8999938964844
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "isp",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 24
+                    "Count": 5311
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -3319,12 +3827,16 @@
                 "z": 372.8999938964844
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "isp",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 24
+                    "Count": 5311
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -3335,12 +3847,16 @@
                 "z": 372.8999938964844
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "isp",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 24
+                    "Count": 5311
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -3351,12 +3867,16 @@
                 "z": 372.8999938964844
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "isp",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 24
+                    "Count": 5311
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -3367,12 +3887,16 @@
                 "z": 372.8999938964844
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "isp",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 24
+                    "Count": 5303
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -3383,12 +3907,16 @@
                 "z": 372.8999938964844
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "isp",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 24
+                    "Count": 5302
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -3399,12 +3927,16 @@
                 "z": 372.8999938964844
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "isp",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 24
+                    "Count": 5302
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 16000
                 }
             ]
         },
@@ -3415,16 +3947,16 @@
                 "z": 409.20001220703127
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "bul",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 96
+                    "Count": 6358
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 3800
+                    "Count": 16000
                 }
             ]
         },
@@ -3435,16 +3967,16 @@
                 "z": 409.20001220703127
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "bul",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 96
+                    "Count": 6357
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 3800
+                    "Count": 16000
                 }
             ]
         },
@@ -3455,16 +3987,16 @@
                 "z": 409.20001220703127
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "bul",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 96
+                    "Count": 6357
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 3800
+                    "Count": 16000
                 }
             ]
         },
@@ -3475,16 +4007,16 @@
                 "z": 409.20001220703127
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "bul",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 96
+                    "Count": 6357
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 3800
+                    "Count": 16000
                 }
             ]
         },
@@ -3495,12 +4027,16 @@
                 "z": 353.1000061035156
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "gre",
             "EquipmentInDivision": [
                 {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 4816
+                },
+                {
                     "EquipmentID": "manpower",
-                    "Count": 3800
+                    "Count": 16000
                 }
             ]
         },
@@ -3511,12 +4047,16 @@
                 "z": 353.1000061035156
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "gre",
             "EquipmentInDivision": [
                 {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 4816
+                },
+                {
                     "EquipmentID": "manpower",
-                    "Count": 3800
+                    "Count": 16000
                 }
             ]
         },
@@ -3527,12 +4067,16 @@
                 "z": 353.1000061035156
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "gre",
             "EquipmentInDivision": [
                 {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 4816
+                },
+                {
                     "EquipmentID": "manpower",
-                    "Count": 3800
+                    "Count": 16000
                 }
             ]
         },
@@ -3543,12 +4087,16 @@
                 "z": 353.1000061035156
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "gre",
             "EquipmentInDivision": [
                 {
+                    "EquipmentID": "ww1_rifle_equipment",
+                    "Count": 4816
+                },
+                {
                     "EquipmentID": "manpower",
-                    "Count": 3800
+                    "Count": 16000
                 }
             ]
         },
@@ -3559,12 +4107,16 @@
                 "z": 389.3999938964844
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "alb",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 96
+                    "Count": 6581
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 5406
                 }
             ]
         },
@@ -3575,12 +4127,16 @@
                 "z": 389.3999938964844
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "alb",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 96
+                    "Count": 6581
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 5406
                 }
             ]
         },
@@ -3591,12 +4147,16 @@
                 "z": 389.3999938964844
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "alb",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 96
+                    "Count": 6581
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 5404
                 }
             ]
         },
@@ -3607,12 +4167,16 @@
                 "z": 389.3999938964844
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "alb",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 96
+                    "Count": 6580
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 5404
                 }
             ]
         },
@@ -3623,12 +4187,16 @@
                 "z": 531.2999877929688
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "irl",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
+                    "Count": 5825
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 14836
                 }
             ]
         },
@@ -3639,12 +4207,16 @@
                 "z": 531.2999877929688
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "irl",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
+                    "Count": 5825
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 14836
                 }
             ]
         },
@@ -3655,12 +4227,16 @@
                 "z": 531.2999877929688
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "irl",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
+                    "Count": 5824
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 14834
                 }
             ]
         },
@@ -3671,12 +4247,16 @@
                 "z": 531.2999877929688
             },
             "TemplateIndex": 0,
-            "Organization": 64000.0,
+            "Organization": 144000.0,
             "CountryOwnerID": "irl",
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 48
+                    "Count": 5824
+                },
+                {
+                    "EquipmentID": "manpower",
+                    "Count": 14834
                 }
             ]
         }

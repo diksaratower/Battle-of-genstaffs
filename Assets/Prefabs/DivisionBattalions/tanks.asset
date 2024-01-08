@@ -16,7 +16,7 @@ MonoBehaviour:
   Attack: 40
   Defend: 7
   Organization: 13000
-  Speed: 40
+  Speed: 30
   ManPower: 700
   BatImage: {fileID: 21300000, guid: 7f24205a50c234d4d8944e612cef0585, type: 3}
   ViewType: 1
