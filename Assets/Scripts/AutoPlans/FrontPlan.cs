@@ -204,9 +204,13 @@ public class FrontPlan : PlanBase
             }
         }
         var ourAttack = 0f;
-        var enemyDefens = 0.00001f;
-        AttachedDivisions.ForEach(division => { ourAttack += (division.GetAttack() * division.GetDivisionStrength()); });
-        enemyDivisionsInFront.ForEach(division => { enemyDefens += (division.GetDefense() * division.GetDivisionStrength()); });
+        var enemyDefens =  0f;
+        AttachedDivisions.ForEach(division => { ourAttack += division.GetAttack(); });
+        enemyDivisionsInFront.ForEach(division => { enemyDefens += division.GetDefense(); });
+        if (enemyDefens == 0f)
+        {
+            return 100f;
+        }
         return ourAttack / enemyDefens;
     }
 
@@ -248,22 +252,7 @@ public class FrontPlan : PlanBase
 
     public static bool FrontCanExist(Country ally, Country enemy)
     {
-        var regions = ally.GetCountryRegions();
-        if (regions.Count == 0)
-        {
-            return false;
-        }
-        foreach (var region in regions)
-        {
-            foreach (var province in region.Provinces)
-            {
-                if (province.Owner == ally && province.Contacts.Exists(pr => pr.Owner == enemy))
-                {
-                    return true;
-                }
-            }
-        }
-        return false;
+        return Map.Instance.Provinces.Exists(province => (province.Owner == ally) && province.Contacts.Exists(c => c.Owner == enemy));
     }
 
     public static List<Province> GetFrontProvinces(Country ally, Country enemy)

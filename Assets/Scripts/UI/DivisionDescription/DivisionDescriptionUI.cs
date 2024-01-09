@@ -26,6 +26,8 @@ public class DivisionDescriptionUI : MonoBehaviour
     {
         if (_division != null && _windowGO.activeSelf == true)
         {
+            _attackText.text = "Атака: " + _division.GetAttack();
+            _defensText.text = "Защита: " + _division.GetDefense();
             var equipmentPercent = _division.GetEquipmentProcent(eqType => eqType != EquipmentType.Manpower);
             var manpowerPercent = _division.GetEquipmentProcent(eqType => eqType == EquipmentType.Manpower);
             _equipmentPercentText.text = "Процент мат. оснащ.: " + Math.Round(((equipmentPercent) * 100f), 2).ToString() + "%";
@@ -41,8 +43,6 @@ public class DivisionDescriptionUI : MonoBehaviour
         
         _divisionName.text = division.Name;
         _divisonImage.sprite = division.Template.GetAvatar();
-        _attackText.text = "Атака: " + division.GetAttack();
-        _defensText.text = "Защита: " + division.GetDefense();
         _organizationText.text = "Макс организация: " + division.MaxOrganization;
         UpdateEquipmentDetails(division);
         division.OnGetSupply += delegate

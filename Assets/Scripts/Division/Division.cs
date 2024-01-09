@@ -144,6 +144,10 @@ public class Division : SupplyUnit
 
     public bool NeedDrawDivisionUI()
     {
+        if (Cheats.ViewAllDivisionModel == true)
+        {
+            return true;
+        }
         if (IsDeleted == true)
         {
             return false;

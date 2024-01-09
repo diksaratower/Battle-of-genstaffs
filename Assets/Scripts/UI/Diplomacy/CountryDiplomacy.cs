@@ -7,6 +7,7 @@ public class CountryDiplomacy
     public Action<Ultimatum> OnGetUltimatum;
     public Action<WarGoal> OnAddWarGoal;
     public Action<UltimatumAnswerType, Ultimatum> OnGetUltimatumAnser;
+    public Action<War> OnDeclaredWarToCountry;
 
     private List<WarGoal> _warGoals = new List<WarGoal>();
     private List<WarGoalJustificationQueueSlot> _justificationQueue = new List<WarGoalJustificationQueueSlot>();

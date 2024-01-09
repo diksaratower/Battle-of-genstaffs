@@ -17,8 +17,6 @@ public class CombatDetailsDivisionSlotUI : MonoBehaviour
     {
         _division = division;
         _divisionNameText.text = division.Name;
-        _divisionAttackText.text = division.GetAttack().ToString();
-        _divisionDefenseText.text = division.GetDefense().ToString();
         _divisionImage.sprite = division.DivisionAvatar;
         var tooltip = gameObject.AddComponent<CombatDetailsDivisionDataTooltipHandlerUI>();
         tooltip.Target = division;
@@ -29,5 +27,7 @@ public class CombatDetailsDivisionSlotUI : MonoBehaviour
     public void Update()
     {
         _organizationField.fillAmount = (_division.Organization / _division.MaxOrganization);
+        _divisionAttackText.text = _division.GetAttack().ToString();
+        _divisionDefenseText.text = _division.GetDefense().ToString();
     }
 }

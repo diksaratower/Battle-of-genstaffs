@@ -36,6 +36,7 @@ public class Diplomacy : MonoBehaviour
         var war = new War();
         war.AddToWar(aggressor, WarMemberType.Aggressor);
         war.AddToWar(victim, WarMemberType.Defender);
+        victim.CountryDiplomacy.OnDeclaredWarToCountry?.Invoke(war);
         UseGuarantees(aggressor, victim, war);
         Wars.Add(war);
     }
@@ -58,10 +59,10 @@ public class Diplomacy : MonoBehaviour
 
     private void UseGuarantees(Country aggressor, Country victim, War war)
     {
-        var guaranteeIndependences = GuaranteesIndependences.Find(guarantee => guarantee.Target == victim && guarantee.Guaranter != aggressor);
-        if (guaranteeIndependences != null)
+        var guaranteeIndependences = GuaranteesIndependences.FindAll(guarantee => guarantee.Target == victim && guarantee.Guaranter != aggressor);
+        foreach (var guaranteeIndependence in guaranteeIndependences)
         {
-            war.AddToWar(guaranteeIndependences.Guaranter, WarMemberType.Defender);
+            war.AddToWar(guaranteeIndependence.Guaranter, WarMemberType.Defender);
         }
     }
 

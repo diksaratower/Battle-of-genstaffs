@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using static FrontPlan;
 
 
 public class Army 
@@ -10,6 +11,7 @@ public class Army
     public List<PlanBase> Plans => new List<PlanBase>(_plans);
     public List<Division> Divisions = new List<Division>();
     public DoPlanType DoPlanType = DoPlanType.Defense;
+    public float CashedForceFactorInFront { get; private set; }
 
     private List<PlanBase> _plans = new List<PlanBase>();
     private CountryArmies _countryArmies;
@@ -41,6 +43,10 @@ public class Army
             (plan as FrontPlan).Enemy.OnCapitulated += delegate
             {
                 RemovePlan(plan);
+            };
+            (plan as FrontPlan).OnRecalculatedFront += (List<FrontPlan.FrontData> frontDates) => 
+            {
+                CashedForceFactorInFront = (plan as FrontPlan).GetForceFactor(frontDates);
             };
         }
         OnAddedPlan?.Invoke(plan);

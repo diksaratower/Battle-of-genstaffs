@@ -123,6 +123,7 @@ public class Region
         {
             province.SetOwner(newOwner);
         }
+        lastOwner.RecalculateNationalProvinces();
     }
 
     public int GetAllBuildingsCount()

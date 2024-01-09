@@ -81,7 +81,7 @@ public class CountryBuild
             }
             var slot = BuildingsQueue[i];
             slot.BuildProgress += efficiencyToSlot;
-            if (slot.IsBuildEnd() || Cheats.InstantBuilding)
+            if (slot.IsBuildEnd() || (Cheats.InstantBuildingForPlayer && _country == Player.CurrentCountry))
             {
                 forRemove.Add(slot);
                 slot.EndBuild();

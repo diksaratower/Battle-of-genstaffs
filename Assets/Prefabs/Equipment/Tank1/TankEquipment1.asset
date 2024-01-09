@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0574733024879054a8b59ef9ad547b29, type: 3}
   m_Name: TankEquipment1
   m_EditorClassIdentifier: 
-  FabricationCost: 1300
+  FabricationCost: 700
   Name: "\u0422\u0430\u043D\u043A \u041F\u041C\u0412"
   ID: ft-17_ww1_tank1
   EquipmentImage: {fileID: 21300000, guid: 17300804b9f56684d8dc35332efd1c28, type: 3}

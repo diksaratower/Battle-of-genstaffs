@@ -46,7 +46,7 @@ public class Country : MonoBehaviour
 
     private void Start()
     {
-        _nationalProvinces = Map.Instance.Provinces.FindAll(p => p.Owner == this);
+        RecalculateNationalProvinces();
         if (CountryPreset.IsAICountry == true && GetCountryRegions().Count > 0)
         {
             gameObject.AddComponent<CountryAI>();
@@ -177,6 +177,11 @@ public class Country : MonoBehaviour
     public void LoadFromSerialize(CountrySerialize ser)
     {
         ser.Load(this);
+    }
+
+    public void RecalculateNationalProvinces()
+    {
+        _nationalProvinces = Map.Instance.Provinces.FindAll(p => p.Owner == this);
     }
 
     private float CalculateCapitulatedPercent()
