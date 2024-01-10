@@ -351,14 +351,6 @@ public class Division : SupplyUnit
         IsDeleted = true;
     }
 
-    private void ReturnEquipmentToStorage()
-    {
-        foreach (var equipment in EquipmentInDivision)
-        {
-            CountyOwner.EquipmentStorage.AddEquipment(equipment.Equipment.ID, equipment.Count);
-        }
-    }
-
     private void SetState(DivisionAnimState divisionState)
     {
         DivisionState = divisionState;

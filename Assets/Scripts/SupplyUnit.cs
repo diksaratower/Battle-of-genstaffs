@@ -86,6 +86,14 @@ public class SupplyUnit
         return list;
     }
 
+    protected void ReturnEquipmentToStorage()
+    {
+        foreach (var equipment in EquipmentInDivision)
+        {
+            _supplyStorage.AddEquipment(equipment.Equipment.ID, equipment.Count);
+        }
+    }
+
     public float GetEquipmentProcent()
     {
         float need = 0;

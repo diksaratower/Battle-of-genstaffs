@@ -30,22 +30,39 @@ public class CountryFabricationEquipmentSlotUI : MonoBehaviour
         UpdateFactoriesCount(fabricationSlot);
         _addFactoryButton.onClick.AddListener(() =>
         {
-            foreach (var fac in country.CountryBuild.GetCountryBuildings(BuildingType.MilitaryFactory))
+            var countryMilitaryFactories = country.CountryBuild.GetCountryBuildings(BuildingType.MilitaryFactory);
+            var tryAddCount = 1;
+            if (Input.GetKey(KeyCode.LeftShift))
             {
-                if (!country.CountryFabrication.FactoryIsUses(fac))
+                tryAddCount = 10;
+            }
+            for (int i = 0; i < tryAddCount; i++)
+            {
+                foreach (var fac in countryMilitaryFactories)
                 {
-                    fabricationSlot.Factories.Add(fac);
-                    UpdateFactoriesCount(fabricationSlot);
-                    return;
+                    if (!country.CountryFabrication.FactoryIsUses(fac))
+                    {
+                        fabricationSlot.Factories.Add(fac);
+                        UpdateFactoriesCount(fabricationSlot);
+                        break;
+                    }
                 }
             }
         });
         _removeFactoryButton.onClick.AddListener(() =>
         {
-            if (fabricationSlot.Factories.Count > 1)
+            var tryRemoveCount = 1;
+            if (Input.GetKey(KeyCode.LeftShift))
             {
-                fabricationSlot.Factories.Remove(fabricationSlot.Factories[fabricationSlot.Factories.Count - 1]);
-                UpdateFactoriesCount(fabricationSlot);
+                tryRemoveCount = 10;
+            }
+            for (int i = 0; i < tryRemoveCount; i++)
+            {
+                if (fabricationSlot.Factories.Count > 1)
+                {
+                    fabricationSlot.Factories.Remove(fabricationSlot.Factories[fabricationSlot.Factories.Count - 1]);
+                    UpdateFactoriesCount(fabricationSlot);
+                }
             }
         });
         _removeSlotButton.onClick.AddListener(() => 

@@ -10,6 +10,7 @@ public class SelectedAviabaseAviationDivisionSlotUI : MonoBehaviour
     [SerializeField] private Outline _slotOutLine;
     [SerializeField] private Image _equipmentPercentFill;
     [SerializeField] private Image _divisionImage;
+    [SerializeField] private Button _deleteAviationDivisionButton;
 
     private AviationDivision _targetAviationDivision;
     private AviationModeUI _aviationUI;
@@ -45,6 +46,10 @@ public class SelectedAviabaseAviationDivisionSlotUI : MonoBehaviour
         {
             aviationUI.DeselectAllAviationDivisions();
             aviationUI.SelectAviationDivision(aviationDivision);
+        });
+        _deleteAviationDivisionButton.onClick.AddListener(delegate 
+        {
+            aviationDivision.RemoveDivision();
         });
     }
 }

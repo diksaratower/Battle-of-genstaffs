@@ -28,6 +28,13 @@ public class SelectedAviabaseUI : MonoBehaviour
                 RefreshUI(_targetAviabase, _aviationUI);
             }
         };
+        UnitsManager.Instance.OnRemoveAviationDivision += delegate
+        {
+            if (_targetAviabase != null)
+            {
+                RefreshUI(_targetAviabase, _aviationUI);
+            }
+        };
     }
 
     private void OnDisable()
@@ -49,7 +56,11 @@ public class SelectedAviabaseUI : MonoBehaviour
         _createAviationDivisionButton.onClick.RemoveAllListeners();
         _createAviationDivisionButton.onClick.AddListener(delegate 
         {
-            UnitsManager.Instance.AddAviationDivision(aviabase, Player.CurrentCountry);
+            var avibaseDivisionsCount = UnitsManager.Instance.AviationDivisions.FindAll(aviationDivision => aviationDivision.PositionAviabase == aviabase).Count;
+            if (avibaseDivisionsCount < (aviabase.TargetBuilding as Airbase).BaseCapacity)
+            {
+                UnitsManager.Instance.AddAviationDivision(aviabase, Player.CurrentCountry);
+            }
         });
         RefreshDivisionsInBase(playerDivisions, aviationUI);
         InstantiateRadiusesView(playerDivisions);

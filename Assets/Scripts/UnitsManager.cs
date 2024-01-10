@@ -10,6 +10,7 @@ public class UnitsManager : MonoBehaviour, ISaveble
     public List<Division> Divisions = new List<Division>();
     public List<AviationDivision> AviationDivisions = new List<AviationDivision>();
     public Action<AviationDivision> OnCreateAviationDivision;
+    public Action<AviationDivision> OnRemoveAviationDivision;
     public Action<Division> OnCreateDivision;
     public Action<Division> OnRemoveDivision;
     public static UnitsManager Instance;
@@ -21,7 +22,7 @@ public class UnitsManager : MonoBehaviour, ISaveble
     }
 
     public Division AddDivision(Province province, DivisionTemplate template, Country owner)
-    { 
+    {
         return AddDivision(province.Position, template, owner);
     }
 
@@ -36,6 +37,16 @@ public class UnitsManager : MonoBehaviour, ISaveble
         AviationDivisions.Add(aviationDivision);
         OnCreateAviationDivision?.Invoke(aviationDivision);
         return aviationDivision;
+    }
+
+    public void RemoveAviationDivision(AviationDivision aviationDivision)
+    {
+        if (AviationDivisions.Contains(aviationDivision) == false)
+        {
+            throw new ArgumentException("Wrong in remove division.");
+        }
+        AviationDivisions.Remove(aviationDivision);
+        OnRemoveAviationDivision?.Invoke(aviationDivision);
     }
 
     private Division AddDivision(Province province, Country owner, DivisionTemplate template)

@@ -80,6 +80,15 @@ public class AviationDivision : SupplyUnit
         throw new Exception("Error in get averge airplane.");
     }
 
+    public void RemoveDivision(bool returnEquipment = true)
+    {
+        if (returnEquipment)
+        {
+            ReturnEquipmentToStorage();
+        }
+        UnitsManager.Instance.RemoveAviationDivision(this);
+    }
+
     private float CalculateAttackDistance()
     {
         if (EquipmentInDivision.Count > 0)
