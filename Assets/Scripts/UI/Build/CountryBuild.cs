@@ -33,7 +33,7 @@ public class CountryBuild
         {
             return false;
         }
-        var buildingsCount = (region.GetAllBuildingsCount() + BuildingsQueue.FindAll(slot => slot.Building == building).Count);
+        var buildingsCount = (region.GetAllBuildingsCount() + BuildingsQueue.FindAll(slot => slot.BuildRegion == region).Count);
         return (buildingsCount < region.MaxBuildingsCount);
     }
 
