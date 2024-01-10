@@ -23,7 +23,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 8,
+                        "EquipmentCount": 48,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
@@ -45,10 +45,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 4654.177734375,
+                "PolitPowerCount": 4670.982421875,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "hubert_peirlot"
@@ -86,7 +86,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 16,
+                        "EquipmentCount": 96,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
@@ -108,10 +108,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 4654.177734375,
+                "PolitPowerCount": 4670.982421875,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "kur_von_schushnik"
@@ -149,7 +149,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 40,
+                        "EquipmentCount": 2470,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
@@ -171,10 +171,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 4654.177734375,
+                "PolitPowerCount": 4670.982421875,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "edvard_benesh"
@@ -212,7 +212,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 24,
+                        "EquipmentCount": 144,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
@@ -234,10 +234,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 3394.1728515625,
+                "PolitPowerCount": 3410.9716796875,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "kristian_10"
@@ -279,7 +279,7 @@
                         "ID": "manpower"
                     },
                     {
-                        "EquipmentCount": 16,
+                        "EquipmentCount": 96,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -306,10 +306,10 @@
                         "ID": "battleship_1939"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 2854.173095703125,
+                "PolitPowerCount": 2870.971923828125,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "stanley_baldwin"
@@ -349,10 +349,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1594.1729736328125,
+                "PolitPowerCount": 1610.9718017578125,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "aimo_cajander"
@@ -390,7 +390,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 64,
+                        "EquipmentCount": 384,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
@@ -424,10 +424,10 @@
                         "ID": "battleship_1939"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 4114.14404296875,
+                "PolitPowerCount": 4130.94873046875,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "pierre_laval"
@@ -473,13 +473,17 @@
                         "ID": "manpower"
                     },
                     {
-                        "EquipmentCount": 0,
+                        "EquipmentCount": 432,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
             },
             "CountryArmies": {
-                "Armies": []
+                "Armies": [
+                    {
+                        "Name": "null"
+                    }
+                ]
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [
@@ -502,10 +506,10 @@
                         "ID": "battleship_1939"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 2894.13818359375,
+                "PolitPowerCount": 2910.93701171875,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "adolf_hilter"
@@ -543,7 +547,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 16,
+                        "EquipmentCount": 96,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
@@ -565,10 +569,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 3754.1572265625,
+                "PolitPowerCount": 3770.9560546875,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "miklosh_horty"
@@ -606,7 +610,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 16,
+                        "EquipmentCount": 96,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
@@ -631,10 +635,10 @@
                         "ID": "base_artillery"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 4294.14306640625,
+                "PolitPowerCount": 4310.94775390625,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "benito_mussolini"
@@ -674,10 +678,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1594.1729736328125,
+                "PolitPowerCount": 1610.9718017578125,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "joseph_besh"
@@ -715,7 +719,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 8,
+                        "EquipmentCount": 48,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
@@ -737,10 +741,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 4654.177734375,
+                "PolitPowerCount": 4670.982421875,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "hendrikus_colijn"
@@ -780,10 +784,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1594.1729736328125,
+                "PolitPowerCount": 1610.9718017578125,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "johan_nygaardsvold"
@@ -823,10 +827,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1594.1729736328125,
+                "PolitPowerCount": 1610.9718017578125,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "leader_null"
@@ -864,7 +868,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 24,
+                        "EquipmentCount": 144,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
@@ -886,10 +890,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 4474.1669921875,
+                "PolitPowerCount": 4490.9716796875,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "ignacy_mosciki"
@@ -929,10 +933,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1594.1729736328125,
+                "PolitPowerCount": 1610.9718017578125,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "karol_2"
@@ -974,7 +978,7 @@
                         "ID": "manpower"
                     },
                     {
-                        "EquipmentCount": 80,
+                        "EquipmentCount": 288,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -992,10 +996,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1594.1729736328125,
+                "PolitPowerCount": 1610.9718017578125,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "joseph_stalin"
@@ -1035,10 +1039,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1594.1729736328125,
+                "PolitPowerCount": 1610.9718017578125,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "per_alibin_hanos"
@@ -1076,7 +1080,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 8,
+                        "EquipmentCount": 48,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
@@ -1098,10 +1102,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 4654.177734375,
+                "PolitPowerCount": 4670.982421875,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "swit_parlament"
@@ -1143,7 +1147,7 @@
                         "ID": "manpower"
                     },
                     {
-                        "EquipmentCount": 8,
+                        "EquipmentCount": 48,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -1161,10 +1165,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 3214.1728515625,
+                "PolitPowerCount": 3230.9716796875,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "petr_2"
@@ -1202,7 +1206,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 16,
+                        "EquipmentCount": 96,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
@@ -1224,10 +1228,10 @@
                         "ID": "ww1_rifle_equipment"
                     }
                 ],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 4853.3837890625,
+                "PolitPowerCount": 4870.1884765625,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "huan_negrin"
@@ -1269,7 +1273,7 @@
                         "ID": "manpower"
                     },
                     {
-                        "EquipmentCount": 16,
+                        "EquipmentCount": 96,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
@@ -1283,10 +1287,10 @@
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 2664.474853515625,
+                "PolitPowerCount": 2681.273681640625,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "boris_3"
@@ -1342,10 +1346,10 @@
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 2664.474853515625,
+                "PolitPowerCount": 2681.273681640625,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "ionis_metakas"
@@ -1383,24 +1387,28 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 207200,
+                        "EquipmentCount": 143200,
                         "ID": "manpower"
                     },
                     {
-                        "EquipmentCount": 87177,
+                        "EquipmentCount": 44933,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
             },
             "CountryArmies": {
-                "Armies": []
+                "Armies": [
+                    {
+                        "Name": "null"
+                    }
+                ]
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1926.974609375,
+                "PolitPowerCount": 1943.7734375,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "standart_leader"
@@ -1438,24 +1446,28 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 207200,
+                        "EquipmentCount": 143200,
                         "ID": "manpower"
                     },
                     {
-                        "EquipmentCount": 87177,
+                        "EquipmentCount": 44285,
                         "ID": "ww1_rifle_equipment"
                     }
                 ]
             },
             "CountryArmies": {
-                "Armies": []
+                "Armies": [
+                    {
+                        "Name": "null"
+                    }
+                ]
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1906.67431640625,
+                "PolitPowerCount": 1923.47314453125,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "standart_leader"
@@ -1507,10 +1519,10 @@
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1531.97412109375,
+                "PolitPowerCount": 1548.77294921875,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "standart_leader"
@@ -1548,7 +1560,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 16,
+                        "EquipmentCount": 96,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
@@ -1566,10 +1578,10 @@
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1553.1939697265625,
+                "PolitPowerCount": 1569.9927978515625,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "king_zogu"
@@ -1607,7 +1619,7 @@
             "EquipmentStorage": {
                 "Slots": [
                     {
-                        "EquipmentCount": 8,
+                        "EquipmentCount": 48,
                         "ID": "ww1_rifle_equipment"
                     },
                     {
@@ -1625,10 +1637,10 @@
             },
             "CountryResearch": {
                 "OpenTechnologySaves": [],
-                "ResearchPointCount": 117.45256805419922
+                "ResearchPointCount": 146.7543487548828
             },
             "CountryPolitics": {
-                "PolitPowerCount": 1353.197021484375,
+                "PolitPowerCount": 1369.995849609375,
                 "Stability": 90.0,
                 "Leader": {
                     "ID": "imon_de_valera"
