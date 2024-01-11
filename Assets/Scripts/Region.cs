@@ -11,7 +11,7 @@ public class Region
     public List<City> Cities = new List<City>();
     public List<BuildingSlotRegion> BuildingsInRegion = new List<BuildingSlotRegion>();
     [HideInInspector] public City RegionCapital;
-    public string Name { get; }
+    public string Name { get; private set; }
     public int Population;
 
     private Vector3 _cashedAveragePosition = Vector3.zero;
@@ -163,6 +163,11 @@ public class Region
         }
         _cashedAveragePosition = GetMeanVector(provincesPositions.ToArray());
         return _cashedAveragePosition;
+    }
+
+    public void ChangeName(string newName)
+    {
+        Name = newName;
     }
 
     public static List<Province> GetProvincesBoard(List<Province> provinces)

@@ -9,12 +9,13 @@ public class AllRegionsListViewSlotUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _openRegionChangerButtonText;
 
 
-    public void RefreshUI(Region region)
+    public void RefreshUI(Region region, RegionRedactorUI regionRedactorUI)
     {
         _openRegionChangerButtonText.text = region.Name + " " + Map.Instance.MapRegions.IndexOf(region);
         _openRegionChangerButton.onClick.AddListener(delegate 
         {
-
+            regionRedactorUI.gameObject.SetActive(true);
+            regionRedactorUI.RefreshUI(region);
         });
     }
 }
