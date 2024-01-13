@@ -17,7 +17,7 @@ MonoBehaviour:
     FormGovernment: 0
     ElectionsType: 0
     PolitPower: 0
-    CountryLeader: {fileID: 11400000, guid: 9030ccf6f2e391c4a8706e32b35b4ff8, type: 2}
+    CountryLeader: {fileID: 11400000, guid: 899d80a51479cf84fab69273eaa9a5e2, type: 2}
     Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}
     Advisers: []
     Parties: []
@@ -27,6 +27,6 @@ MonoBehaviour:
   CountryFlag: {fileID: 21300000, guid: 657ed1872bd25ba40a10bf9f2ba9573b, type: 3}
   Population: 8300000
   IsAvailableForPlayer: 1
-  IsAICountry: 0
+  IsAICountry: 1
   CountrySizeType: 0
   HistoryIdealogyForAI: 0
