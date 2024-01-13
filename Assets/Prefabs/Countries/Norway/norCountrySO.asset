@@ -24,7 +24,7 @@ MonoBehaviour:
   Name: "\u041D\u043E\u0440\u0432\u0435\u0433\u0438\u044F"
   ID: nor
   ColorInMap: {r: 0.27816096, g: 0.5283019, b: 0, a: 1}
-  CountryFlag: {fileID: 21300000, guid: 8c973977c4e83e441a48a8fdb27c8df3, type: 3}
+  CountryFlag: {fileID: 21300000, guid: dae69dfbfdd41024aa57d424dc56d7bf, type: 3}
   Population: 2814200
   IsAvailableForPlayer: 0
   IsAICountry: 0

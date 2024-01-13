@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Traits: []
   ID: aimo_cajander
-  _standartPortrait: {fileID: 21300000, guid: 5bb2666196bce864cbecc133b9ba691c, type: 3}
+  _standartPortrait: {fileID: 21300000, guid: 6e34d69fc75fc4e4cb3366f8854901a7, type: 3}
   _name: "\u0410\u0439\u043C\u043E \u041A\u0430\u044F\u043D\u0434\u0435\u0440"

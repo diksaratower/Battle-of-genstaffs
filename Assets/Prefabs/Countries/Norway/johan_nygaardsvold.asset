@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Traits: []
   ID: johan_nygaardsvold
-  _standartPortrait: {fileID: 21300000, guid: 5bb2666196bce864cbecc133b9ba691c, type: 3}
+  _standartPortrait: {fileID: 21300000, guid: d4fa51516321804458824d3ec2bba477, type: 3}
   _name: "\u0419\u043E\u0445\u0430\u043D \u041D\u044E\u0433\u043E\u0440\u0441\u0432\u043E\u043B\u044C\u0434 "
