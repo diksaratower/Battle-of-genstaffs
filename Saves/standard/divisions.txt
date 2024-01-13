@@ -12,7 +12,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7462
+                    "Count": 7868
                 },
                 {
                     "EquipmentID": "manpower",
@@ -32,7 +32,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7462
+                    "Count": 7868
                 },
                 {
                     "EquipmentID": "manpower",
@@ -52,7 +52,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7462
+                    "Count": 7868
                 },
                 {
                     "EquipmentID": "manpower",
@@ -72,7 +72,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7462
+                    "Count": 7868
                 },
                 {
                     "EquipmentID": "manpower",
@@ -92,7 +92,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7462
+                    "Count": 7868
                 },
                 {
                     "EquipmentID": "manpower",
@@ -112,7 +112,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7462
+                    "Count": 7868
                 },
                 {
                     "EquipmentID": "manpower",
@@ -132,7 +132,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7461
+                    "Count": 7867
                 },
                 {
                     "EquipmentID": "manpower",
@@ -152,7 +152,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7461
+                    "Count": 7867
                 },
                 {
                     "EquipmentID": "manpower",
@@ -172,7 +172,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7461
+                    "Count": 7867
                 },
                 {
                     "EquipmentID": "manpower",
@@ -192,7 +192,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7461
+                    "Count": 7867
                 },
                 {
                     "EquipmentID": "manpower",
@@ -212,7 +212,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7461
+                    "Count": 7867
                 },
                 {
                     "EquipmentID": "manpower",
@@ -232,7 +232,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7461
+                    "Count": 7867
                 },
                 {
                     "EquipmentID": "manpower",
@@ -252,7 +252,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7456
+                    "Count": 7862
                 },
                 {
                     "EquipmentID": "manpower",
@@ -272,7 +272,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7456
+                    "Count": 7862
                 },
                 {
                     "EquipmentID": "manpower",
@@ -292,7 +292,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7456
+                    "Count": 7862
                 },
                 {
                     "EquipmentID": "manpower",
@@ -312,7 +312,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7456
+                    "Count": 7862
                 },
                 {
                     "EquipmentID": "manpower",
@@ -332,7 +332,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7456
+                    "Count": 7862
                 },
                 {
                     "EquipmentID": "manpower",
@@ -352,7 +352,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7456
+                    "Count": 7862
                 },
                 {
                     "EquipmentID": "manpower",
@@ -372,7 +372,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7456
+                    "Count": 7862
                 },
                 {
                     "EquipmentID": "manpower",
@@ -392,7 +392,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7456
+                    "Count": 7862
                 },
                 {
                     "EquipmentID": "manpower",
@@ -412,7 +412,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7456
+                    "Count": 7862
                 },
                 {
                     "EquipmentID": "manpower",
@@ -432,7 +432,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7455
+                    "Count": 7861
                 },
                 {
                     "EquipmentID": "manpower",
@@ -452,7 +452,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7455
+                    "Count": 7861
                 },
                 {
                     "EquipmentID": "manpower",
@@ -472,7 +472,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7455
+                    "Count": 7861
                 },
                 {
                     "EquipmentID": "manpower",
@@ -492,7 +492,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7414
+                    "Count": 7806
                 },
                 {
                     "EquipmentID": "manpower",
@@ -512,7 +512,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7414
+                    "Count": 7806
                 },
                 {
                     "EquipmentID": "manpower",
@@ -532,7 +532,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7414
+                    "Count": 7806
                 },
                 {
                     "EquipmentID": "manpower",
@@ -552,7 +552,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7414
+                    "Count": 7806
                 },
                 {
                     "EquipmentID": "manpower",
@@ -572,7 +572,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7414
+                    "Count": 7806
                 },
                 {
                     "EquipmentID": "manpower",
@@ -592,7 +592,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7414
+                    "Count": 7806
                 },
                 {
                     "EquipmentID": "manpower",
@@ -612,7 +612,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7225
+                    "Count": 7561
                 },
                 {
                     "EquipmentID": "manpower",
@@ -632,7 +632,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7225
+                    "Count": 7561
                 },
                 {
                     "EquipmentID": "manpower",
@@ -652,7 +652,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7225
+                    "Count": 7561
                 },
                 {
                     "EquipmentID": "manpower",
@@ -672,7 +672,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7224
+                    "Count": 7560
                 },
                 {
                     "EquipmentID": "manpower",
@@ -692,7 +692,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 9269
+                    "Count": 9941
                 },
                 {
                     "EquipmentID": "manpower",
@@ -712,7 +712,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 9269
+                    "Count": 9941
                 },
                 {
                     "EquipmentID": "manpower",
@@ -732,7 +732,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 9269
+                    "Count": 9941
                 },
                 {
                     "EquipmentID": "manpower",
@@ -752,7 +752,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 9269
+                    "Count": 9941
                 },
                 {
                     "EquipmentID": "manpower",
@@ -932,7 +932,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6032
+                    "Count": 6214
                 },
                 {
                     "EquipmentID": "manpower",
@@ -952,7 +952,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6032
+                    "Count": 6214
                 },
                 {
                     "EquipmentID": "manpower",
@@ -972,7 +972,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6032
+                    "Count": 6214
                 },
                 {
                     "EquipmentID": "manpower",
@@ -992,7 +992,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6032
+                    "Count": 6214
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1012,7 +1012,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6032
+                    "Count": 6214
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1032,7 +1032,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6031
+                    "Count": 6213
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1052,7 +1052,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6031
+                    "Count": 6213
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1072,7 +1072,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6031
+                    "Count": 6213
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1092,7 +1092,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6031
+                    "Count": 6213
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1112,7 +1112,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6031
+                    "Count": 6213
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1132,7 +1132,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6031
+                    "Count": 6213
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1152,7 +1152,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6031
+                    "Count": 6213
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1172,7 +1172,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 5967
+                    "Count": 6135
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1192,7 +1192,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 5967
+                    "Count": 6135
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1212,7 +1212,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 5967
+                    "Count": 6135
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1232,7 +1232,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8392
+                    "Count": 8756
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1252,7 +1252,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8392
+                    "Count": 8756
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1272,7 +1272,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8392
+                    "Count": 8756
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1292,7 +1292,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8392
+                    "Count": 8756
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1312,7 +1312,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8392
+                    "Count": 8756
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1332,7 +1332,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8392
+                    "Count": 8756
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1352,7 +1352,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8392
+                    "Count": 8756
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1372,7 +1372,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8392
+                    "Count": 8756
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1392,7 +1392,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8392
+                    "Count": 8756
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1412,7 +1412,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8392
+                    "Count": 8756
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1432,7 +1432,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8392
+                    "Count": 8756
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1452,7 +1452,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8392
+                    "Count": 8756
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1472,7 +1472,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8392
+                    "Count": 8756
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1492,7 +1492,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8392
+                    "Count": 8756
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1512,7 +1512,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8392
+                    "Count": 8756
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1532,7 +1532,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8392
+                    "Count": 8756
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1552,7 +1552,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8392
+                    "Count": 8756
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1572,7 +1572,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8392
+                    "Count": 8756
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1592,7 +1592,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8328
+                    "Count": 8678
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1612,7 +1612,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8328
+                    "Count": 8678
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1632,7 +1632,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8328
+                    "Count": 8678
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1652,7 +1652,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8328
+                    "Count": 8678
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1672,7 +1672,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8328
+                    "Count": 8678
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1692,7 +1692,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8327
+                    "Count": 8677
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1712,7 +1712,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8327
+                    "Count": 8677
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1732,7 +1732,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8327
+                    "Count": 8677
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1752,7 +1752,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8327
+                    "Count": 8677
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1772,7 +1772,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8327
+                    "Count": 8677
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1792,7 +1792,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8327
+                    "Count": 8677
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1812,7 +1812,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8327
+                    "Count": 8677
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1832,7 +1832,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 9018
+                    "Count": 9690
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1852,7 +1852,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 9018
+                    "Count": 9690
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1872,7 +1872,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 9017
+                    "Count": 9689
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1892,7 +1892,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 9017
+                    "Count": 9689
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1912,7 +1912,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6803
+                    "Count": 6901
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1932,7 +1932,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6803
+                    "Count": 6901
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1952,7 +1952,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6803
+                    "Count": 6901
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1972,7 +1972,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6803
+                    "Count": 6901
                 },
                 {
                     "EquipmentID": "manpower",
@@ -1992,7 +1992,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6803
+                    "Count": 6901
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2012,7 +2012,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6803
+                    "Count": 6901
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2032,7 +2032,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6803
+                    "Count": 6901
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2052,7 +2052,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6803
+                    "Count": 6901
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2072,7 +2072,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6802
+                    "Count": 6900
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2092,7 +2092,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6802
+                    "Count": 6900
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2112,7 +2112,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6802
+                    "Count": 6900
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2132,7 +2132,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6802
+                    "Count": 6900
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2152,7 +2152,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6738
+                    "Count": 6822
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2172,7 +2172,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6738
+                    "Count": 6822
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2192,7 +2192,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6738
+                    "Count": 6822
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2212,7 +2212,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6738
+                    "Count": 6822
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2232,7 +2232,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6738
+                    "Count": 6822
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2252,7 +2252,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6738
+                    "Count": 6822
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2272,7 +2272,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6738
+                    "Count": 6822
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2292,7 +2292,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6738
+                    "Count": 6822
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2312,7 +2312,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6738
+                    "Count": 6822
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2332,7 +2332,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6738
+                    "Count": 6822
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2352,7 +2352,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6738
+                    "Count": 6822
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2372,7 +2372,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6738
+                    "Count": 6822
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2392,7 +2392,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6738
+                    "Count": 6822
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2412,7 +2412,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6738
+                    "Count": 6822
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2432,7 +2432,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6738
+                    "Count": 6822
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2452,7 +2452,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6738
+                    "Count": 6822
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2472,7 +2472,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6738
+                    "Count": 6822
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2492,7 +2492,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6738
+                    "Count": 6822
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2512,7 +2512,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6778
+                    "Count": 7114
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2532,7 +2532,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6777
+                    "Count": 7113
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2552,7 +2552,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6777
+                    "Count": 7113
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2572,7 +2572,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6777
+                    "Count": 7113
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2592,7 +2592,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6675
+                    "Count": 6955
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2612,7 +2612,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6675
+                    "Count": 6955
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2632,7 +2632,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6675
+                    "Count": 6955
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2652,7 +2652,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6611
+                    "Count": 6877
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2672,7 +2672,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6611
+                    "Count": 6877
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2692,7 +2692,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6611
+                    "Count": 6877
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2712,7 +2712,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6611
+                    "Count": 6877
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2732,7 +2732,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6611
+                    "Count": 6877
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2752,7 +2752,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6611
+                    "Count": 6877
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2772,7 +2772,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6611
+                    "Count": 6877
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2792,7 +2792,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6610
+                    "Count": 6876
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2812,7 +2812,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6610
+                    "Count": 6876
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2832,7 +2832,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6610
+                    "Count": 6876
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2852,7 +2852,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6610
+                    "Count": 6876
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2872,7 +2872,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6610
+                    "Count": 6876
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2882,9 +2882,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 628.7344360351563,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 584.1000366210938
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -2892,7 +2892,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8293
+                    "Count": 8475
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2902,9 +2902,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 624.9239501953125,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 577.5
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -2912,7 +2912,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8293
+                    "Count": 8475
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2922,9 +2922,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 628.7344360351563,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 584.1000366210938
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -2932,7 +2932,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8293
+                    "Count": 8475
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2942,9 +2942,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 630.6397094726563,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 587.4000244140625
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -2952,7 +2952,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8293
+                    "Count": 8475
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2962,9 +2962,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 632.5449829101563,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 590.7000122070313
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -2972,7 +2972,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8293
+                    "Count": 8475
                 },
                 {
                     "EquipmentID": "manpower",
@@ -2982,9 +2982,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 636.35546875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 597.2999877929688
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -2992,7 +2992,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8293
+                    "Count": 8475
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3002,9 +3002,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 640.166015625,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 603.9000244140625
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3012,7 +3012,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8284
+                    "Count": 8466
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3022,9 +3022,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 643.9765014648438,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 610.5
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3032,7 +3032,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8284
+                    "Count": 8466
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3042,9 +3042,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 647.7869873046875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 617.1000366210938
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3052,7 +3052,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8284
+                    "Count": 8466
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3062,9 +3062,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 643.9765014648438,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 610.5
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3072,7 +3072,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8284
+                    "Count": 8466
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3082,9 +3082,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 647.7869873046875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 617.1000366210938
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3092,7 +3092,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8284
+                    "Count": 8466
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3102,9 +3102,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 647.7869873046875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 617.1000366210938
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3112,7 +3112,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8284
+                    "Count": 8466
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3122,9 +3122,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 649.6922607421875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 620.4000244140625
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3132,7 +3132,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8284
+                    "Count": 8466
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3142,9 +3142,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 649.6922607421875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 620.4000244140625
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3152,7 +3152,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8284
+                    "Count": 8466
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3162,9 +3162,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 647.7869873046875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 617.1000366210938
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3172,7 +3172,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8284
+                    "Count": 8466
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3182,9 +3182,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 647.7869873046875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 617.1000366210938
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3192,7 +3192,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8284
+                    "Count": 8466
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3202,9 +3202,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 647.7869873046875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 617.1000366210938
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3212,7 +3212,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8284
+                    "Count": 8466
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3222,9 +3222,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 647.7869873046875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 617.1000366210938
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3232,7 +3232,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8284
+                    "Count": 8466
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3242,9 +3242,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 647.7869873046875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 617.1000366210938
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3252,7 +3252,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8284
+                    "Count": 8466
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3262,9 +3262,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 649.6922607421875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 620.4000244140625
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3272,7 +3272,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8284
+                    "Count": 8466
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3282,9 +3282,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 649.6922607421875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 620.4000244140625
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3292,7 +3292,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8284
+                    "Count": 8466
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3302,9 +3302,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 649.6922607421875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 620.4000244140625
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3312,7 +3312,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8284
+                    "Count": 8466
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3322,9 +3322,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 649.6922607421875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 620.4000244140625
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3332,7 +3332,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8284
+                    "Count": 8466
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3342,9 +3342,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 647.7869873046875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 617.1000366210938
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3352,7 +3352,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8283
+                    "Count": 8465
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3362,9 +3362,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 649.6922607421875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 620.4000244140625
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3372,7 +3372,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8241
+                    "Count": 8409
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3382,9 +3382,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 649.6922607421875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 620.4000244140625
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3392,7 +3392,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8241
+                    "Count": 8409
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3402,9 +3402,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 649.6922607421875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 620.4000244140625
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3412,7 +3412,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8241
+                    "Count": 8409
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3422,9 +3422,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 649.6922607421875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 620.4000244140625
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3432,7 +3432,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8241
+                    "Count": 8409
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3442,9 +3442,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 649.6922607421875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 620.4000244140625
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3452,7 +3452,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8241
+                    "Count": 8409
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3462,9 +3462,9 @@
         },
         {
             "Position": {
-                "x": 676.3658447265625,
+                "x": 649.6922607421875,
                 "y": 1.0,
-                "z": 574.2000122070313
+                "z": 620.4000244140625
             },
             "TemplateIndex": 0,
             "Organization": 260000.0,
@@ -3472,7 +3472,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 8241
+                    "Count": 8409
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3492,7 +3492,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7253
+                    "Count": 7589
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3512,7 +3512,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7252
+                    "Count": 7588
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3532,7 +3532,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7252
+                    "Count": 7588
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3552,7 +3552,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7252
+                    "Count": 7588
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3572,7 +3572,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7281
+                    "Count": 7617
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3592,7 +3592,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7281
+                    "Count": 7617
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3612,7 +3612,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7280
+                    "Count": 7616
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3632,7 +3632,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7280
+                    "Count": 7616
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3642,9 +3642,9 @@
         },
         {
             "Position": {
-                "x": 175.28353881835938,
+                "x": 139.08367919921876,
                 "y": 1.0,
-                "z": 372.8999938964844
+                "z": 343.20001220703127
             },
             "TemplateIndex": 0,
             "Organization": 208000.0,
@@ -3652,7 +3652,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6039
+                    "Count": 6221
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3662,9 +3662,9 @@
         },
         {
             "Position": {
-                "x": 175.28353881835938,
+                "x": 140.9889373779297,
                 "y": 1.0,
-                "z": 372.8999938964844
+                "z": 346.5
             },
             "TemplateIndex": 0,
             "Organization": 208000.0,
@@ -3672,7 +3672,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6039
+                    "Count": 6221
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3682,9 +3682,9 @@
         },
         {
             "Position": {
-                "x": 175.28353881835938,
+                "x": 140.9889373779297,
                 "y": 1.0,
-                "z": 372.8999938964844
+                "z": 353.1000061035156
             },
             "TemplateIndex": 0,
             "Organization": 208000.0,
@@ -3692,7 +3692,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6039
+                    "Count": 6221
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3702,9 +3702,9 @@
         },
         {
             "Position": {
-                "x": 175.28353881835938,
+                "x": 142.89419555664063,
                 "y": 1.0,
-                "z": 372.8999938964844
+                "z": 363.0
             },
             "TemplateIndex": 0,
             "Organization": 208000.0,
@@ -3712,7 +3712,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6039
+                    "Count": 6221
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3722,9 +3722,9 @@
         },
         {
             "Position": {
-                "x": 175.28353881835938,
+                "x": 144.79945373535157,
                 "y": 1.0,
-                "z": 372.8999938964844
+                "z": 366.3000183105469
             },
             "TemplateIndex": 0,
             "Organization": 208000.0,
@@ -3732,7 +3732,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6039
+                    "Count": 6221
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3742,9 +3742,9 @@
         },
         {
             "Position": {
-                "x": 175.28353881835938,
+                "x": 142.89419555664063,
                 "y": 1.0,
-                "z": 372.8999938964844
+                "z": 376.20001220703127
             },
             "TemplateIndex": 0,
             "Organization": 208000.0,
@@ -3752,7 +3752,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6039
+                    "Count": 6221
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3762,9 +3762,9 @@
         },
         {
             "Position": {
-                "x": 175.28353881835938,
+                "x": 144.79945373535157,
                 "y": 1.0,
-                "z": 372.8999938964844
+                "z": 379.5
             },
             "TemplateIndex": 0,
             "Organization": 208000.0,
@@ -3772,7 +3772,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6039
+                    "Count": 6221
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3782,9 +3782,9 @@
         },
         {
             "Position": {
-                "x": 175.28353881835938,
+                "x": 144.79945373535157,
                 "y": 1.0,
-                "z": 372.8999938964844
+                "z": 386.1000061035156
             },
             "TemplateIndex": 0,
             "Organization": 208000.0,
@@ -3792,7 +3792,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6039
+                    "Count": 6221
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3802,9 +3802,9 @@
         },
         {
             "Position": {
-                "x": 175.28353881835938,
+                "x": 146.7047119140625,
                 "y": 1.0,
-                "z": 372.8999938964844
+                "z": 389.3999938964844
             },
             "TemplateIndex": 0,
             "Organization": 208000.0,
@@ -3812,7 +3812,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6039
+                    "Count": 6221
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3822,9 +3822,9 @@
         },
         {
             "Position": {
-                "x": 175.28353881835938,
+                "x": 137.1784210205078,
                 "y": 1.0,
-                "z": 372.8999938964844
+                "z": 399.3000183105469
             },
             "TemplateIndex": 0,
             "Organization": 208000.0,
@@ -3832,7 +3832,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6039
+                    "Count": 6221
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3842,9 +3842,9 @@
         },
         {
             "Position": {
-                "x": 175.28353881835938,
+                "x": 139.08367919921876,
                 "y": 1.0,
-                "z": 372.8999938964844
+                "z": 402.6000061035156
             },
             "TemplateIndex": 0,
             "Organization": 208000.0,
@@ -3852,7 +3852,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6039
+                    "Count": 6221
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3862,9 +3862,9 @@
         },
         {
             "Position": {
-                "x": 175.28353881835938,
+                "x": 148.60995483398438,
                 "y": 1.0,
-                "z": 372.8999938964844
+                "z": 399.3000183105469
             },
             "TemplateIndex": 0,
             "Organization": 208000.0,
@@ -3872,7 +3872,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 6039
+                    "Count": 6221
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3882,9 +3882,9 @@
         },
         {
             "Position": {
-                "x": 175.28353881835938,
+                "x": 131.46266174316407,
                 "y": 1.0,
-                "z": 372.8999938964844
+                "z": 402.6000061035156
             },
             "TemplateIndex": 0,
             "Organization": 208000.0,
@@ -3892,7 +3892,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 5975
+                    "Count": 6143
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3902,9 +3902,9 @@
         },
         {
             "Position": {
-                "x": 175.28353881835938,
+                "x": 127.65214538574219,
                 "y": 1.0,
-                "z": 372.8999938964844
+                "z": 402.6000061035156
             },
             "TemplateIndex": 0,
             "Organization": 208000.0,
@@ -3912,7 +3912,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 5974
+                    "Count": 6142
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3922,9 +3922,9 @@
         },
         {
             "Position": {
-                "x": 175.28353881835938,
+                "x": 131.46266174316407,
                 "y": 1.0,
-                "z": 372.8999938964844
+                "z": 402.6000061035156
             },
             "TemplateIndex": 0,
             "Organization": 208000.0,
@@ -3932,7 +3932,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 5974
+                    "Count": 6142
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3952,7 +3952,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 9046
+                    "Count": 9718
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3972,7 +3972,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 9045
+                    "Count": 9717
                 },
                 {
                     "EquipmentID": "manpower",
@@ -3992,7 +3992,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 9045
+                    "Count": 9717
                 },
                 {
                     "EquipmentID": "manpower",
@@ -4012,7 +4012,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 9045
+                    "Count": 9717
                 },
                 {
                     "EquipmentID": "manpower",
@@ -4112,11 +4112,11 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 9269
+                    "Count": 9941
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 5406
+                    "Count": 8109
                 }
             ]
         },
@@ -4132,11 +4132,11 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 9269
+                    "Count": 9941
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 5406
+                    "Count": 8109
                 }
             ]
         },
@@ -4152,11 +4152,11 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 9269
+                    "Count": 9941
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 5404
+                    "Count": 8106
                 }
             ]
         },
@@ -4172,11 +4172,11 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 9268
+                    "Count": 9940
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 5404
+                    "Count": 8106
                 }
             ]
         },
@@ -4192,11 +4192,11 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7169
+                    "Count": 7505
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 14836
+                    "Count": 16000
                 }
             ]
         },
@@ -4212,11 +4212,11 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7169
+                    "Count": 7505
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 14836
+                    "Count": 16000
                 }
             ]
         },
@@ -4232,11 +4232,11 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7168
+                    "Count": 7504
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 14834
+                    "Count": 16000
                 }
             ]
         },
@@ -4252,11 +4252,11 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 7168
+                    "Count": 7504
                 },
                 {
                     "EquipmentID": "manpower",
-                    "Count": 14834
+                    "Count": 16000
                 }
             ]
         },
@@ -4432,7 +4432,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 1512
+                    "Count": 2184
                 },
                 {
                     "EquipmentID": "manpower",
@@ -4452,7 +4452,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 1512
+                    "Count": 2184
                 },
                 {
                     "EquipmentID": "manpower",
@@ -4472,7 +4472,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 1512
+                    "Count": 2184
                 },
                 {
                     "EquipmentID": "manpower",
@@ -4492,7 +4492,7 @@
             "EquipmentInDivision": [
                 {
                     "EquipmentID": "ww1_rifle_equipment",
-                    "Count": 1512
+                    "Count": 2184
                 },
                 {
                     "EquipmentID": "manpower",
