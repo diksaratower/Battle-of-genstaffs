@@ -326,6 +326,10 @@ public class Division : SupplyUnit
 
     public void SetTemplate(DivisionTemplate template)
     {
+        if (Template != null)
+        {
+            ReturnEquipmentToStorage();
+        }
         Template = template;
         _neededEquipment = Template.GetTemplateNeedEquipment();
         EquipmentInDivision.Clear();

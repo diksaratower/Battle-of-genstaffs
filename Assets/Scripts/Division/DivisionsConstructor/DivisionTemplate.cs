@@ -68,6 +68,17 @@ public class DivisionTemplate
         return Battalions[0];
     }
 
+    public void UpdateDivisionsWithTemplate()
+    {
+        foreach (var division in UnitsManager.Instance.Divisions)
+        {
+            if (division.Template == this)
+            {
+                division.SetTemplate(this);
+            }
+        }
+    }
+
     private float GetAttack()
     {
         float attack = 0;

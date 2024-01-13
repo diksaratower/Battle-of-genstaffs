@@ -16,6 +16,7 @@ public class DivisionTemplateConstructorUI : MonoBehaviour
     [SerializeField] private DivisionLineUI _divisionLineUIPrefab;
     [SerializeField] private HorizontalLayoutGroup _divisionsLineUILayot;
     [SerializeField] private TMP_InputField _templateNameInputField;
+    [SerializeField] private DivisionTemplateModelPreviewUI _divisionTemplateModelPreviewUI;
 
     private List<DivisionLineUI> _divisionLinesUI = new List<DivisionLineUI>();
     private List<TextMeshProUGUI> _divisionCharacteristics = new List<TextMeshProUGUI>();
@@ -65,6 +66,7 @@ public class DivisionTemplateConstructorUI : MonoBehaviour
             needEquipmentCh.text = ne.Key + ": " + ne.Value;
             _divisionCharacteristics.Add(needEquipmentCh);
         }
+        _divisionTemplateModelPreviewUI.UpdateModelView(TargetTemplate);
     }
 
     public TextMeshProUGUI SpawnTemplateCharacteristic()
@@ -81,6 +83,7 @@ public class DivisionTemplateConstructorUI : MonoBehaviour
     public void AddBatalion(DivisionLine line, Battalion battalion)
     {
         line.Battalions.Add(battalion);
+        TargetTemplate.UpdateDivisionsWithTemplate();
         RefreshBatalions(TargetTemplate);
     }
 
@@ -91,6 +94,7 @@ public class DivisionTemplateConstructorUI : MonoBehaviour
             return;
         }
         line.Battalions.Remove(battalion);
+        TargetTemplate.UpdateDivisionsWithTemplate();
         RefreshBatalions(TargetTemplate);
     }
 
