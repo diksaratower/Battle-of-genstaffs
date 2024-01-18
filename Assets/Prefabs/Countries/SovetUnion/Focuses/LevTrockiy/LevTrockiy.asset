@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cff5c8c1db0a89478190a4e7ccae645, type: 3}
+  m_Name: LevTrockiy
+  m_EditorClassIdentifier: 
+  Name: "\u0422\u0440\u043E\u0446\u043A\u0438\u0439 \u0433\u043B\u0430\u0432\u0430
+    \u041A\u041F\u0421\u0421"
+  Description: 
+  ID: lev_trockiy_leader
+  Image: {fileID: 21300000, guid: e3fa2bfea2179e448af66d5f11389dae, type: 3}
+  ExecutionDurationDay: 45
+  NeedsForExecution:
+  - {fileID: 11400000, guid: bc85918f89b97424d84116d2b38a7a4a, type: 2}
+  ConflictWithFocuses: []
+  FocusEffects: []

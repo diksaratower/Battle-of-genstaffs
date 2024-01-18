@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cff5c8c1db0a89478190a4e7ccae645, type: 3}
+  m_Name: StartWorldFire
+  m_EditorClassIdentifier: 
+  Name: "\u0420\u0430\u0437\u0436\u0435\u0447\u044C \u043C\u0438\u0440\u043E\u0432\u043E\u0439
+    \u043F\u043E\u0436\u0430\u0440"
+  Description: 
+  ID: start_a_world_fire
+  Image: {fileID: 21300000, guid: 30306e25f1fca8540984a789b9015001, type: 3}
+  ExecutionDurationDay: 70
+  NeedsForExecution: []
+  ConflictWithFocuses: []
+  FocusEffects: []

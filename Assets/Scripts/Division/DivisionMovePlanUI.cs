@@ -85,6 +85,10 @@ public class DivisionMovePlanUI : MonoBehaviour
 
     private void SetTemplateView(DivisionTemplate template)
     {
+        if (this == null)
+        {
+            return;
+        }
         if (template.GetAverageBattlion().ViewType != DivisionViewType.Tanks)
         {
             _divisionModelView = Instantiate(_infantryDivisionViewPrefab, transform);
