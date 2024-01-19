@@ -2,7 +2,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "SetConscriptionProcent", menuName = "ScriptableObjects/Law/Effects/SetConscriptionProcent", order = 1)]
-public class SetConscriptionProcent : LawEffect
+public class SetConscriptionProcent : ConstantEffect
 {
     public float ConscriptionProcent;
 

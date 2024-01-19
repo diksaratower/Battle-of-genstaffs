@@ -189,6 +189,22 @@ public class CountryPolitics
         return result;
     }
 
+    public float GetPoliticCorrectionResearcPointGrowth()
+    {
+        return 1;
+    }
+
+    public float GetPoliticCooficentDivisionAttack()
+    {
+        var result = 1f;
+        var effects = GetAllConstantEffectsWithType<DivisionAttackTraitEffect>();
+        foreach (var effect in effects)
+        {
+            result += (effect.AddedAttackPercent / 100);
+        }
+        return result;
+    }
+
     public float GetPoliticCorrectionBuildEfficiency(float baseFabrication)
     {
         var result = 0f;
@@ -221,6 +237,23 @@ public class CountryPolitics
         var result = new List<T>();
         result.AddRange(GetAdvisersConstantEffects<T>());
         result.AddRange(GetCountryTraitsConstantEffects<T>());
+        result.AddRange(GetLawsConstantEffects<T>());
+        return result;
+    }
+
+    private List<T> GetLawsConstantEffects<T>() where T : ConstantEffect
+    {
+        var result = new List<T>();
+        foreach (var law in GetCurrentLaws())
+        {
+            foreach (var effect in law.LawEffects)
+            {
+                if (effect is T)
+                {
+                    result.Add(effect as T);
+                }
+            }
+        }
         return result;
     }
 
@@ -277,6 +310,11 @@ public class CountryPolitics
         _executedFocuses.Add(nationalFocus);
         nationalFocus.ExecuteFocus(_country);
         OnFocusExecuted?.Invoke();
+    }
+
+    private List<Law> GetCurrentLaws()
+    {
+        return new List<Law>(2) { CurrentEconomicLaw, Current—onscriptionLaw };
     }
 
     public CountryPoliticsSerialize GetSerialize()

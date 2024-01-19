@@ -8,6 +8,6 @@ public class DivisionAttackTraitEffect : ConstantEffect
 
     public override string GetEffectDescription()
     {
-        return $"Атака двизий {GameIU.FloatToStringAddPlus(AddedAttackPercent)}%";
+        return $"Атака дивизий {GameIU.FloatToStringAddPlus(AddedAttackPercent)}%";
     }
 }

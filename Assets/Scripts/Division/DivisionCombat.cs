@@ -65,7 +65,8 @@ public class DivisionCombat
         float attack = 0;
         foreach (var attacker in Attackers)
         {
-            attack += (attacker.GetAttack() * GetAviationEffectPercent(attacker));
+            var politicsAttackCoof = attacker.CountyOwner.Politics.GetPoliticCooficentDivisionAttack();
+            attack += (attacker.GetAttack() * GetAviationEffectPercent(attacker) * politicsAttackCoof);
         }
         return attack;
     }

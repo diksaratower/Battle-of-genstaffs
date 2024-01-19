@@ -2,7 +2,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "MilitaryFabrication", menuName = "ScriptableObjects/Law/Effects/MilitaryFabrication", order = 1)]
-public class MilitaryFabricationLawEffect : LawEffect
+public class MilitaryFabricationLawEffect : ConstantEffect
 {
     public float MilitaryFabricationIncreaseProcent = 10;
 

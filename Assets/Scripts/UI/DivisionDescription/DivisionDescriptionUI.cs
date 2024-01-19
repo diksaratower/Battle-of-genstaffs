@@ -20,6 +20,7 @@ public class DivisionDescriptionUI : MonoBehaviour
 
     private List<EquipmentSlotDivisionDescriptionUI> _equipmentSlots = new List<EquipmentSlotDivisionDescriptionUI>();
     private Division _division;
+    private NotPrefabTooltipHandlerUI _divisionAttackTooltip;
 
 
     private void Update()
@@ -55,6 +56,23 @@ public class DivisionDescriptionUI : MonoBehaviour
                 }
             }
         };
+        CreateAttackTooltip(division);
+    }
+
+    private void CreateAttackTooltip(Division division)
+    {
+        if (_divisionAttackTooltip != null)
+        {
+            Destroy(_divisionAttackTooltip);
+        }
+        var tooltip = _attackText.gameObject.AddComponent<NotPrefabTooltipHandlerUI>();
+
+        tooltip.Initialize((TooltipViewMenu menu) =>
+        {
+            var attackCoof = division.CountyOwner.Politics.GetPoliticCooficentDivisionAttack();
+            menu.AddSimpleText($"Бонус от политики {GameIU.FloatToStringAddPlus((float)Math.Round(100f * (attackCoof - 1), 2))}%", false);
+        });
+        _divisionAttackTooltip = tooltip;
     }
 
     private void UpdateEquipmentDetails(Division division)
