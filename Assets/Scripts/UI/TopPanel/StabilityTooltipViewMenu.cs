@@ -20,10 +20,18 @@ public class StabilityTooltipViewMenu : TooltipViewMenu
         var result = new List<string>();
         foreach (var adviser in Player.CurrentCountry.Politics.Advisers)
         {
-            var effects = adviser.GetTraitEffects<ChangeStabilityTraitEffect>();
+            var effects = adviser.GetEffects<ChangeStabilityTraitEffect>();
             foreach (var effect in effects)
             {
-                result.Add($"{adviser.Name} даёт {GameIU.FloatToStringAddPlus((effect as ChangeStabilityTraitEffect).ChangeStabilityProcent)}%");
+                result.Add($"{adviser.Name} даёт {GameIU.FloatToStringAddPlus(effect.ChangeStabilityProcent)}%");
+            }
+        }
+        foreach (var trait in Player.CurrentCountry.Politics.Traits)
+        {
+            var traitsEffects = trait.GetEffects<ChangeStabilityTraitEffect>();
+            foreach (var effect in traitsEffects)
+            {
+                result.Add($"Черта {trait.Name} даёт {GameIU.FloatToStringAddPlus(effect.ChangeStabilityProcent)}%");
             }
         }
         return result;

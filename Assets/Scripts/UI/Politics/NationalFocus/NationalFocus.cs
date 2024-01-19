@@ -11,13 +11,13 @@ public class NationalFocus : ScriptableObject
     public int ExecutionDurationDay;
     public List<NationalFocus> NeedsForExecution = new List<NationalFocus>();
     public List<NationalFocus> ConflictWithFocuses = new List<NationalFocus>();
-    public List<NationalFocusEffect> FocusEffects = new List<NationalFocusEffect>();
+    public List<InstantEffect> FocusEffects = new List<InstantEffect>();
 
     public void ExecuteFocus(Country country)
     {
         foreach (var effect in FocusEffects)
         {
-            effect.ExecuteFocus(country);
+            effect.DoEffect(country);
         }
     }
 }

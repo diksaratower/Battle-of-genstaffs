@@ -23,7 +23,9 @@ public class CountryPolitics
     public CountryPoliticsPreset Preset;
     public Action OnFocusExecuted;
 
+    [HideInInspector] public List<Decision> Decisions = new List<Decision>();
     [HideInInspector] public List<Personage> Advisers = new List<Personage>();
+    [HideInInspector] public List<CountryTrait> Traits = new List<CountryTrait>();
     [HideInInspector] public List<PartyPopular> Parties = new List<PartyPopular>();
 
     private List<NationalFocus> _executedFocuses = new List<NationalFocus>();
@@ -42,8 +44,14 @@ public class CountryPolitics
                 Parties.Add(new PartyPopular(party.ProcentPopularity, party.Name, party.PartyColor, party.PartyIdeology));
             }
         }
+        Decisions.AddRange(PoliticsDataSO.GetInstance().StandartDecisions);
+        foreach (var decision in Preset.Decisions)
+        {
+            Decisions.Add(decision);
+        }
         CurrentEconomicLaw = EconomicsLaws[0];
         Current—onscriptionLaw = —onscriptionLaws[0];
+        Traits.AddRange(Preset.CountryTraits);
     }
 
     public void CopyData(CountryPolitics original)
@@ -160,7 +168,7 @@ public class CountryPolitics
         {
             correctedGrowth += (baseGrowth * (Player.CurrentDifficultie.PolitPowerBonusPercent / 100f));
         }
-        var effects = GetAdvisersTraitEffects<PolitPowerGrowthTraitEffect>();
+        var effects = GetAllConstantEffectsWithType<PolitPowerGrowthTraitEffect>();
         effects.ForEach((PolitPowerGrowthTraitEffect effect) =>
         {
             correctedGrowth += effect.GetNeedIncreaseValue(baseGrowth);
@@ -184,7 +192,7 @@ public class CountryPolitics
     public float GetPoliticCorrectionBuildEfficiency(float baseFabrication)
     {
         var result = 0f;
-        var effects = GetAdvisersTraitEffects<BuildSpeedTraitEffect>();
+        var effects = GetAllConstantEffectsWithType<BuildSpeedTraitEffect>();
         effects.ForEach((BuildSpeedTraitEffect effect) =>
         {
             result += effect.GetNeedIncreaseValue(baseFabrication);
@@ -195,7 +203,7 @@ public class CountryPolitics
     public float CalculateStability()
     {
         var correctedStability = BaseStability;
-        var effects = GetAdvisersTraitEffects<ChangeStabilityTraitEffect>();
+        var effects = GetAllConstantEffectsWithType<ChangeStabilityTraitEffect>();
         effects.ForEach((ChangeStabilityTraitEffect effect) =>
         {
             correctedStability += effect.GetNeedIncreaseValue(BaseStability);
@@ -208,23 +216,45 @@ public class CountryPolitics
         return correctedStability;
     }
 
-    private void CalculatePolitPowerGrowth()
-    {
-        PolitPower += ApplyPolitPowerGrowthEffects(PolitPowerGrowthSpeed);
-    }
-
-    private List<T> GetAdvisersTraitEffects<T>() where T : TraitEffect
+    public List<T> GetAllConstantEffectsWithType<T>() where T : ConstantEffect
     {
         var result = new List<T>();
-        foreach (var adviser in Advisers)
+        result.AddRange(GetAdvisersConstantEffects<T>());
+        result.AddRange(GetCountryTraitsConstantEffects<T>());
+        return result;
+    }
+
+    private List<T> GetCountryTraitsConstantEffects<T>() where T : ConstantEffect
+    {
+        var result = new List<T>();
+        foreach (var trait in Traits)
         {
-            var effects = adviser.GetTraitEffects<T>();
+            var effects = (trait as IHavingConstantPoliticsEffect).GetEffects<T>();
             foreach (var effect in effects)
             {
                 result.Add(effect as T);
             }
         }
         return result;
+    }
+
+    private List<T> GetAdvisersConstantEffects<T>() where T : ConstantEffect
+    {
+        var result = new List<T>();
+        foreach (var adviser in Advisers)
+        {
+            var effects = (adviser as IHavingConstantPoliticsEffect).GetEffects<T>();
+            foreach (var effect in effects)
+            {
+                result.Add(effect as T);
+            }
+        }
+        return result;
+    }
+
+    private void CalculatePolitPowerGrowth()
+    {
+        PolitPower += ApplyPolitPowerGrowthEffects(PolitPowerGrowthSpeed);
     }
 
     private void CalculateFocusExecution()
@@ -240,13 +270,6 @@ public class CountryPolitics
             ExecutingFocus = null;
             ExecuteFocus(focus);
         }
-    }
-
-    private float GetCorrectedStability(float baseStability)
-    {
-        var correctedStability = baseStability;
-
-        return correctedStability;
     }
 
     private void ExecuteFocus(NationalFocus nationalFocus)
@@ -387,4 +410,9 @@ public class CountryPolitics
             ID = nationalFocus.ID;
         }
     }
+}
+
+public interface IHavingConstantPoliticsEffect
+{
+    public List<T> GetEffects<T>() where T : ConstantEffect;
 }

@@ -28,6 +28,7 @@ public class PolticsUI : MonoBehaviour
     [SerializeField] private Image _executionFocusImage;
     [SerializeField] private TextMeshProUGUI _executionFocusName;
     [SerializeField] private Sprite _nullFocusSprite;
+    [SerializeField] private CountryTraitsViewUI _countryTraitsViewUI;
 
     private List<TextMeshProUGUI> _partiesReviewTexts = new List<TextMeshProUGUI>();
     private List<GameObject> _advisersUI = new List<GameObject>();
@@ -133,25 +134,31 @@ public class PolticsUI : MonoBehaviour
         }
         _addAdviserMenu.RefreshUI(_country.Politics.Preset.AvailableAdvisers.FindAll(adv => !_country.Politics.Advisers.Contains(adv)));
 
+        AddLawsMenus();
+        _countryTraitsViewUI.Refresh(_country);
+    }
+
+    private void AddLawsMenus()
+    {
         var economicMenu = Instantiate(_economicLawUIPrefab, _advisersLayoutParent.transform);
         var economicLawChangeData = new ChangeLawData(
             () => _country.Politics.CurrentEconomicLaw,
-            (Law law) => 
+            (Law law) =>
             {
-                _country.Politics.ChangeCurrentEconomicLaw(law); 
+                _country.Politics.ChangeCurrentEconomicLaw(law);
             },
             _country.Politics.EconomicsLaws, "Ýêîíîìèêà");
 
         economicMenu.CreateMenu(_changeLawsMeniesParent, economicLawChangeData);
 
         _advisersUI.Add(economicMenu.gameObject);
-        
+
         var conscriptionMenu = Instantiate(_conscriptionLawUIPrefab, _advisersLayoutParent.transform);
         var conscriptionLawChangeData = new ChangeLawData(
             () => _country.Politics.CurrentÑonscriptionLaw,
             (Law law) =>
-            { 
-                _country.Politics.ChangeCurrentConscrirtionLaw(law); 
+            {
+                _country.Politics.ChangeCurrentConscrirtionLaw(law);
             },
             _country.Politics.ÑonscriptionLaws, "Ïðèçûâ");
 

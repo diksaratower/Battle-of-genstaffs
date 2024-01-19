@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Personages/Simple", order = 1)]
-public class Personage : ScriptableObject
+public class Personage : ScriptableObject, IHavingConstantPoliticsEffect
 {
     public Sprite Portrait => _standartPortrait;
     public string Name => _name;
@@ -23,15 +24,15 @@ public class Personage : ScriptableObject
         return _standartPortrait;
     }
 
-    public List<TraitEffect> GetTraitEffects<T>() where T : TraitEffect
+    public List<T> GetEffects<T>() where T : ConstantEffect
     {
-        var result = new List<TraitEffect>();
+        var result = new List<T>();
         foreach (var trait in Traits)
         {
             var effects = trait.TraitEffects.FindAll(effect => effect.GetType() == typeof(T));
             if (effects.Count > 0)
             {
-                result.AddRange(effects);
+                result.AddRange(effects.Cast<T>());
             }
         }
         return result;

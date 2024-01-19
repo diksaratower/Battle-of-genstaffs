@@ -22,10 +22,18 @@ public class PolitPowerTooltipUI : TooltipViewMenu
         var result = new List<string>();
         foreach (var adviser in Player.CurrentCountry.Politics.Advisers)
         {
-            var effects = adviser.GetTraitEffects<PolitPowerGrowthTraitEffect>();
-            foreach (var effect in effects)
+            var advisersEffects = adviser.GetEffects<PolitPowerGrowthTraitEffect>();
+            foreach (var effect in advisersEffects)
             {
-                result.Add($"{adviser.Name} даёт {GameIU.FloatToStringAddPlus((effect as PolitPowerGrowthTraitEffect).PolitPowerGrothIncreaseProcent)}%");
+                result.Add($"{adviser.Name} даёт {GameIU.FloatToStringAddPlus(effect.PolitPowerGrothIncreaseProcent)}%");
+            }
+        }
+        foreach (var trait in Player.CurrentCountry.Politics.Traits)
+        {
+            var traitsEffects = trait.GetEffects<PolitPowerGrowthTraitEffect>();
+            foreach (var effect in traitsEffects)
+            {
+                result.Add($"Черта {trait.Name} даёт {GameIU.FloatToStringAddPlus(effect.PolitPowerGrothIncreaseProcent)}%");
             }
         }
         return result;

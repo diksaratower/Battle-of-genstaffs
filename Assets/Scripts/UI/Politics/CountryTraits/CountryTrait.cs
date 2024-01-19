@@ -1,7 +1,24 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 
-public abstract class CountryTrait : ScriptableObject
+[CreateAssetMenu(fileName = "CountryTrait", menuName = "ScriptableObjects/CountryTrait", order = 1)]
+public class CountryTrait : ScriptableObject, IHavingConstantPoliticsEffect
 {
-    
+    public List<ConstantEffect> CountryTraitEffects = new List<ConstantEffect>();
+    public string Name;
+    public Sprite TraitImage;
+
+    public List<T> GetEffects<T>() where T : ConstantEffect
+    {
+        var result = new List<T>();
+        foreach (var effect in CountryTraitEffects)
+        {
+            if (effect is T)
+            {
+                result.Add(effect as T);
+            }
+        }
+        return result;
+    }
 }

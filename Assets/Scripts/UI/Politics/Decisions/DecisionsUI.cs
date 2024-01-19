@@ -20,7 +20,7 @@ public class DecisionsUI : MonoBehaviour
     {
         _slotsUI.ForEach(sl => Destroy(sl.gameObject));
         _slotsUI.Clear();
-        foreach (var decision in _country.Politics.Preset.Decisions)
+        foreach (var decision in _country.Politics.Decisions)
         {
             var slot = Instantiate(_slotPrefab, _slotsParent.transform);
             slot.Target = decision;

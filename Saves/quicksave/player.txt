@@ -1,1 +1,1 @@
-{"CountryID":"sssr","DifficultieID":"normal"}
+{"CountryID":"luks","DifficultieID":"normal"}

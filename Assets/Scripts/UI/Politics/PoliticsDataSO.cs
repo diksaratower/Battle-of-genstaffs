@@ -7,6 +7,7 @@ public class PoliticsDataSO : ScriptableObject
 {
     public List<Personage> Personages = new List<Personage>();
     public List<Personage> MinorLeaders = new List<Personage>();
+    public List<Decision> StandartDecisions = new List<Decision>();
 
     private static PoliticsDataSO _instance;
 

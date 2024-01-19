@@ -7,7 +7,7 @@ public class Decision : ScriptableObject
 {
     public string Name;
     public int PolitPowerCost = 10;
-    public List<DecisionEffect> Effects = new List<DecisionEffect>(); 
+    public List<InstantEffect> Effects = new List<InstantEffect>(); 
 
 
     public void ActivaieDecision(Country country)
@@ -17,9 +17,9 @@ public class Decision : ScriptableObject
             return;
         }
         country.Politics.PolitPower -= PolitPowerCost;
-        foreach (DecisionEffect effect in Effects) 
+        foreach (InstantEffect effect in Effects) 
         {
-            effect.ExecuteDecisionEffect(country);
+            effect.DoEffect(country);
         }
     }
 }
