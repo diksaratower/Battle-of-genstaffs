@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6818656e334cd40abd0a3011008efa, type: 3}
   m_Name: ChangeStabilityEffect
   m_EditorClassIdentifier: 
-  ChangeStabilityProcent: 10
+  ChangeStabilityProcent: -80

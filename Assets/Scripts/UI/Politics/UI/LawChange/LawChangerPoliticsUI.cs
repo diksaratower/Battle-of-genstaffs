@@ -20,21 +20,27 @@ public class LawChangerPoliticsUI : MonoBehaviour
 
     private void Start()
     {
-        _openChangeLawMenuButton.onClick.AddListener(delegate 
-        {
-            _changeMenu.SetActive(true);
-            RefreshChangeMenu();
-        });
         RefreshCurrentLaw();
     }
 
-    public void CreateMenu(Transform menuParent, ChangeLawData changeLawData)
+    public void CloseMenu()
+    {
+        _changeMenu.SetActive(false);
+    }
+
+    public void CreateMenu(Transform menuParent, ChangeLawData changeLawData, PolticsUI politicsUI)
     {
         _changeLawData = changeLawData;
         _lawNameText.text = _changeLawData.LawName;
         _changeMenu = Instantiate(_changeMenuPrefab, menuParent);
         _lawViewsParent = _changeMenu.GetComponentInChildren<GridLayoutGroup>();
         _changeMenu.SetActive(false);
+        _openChangeLawMenuButton.onClick.AddListener(delegate
+        {
+            politicsUI.CloseAllChangeWindows();
+            _changeMenu.SetActive(true);
+            RefreshChangeMenu();
+        });
     }
 
     public void RefreshCurrentLaw()

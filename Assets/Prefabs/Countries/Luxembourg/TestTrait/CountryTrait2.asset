@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 947d295a2d1be0248b795bdd0f7ecb45, type: 3}
   m_Name: CountryTrait2
   m_EditorClassIdentifier: 
-  CountryTraitEffects: []
-  Name: 
-  TraitImage: {fileID: 0}
+  CountryTraitEffects:
+  - {fileID: 11400000, guid: 413f6c338b6cd004da8cd82ffaecaa15, type: 2}
+  Name: "\u0422\u0435\u0441\u0442\u043E\u0432\u0430\u044F \u0447\u0435\u0440\u0442\u0430
+    2"
+  TraitImage: {fileID: 21300000, guid: f1beeb305e3012e4ab91b3a689971433, type: 3}

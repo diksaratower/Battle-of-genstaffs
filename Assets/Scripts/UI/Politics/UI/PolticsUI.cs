@@ -82,6 +82,17 @@ public class PolticsUI : MonoBehaviour
         RefreshAdvisers();
     }
 
+    public void CloseAllChangeWindows()
+    {
+        foreach (var advisersChange in _advisersUI)
+        {
+            if (advisersChange.TryGetComponent<LawChangerPoliticsUI>(out var lawChangerUI))
+            {
+                lawChangerUI.CloseMenu();
+            }
+        }
+    }
+
     private void UpdatePartiesPopular() 
     {
         _partiesReviewTexts.ForEach(prt => Destroy(prt.gameObject));
@@ -127,6 +138,7 @@ public class PolticsUI : MonoBehaviour
                 var addAdviserButton = Instantiate(_adviserAddButtonUIPrefab, _advisersLayoutParent.transform);
                 addAdviserButton.GetComponent<Button>().onClick.AddListener(() =>
                 {
+                    CloseAllChangeWindows();
                     _addAdviserMenu.gameObject.SetActive(true);
                 });
                 _advisersUI.Add(addAdviserButton.gameObject);
@@ -149,7 +161,7 @@ public class PolticsUI : MonoBehaviour
             },
             _country.Politics.EconomicsLaws, "Ýêîíîìèêà");
 
-        economicMenu.CreateMenu(_changeLawsMeniesParent, economicLawChangeData);
+        economicMenu.CreateMenu(_changeLawsMeniesParent, economicLawChangeData, this);
 
         _advisersUI.Add(economicMenu.gameObject);
 
@@ -162,7 +174,7 @@ public class PolticsUI : MonoBehaviour
             },
             _country.Politics.ÑonscriptionLaws, "Ïðèçûâ");
 
-        conscriptionMenu.CreateMenu(_changeLawsMeniesParent, conscriptionLawChangeData);
+        conscriptionMenu.CreateMenu(_changeLawsMeniesParent, conscriptionLawChangeData, this);
 
         _advisersUI.Add(conscriptionMenu.gameObject);
     }
