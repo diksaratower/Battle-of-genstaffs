@@ -16,7 +16,7 @@ public class CountryTraitsViewUI : MonoBehaviour
             Destroy(trait.gameObject); 
         });
         _traitsUI.Clear();
-        foreach (var trait in country.Politics.Traits)
+        foreach (var trait in country.Politics.TraitSlots)
         {
             var traitUI = Instantiate(_traitUIPrefab, _traitsUIParent);
             traitUI.RefreshUI(trait);

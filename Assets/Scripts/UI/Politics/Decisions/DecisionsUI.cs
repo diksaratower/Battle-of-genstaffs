@@ -19,7 +19,7 @@ public class DecisionsUI : MonoBehaviour
         _slotsUI.Clear();
         foreach (var blockedDecision in _country.Politics.BlockedDecisions)
         {
-            if (blockedDecision.InfinityBlock == true)
+            if (blockedDecision.EternalBlock == true)
             {
                 continue;
             }

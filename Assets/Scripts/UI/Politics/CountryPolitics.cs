@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
 using UnityEngine;
 
 
@@ -10,10 +12,12 @@ public class CountryPolitics
     public NationalFocus ExecutingFocus { get; private set; }
     public float BaseStability { get; private set; }
     public float PolitPowerGrowthSpeed => 0.7f;
-    public List<Law> EconomicsLaws => Preset.Laws;
-    public List<Law> —onscriptionLaws => Preset.ConscriptionLaws;
+    public ReadOnlyCollection<Law> EconomicsLaws => Preset.Laws.AsReadOnly();
+    public ReadOnlyCollection<Law> —onscriptionLaws => Preset.ConscriptionLaws.AsReadOnly();
     public Law CurrentEconomicLaw { get; private set; }
     public Law Current—onscriptionLaw { get; private set; }
+    public ReadOnlyCollection<CountryTrait> Traits => GetCountryTraits();
+    public ReadOnlyCollection<CountryTraitSlot> TraitSlots => _countryTraitsSlots.AsReadOnly();
 
     public Ideology CountryIdeology;
     public FormOfGovernment FormGovernment;
@@ -27,12 +31,13 @@ public class CountryPolitics
 
     [HideInInspector] public List<Decision> Decisions = new List<Decision>();
     [HideInInspector] public List<Personage> Advisers = new List<Personage>();
-    [HideInInspector] public List<CountryTrait> Traits = new List<CountryTrait>();
     [HideInInspector] public List<PartyPopular> Parties = new List<PartyPopular>();
 
+    private List<CountryTraitSlot> _countryTraitsSlots = new List<CountryTraitSlot>();
     private List<NationalFocus> _executedFocuses = new List<NationalFocus>();
     private int _executingFocusProgressDays = 0;
     private Country _country;
+
 
     public void Setup(Country country)
     {
@@ -40,6 +45,7 @@ public class CountryPolitics
         GameTimer.DayEnd += CalculatePolitPowerGrowth;
         GameTimer.DayEnd += CalculateFocusExecution;
         GameTimer.DayEnd += CalculateDecesionsRecharge;
+        GameTimer.DayEnd += CalculateTraitsWorkTime;
         if (Preset != null)
         {
             foreach (var party in Preset.Parties)
@@ -54,7 +60,10 @@ public class CountryPolitics
         }
         CurrentEconomicLaw = EconomicsLaws[0];
         Current—onscriptionLaw = —onscriptionLaws[0];
-        Traits.AddRange(Preset.CountryTraits);
+        foreach (var trait in Preset.CountryTraits)
+        {
+            AddTrait(trait);
+        }
     }
 
     public void CopyData(CountryPolitics original)
@@ -108,6 +117,11 @@ public class CountryPolitics
     {
         PolitPower -= AdviserAddCost;
         Advisers.Add(personage);
+    }
+
+    public void AddTrait(CountryTrait countryTrait)
+    {
+        _countryTraitsSlots.Add(new CountryTraitSlot(countryTrait));
     }
 
     public void DoDecision(Decision decision)
@@ -342,7 +356,7 @@ public class CountryPolitics
         var forRemove = new List<DecisionsBlockSlot>();
         foreach (var blockedDecision in BlockedDecisions)
         {
-            if (blockedDecision.InfinityBlock == false)
+            if (blockedDecision.EternalBlock == false)
             {
                 blockedDecision.RechargeTimeLeftDays -= 1;
                 if (blockedDecision.RechargeTimeLeftDays <= 0)
@@ -358,6 +372,23 @@ public class CountryPolitics
         }
     }
 
+    private void CalculateTraitsWorkTime()
+    {
+        var forRemove = new List<CountryTraitSlot>();
+        foreach (var traitSlot in _countryTraitsSlots)
+        {
+            if (traitSlot.TemporaryTrait == true)
+            {
+                traitSlot.TimeLeftDays -= 1;
+                if (traitSlot.TimeLeftDays <= 0)
+                {
+                    forRemove.Add(traitSlot);
+                }
+            }
+        }
+        _countryTraitsSlots.RemoveAll(traitSlot => forRemove.Contains(traitSlot));
+    }
+
     private void ExecuteFocus(NationalFocus nationalFocus)
     {
         _executedFocuses.Add(nationalFocus);
@@ -365,9 +396,19 @@ public class CountryPolitics
         OnFocusExecuted?.Invoke();
     }
 
-    private List<Law> GetCurrentLaws()
+    private ReadOnlyCollection<CountryTrait> GetCountryTraits()
     {
-        return new List<Law>(2) { CurrentEconomicLaw, Current—onscriptionLaw };
+        var result = new List<CountryTrait>();
+        foreach (var traitSlot in _countryTraitsSlots)
+        {
+            result.Add(traitSlot.CountryTrait);
+        }
+        return result.AsReadOnly();
+    }
+
+    private ReadOnlyCollection<Law> GetCurrentLaws()
+    {
+        return new List<Law>(2) { CurrentEconomicLaw, Current—onscriptionLaw }.AsReadOnly();
     }
 
     public CountryPoliticsSerialize GetSerialize()
@@ -513,14 +554,29 @@ public class DecisionsBlockSlot
     public int RechargeTimeLeftDays { get; set; }
 
     public Decision Decision { get; }
-    public bool InfinityBlock { get; }
+    public bool EternalBlock { get; }
 
 
     public DecisionsBlockSlot(Decision decision, bool infinityBlock)
     {
         Decision = decision;
         RechargeTimeLeftDays = decision.RechargeTime;
-        InfinityBlock = infinityBlock;
+        EternalBlock = infinityBlock;
     }
 }
 
+public class CountryTraitSlot
+{
+    public int TimeLeftDays { get; set; }
+
+    public CountryTrait CountryTrait { get; }
+    public bool TemporaryTrait { get; }
+
+
+    public CountryTraitSlot(CountryTrait countryTrait)
+    {
+        TimeLeftDays = countryTrait.WorkTime;
+        CountryTrait = countryTrait;
+        TemporaryTrait = countryTrait.TemporaryTrait;
+    }
+}

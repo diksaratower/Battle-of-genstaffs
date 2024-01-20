@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -71,11 +72,11 @@ public class ChangeLawData
     private Action<Law> _setCurrentLawFunc;
     private List<Law> _availbleLaws;
 
-    public ChangeLawData(Func<Law> getCurrentLawFunc, Action<Law> setCurrentLawFunc, List<Law> availbleLaws, string lawName)
+    public ChangeLawData(Func<Law> getCurrentLawFunc, Action<Law> setCurrentLawFunc, ReadOnlyCollection<Law> availbleLaws, string lawName)
     {
         _getCurrentLawFunc = getCurrentLawFunc;
         _setCurrentLawFunc = setCurrentLawFunc;
-        _availbleLaws = availbleLaws;
+        _availbleLaws = new List<Law>(availbleLaws);
         LawName = lawName;
     }
 

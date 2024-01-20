@@ -8,6 +8,9 @@ public class CountryTrait : ScriptableObject, IHavingConstantPoliticsEffect
     public List<ConstantEffect> CountryTraitEffects = new List<ConstantEffect>();
     public string Name;
     public Sprite TraitImage;
+    public bool TemporaryTrait;
+    public int WorkTime = 1;
+
 
     public List<T> GetEffects<T>() where T : ConstantEffect
     {
