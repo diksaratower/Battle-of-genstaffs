@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using UnityEngine;
 
 
@@ -27,6 +26,7 @@ public class CountryPolitics
     public CountryPoliticsPreset Preset;
     public Action OnFocusExecuted;
     public Action OnUpdateBlockedDecisions;
+    public Action OnUpdatePartiesPopular;
     public List<DecisionsBlockSlot> BlockedDecisions = new List<DecisionsBlockSlot>();
 
     [HideInInspector] public List<Decision> Decisions = new List<Decision>();
@@ -46,11 +46,15 @@ public class CountryPolitics
         GameTimer.DayEnd += CalculateFocusExecution;
         GameTimer.DayEnd += CalculateDecesionsRecharge;
         GameTimer.DayEnd += CalculateTraitsWorkTime;
+        GameTimer.DayEnd += CalculatePartiesPopularEveryday;
         if (Preset != null)
         {
-            foreach (var party in Preset.Parties)
+            var maxPercent = 100f;
+            foreach (var party in PoliticsDataSO.GetInstance().PoliticalParties)
             {
-                Parties.Add(new PartyPopular(party.ProcentPopularity, party.Name, party.PartyColor, party.PartyIdeology));
+                var percent = UnityEngine.Random.Range(0f, maxPercent);
+                maxPercent -= percent;
+                Parties.Add(new PartyPopular(percent, party.Name, party.PartyColor, party.PartyIdeology));
             }
         }
         Decisions.AddRange(PoliticsDataSO.GetInstance().StandartDecisions);
@@ -205,6 +209,7 @@ public class CountryPolitics
             otherParty.ChangePopular(-(addProcent / otherParties.Count));
         });
         Parties.Find(pr => pr.Name == partyName).ChangePopular(addProcent);
+        OnUpdatePartiesPopular?.Invoke();
     }
 
     public float ApplyPolitPowerGrowthEffects(float baseGrowth)
@@ -387,6 +392,15 @@ public class CountryPolitics
             }
         }
         _countryTraitsSlots.RemoveAll(traitSlot => forRemove.Contains(traitSlot));
+    }
+
+    private void CalculatePartiesPopularEveryday()
+    {
+        var partyPopularChangeEffects = GetAllConstantEffectsWithType<EverydayChangePartyPopularConstantEffect>();
+        foreach (var effect in partyPopularChangeEffects)
+        {
+            AddPartyPopular(effect.Party.PartyIdeology, effect.EverydayChangePopular);
+        }
     }
 
     private void ExecuteFocus(NationalFocus nationalFocus)

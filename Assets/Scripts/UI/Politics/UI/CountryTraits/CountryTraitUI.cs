@@ -22,7 +22,7 @@ public class CountryTraitUI : MonoBehaviour
             }
             foreach (var effect in trait.CountryTraitEffects)
             {
-                menu.AddSimpleText(effect.GetEffectDescription());
+                menu.AddSimpleText(effect.GetEffectDescription(), false);
             }
         });
     }

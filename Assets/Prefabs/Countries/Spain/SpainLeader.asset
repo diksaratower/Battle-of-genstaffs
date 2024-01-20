@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Traits: []
   ID: huan_negrin
-  _standartPortrait: {fileID: 21300000, guid: 5bb2666196bce864cbecc133b9ba691c, type: 3}
-  _name: "\u0425\u0443\u0430\u043D \u041D\u0435\u0433\u0440\u0438\u043D"
+  _standartPortrait: {fileID: 21300000, guid: 95c5bc0e42b0c2647b7c3598462fca8f, type: 3}
+  _name: "\u0424\u0440\u0430\u043D\u0441\u0438\u0441\u043A\u043E \u041B\u0430\u0440\u0433\u043E"

@@ -1,5 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -46,6 +46,10 @@ public class PolticsUI : MonoBehaviour
         {
             _decisionsUI.RefreshUI(this);
         };
+        _country.Politics.OnUpdatePartiesPopular += delegate 
+        {
+            UpdatePartiesPopular();
+        };
     }
 
     private void Update()
@@ -63,10 +67,10 @@ public class PolticsUI : MonoBehaviour
         _countryFlag.sprite = _country.Flag;
         _countryNameText.text = _country.Name;
         RefreshAdvisers();
-        _partiesPopularityChartUI.RefreshUI(_country.Politics.Parties);
-        _aboutCountryText.text = @$"Выборы: {_country.Politics.ElectionsType}
-Форма правления: {_country.Politics.FormGovernment}
-Идеалогия: {_country.Politics.CountryIdeology}";
+       
+        _aboutCountryText.text = @$"Выборы: {UtilsPoliticsUI.ElectionTypeToString(_country.Politics.ElectionsType)}
+Форма правления: {UtilsPoliticsUI.FormOfGovernmentToString(_country.Politics.FormGovernment)}
+Идеалогия: {UtilsPoliticsUI.IdeologyToString(_country.Politics.CountryIdeology)}";
         _leaderName.text = _country.Politics.CountryLeader.Name;
         _leaderPortrait.sprite = _country.Politics.CountryLeader.Portrait;
         UpdatePartiesPopular();
@@ -102,12 +106,15 @@ public class PolticsUI : MonoBehaviour
     {
         _partiesReviewTexts.ForEach(prt => Destroy(prt.gameObject));
         _partiesReviewTexts.Clear();
-        foreach (var party in _country.Politics.Parties)
+        var sortedParties = _country.Politics.Parties.OrderBy(party => -party.ProcentPopularity).ToList();
+        foreach (var party in sortedParties)
         {
             var text = Instantiate(_partiesReviewTextPrefab, _partiesReviewLayoutGroup.transform);
             text.text = $"{party.Name} {System.Math.Round(party.ProcentPopularity, 2)}%";
             _partiesReviewTexts.Add(text);
         }
+        LayoutRebuilder.ForceRebuildLayoutImmediate(_partiesReviewLayoutGroup.transform as RectTransform);
+        _partiesPopularityChartUI.RefreshUI(_country.Politics.Parties);
     }
 
     private void UpdateFocusExecuteView()
@@ -182,5 +189,49 @@ public class PolticsUI : MonoBehaviour
         conscriptionMenu.CreateMenu(_changeLawsMeniesParent, conscriptionLawChangeData, this);
 
         _advisersUI.Add(conscriptionMenu.gameObject);
+    }
+}
+
+public class UtilsPoliticsUI
+{
+    private UtilsPoliticsUI() 
+    {
+    }
+
+    public static string FormOfGovernmentToString(FormOfGovernment formOfGovernment)
+    {
+        var formGovernmentString = "";
+        if (formOfGovernment == FormOfGovernment.Dictatorship)
+        {
+            formGovernmentString = "Диктатура";
+        }
+        if (formOfGovernment == FormOfGovernment.Monarchy)
+        {
+            formGovernmentString = "Монархия";
+        }
+        if (formOfGovernment == FormOfGovernment.Democracy)
+        {
+            formGovernmentString = "Демократия";
+        }
+        return formGovernmentString;
+    }
+
+    public static string ElectionTypeToString(CuntryElectionsType electionsType)
+    {
+        var electionString = "";
+        if (electionsType == CuntryElectionsType.Constantly)
+        {
+            electionString = "Регулярно";
+        }
+        if (electionsType == CuntryElectionsType.NoElections)
+        {
+            electionString = "Нет";
+        }
+        return electionString;
+    }
+
+    public static string IdeologyToString(Ideology countryIdeology)
+    {
+        return PoliticsDataSO.GetInstance().PoliticalParties.Find(party => party.PartyIdeology == countryIdeology).Name;
     }
 }

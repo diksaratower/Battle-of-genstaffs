@@ -59,3 +59,10 @@ MonoBehaviour:
   StandartDecisions:
   - {fileID: 11400000, guid: d94939ea51a3d0d49af6590086b462fd, type: 2}
   - {fileID: 11400000, guid: a8467b987f513f24d81e815f0a62170a, type: 2}
+  PoliticalParties:
+  - {fileID: 11400000, guid: 7eaf6039ed787f146a80c77bf93a5ca5, type: 2}
+  - {fileID: 11400000, guid: bcd627dc3b6c0d546b09a7b75659dc9a, type: 2}
+  - {fileID: 11400000, guid: 40c4cb8fc5757ed48936578e26f87cf5, type: 2}
+  - {fileID: 11400000, guid: 32500fa4d455fed439f00f44d06a33e4, type: 2}
+  - {fileID: 11400000, guid: f4814a8701f489f4ba3b8bbb389eb6bb, type: 2}
+  - {fileID: 11400000, guid: 8c58c1c45b1dd1a41a84e7c550bc9128, type: 2}

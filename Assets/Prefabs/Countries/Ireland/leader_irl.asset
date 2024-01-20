@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Traits: []
   ID: imon_de_valera
-  _standartPortrait: {fileID: 21300000, guid: ecaae47b6b646ff449c15cabbc012127, type: 3}
+  _standartPortrait: {fileID: 21300000, guid: 6c71591a13468344ab3d44b6ffeb68a1, type: 3}
   _name: "\u0418\u043C\u043E\u043D \u0434\u0435 \u0412\u0430\u043B\u0435\u0440\u0430 "

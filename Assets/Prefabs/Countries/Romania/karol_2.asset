@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Traits: []
   ID: karol_2
-  _standartPortrait: {fileID: 21300000, guid: 5bb2666196bce864cbecc133b9ba691c, type: 3}
+  _standartPortrait: {fileID: 21300000, guid: d82918a26892e784e8678ab2084ea072, type: 3}
   _name: "\u041A\u0430\u0440\u043E\u043B\u044C II"
