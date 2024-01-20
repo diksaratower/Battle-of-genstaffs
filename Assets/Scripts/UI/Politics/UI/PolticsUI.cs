@@ -69,7 +69,6 @@ public class PolticsUI : MonoBehaviour
         RefreshAdvisers();
        
         _aboutCountryText.text = @$"Выборы: {UtilsPoliticsUI.ElectionTypeToString(_country.Politics.ElectionsType)}
-Форма правления: {UtilsPoliticsUI.FormOfGovernmentToString(_country.Politics.FormGovernment)}
 Идеалогия: {UtilsPoliticsUI.IdeologyToString(_country.Politics.CountryIdeology)}";
         _leaderName.text = _country.Politics.CountryLeader.Name;
         _leaderPortrait.sprite = _country.Politics.CountryLeader.Portrait;
@@ -196,24 +195,6 @@ public class UtilsPoliticsUI
 {
     private UtilsPoliticsUI() 
     {
-    }
-
-    public static string FormOfGovernmentToString(FormOfGovernment formOfGovernment)
-    {
-        var formGovernmentString = "";
-        if (formOfGovernment == FormOfGovernment.Dictatorship)
-        {
-            formGovernmentString = "Диктатура";
-        }
-        if (formOfGovernment == FormOfGovernment.Monarchy)
-        {
-            formGovernmentString = "Монархия";
-        }
-        if (formOfGovernment == FormOfGovernment.Democracy)
-        {
-            formGovernmentString = "Демократия";
-        }
-        return formGovernmentString;
     }
 
     public static string ElectionTypeToString(CuntryElectionsType electionsType)

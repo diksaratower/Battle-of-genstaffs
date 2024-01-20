@@ -42,7 +42,6 @@ public class DiplomacyWindowUI : MonoBehaviour
         _relationsText.text = "Отношения: " + playerRelation.Relation;
         _aboutCountryText.text = @$"
 Выборы: {UtilsPoliticsUI.ElectionTypeToString(targetCountry.Politics.ElectionsType)}
-Форма правления: {UtilsPoliticsUI.FormOfGovernmentToString(targetCountry.Politics.FormGovernment)}
 Идеалогия: {UtilsPoliticsUI.IdeologyToString(targetCountry.Politics.CountryIdeology)}
 ";
         _leaderNameText.text = targetCountry.Politics.CountryLeader.Name;

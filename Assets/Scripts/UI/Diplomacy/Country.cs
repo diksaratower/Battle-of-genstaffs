@@ -283,13 +283,6 @@ public enum Ideology
     Anarchy
 }
 
-public enum FormOfGovernment
-{
-    Dictatorship,
-    Democracy,
-    Monarchy
-}
-
 public enum CuntryElectionsType
 {
     NoElections,

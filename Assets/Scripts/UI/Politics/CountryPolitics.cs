@@ -19,7 +19,6 @@ public class CountryPolitics
     public ReadOnlyCollection<CountryTraitSlot> TraitSlots => _countryTraitsSlots.AsReadOnly();
 
     public Ideology CountryIdeology;
-    public FormOfGovernment FormGovernment;
     public CuntryElectionsType ElectionsType;
     public float PolitPower;
     public Personage CountryLeader;
@@ -74,7 +73,6 @@ public class CountryPolitics
     {
         Preset = original.Preset;
         CountryIdeology = original.CountryIdeology;
-        FormGovernment = original.FormGovernment;
         ElectionsType = original.ElectionsType;
         CountryLeader = original.CountryLeader;
         BaseStability = Preset.BaseStability;
