@@ -1,25 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DecisionSlotUI : MonoBehaviour
-{
-    public Decision Target { get; set; }
 
+public class DecisionSlotUI : MonoBehaviour, IDecisionsUIViewSlot
+{
     [SerializeField] private TextMeshProUGUI _decisionText;
     [SerializeField] private TextMeshProUGUI _decisionCostText;
     [SerializeField] private Button _activateButton;
 
-    private void Start()
+
+    public void RefreshUI(Decision decision, PolticsUI politicsUI)
     {
-        _decisionText.text = Target.Name;
-        _decisionCostText.text = $"Стоимость: {Target.PolitPowerCost} полит. вл.";
+        _decisionText.text = decision.Name;
+        _decisionCostText.text = $"Стоимость: {decision.PolitPowerCost} полит. вл.";
         _activateButton.onClick.AddListener(delegate
         {
-            Target.ActivaieDecision(Player.CurrentCountry);
-            FindObjectOfType<PolticsUI>().RefreshUI();
+            Player.CurrentCountry.Politics.DoDecision(decision);
+            politicsUI.RefreshUI();
         });
+    }
+
+    GameObject IDecisionsUIViewSlot.GetSlotGO()
+    {
+        return gameObject;
     }
 }

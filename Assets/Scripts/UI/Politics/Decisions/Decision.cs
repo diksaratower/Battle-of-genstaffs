@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -7,7 +8,9 @@ public class Decision : ScriptableObject
 {
     public string Name;
     public int PolitPowerCost = 10;
-    public List<InstantEffect> Effects = new List<InstantEffect>(); 
+    public List<InstantEffect> Effects = new List<InstantEffect>();
+    public int RechargeTime;
+    public bool OnceAvailable;
 
 
     public void ActivaieDecision(Country country)
@@ -17,7 +20,7 @@ public class Decision : ScriptableObject
             return;
         }
         country.Politics.PolitPower -= PolitPowerCost;
-        foreach (InstantEffect effect in Effects) 
+        foreach (InstantEffect effect in Effects)
         {
             effect.DoEffect(country);
         }

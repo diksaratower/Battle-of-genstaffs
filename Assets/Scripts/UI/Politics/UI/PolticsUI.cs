@@ -29,6 +29,7 @@ public class PolticsUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _executionFocusName;
     [SerializeField] private Sprite _nullFocusSprite;
     [SerializeField] private CountryTraitsViewUI _countryTraitsViewUI;
+    [SerializeField] private DecisionsUI _decisionsUI;
 
     private List<TextMeshProUGUI> _partiesReviewTexts = new List<TextMeshProUGUI>();
     private List<GameObject> _advisersUI = new List<GameObject>();
@@ -40,7 +41,11 @@ public class PolticsUI : MonoBehaviour
         _openNationalFocusesTree.onClick.AddListener(delegate { 
         _nationalFocuseseWindow.gameObject.SetActive(true);
         });
-
+        _decisionsUI.RefreshUI(this);
+        _country.Politics.OnUpdateBlockedDecisions += delegate
+        {
+            _decisionsUI.RefreshUI(this);
+        };
     }
 
     private void Update()

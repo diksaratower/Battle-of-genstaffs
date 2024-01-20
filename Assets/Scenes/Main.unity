@@ -6559,6 +6559,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaterBlock_50m
       objectReference: {fileID: 0}
+    - target: {fileID: 1507636620937791836, guid: 7097ba7ba649e1f41bba232312bdcbd8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -39587,6 +39592,7 @@ MonoBehaviour:
   _executionFocusName: {fileID: 765013673}
   _nullFocusSprite: {fileID: 21300000, guid: b089ac5bd81a59543a6d70f739a9d1c6, type: 3}
   _countryTraitsViewUI: {fileID: 139028919}
+  _decisionsUI: {fileID: 1794622130}
 --- !u!1 &1296371311
 GameObject:
   m_ObjectHideFlags: 0
@@ -52417,6 +52423,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _slotPrefab: {fileID: 4413414363760183179, guid: 244ce9ffb21320e4aab2f6d69e3a46f5,
     type: 3}
+  _blockedSlotPrefab: {fileID: 1971523462893383567, guid: 5d515c6f5405785428bfaa092515b2fa,
+    type: 3}
   _slotsParent: {fileID: 1743146941}
 --- !u!114 &1794622131
 MonoBehaviour:
@@ -63935,7 +63943,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f2c38ffb1bfe4f341a3014b6b8caba95, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

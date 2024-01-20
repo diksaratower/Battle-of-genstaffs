@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c0704b7ae05944b9587fbe32331f22, type: 3}
   m_Name: Lucas Davis
   m_EditorClassIdentifier: 
-  Traits: []
+  Traits:
+  - {fileID: 11400000, guid: d0fc03b16f9a131468a95b088eea3233, type: 2}
   ID: lucas_davis
   _standartPortrait: {fileID: 21300000, guid: f1936859beb0569418afd18fcfc86bb3, type: 3}
   _name: 'Lucas Davis '

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b990cbe39c337654ab9bb6a42c45122c, type: 3}
   m_Name: DivisionAttackTraitEffect
   m_EditorClassIdentifier: 
-  AddedAttackPercent: 0
+  AddedAttackPercent: -4

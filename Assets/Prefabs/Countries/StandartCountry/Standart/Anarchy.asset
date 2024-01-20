@@ -10,19 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cff5c8c1db0a89478190a4e7ccae645, type: 3}
-  m_Name: FascismFocus
+  m_Name: Anarchy
   m_EditorClassIdentifier: 
-  Name: "\u0422\u0440\u0435\u0442\u0438\u0439 \u043F\u0443\u0442\u044C"
+  Name: "\u0410\u043D\u0430\u0440\u0445\u0438\u044F"
   Description: 
-  ID: fascism_focus
-  Image: {fileID: 21300000, guid: a28efb727b1c4684281d313d4f7fa6bb, type: 3}
+  ID: anarchy
+  Image: {fileID: 21300000, guid: 1aa9023e55976fa4685c35d10a3ffb9d, type: 3}
   ExecutionDurationDay: 60
   NeedsForExecution:
   - {fileID: 11400000, guid: 346408a92856b3a4bbca4be6a55f2c37, type: 2}
   ConflictWithFocuses:
-  - {fileID: 11400000, guid: 44ad88d5ca7008e46b3a1e142991e0b0, type: 2}
   - {fileID: 11400000, guid: 5b19a20a96f92b5409c8cce4284fe02e, type: 2}
   - {fileID: 11400000, guid: 9a9ac95c32252ab498948d683bd38ddf, type: 2}
-  FocusEffects:
-  - {fileID: 11400000, guid: 8f7e8906cae74ab4abf726a65d897578, type: 2}
-  - {fileID: 11400000, guid: bd6cb253bbca0ee48b8ae92151253eab, type: 2}
+  - {fileID: 11400000, guid: 6fe836c93c4037942afe737ae05b8b36, type: 2}
+  FocusEffects: []

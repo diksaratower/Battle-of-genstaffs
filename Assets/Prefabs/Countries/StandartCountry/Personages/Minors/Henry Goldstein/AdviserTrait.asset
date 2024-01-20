@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5e6196330fba344a6d8d98c753f50d, type: 3}
   m_Name: AdviserTrait
   m_EditorClassIdentifier: 
-  TraitName: 
-  TraitEffects: []
+  TraitName: "\u0423\u0447\u0451\u043D\u044B\u0439 \u043F\u0430\u0446\u0438\u0444\u0438\u0441\u0442"
+  TraitEffects:
+  - {fileID: 11400000, guid: c7d7da00ee5d0c747b033597e961f46a, type: 2}
+  - {fileID: 11400000, guid: e6813e9b46aed7b4e972510175708df9, type: 2}

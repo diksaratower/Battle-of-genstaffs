@@ -22,6 +22,8 @@ public class CountryPolitics
     public Personage CountryLeader;
     public CountryPoliticsPreset Preset;
     public Action OnFocusExecuted;
+    public Action OnUpdateBlockedDecisions;
+    public List<DecisionsBlockSlot> BlockedDecisions = new List<DecisionsBlockSlot>();
 
     [HideInInspector] public List<Decision> Decisions = new List<Decision>();
     [HideInInspector] public List<Personage> Advisers = new List<Personage>();
@@ -37,6 +39,7 @@ public class CountryPolitics
         _country = country;
         GameTimer.DayEnd += CalculatePolitPowerGrowth;
         GameTimer.DayEnd += CalculateFocusExecution;
+        GameTimer.DayEnd += CalculateDecesionsRecharge;
         if (Preset != null)
         {
             foreach (var party in Preset.Parties)
@@ -105,6 +108,35 @@ public class CountryPolitics
     {
         PolitPower -= AdviserAddCost;
         Advisers.Add(personage);
+    }
+
+    public void DoDecision(Decision decision)
+    {
+        if (Decisions.Contains(decision) == false)
+        {
+            throw new Exception("It is not country decision.");
+        }
+        if (BlockedDecisions.Exists(blockDecision => blockDecision.Decision == decision))
+        {
+            throw new Exception("Decision is blocked.");
+        }
+
+        decision.ActivaieDecision(_country);
+
+        if (decision.OnceAvailable)
+        {
+            BlockedDecisions.Add(new DecisionsBlockSlot(decision, true));
+            OnUpdateBlockedDecisions?.Invoke();
+        }
+        if (decision.RechargeTime != 0 || !decision.OnceAvailable)
+        {
+            if (decision.RechargeTime < 0)
+            {
+                throw new System.Exception("Negative decision recharge time");
+            }
+            BlockedDecisions.Add(new DecisionsBlockSlot(decision, false));
+            OnUpdateBlockedDecisions?.Invoke();
+        }
     }
 
     public void ChangeCurrentEconomicLaw(Law law)
@@ -305,6 +337,27 @@ public class CountryPolitics
         }
     }
 
+    private void CalculateDecesionsRecharge()
+    {
+        var forRemove = new List<DecisionsBlockSlot>();
+        foreach (var blockedDecision in BlockedDecisions)
+        {
+            if (blockedDecision.InfinityBlock == false)
+            {
+                blockedDecision.RechargeTimeLeftDays -= 1;
+                if (blockedDecision.RechargeTimeLeftDays <= 0)
+                {
+                    forRemove.Add(blockedDecision);
+                }
+            }
+        }
+        BlockedDecisions.RemoveAll(blockedDecision => forRemove.Contains(blockedDecision));
+        if (forRemove.Count > 0)
+        {
+            OnUpdateBlockedDecisions?.Invoke();
+        }
+    }
+
     private void ExecuteFocus(NationalFocus nationalFocus)
     {
         _executedFocuses.Add(nationalFocus);
@@ -454,3 +507,20 @@ public interface IHavingConstantPoliticsEffect
 {
     public List<T> GetEffects<T>() where T : ConstantEffect;
 }
+
+public class DecisionsBlockSlot
+{
+    public int RechargeTimeLeftDays { get; set; }
+
+    public Decision Decision { get; }
+    public bool InfinityBlock { get; }
+
+
+    public DecisionsBlockSlot(Decision decision, bool infinityBlock)
+    {
+        Decision = decision;
+        RechargeTimeLeftDays = decision.RechargeTime;
+        InfinityBlock = infinityBlock;
+    }
+}
+

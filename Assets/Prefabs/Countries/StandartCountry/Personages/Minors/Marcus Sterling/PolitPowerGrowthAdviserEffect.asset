@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b168e7f5f9da8a9419ede47d55a5a11c, type: 3}
   m_Name: PolitPowerGrowthAdviserEffect
   m_EditorClassIdentifier: 
-  PolitPowerGrothIncreaseProcent: 10
+  PolitPowerGrothIncreaseProcent: -12

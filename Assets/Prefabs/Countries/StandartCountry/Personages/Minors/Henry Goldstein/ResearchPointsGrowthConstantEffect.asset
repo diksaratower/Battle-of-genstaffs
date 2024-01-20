@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09bfc376ef888834e97ce78091d95fa0, type: 3}
   m_Name: ResearchPointsGrowthConstantEffect
   m_EditorClassIdentifier: 
-  ResearchPointsGrothIncreaseProcent: 10
+  ResearchPointsGrothIncreaseProcent: 19

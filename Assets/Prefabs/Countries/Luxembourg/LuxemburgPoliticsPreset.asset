@@ -16,6 +16,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 68c7ad5bb0bf3dd4e93814ad53ae466a, type: 2}
   - {fileID: 11400000, guid: 87b14e70bbe550a4e83714dd6f506f50, type: 2}
   - {fileID: 11400000, guid: e747b63365d9ae643b59000f746e493b, type: 2}
+  - {fileID: 11400000, guid: cf769160d12b4b44da66d0f12e0a20f6, type: 2}
+  - {fileID: 11400000, guid: e1d162831d8364c4588a7c30abeb8092, type: 2}
+  - {fileID: 11400000, guid: 188940b4512f3df4cb69229bed7368f8, type: 2}
   Parties:
   - <ProcentPopularity>k__BackingField: 45
     PartyIdeology: 1

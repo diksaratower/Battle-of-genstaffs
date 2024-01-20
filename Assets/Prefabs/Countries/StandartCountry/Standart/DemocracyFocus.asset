@@ -20,6 +20,7 @@ MonoBehaviour:
   NeedsForExecution:
   - {fileID: 11400000, guid: 346408a92856b3a4bbca4be6a55f2c37, type: 2}
   ConflictWithFocuses:
+  - {fileID: 11400000, guid: 44ad88d5ca7008e46b3a1e142991e0b0, type: 2}
   - {fileID: 11400000, guid: 6fe836c93c4037942afe737ae05b8b36, type: 2}
   - {fileID: 11400000, guid: 5b19a20a96f92b5409c8cce4284fe02e, type: 2}
   FocusEffects:

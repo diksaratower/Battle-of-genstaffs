@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c0704b7ae05944b9587fbe32331f22, type: 3}
   m_Name: Marcus Sterling
   m_EditorClassIdentifier: 
-  Traits: []
-  ID: 
-  _standartPortrait: {fileID: 0}
-  _name: 
+  Traits:
+  - {fileID: 11400000, guid: cd62179daf6cf2a4d8ccbb076a97471c, type: 2}
+  ID: marcus_sterling
+  _standartPortrait: {fileID: 21300000, guid: 903224b52bc580b41b3a1670eaabd8c0, type: 3}
+  _name: Marcus Sterling
