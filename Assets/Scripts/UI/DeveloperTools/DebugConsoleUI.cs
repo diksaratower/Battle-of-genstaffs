@@ -13,6 +13,7 @@ public class DebugConsoleUI : MonoBehaviour
     [SerializeField] private Transform _textsParent;
     [SerializeField] private Toggle _activeProvinceChangeTool;
     [SerializeField] private ProvinceChangeTool _provinceChageTool;
+    [SerializeField] private CountriesDataSO _countriesDataSO;
 
 
     private void Start()
@@ -46,6 +47,14 @@ delete divs - удалить дивизию
 manpower - чуваков нарожать
 prom - промышленность
 pp_all_zero - всем полит власть на ноль");
+        }
+        if (text.StartsWith("copyparties"))
+        {
+            foreach (var countrySO in _countriesDataSO.Countries)
+            {
+                countrySO.Politics.PoliticalParty = PoliticsDataSO.GetInstance().PoliticalParties.Find(party => party.PartyIdeology == countrySO.Politics.CountryIdeology);
+            }
+            WriteTextToConsole("Скопированна информауия о партиях.");
         }
         if (text.StartsWith("echo"))
         {

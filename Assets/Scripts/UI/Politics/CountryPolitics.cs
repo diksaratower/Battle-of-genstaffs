@@ -18,6 +18,7 @@ public class CountryPolitics
     public ReadOnlyCollection<CountryTrait> Traits => GetCountryTraits();
     public ReadOnlyCollection<CountryTraitSlot> TraitSlots => _countryTraitsSlots.AsReadOnly();
 
+    public PoliticalParty PoliticalParty;
     public Ideology CountryIdeology;
     public CuntryElectionsType ElectionsType;
     public float PolitPower;
@@ -48,11 +49,13 @@ public class CountryPolitics
         GameTimer.DayEnd += CalculatePartiesPopularEveryday;
         if (Preset != null)
         {
-            var maxPercent = 100f;
             foreach (var party in PoliticsDataSO.GetInstance().PoliticalParties)
             {
-                var percent = UnityEngine.Random.Range(0f, maxPercent);
-                maxPercent -= percent;
+                var percent = 0f;
+                if (Preset.Parties.Exists(pr => pr.PartyIdeology == party.PartyIdeology))
+                {
+                    percent = Preset.Parties.Find(pr => pr.PartyIdeology == party.PartyIdeology).ProcentPopularity;
+                }
                 Parties.Add(new PartyPopular(percent, party.Name, party.PartyColor, party.PartyIdeology));
             }
         }
