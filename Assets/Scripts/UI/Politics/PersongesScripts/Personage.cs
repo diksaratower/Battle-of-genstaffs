@@ -11,8 +11,13 @@ public class Personage : ScriptableObject, IHavingConstantPoliticsEffect
     public List<PersonageTrait> Traits = new List<PersonageTrait>();
     public string ID;
 
+    public float AdviserCost => _adviserAddCost;
+
     [SerializeField] private Sprite _standartPortrait;
     [SerializeField] private string _name;
+
+    private const float _adviserAddCost = 130;
+
 
     public string GetName()
     {

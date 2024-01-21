@@ -13,22 +13,34 @@ public class AddAdviserButtonUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _costText;
     [SerializeField] private AdviserDataTooltipHandlerUI _tooltipHandler;
 
-    public void RefreshUI(Personage personage, PolticsUI polticsUI)
+    private Country _country;
+    private Personage _personage;
+
+
+    public void RefreshUI(Personage personage, PolticsUI polticsUI, Country country)
     {
+        _country = country;
+        _personage = personage;
         _nameText.text = personage.GetName();
         _adviserImage.sprite = personage.GetPortrait();
-        _costText.text = $"Стоимость: {CountryPolitics.AdviserAddCost} пв.";
+        _costText.text = $"Стоимость: {personage.AdviserCost} пв.";
         _tooltipHandler.SetAdviser(personage);
         var trait = personage.Traits.Find(tr => tr is AdviserTrait);
         if (trait != null)
         {
             _traitText.text = (trait as AdviserTrait).TraitName;
         }
-        _button.onClick.AddListener(() => polticsUI.AddAdviser(personage));
+        _button.onClick.AddListener(delegate 
+        {
+            if (_country.Politics.CanAddAdviser(_personage))
+            {
+                _country.Politics.AddAdviser(personage);
+            }
+        });
     }
 
     public void Update()
     {
-        _button.interactable = Player.CurrentCountry.Politics.PolitPower > CountryPolitics.AdviserAddCost;
+        _button.interactable = _country.Politics.CanAddAdviser(_personage);
     }
 }

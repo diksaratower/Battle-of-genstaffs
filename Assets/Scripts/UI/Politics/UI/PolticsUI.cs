@@ -38,22 +38,12 @@ public class PolticsUI : MonoBehaviour
     private void Start()
     {
         RefreshUI();
-        _openNationalFocusesTree.onClick.AddListener(delegate { 
+        _openNationalFocusesTree.onClick.AddListener(delegate 
+        { 
         _nationalFocuseseWindow.gameObject.SetActive(true);
         });
         _decisionsUI.RefreshUI(this);
-        _country.Politics.OnUpdateBlockedDecisions += delegate
-        {
-            _decisionsUI.RefreshUI(this);
-        };
-        _country.Politics.OnUpdatePartiesPopular += delegate 
-        {
-            UpdatePartiesPopular();
-        };
-        _country.Politics.OnFocusExecuted += delegate 
-        {
-            RefreshUI();
-        };
+        AddActionsListeners();
     }
 
     private void Update()
@@ -79,21 +69,6 @@ public class PolticsUI : MonoBehaviour
         UpdatePartiesPopular();
     }
 
-    public bool CanAddAdviser(Personage adviser)
-    {
-        if(_country.Politics.PolitPower > 150)
-        {
-            return true;
-        }
-        return false;
-    }
-
-    public void AddAdviser(Personage adviser)
-    {
-        _country.Politics.AddAdviser(adviser);
-        RefreshAdvisers();
-    }
-
     public void CloseAllChangeWindows()
     {
         foreach (var advisersChange in _advisersUI)
@@ -103,6 +78,26 @@ public class PolticsUI : MonoBehaviour
                 lawChangerUI.CloseMenu();
             }
         }
+    }
+
+    private void AddActionsListeners()
+    {
+        _country.Politics.OnUpdateBlockedDecisions += delegate
+        {
+            _decisionsUI.RefreshUI(this);
+        };
+        _country.Politics.OnUpdatePartiesPopular += delegate
+        {
+            UpdatePartiesPopular();
+        };
+        _country.Politics.OnFocusExecuted += delegate
+        {
+            RefreshUI();
+        };
+        _country.Politics.OnAdvisersChange += delegate
+        {
+            RefreshAdvisers();
+        };
     }
 
     private void UpdatePartiesPopular() 
@@ -143,7 +138,7 @@ public class PolticsUI : MonoBehaviour
         foreach (var pers in _country.Politics.Advisers)
         {
             var adviserUI = Instantiate(_adviserUIPrefab, _advisersLayoutParent.transform);
-            adviserUI.RefreshUI(pers);
+            adviserUI.RefreshUI(pers, _country);
             _advisersUI.Add(adviserUI.gameObject);
         }
         if (_country.Politics.Advisers.Count < _advisersMaxCount)
@@ -159,7 +154,7 @@ public class PolticsUI : MonoBehaviour
                 _advisersUI.Add(addAdviserButton.gameObject);
             }
         }
-        _addAdviserMenu.RefreshUI(_country.Politics.Preset.AvailableAdvisers.FindAll(adv => !_country.Politics.Advisers.Contains(adv)));
+        _addAdviserMenu.RefreshUI(_country.Politics.Preset.AvailableAdvisers.FindAll(adv => !_country.Politics.Advisers.Contains(adv)), _country);
 
         AddLawsMenus();
         _countryTraitsViewUI.Refresh(_country);

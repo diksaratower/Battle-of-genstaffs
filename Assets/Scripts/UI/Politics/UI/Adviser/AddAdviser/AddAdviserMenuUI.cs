@@ -11,14 +11,14 @@ public class AddAdviserMenuUI : MonoBehaviour
 
     private List<AddAdviserButtonUI> _addAdvisersUI = new List<AddAdviserButtonUI>();
 
-    public void RefreshUI(List<Personage> advisers)
+    public void RefreshUI(List<Personage> advisers, Country country)
     {
         _addAdvisersUI.ForEach(adv => Destroy(adv.gameObject));
         _addAdvisersUI.Clear();
         foreach (var pers in advisers)
         {
             var slot = Instantiate(_addAdviserUIPrefab, _addAdvisersLayoutParent.transform);
-            slot.RefreshUI(pers, _poiliticsUI);
+            slot.RefreshUI(pers, _poiliticsUI, country);
             _addAdvisersUI.Add(slot);
         }
     }

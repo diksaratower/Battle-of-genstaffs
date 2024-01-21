@@ -2,13 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using UnityEngine;
-using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 
 [Serializable]
 public class CountryPolitics 
 {
-    public static readonly float AdviserAddCost = 20;
     public NationalFocus ExecutingFocus { get; private set; }
     public float BaseStability { get; private set; }
     public float PolitPowerGrowthSpeed => 0.7f;
@@ -21,6 +19,7 @@ public class CountryPolitics
     public ReadOnlyCollection<CountryTraitSlot> TraitSlots => _countryTraitsSlots.AsReadOnly();
     public Ideology CountryIdeology => RulingParty.PartyIdeology;
     public CountryElectionsType ElectionsType => RulingParty.ElectionType;
+    public ReadOnlyCollection<Personage> Advisers => new ReadOnlyCollection<Personage>(_advisers);
 
     public float PolitPower;
     public Personage CountryLeader;
@@ -28,15 +27,17 @@ public class CountryPolitics
     public Action OnFocusExecuted;
     public Action OnUpdateBlockedDecisions;
     public Action OnUpdatePartiesPopular;
+    public Action OnAdvisersChange;
     public List<DecisionsBlockSlot> BlockedDecisions = new List<DecisionsBlockSlot>();
 
     [HideInInspector] public List<Decision> Decisions = new List<Decision>();
-    [HideInInspector] public List<Personage> Advisers = new List<Personage>();
     [HideInInspector] public List<PartyPopular> Parties = new List<PartyPopular>();
 
+    private List<Personage> _advisers = new List<Personage>();
     private List<CountryTraitSlot> _countryTraitsSlots = new List<CountryTraitSlot>();
     private List<NationalFocus> _executedFocuses = new List<NationalFocus>();
     private int _executingFocusProgressDays = 0;
+    private const int _maxAdvisersCount = 4;
     private Country _country;
 
 
@@ -130,10 +131,39 @@ public class CountryPolitics
         return (((float)_executingFocusProgressDays) / ((float)ExecutingFocus.ExecutionDurationDay));
     }
 
+    public bool CanAddAdviser(Personage adviser)
+    {
+        if (PolitPower < adviser.AdviserCost)
+        {
+            return false;
+        }
+        if (_advisers.Count >= _maxAdvisersCount)
+        {
+            return false;
+        }
+        return true;
+    }
+
     public void AddAdviser(Personage personage)
     {
-        PolitPower -= AdviserAddCost;
-        Advisers.Add(personage);
+        if (_advisers.Count >= _maxAdvisersCount)
+        {
+            Debug.LogError("The maximum number of advisors has been exceeded.");
+            return;
+        }
+        PolitPower -= personage.AdviserCost;
+        _advisers.Add(personage);
+        OnAdvisersChange?.Invoke();
+    }
+
+    public void RemoveAdviser(Personage personage)
+    {
+        if (_advisers.Contains(personage) == false)
+        {
+            throw new Exception("Personage is not current adviser.");
+        }
+        _advisers.Remove(personage);
+        OnAdvisersChange?.Invoke();
     }
 
     public void AddTrait(CountryTrait countryTrait)
