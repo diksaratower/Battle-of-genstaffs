@@ -104,12 +104,11 @@ public class Country : MonoBehaviour
         return result;
     }
 
-    public void SetPreset(CountrySO country)
+    public void SetPreset(CountrySO countrySO)
     {
-        CountryPreset = country;
+        CountryPreset = countrySO;
         Politics = new CountryPolitics();
-        Politics.CopyData(country.Politics, country.RulingPoliticalParty);
-        Politics.Setup(this);
+        Politics.Setup(this, countrySO);
     }
 
     public bool CountryDivsCanFightWithDiv(Division division)

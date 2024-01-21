@@ -13,15 +13,8 @@ MonoBehaviour:
   m_Name: porCountrySO
   m_EditorClassIdentifier: 
   Politics:
-    CountryIdeology: 0
-    ElectionsType: 0
-    PolitPower: 0
-    CountryLeader: {fileID: 11400000, guid: 899d80a51479cf84fab69273eaa9a5e2, type: 2}
     Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}
-    RulingParty: {fileID: 0}
-    Decisions: []
-    Advisers: []
-    Parties: []
+    PolitPower: 0
   Name: "\u041F\u043E\u0440\u0442\u0443\u0433\u0430\u043B\u0438\u044F"
   ID: por
   ColorInMap: {r: 0, g: 0.4627451, b: 0.29270798, a: 1}
@@ -33,3 +26,4 @@ MonoBehaviour:
   HistoryIdealogyForAI: 0
   RulingPoliticalParty: {fileID: 11400000, guid: 7eaf6039ed787f146a80c77bf93a5ca5,
     type: 2}
+  Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}

@@ -13,15 +13,8 @@ MonoBehaviour:
   m_Name: romCountrySO
   m_EditorClassIdentifier: 
   Politics:
-    CountryIdeology: 1
-    ElectionsType: 1
-    PolitPower: 0
-    CountryLeader: {fileID: 11400000, guid: 1420e559781018b4b8e73da9beac0224, type: 2}
     Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}
-    RulingParty: {fileID: 0}
-    Decisions: []
-    Advisers: []
-    Parties: []
+    PolitPower: 0
   Name: "\u0420\u0443\u043C\u044B\u043D\u0438\u044F"
   ID: rom
   ColorInMap: {r: 0, g: 0.396525, b: 0.44313726, a: 1}
@@ -33,3 +26,4 @@ MonoBehaviour:
   HistoryIdealogyForAI: 0
   RulingPoliticalParty: {fileID: 11400000, guid: bcd627dc3b6c0d546b09a7b75659dc9a,
     type: 2}
+  Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}

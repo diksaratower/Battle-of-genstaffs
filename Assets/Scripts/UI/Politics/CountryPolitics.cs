@@ -16,6 +16,7 @@ public class CountryPolitics
     public Law Current—onscriptionLaw { get; private set; }
     public PoliticalParty RulingParty { get; private set; }
     public Personage CountryLeader { get; private set; }
+    public CountryPoliticsPreset Preset { get; private set; }
     public ReadOnlyCollection<CountryTrait> Traits => GetCountryTraits();
     public ReadOnlyCollection<CountryTraitSlot> TraitSlots => _countryTraitsSlots.AsReadOnly();
     public Ideology CountryIdeology => RulingParty.PartyIdeology;
@@ -24,7 +25,6 @@ public class CountryPolitics
     public ReadOnlyCollection<PartyPopular> PartiesPopularData => _partiesPopularsData.AsReadOnly();
     public ReadOnlyCollection<Decision> Decisions => _decisions.AsReadOnly();
 
-    public CountryPoliticsPreset Preset;
     public float PolitPower;
     public Action OnFocusExecuted;
     public Action OnUpdateBlockedDecisions;
@@ -43,7 +43,7 @@ public class CountryPolitics
     private Country _country;
 
 
-    public void Setup(Country country)
+    public void Setup(Country country, CountrySO countrySO)
     {
         _country = country;
         GameTimer.DayEnd += CalculatePolitPowerGrowth;
@@ -51,6 +51,10 @@ public class CountryPolitics
         GameTimer.DayEnd += CalculateDecesionsRecharge;
         GameTimer.DayEnd += CalculateTraitsWorkTime;
         GameTimer.DayEnd += CalculatePartiesPopularEveryday;
+        Preset = countrySO.Preset;
+        RulingParty = countrySO.RulingPoliticalParty;
+        CountryLeader = countrySO.CountryLeader;
+        BaseStability = Preset.BaseStability;
         if (Preset != null)
         {
             foreach (var party in PoliticsDataSO.GetInstance().PoliticalParties)
@@ -74,14 +78,6 @@ public class CountryPolitics
         {
             AddTrait(trait);
         }
-    }
-
-    public void CopyData(CountryPolitics original, PoliticalParty politicalParty)
-    {
-        Preset = original.Preset;
-        RulingParty = politicalParty;
-        CountryLeader = original.CountryLeader;
-        BaseStability = Preset.BaseStability;
     }
 
     public void SetExecutingFocus(NationalFocus focus)

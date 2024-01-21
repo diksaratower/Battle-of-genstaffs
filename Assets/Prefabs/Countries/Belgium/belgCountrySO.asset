@@ -13,15 +13,8 @@ MonoBehaviour:
   m_Name: belgCountrySO
   m_EditorClassIdentifier: 
   Politics:
-    CountryIdeology: 1
-    ElectionsType: 1
-    PolitPower: 0
-    CountryLeader: {fileID: 11400000, guid: 9ed695c12a6203e4da7860f6063fe51c, type: 2}
     Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}
-    RulingParty: {fileID: 0}
-    Decisions: []
-    Advisers: []
-    Parties: []
+    PolitPower: 0
   Name: "\u0411\u0435\u043B\u044C\u0433\u0438\u044F"
   ID: belg
   ColorInMap: {r: 0.32580093, g: 0.21938412, b: 0.5471698, a: 1}
@@ -33,3 +26,4 @@ MonoBehaviour:
   HistoryIdealogyForAI: 1
   RulingPoliticalParty: {fileID: 11400000, guid: bcd627dc3b6c0d546b09a7b75659dc9a,
     type: 2}
+  Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}

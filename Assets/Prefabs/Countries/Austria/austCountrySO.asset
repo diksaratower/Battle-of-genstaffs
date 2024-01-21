@@ -13,15 +13,8 @@ MonoBehaviour:
   m_Name: austCountrySO
   m_EditorClassIdentifier: 
   Politics:
-    CountryIdeology: 0
-    ElectionsType: 0
-    PolitPower: 0
-    CountryLeader: {fileID: 11400000, guid: 68bda34f50aaebc478ccabac2fa3e2af, type: 2}
     Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}
-    RulingParty: {fileID: 0}
-    Decisions: []
-    Advisers: []
-    Parties: []
+    PolitPower: 0
   Name: "\u0410\u0432\u0441\u0442\u0440\u0438\u044F"
   ID: aust
   ColorInMap: {r: 0, g: 0.22396983, b: 0.46226418, a: 1}
@@ -33,3 +26,4 @@ MonoBehaviour:
   HistoryIdealogyForAI: 1
   RulingPoliticalParty: {fileID: 11400000, guid: 7eaf6039ed787f146a80c77bf93a5ca5,
     type: 2}
+  Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}

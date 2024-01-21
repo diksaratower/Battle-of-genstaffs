@@ -13,15 +13,8 @@ MonoBehaviour:
   m_Name: irlCountrySO
   m_EditorClassIdentifier: 
   Politics:
-    CountryIdeology: 1
-    ElectionsType: 1
-    PolitPower: 0
-    CountryLeader: {fileID: 11400000, guid: dda58c076b0d4d64587c0732e552b961, type: 2}
     Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}
-    RulingParty: {fileID: 0}
-    Decisions: []
-    Advisers: []
-    Parties: []
+    PolitPower: 0
   Name: "\u0418\u0440\u043B\u0430\u043D\u0434\u0438\u044F"
   ID: irl
   ColorInMap: {r: 0.32188803, g: 0.49056602, b: 0, a: 1}
@@ -33,3 +26,4 @@ MonoBehaviour:
   HistoryIdealogyForAI: 1
   RulingPoliticalParty: {fileID: 11400000, guid: bcd627dc3b6c0d546b09a7b75659dc9a,
     type: 2}
+  Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}

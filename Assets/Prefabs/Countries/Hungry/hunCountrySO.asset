@@ -13,15 +13,8 @@ MonoBehaviour:
   m_Name: hunCountrySO
   m_EditorClassIdentifier: 
   Politics:
-    CountryIdeology: 0
-    ElectionsType: 0
-    PolitPower: 0
-    CountryLeader: {fileID: 11400000, guid: de4f3a5f1c5a581448e7d0e63af1c72c, type: 2}
     Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}
-    RulingParty: {fileID: 0}
-    Decisions: []
-    Advisers: []
-    Parties: []
+    PolitPower: 0
   Name: "\u0412\u0435\u043D\u0433\u0440\u0438\u044F"
   ID: hun
   ColorInMap: {r: 0.58004916, g: 0.50387144, b: 0.6320754, a: 1}
@@ -33,3 +26,4 @@ MonoBehaviour:
   HistoryIdealogyForAI: 0
   RulingPoliticalParty: {fileID: 11400000, guid: 7eaf6039ed787f146a80c77bf93a5ca5,
     type: 2}
+  Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}

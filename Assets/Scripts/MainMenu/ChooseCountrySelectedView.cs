@@ -17,8 +17,8 @@ public class ChooseCountrySelectedView : MonoBehaviour
         _chooseDifficultiesUI.RefreshUI();
         _countryNameText.text = country.Name;
         _flagImage.sprite = country.CountryFlag;
-        _leaderImage.sprite = country.Politics.CountryLeader.Portrait;
-        _leaderNameText.text = country.Politics.CountryLeader.Name;
+        _leaderImage.sprite = country.CountryLeader.Portrait;
+        _leaderNameText.text = country.CountryLeader.Name;
         _startWithCountryButton.onClick.RemoveAllListeners();//чтобы не загружалась левая страна
         _startWithCountryButton.onClick.AddListener(delegate 
         {

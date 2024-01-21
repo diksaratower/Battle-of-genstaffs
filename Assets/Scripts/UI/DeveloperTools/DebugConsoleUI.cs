@@ -55,7 +55,7 @@ pp_all_zero - всем полит власть на ноль");
             foreach (var countrySO in _countriesDataSO.Countries)
             {
                 AssetDatabase.StartAssetEditing();
-                countrySO.RulingPoliticalParty = PoliticsDataSO.GetInstance().PoliticalParties.Find(party => party.PartyIdeology == countrySO.Politics.CountryIdeology);
+                //countrySO.RulingPoliticalParty = PoliticsDataSO.GetInstance().PoliticalParties.Find(party => party.PartyIdeology == countrySO.Politics.CountryIdeology);
                 AssetDatabase.StopAssetEditing();
                 EditorUtility.SetDirty(countrySO);
                 AssetDatabase.SaveAssets();
@@ -69,7 +69,7 @@ pp_all_zero - всем полит власть на ноль");
             foreach (var countrySO in _countriesDataSO.Countries)
             {
                 AssetDatabase.StartAssetEditing();
-                countrySO.Preset = countrySO.Politics.Preset;
+                //countrySO.Preset = countrySO.Politics.Preset;
                 AssetDatabase.StopAssetEditing();
                 EditorUtility.SetDirty(countrySO);
                 AssetDatabase.SaveAssets();

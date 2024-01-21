@@ -13,7 +13,7 @@ public class ChooseCountryMajorViewSlot : MonoBehaviour
     {
         _countryNameText.text = country.Name;
         _flagImage.sprite = country.CountryFlag;
-        _leaderPortraitImage.sprite = country.Politics.CountryLeader.Portrait;
+        _leaderPortraitImage.sprite = country.CountryLeader.Portrait;
 
         _selectCountryButton.onClick.AddListener(delegate 
         {

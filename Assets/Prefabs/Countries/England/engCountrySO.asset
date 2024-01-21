@@ -13,15 +13,8 @@ MonoBehaviour:
   m_Name: engCountrySO
   m_EditorClassIdentifier: 
   Politics:
-    CountryIdeology: 1
-    ElectionsType: 1
-    PolitPower: 0
-    CountryLeader: {fileID: 11400000, guid: 5a6ba8cd16aee6845afad1969f30f643, type: 2}
     Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}
-    RulingParty: {fileID: 0}
-    Decisions: []
-    Advisers: []
-    Parties: []
+    PolitPower: 0
   Name: "\u0410\u043D\u0433\u043B\u0438\u044F"
   ID: eng
   ColorInMap: {r: 0.8113208, g: 0.2920829, b: 0, a: 1}
@@ -33,3 +26,4 @@ MonoBehaviour:
   HistoryIdealogyForAI: 1
   RulingPoliticalParty: {fileID: 11400000, guid: bcd627dc3b6c0d546b09a7b75659dc9a,
     type: 2}
+  Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}

@@ -13,15 +13,8 @@ MonoBehaviour:
   m_Name: luksCountrySO
   m_EditorClassIdentifier: 
   Politics:
-    CountryIdeology: 1
-    ElectionsType: 1
-    PolitPower: 0
-    CountryLeader: {fileID: 11400000, guid: 0ff3644f6617dfc40ad6d71ad7fe097e, type: 2}
     Preset: {fileID: 11400000, guid: ed2e8c62dbea45948bb6aae8be3e5c5a, type: 2}
-    RulingParty: {fileID: 0}
-    Decisions: []
-    Advisers: []
-    Parties: []
+    PolitPower: 0
   Name: "\u041B\u044E\u043A\u0441\u0435\u043C\u0431\u0443\u0440\u0433"
   ID: luks
   ColorInMap: {r: 0, g: 0.4818565, b: 0.5471698, a: 1}
@@ -33,3 +26,4 @@ MonoBehaviour:
   HistoryIdealogyForAI: 1
   RulingPoliticalParty: {fileID: 11400000, guid: bcd627dc3b6c0d546b09a7b75659dc9a,
     type: 2}
+  Preset: {fileID: 11400000, guid: ed2e8c62dbea45948bb6aae8be3e5c5a, type: 2}
