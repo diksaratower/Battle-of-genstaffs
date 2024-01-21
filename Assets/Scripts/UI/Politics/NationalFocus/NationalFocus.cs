@@ -12,6 +12,8 @@ public class NationalFocus : ScriptableObject
     public List<NationalFocus> NeedsForExecution = new List<NationalFocus>();
     public List<NationalFocus> ConflictWithFocuses = new List<NationalFocus>();
     public List<InstantEffect> FocusEffects = new List<InstantEffect>();
+    public List<PoliticsCondition> FocusConditions = new List<PoliticsCondition>();
+
 
     public void ExecuteFocus(Country country)
     {

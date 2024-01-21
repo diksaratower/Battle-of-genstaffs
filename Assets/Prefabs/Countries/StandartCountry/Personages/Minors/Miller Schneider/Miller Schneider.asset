@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Traits:
   - {fileID: 11400000, guid: b9cf6518ecad53343bbc7836e4441c71, type: 2}
-  ID: noah_charles_bailey
+  ID: miller_schneider
   _standartPortrait: {fileID: 21300000, guid: 6d87438a75c8cdc4e9f4532a45a4620a, type: 3}
-  _name: Noah Charles Bailey
+  _name: 'Miller Schneider '

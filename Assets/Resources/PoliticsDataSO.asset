@@ -52,10 +52,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e1d162831d8364c4588a7c30abeb8092, type: 2}
   - {fileID: 11400000, guid: 188940b4512f3df4cb69229bed7368f8, type: 2}
   MinorLeaders:
-  - {fileID: 11400000, guid: 68c7ad5bb0bf3dd4e93814ad53ae466a, type: 2}
-  - {fileID: 11400000, guid: e747b63365d9ae643b59000f746e493b, type: 2}
   - {fileID: 11400000, guid: 40d6b2c9ebd34a64caf7e0681ef21d82, type: 2}
+  - {fileID: 11400000, guid: 68c7ad5bb0bf3dd4e93814ad53ae466a, type: 2}
   - {fileID: 11400000, guid: 10b5801322d8fde45b480101593fc15e, type: 2}
+  - {fileID: 11400000, guid: e747b63365d9ae643b59000f746e493b, type: 2}
+  - {fileID: 11400000, guid: 87b14e70bbe550a4e83714dd6f506f50, type: 2}
   StandartDecisions:
   - {fileID: 11400000, guid: d94939ea51a3d0d49af6590086b462fd, type: 2}
   - {fileID: 11400000, guid: a8467b987f513f24d81e815f0a62170a, type: 2}

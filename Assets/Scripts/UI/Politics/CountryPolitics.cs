@@ -95,6 +95,13 @@ public class CountryPolitics
         {
             return false;
         }
+        foreach (var condition in focus.FocusConditions)
+        {
+            if (condition.CountryIsFits(_country) == false)
+            {
+                return false;
+            }
+        }
         var needFocusesExecuted = 0;
         foreach (var need in focus.NeedsForExecution)
         {
@@ -104,6 +111,11 @@ public class CountryPolitics
             }
         }
         return needFocusesExecuted == focus.NeedsForExecution.Count && !_executedFocuses.Contains(focus);
+    }
+
+    public float GetPercentPopularity(PoliticalParty politicalParty)
+    {
+        return Parties.Find(party => party.PartyIdeology == politicalParty.PartyIdeology).ProcentPopularity;
     }
 
     public float GetProcentOfExecuteFocus()
