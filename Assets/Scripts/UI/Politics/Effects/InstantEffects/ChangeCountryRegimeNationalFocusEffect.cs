@@ -4,11 +4,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "ChangeCountryRegime", menuName = "ScriptableObjects/Focuses/Effect/ChangeCountryRegime", order = 1)]
 public class ChangeCountryRegimeNationalFocusEffect : InstantEffect
 {
-    public Ideology NewIdeology;
+    public PoliticalParty NewParty;
 
     public override void DoEffect(Country country)
     {
-        if (country.Politics.CountryIdeology == NewIdeology)
+        if (country.Politics.CountryIdeology == NewParty.PartyIdeology)
         {
             return;
         }
@@ -16,11 +16,13 @@ public class ChangeCountryRegimeNationalFocusEffect : InstantEffect
         {
             var lastLeader = country.Politics.CountryLeader;
             country.Politics.CountryLeader = PoliticsDataSO.GetInstance().MinorLeaders[Random.Range(0, PoliticsDataSO.GetInstance().MinorLeaders.Count - 1)];
+            country.Politics.CountryIdeology = NewParty.PartyIdeology;
+            country.Politics.ElectionsType = NewParty.ElectionType;
             if (EventsViewUI.Instance == null)
             {
                 return;
             }
-            if (NewIdeology == Ideology.Fascism)
+            if (NewParty.PartyIdeology == Ideology.Fascism)
             {
                 var panel = EventsViewUI.Instance.ViewNewsEvent($@"Сегодня ночью произошёл переворот в {country.Name}. Войска, подконтрольные фашистской партии, захватили правительственные здания и телецентр. Лидер страны {lastLeader.Name} был убит при попытке сопротивления.
 
@@ -33,7 +35,7 @@ public class ChangeCountryRegimeNationalFocusEffect : InstantEffect
                     panel.gameObject.SetActive(false);
                 });
             }
-            if (NewIdeology == Ideology.Communism)
+            if (NewParty.PartyIdeology == Ideology.Communism)
             {
                 var panel = EventsViewUI.Instance.ViewNewsEvent($@"Переворот в {country.Name}. Восстание началось в нескольких крупных городах государства. Рабочие, недовольные низкими зарплатами, плохими условиями труда и отсутствием социальных гарантий, вышли на улицы. Их вёл ранее неизвестный {country.Politics.CountryLeader.Name}
 
@@ -50,6 +52,6 @@ public class ChangeCountryRegimeNationalFocusEffect : InstantEffect
 
     public override string GetEffectDescription()
     {
-        return $"Меняет правящую партию на {NewIdeology}";
+        return $"Меняет правящую партию на {NewParty.Name}";
     }
 }

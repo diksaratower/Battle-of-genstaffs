@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cff5c8c1db0a89478190a4e7ccae645, type: 3}
+  m_Name: FascismFocus
+  m_EditorClassIdentifier: 
+  Name: "\u0422\u0440\u0435\u0442\u0438\u0439 \u043F\u0443\u0442\u044C"
+  Description: 
+  ID: fascism_focus
+  Image: {fileID: 21300000, guid: a28efb727b1c4684281d313d4f7fa6bb, type: 3}
+  ExecutionDurationDay: 60
+  NeedsForExecution:
+  - {fileID: 11400000, guid: 346408a92856b3a4bbca4be6a55f2c37, type: 2}
+  ConflictWithFocuses:
+  - {fileID: 11400000, guid: 44ad88d5ca7008e46b3a1e142991e0b0, type: 2}
+  - {fileID: 11400000, guid: 5b19a20a96f92b5409c8cce4284fe02e, type: 2}
+  - {fileID: 11400000, guid: 9a9ac95c32252ab498948d683bd38ddf, type: 2}
+  - {fileID: 11400000, guid: 0655672513be2974e87c93032c611795, type: 2}
+  FocusEffects:
+  - {fileID: 11400000, guid: 8f7e8906cae74ab4abf726a65d897578, type: 2}
+  - {fileID: 11400000, guid: bd6cb253bbca0ee48b8ae92151253eab, type: 2}

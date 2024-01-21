@@ -346,7 +346,8 @@ public class CountryPolitics
             return;
         }
         _executingFocusProgressDays += 1;
-        if(ExecutingFocus.ExecutionDurationDay == _executingFocusProgressDays || Cheats.InstantFocusesDoing)
+        if(ExecutingFocus.ExecutionDurationDay == _executingFocusProgressDays || Cheats.InstantFocusesDoingAll 
+            || (_country == Player.CurrentCountry && Cheats.InstantFocusesDoingForPlayer))
         {
             var focus = ExecutingFocus;
             ExecutingFocus = null;

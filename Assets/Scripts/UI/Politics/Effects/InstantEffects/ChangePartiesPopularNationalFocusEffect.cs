@@ -14,6 +14,6 @@ public class ChangePartiesPopularNationalFocusEffect : InstantEffect
 
     public override string GetEffectDescription()
     {
-        return $"Популярность идеалогии {PartyIdealogy} {GameIU.FloatToStringAddPlus(ChangeProcent)}%";
+        return $"Популярность идеалогии {UtilsPoliticsUI.IdeologyToString(PartyIdealogy)} {GameIU.FloatToStringAddPlus(ChangeProcent)}%";
     }
 }

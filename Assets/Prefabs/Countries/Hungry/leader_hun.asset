@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Traits: []
   ID: miklosh_horty
-  _standartPortrait: {fileID: 21300000, guid: 6f62bc2f66d6b124d83fa731c9a97bc0, type: 3}
+  _standartPortrait: {fileID: 21300000, guid: 3936b6e6a38e74a46914e3fe6d3d437f, type: 3}
   _name: "\u041C\u0438\u043A\u043B\u043E\u0448 \u0425\u043E\u0440\u0442\u0438"

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Traits: []
   ID: hendrikus_colijn
-  _standartPortrait: {fileID: 21300000, guid: 6cdbe4364b9a0a642b7b503f2c18e484, type: 3}
-  _name: leader_nidr
+  _standartPortrait: {fileID: 21300000, guid: 074a21a7d9e3d6e4c870e813d400aa7f, type: 3}
+  _name: "\u0425\u0435\u043D\u0434\u0440\u0438\u043A \u041A\u043E\u043B\u0435\u0439\u043D "

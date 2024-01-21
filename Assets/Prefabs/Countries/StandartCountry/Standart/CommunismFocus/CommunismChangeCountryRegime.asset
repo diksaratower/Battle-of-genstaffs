@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0494775cb9ad78d4f954a115d5a81b1f, type: 3}
   m_Name: CommunismChangeCountryRegime
   m_EditorClassIdentifier: 
-  NewIdeology: 4
+  NewParty: {fileID: 11400000, guid: f4814a8701f489f4ba3b8bbb389eb6bb, type: 2}

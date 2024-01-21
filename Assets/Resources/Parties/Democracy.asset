@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Democracy
   m_EditorClassIdentifier: 
   PartyIdeology: 1
+  ElectionType: 1
   Name: "\u0414\u0435\u043C\u043E\u043A\u0440\u0430\u0442\u0438\u044F"
   PartyColor: {r: 0, g: 0.45882353, b: 1, a: 1}

@@ -50,6 +50,10 @@ public class PolticsUI : MonoBehaviour
         {
             UpdatePartiesPopular();
         };
+        _country.Politics.OnFocusExecuted += delegate 
+        {
+            RefreshUI();
+        };
     }
 
     private void Update()

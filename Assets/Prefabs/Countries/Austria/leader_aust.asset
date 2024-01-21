@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Traits: []
   ID: kur_von_schushnik
-  _standartPortrait: {fileID: 21300000, guid: 8e21b3438b07a3f4395d7ec90265eda3, type: 3}
+  _standartPortrait: {fileID: 21300000, guid: 1083485613c9da448accda463dc390e8, type: 3}
   _name: "\u041A\u0443\u0440\u0442 \u0428\u0443\u0448\u043D\u0438\u0433"
