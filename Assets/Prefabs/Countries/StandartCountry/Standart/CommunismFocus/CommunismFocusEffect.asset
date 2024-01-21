@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c459f2b56e66154ba2801f396571e5c, type: 3}
   m_Name: CommunismFocusEffect
   m_EditorClassIdentifier: 
-  ChangeProcent: 30
+  ChangeProcent: 10
   PartyIdealogy: 4

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class ResearchUI : MonoBehaviour
 {
@@ -13,9 +13,12 @@ public class ResearchUI : MonoBehaviour
     [SerializeField] private Transform _techTreesParent;
     [SerializeField] private Transform _connectionsParent;
     [SerializeField] private ResearchTechnologyTreeUI _technologyTreeUIPrefab;
+    [SerializeField] private RectTransform _reserchPointTextParent;
 
     private Country _country;
     private List<ResearchTechnologyTreeUI> _treesUI = new List<ResearchTechnologyTreeUI>();
+    private int _researchPointsTextCharsCount = 0;
+
 
     private void Start()
     {
@@ -25,7 +28,7 @@ public class ResearchUI : MonoBehaviour
 
     private void Update()
     {
-        _researchPointsText.text = "Очки исследования: " + Math.Round(_country.Research.ResearchPointCount, 2).ToString("0.00");
+        UpdateResearchPoints();
     }
     
     public void RefreshUI(TechnologyCategory category)
@@ -45,6 +48,17 @@ public class ResearchUI : MonoBehaviour
             var treeUI = Instantiate(_technologyTreeUIPrefab, _techTreesParent);
             treeUI.RefreshUI(tree, _connectionsParent, _techTreesParent as RectTransform);
             _treesUI.Add(treeUI);
+        }
+    }
+
+    private void UpdateResearchPoints()
+    {
+        var researchPointsStringText = ("Очки исследования: " + Math.Round(_country.Research.ResearchPointCount, 2).ToString("0.00"));
+        _researchPointsText.text = researchPointsStringText;
+        if (researchPointsStringText.Length != _researchPointsTextCharsCount)
+        {
+            LayoutRebuilder.ForceRebuildLayoutImmediate(_reserchPointTextParent);
+            _researchPointsTextCharsCount = researchPointsStringText.Length;
         }
     }
 }
