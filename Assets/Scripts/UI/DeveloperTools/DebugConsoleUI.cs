@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -52,7 +53,11 @@ pp_all_zero - всем полит власть на ноль");
         {
             foreach (var countrySO in _countriesDataSO.Countries)
             {
-                countrySO.Politics.PoliticalParty = PoliticsDataSO.GetInstance().PoliticalParties.Find(party => party.PartyIdeology == countrySO.Politics.CountryIdeology);
+                AssetDatabase.StartAssetEditing();
+                countrySO.RulingPoliticalParty = PoliticsDataSO.GetInstance().PoliticalParties.Find(party => party.PartyIdeology == countrySO.Politics.CountryIdeology);
+                AssetDatabase.StopAssetEditing();
+                EditorUtility.SetDirty(countrySO);
+                AssetDatabase.SaveAssets();
             }
             WriteTextToConsole("Скопированна информауия о партиях.");
         }

@@ -18,7 +18,6 @@ public class CountryPolitics
     public ReadOnlyCollection<CountryTrait> Traits => GetCountryTraits();
     public ReadOnlyCollection<CountryTraitSlot> TraitSlots => _countryTraitsSlots.AsReadOnly();
 
-    public PoliticalParty PoliticalParty;
     public Ideology CountryIdeology;
     public CuntryElectionsType ElectionsType;
     public float PolitPower;
@@ -29,6 +28,7 @@ public class CountryPolitics
     public Action OnUpdatePartiesPopular;
     public List<DecisionsBlockSlot> BlockedDecisions = new List<DecisionsBlockSlot>();
 
+    [HideInInspector] public PoliticalParty RulingParty;
     [HideInInspector] public List<Decision> Decisions = new List<Decision>();
     [HideInInspector] public List<Personage> Advisers = new List<Personage>();
     [HideInInspector] public List<PartyPopular> Parties = new List<PartyPopular>();

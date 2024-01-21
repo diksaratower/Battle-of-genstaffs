@@ -10705,6 +10705,7 @@ MonoBehaviour:
   _textsParent: {fileID: 1682340836}
   _activeProvinceChangeTool: {fileID: 522516999}
   _provinceChageTool: {fileID: 1178506709}
+  _countriesDataSO: {fileID: 11400000, guid: 7e3abbec32ba5474183e0c5b9e2b6cc5, type: 2}
 --- !u!1 &347472329
 GameObject:
   m_ObjectHideFlags: 0
