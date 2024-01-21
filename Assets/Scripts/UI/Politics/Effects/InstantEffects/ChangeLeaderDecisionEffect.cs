@@ -8,7 +8,7 @@ public class ChangeLeaderDecisionEffect : InstantEffect
 
     public override void DoEffect(Country country)
     {
-        country.Politics.CountryLeader = NewLeader;
+        country.Politics.ChangeLeader(NewLeader);
     }
 
     public override string GetEffectDescription()

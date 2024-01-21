@@ -16,6 +16,7 @@ public class CountrySO : ScriptableObject
     public CountryAISizeData CountrySizeType;
     public Ideology HistoryIdealogyForAI;
     public PoliticalParty RulingPoliticalParty;
+    public CountryPoliticsPreset Preset;
 
 
 #if UNITY_EDITOR

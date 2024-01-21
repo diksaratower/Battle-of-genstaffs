@@ -63,6 +63,20 @@ pp_all_zero - всем полит власть на ноль");
             WriteTextToConsole("Скопированна информация о партиях.");
 #endif
         }
+        if (text.StartsWith("copypresets"))
+        {
+#if UNITY_EDITOR
+            foreach (var countrySO in _countriesDataSO.Countries)
+            {
+                AssetDatabase.StartAssetEditing();
+                countrySO.Preset = countrySO.Politics.Preset;
+                AssetDatabase.StopAssetEditing();
+                EditorUtility.SetDirty(countrySO);
+                AssetDatabase.SaveAssets();
+            }
+            WriteTextToConsole("Скопированна информация о партиях.");
+#endif
+        }
         if (text.StartsWith("echo"))
         {
             WriteTextToConsole(text.Remove(0, 5));

@@ -15,24 +15,26 @@ public class CountryPolitics
     public Law CurrentEconomicLaw { get; private set; }
     public Law Current—onscriptionLaw { get; private set; }
     public PoliticalParty RulingParty { get; private set; }
+    public Personage CountryLeader { get; private set; }
     public ReadOnlyCollection<CountryTrait> Traits => GetCountryTraits();
     public ReadOnlyCollection<CountryTraitSlot> TraitSlots => _countryTraitsSlots.AsReadOnly();
     public Ideology CountryIdeology => RulingParty.PartyIdeology;
     public CountryElectionsType ElectionsType => RulingParty.ElectionType;
-    public ReadOnlyCollection<Personage> Advisers => new ReadOnlyCollection<Personage>(_advisers);
+    public ReadOnlyCollection<Personage> Advisers => _advisers.AsReadOnly();
+    public ReadOnlyCollection<PartyPopular> PartiesPopularData => _partiesPopularsData.AsReadOnly();
+    public ReadOnlyCollection<Decision> Decisions => _decisions.AsReadOnly();
 
-    public float PolitPower;
-    public Personage CountryLeader;
     public CountryPoliticsPreset Preset;
+    public float PolitPower;
     public Action OnFocusExecuted;
     public Action OnUpdateBlockedDecisions;
     public Action OnUpdatePartiesPopular;
     public Action OnAdvisersChange;
     public List<DecisionsBlockSlot> BlockedDecisions = new List<DecisionsBlockSlot>();
 
-    [HideInInspector] public List<Decision> Decisions = new List<Decision>();
-    [HideInInspector] public List<PartyPopular> Parties = new List<PartyPopular>();
 
+    private List<Decision> _decisions = new List<Decision>();
+    private List<PartyPopular> _partiesPopularsData = new List<PartyPopular>();
     private List<Personage> _advisers = new List<Personage>();
     private List<CountryTraitSlot> _countryTraitsSlots = new List<CountryTraitSlot>();
     private List<NationalFocus> _executedFocuses = new List<NationalFocus>();
@@ -58,13 +60,13 @@ public class CountryPolitics
                 {
                     percent = Preset.Parties.Find(pr => pr.PartyIdeology == party.PartyIdeology).ProcentPopularity;
                 }
-                Parties.Add(new PartyPopular(percent, party.Name, party.PartyColor, party.PartyIdeology));
+                _partiesPopularsData.Add(new PartyPopular(percent, party.Name, party.PartyColor, party.PartyIdeology));
             }
         }
-        Decisions.AddRange(PoliticsDataSO.GetInstance().StandartDecisions);
+        _decisions.AddRange(PoliticsDataSO.GetInstance().StandartDecisions);
         foreach (var decision in Preset.Decisions)
         {
-            Decisions.Add(decision);
+            _decisions.Add(decision);
         }
         CurrentEconomicLaw = EconomicsLaws[0];
         Current—onscriptionLaw = —onscriptionLaws[0];
@@ -119,7 +121,7 @@ public class CountryPolitics
 
     public float GetPercentPopularity(PoliticalParty politicalParty)
     {
-        return Parties.Find(party => party.PartyIdeology == politicalParty.PartyIdeology).ProcentPopularity;
+        return _partiesPopularsData.Find(party => party.PartyIdeology == politicalParty.PartyIdeology).ProcentPopularity;
     }
 
     public float GetProcentOfExecuteFocus()
@@ -241,17 +243,17 @@ public class CountryPolitics
 
     public void AddPartyPopular(Ideology ideology, float addProcent)
     {
-        AddPartyPopular(Parties.Find(pr => pr.PartyIdeology == ideology).Name, addProcent);
+        AddPartyPopular(_partiesPopularsData.Find(pr => pr.PartyIdeology == ideology).Name, addProcent);
     }
 
     public void AddPartyPopular(string partyName, float addProcent)
     {
-        var otherParties = Parties.FindAll(pr => (pr.Name != partyName && pr.ProcentPopularity > 0));
+        var otherParties = _partiesPopularsData.FindAll(pr => (pr.Name != partyName && pr.ProcentPopularity > 0));
         otherParties.ForEach(otherParty => 
         {
             otherParty.ChangePopular(-(addProcent / otherParties.Count));
         });
-        Parties.Find(pr => pr.Name == partyName).ChangePopular(addProcent);
+        _partiesPopularsData.Find(pr => pr.Name == partyName).ChangePopular(addProcent);
         OnUpdatePartiesPopular?.Invoke();
     }
 
@@ -328,8 +330,13 @@ public class CountryPolitics
 
     public void ChangeRegime(Personage newLeader, PoliticalParty newRulingParty)
     {
-        CountryLeader = newLeader;
+        ChangeLeader(newLeader);
         RulingParty = newRulingParty;
+    }
+
+    public void ChangeLeader(Personage newLeader)
+    {
+        CountryLeader = newLeader;
     }
 
     public List<T> GetAllConstantEffectsWithType<T>() where T : ConstantEffect
