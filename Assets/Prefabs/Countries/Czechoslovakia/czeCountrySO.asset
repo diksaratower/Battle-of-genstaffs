@@ -31,4 +31,5 @@ MonoBehaviour:
   IsAICountry: 1
   CountrySizeType: 0
   HistoryIdealogyForAI: 1
-  RulingParty: {fileID: 11400000, guid: bcd627dc3b6c0d546b09a7b75659dc9a, type: 2}
+  RulingPoliticalParty: {fileID: 11400000, guid: bcd627dc3b6c0d546b09a7b75659dc9a,
+    type: 2}

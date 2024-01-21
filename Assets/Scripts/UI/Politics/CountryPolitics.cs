@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using UnityEngine;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 
 [Serializable]
@@ -15,11 +16,12 @@ public class CountryPolitics
     public ReadOnlyCollection<Law> —onscriptionLaws => Preset.ConscriptionLaws.AsReadOnly();
     public Law CurrentEconomicLaw { get; private set; }
     public Law Current—onscriptionLaw { get; private set; }
+    public PoliticalParty RulingParty { get; private set; }
     public ReadOnlyCollection<CountryTrait> Traits => GetCountryTraits();
     public ReadOnlyCollection<CountryTraitSlot> TraitSlots => _countryTraitsSlots.AsReadOnly();
+    public Ideology CountryIdeology => RulingParty.PartyIdeology;
+    public CountryElectionsType ElectionsType => RulingParty.ElectionType;
 
-    public Ideology CountryIdeology;
-    public CuntryElectionsType ElectionsType;
     public float PolitPower;
     public Personage CountryLeader;
     public CountryPoliticsPreset Preset;
@@ -28,7 +30,6 @@ public class CountryPolitics
     public Action OnUpdatePartiesPopular;
     public List<DecisionsBlockSlot> BlockedDecisions = new List<DecisionsBlockSlot>();
 
-    [HideInInspector] public PoliticalParty RulingParty;
     [HideInInspector] public List<Decision> Decisions = new List<Decision>();
     [HideInInspector] public List<Personage> Advisers = new List<Personage>();
     [HideInInspector] public List<PartyPopular> Parties = new List<PartyPopular>();
@@ -72,11 +73,10 @@ public class CountryPolitics
         }
     }
 
-    public void CopyData(CountryPolitics original)
+    public void CopyData(CountryPolitics original, PoliticalParty politicalParty)
     {
         Preset = original.Preset;
-        CountryIdeology = original.CountryIdeology;
-        ElectionsType = original.ElectionsType;
+        RulingParty = politicalParty;
         CountryLeader = original.CountryLeader;
         BaseStability = Preset.BaseStability;
     }
@@ -294,6 +294,12 @@ public class CountryPolitics
             correctedStability = 100f;
         }
         return correctedStability;
+    }
+
+    public void ChangeRegime(Personage newLeader, PoliticalParty newRulingParty)
+    {
+        CountryLeader = newLeader;
+        RulingParty = newRulingParty;
     }
 
     public List<T> GetAllConstantEffectsWithType<T>() where T : ConstantEffect

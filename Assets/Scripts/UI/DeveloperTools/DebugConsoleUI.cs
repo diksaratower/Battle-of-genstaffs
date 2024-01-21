@@ -51,6 +51,7 @@ pp_all_zero - всем полит власть на ноль");
         }
         if (text.StartsWith("copyparties"))
         {
+#if UNITY_EDITOR
             foreach (var countrySO in _countriesDataSO.Countries)
             {
                 AssetDatabase.StartAssetEditing();
@@ -59,7 +60,8 @@ pp_all_zero - всем полит власть на ноль");
                 EditorUtility.SetDirty(countrySO);
                 AssetDatabase.SaveAssets();
             }
-            WriteTextToConsole("Скопированна информауия о партиях.");
+            WriteTextToConsole("Скопированна информация о партиях.");
+#endif
         }
         if (text.StartsWith("echo"))
         {

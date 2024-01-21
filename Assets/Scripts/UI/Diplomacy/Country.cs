@@ -108,7 +108,7 @@ public class Country : MonoBehaviour
     {
         CountryPreset = country;
         Politics = new CountryPolitics();
-        Politics.CopyData(country.Politics);
+        Politics.CopyData(country.Politics, country.RulingPoliticalParty);
         Politics.Setup(this);
     }
 
@@ -283,7 +283,7 @@ public enum Ideology
     Anarchy
 }
 
-public enum CuntryElectionsType
+public enum CountryElectionsType
 {
     NoElections,
     Constantly

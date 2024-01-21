@@ -15,9 +15,8 @@ public class ChangeCountryRegimeNationalFocusEffect : InstantEffect
         else
         {
             var lastLeader = country.Politics.CountryLeader;
-            country.Politics.CountryLeader = PoliticsDataSO.GetInstance().MinorLeaders[Random.Range(0, PoliticsDataSO.GetInstance().MinorLeaders.Count - 1)];
-            country.Politics.CountryIdeology = NewParty.PartyIdeology;
-            country.Politics.ElectionsType = NewParty.ElectionType;
+            var newLeader = PoliticsDataSO.GetInstance().MinorLeaders[Random.Range(0, PoliticsDataSO.GetInstance().MinorLeaders.Count - 1)];
+            country.Politics.ChangeRegime(newLeader, NewParty);
             if (EventsViewUI.Instance == null)
             {
                 return;

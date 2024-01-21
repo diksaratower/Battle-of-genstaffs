@@ -5,7 +5,7 @@
 public class PoliticalParty : ScriptableObject
 {
     public Ideology PartyIdeology;
-    public CuntryElectionsType ElectionType;
+    public CountryElectionsType ElectionType;
     public string Name;
     public Color PartyColor;
 }

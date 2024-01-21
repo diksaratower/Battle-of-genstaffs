@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Politics:
     CountryIdeology: 2
-    FormGovernment: 0
     ElectionsType: 0
     PolitPower: 15
     CountryLeader: {fileID: 11400000, guid: 033c629bfc6811645871fc1a575bd656, type: 2}
     Preset: {fileID: 11400000, guid: fd069c0ff9ca9cf49ab0a3d56f9f1df1, type: 2}
+    RulingParty: {fileID: 0}
+    Decisions: []
     Advisers: []
     Parties: []
   Name: "\u0413\u0435\u0440\u043C\u0430\u043D\u0438\u044F"
@@ -30,3 +31,5 @@ MonoBehaviour:
   IsAICountry: 1
   CountrySizeType: 1
   HistoryIdealogyForAI: 2
+  RulingPoliticalParty: {fileID: 11400000, guid: 40c4cb8fc5757ed48936578e26f87cf5,
+    type: 2}

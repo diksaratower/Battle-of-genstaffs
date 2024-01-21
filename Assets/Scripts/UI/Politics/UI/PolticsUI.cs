@@ -201,14 +201,14 @@ public class UtilsPoliticsUI
     {
     }
 
-    public static string ElectionTypeToString(CuntryElectionsType electionsType)
+    public static string ElectionTypeToString(CountryElectionsType electionsType)
     {
         var electionString = "";
-        if (electionsType == CuntryElectionsType.Constantly)
+        if (electionsType == CountryElectionsType.Constantly)
         {
             electionString = "Регулярно";
         }
-        if (electionsType == CuntryElectionsType.NoElections)
+        if (electionsType == CountryElectionsType.NoElections)
         {
             electionString = "Нет";
         }

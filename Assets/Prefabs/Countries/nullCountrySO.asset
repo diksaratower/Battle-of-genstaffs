@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: nullCountrySO
   m_EditorClassIdentifier: 
   Politics:
-    PolitPowerGrowthSpeed: 1
     CountryIdeology: 5
-    FormGovernment: 1
     ElectionsType: 0
     PolitPower: 0
     CountryLeader: {fileID: 11400000, guid: 24d4a2d2d3878244d89ac0ad5223da6d, type: 2}
     Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}
+    RulingParty: {fileID: 0}
+    Decisions: []
     Advisers: []
     Parties: []
   Name: "\u0421\u043A\u043E\u0440\u043E \u0432 \u0432 \u0438\u0433\u0440\u0435"
@@ -28,3 +28,8 @@ MonoBehaviour:
   CountryFlag: {fileID: 21300000, guid: de5fc64928e1fbf4e945a310a27bb9d8, type: 3}
   Population: 34002000
   IsAvailableForPlayer: 0
+  IsAICountry: 0
+  CountrySizeType: 0
+  HistoryIdealogyForAI: 0
+  RulingPoliticalParty: {fileID: 11400000, guid: 8c58c1c45b1dd1a41a84e7c550bc9128,
+    type: 2}
