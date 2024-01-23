@@ -25,5 +25,13 @@ public class CreationDivisionsQueueSlotUI : MonoBehaviour
     {
         _targetSlot = queueSlot;
         _divisionName.text = queueSlot.DivisionName;
+        _divisionImage.sprite = queueSlot.DivisionTemplate.GetAverageBattlion().BatImage;
+        var tooltip = gameObject.AddComponent<NotPrefabTooltipHandlerUI>();
+
+        tooltip.Initialize((TooltipViewMenu menu) => 
+        {
+            menu.AddSimpleText($"Дивизия {queueSlot.DivisionName} обучается.", false);
+            menu.AddDynamicText(() => $"До конца обучения {_targetSlot.CretionTimeDays - _targetSlot.CreationProgressDays} дней.", false);
+        });
     }
 }

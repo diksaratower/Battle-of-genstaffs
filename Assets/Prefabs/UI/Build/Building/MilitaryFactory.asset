@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 386b7aa5c983d8c40bf1459425c29088, type: 3}
   m_Name: MilitaryFactory
   m_EditorClassIdentifier: 
-  BuildCost: 1600
+  BuildCost: 4000
   Name: "\u0412\u043E\u0435\u043D\u043D\u044B\u0439 \u0417\u0430\u0432\u043E\u0434"
   BuildingImage: {fileID: 21300000, guid: 3e45da5cb5acf014da5e186c301f74d9, type: 3}
   ID: military_factory

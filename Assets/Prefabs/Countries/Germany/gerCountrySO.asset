@@ -12,14 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ee3d89a6a36844eb88abd039309455, type: 3}
   m_Name: gerCountrySO
   m_EditorClassIdentifier: 
-  Politics:
-    Preset: {fileID: 11400000, guid: fd069c0ff9ca9cf49ab0a3d56f9f1df1, type: 2}
-    PolitPower: 15
   Name: "\u0413\u0435\u0440\u043C\u0430\u043D\u0438\u044F"
   ID: ger
   ColorInMap: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 1}
   CountryFlag: {fileID: 21300000, guid: 02ebf946989a3c9419ba64f9216be161, type: 3}
   Population: 67000000
+  CountryLeader: {fileID: 11400000, guid: 033c629bfc6811645871fc1a575bd656, type: 2}
   IsAvailableForPlayer: 1
   IsAICountry: 1
   CountrySizeType: 1

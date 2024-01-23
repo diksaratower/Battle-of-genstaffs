@@ -12,14 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ee3d89a6a36844eb88abd039309455, type: 3}
   m_Name: luksCountrySO
   m_EditorClassIdentifier: 
-  Politics:
-    Preset: {fileID: 11400000, guid: ed2e8c62dbea45948bb6aae8be3e5c5a, type: 2}
-    PolitPower: 0
   Name: "\u041B\u044E\u043A\u0441\u0435\u043C\u0431\u0443\u0440\u0433"
   ID: luks
   ColorInMap: {r: 0, g: 0.4818565, b: 0.5471698, a: 1}
   CountryFlag: {fileID: 21300000, guid: 1704044b4fd7fcc44909f3cb2da07220, type: 3}
   Population: 340000
+  CountryLeader: {fileID: 11400000, guid: 0ff3644f6617dfc40ad6d71ad7fe097e, type: 2}
   IsAvailableForPlayer: 1
   IsAICountry: 0
   CountrySizeType: 0

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Traits: []
   ID: king_zogu
-  _standartPortrait: {fileID: 21300000, guid: 853fd537fd1cace4885b7eeafaaea925, type: 3}
+  _standartPortrait: {fileID: 21300000, guid: a0978f45335616f4484aa9d57305a921, type: 3}
   _name: "\u041A\u043E\u0440\u043E\u043B\u044C \u0417\u043E\u0433\u0443"

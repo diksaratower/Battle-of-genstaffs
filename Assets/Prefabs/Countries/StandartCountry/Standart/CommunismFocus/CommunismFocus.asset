@@ -26,4 +26,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0655672513be2974e87c93032c611795, type: 2}
   FocusEffects:
   - {fileID: 11400000, guid: f0add4f0c868e2b4b889074823478371, type: 2}
+  - {fileID: 11400000, guid: 98a9edd0e8acf9544808ef671e2dd67b, type: 2}
   FocusConditions: []

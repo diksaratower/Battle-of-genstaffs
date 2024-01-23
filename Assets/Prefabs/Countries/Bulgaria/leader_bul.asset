@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Traits: []
   ID: boris_3
-  _standartPortrait: {fileID: 21300000, guid: c27b3597251ed924b81cb29c662c8b9c, type: 3}
+  _standartPortrait: {fileID: 21300000, guid: 725782ff498af2e4fadd8876ac584693, type: 3}
   _name: "\u0411\u043E\u0440\u0438\u0441 \u0442\u0440\u0435\u0442\u0438\u0439"

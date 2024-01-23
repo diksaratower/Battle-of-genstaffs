@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Traits: []
   ID: hubert_peirlot
-  _standartPortrait: {fileID: 21300000, guid: 9abca9d118e2e794c997a2c40065739d, type: 3}
-  _name: leader_belg
+  _standartPortrait: {fileID: 21300000, guid: 0079b13a6a438bb48b1285d9eaa0e73e, type: 3}
+  _name: "\u0433\u0440\u0430\u0444 \u041F\u044C\u0435\u0440\u043B\u043E"

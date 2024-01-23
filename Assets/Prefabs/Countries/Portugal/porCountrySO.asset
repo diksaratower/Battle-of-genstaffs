@@ -12,14 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ee3d89a6a36844eb88abd039309455, type: 3}
   m_Name: porCountrySO
   m_EditorClassIdentifier: 
-  Politics:
-    Preset: {fileID: 11400000, guid: 8b7cc8619f6067847afeac060d91459b, type: 2}
-    PolitPower: 0
   Name: "\u041F\u043E\u0440\u0442\u0443\u0433\u0430\u043B\u0438\u044F"
   ID: por
   ColorInMap: {r: 0, g: 0.4627451, b: 0.29270798, a: 1}
   CountryFlag: {fileID: 21300000, guid: 657ed1872bd25ba40a10bf9f2ba9573b, type: 3}
   Population: 8300000
+  CountryLeader: {fileID: 11400000, guid: 899d80a51479cf84fab69273eaa9a5e2, type: 2}
   IsAvailableForPlayer: 1
   IsAICountry: 1
   CountrySizeType: 0
