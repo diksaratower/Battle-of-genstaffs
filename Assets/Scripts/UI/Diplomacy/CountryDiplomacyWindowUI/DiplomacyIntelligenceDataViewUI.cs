@@ -8,6 +8,7 @@ public class DiplomacyIntelligenceDataViewUI : MonoBehaviour
     [SerializeField] private Image _currentFocusImage;
     [SerializeField] private TextMeshProUGUI _currentFocusName;
     [SerializeField] private TextMeshProUGUI _divisionsCountText;
+    [SerializeField] private TextMeshProUGUI _divisionsTrainingCountText;
     [SerializeField] private Image _focusExecuteFill;
     [SerializeField] private TextMeshProUGUI _factoryCountText;
     [SerializeField] private TextMeshProUGUI _militaryFactoryCountText;
@@ -35,6 +36,7 @@ public class DiplomacyIntelligenceDataViewUI : MonoBehaviour
         if (_country != null)
         {
             _divisionsCountText.text = $"Количество дивизий: {UnitsManager.Instance.Divisions.FindAll(divsion => divsion.CountyOwner == _country).Count}";
+            _divisionsTrainingCountText.text = $"Дивизии на обучение: {_country.CreationDivisions.CreationQueue.Count}";
             _focusExecuteFill.fillAmount = _country.Politics.GetProcentOfExecuteFocus();
             _factoryCountText.text = "Обычные заводы: " + _country.CountryBuild.GetCountryBuildings(BuildingType.Factory).Count;
             _militaryFactoryCountText.text = "Военные заводы: " + _country.CountryBuild.GetCountryBuildings(BuildingType.MilitaryFactory).Count;

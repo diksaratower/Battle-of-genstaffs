@@ -52,6 +52,7 @@ public class CountryAI : MonoBehaviour
             UpdateFabrication();
         }
         _countryArmiesAI.UpdateAttcakOrDefens();
+        _countryArmiesAI.CreateDivisionsIfNeed();
         if (_country.CountryBuild.BuildingsQueue.Count == 0)
         {
             BuildWork();
@@ -129,6 +130,10 @@ public class CountryAI : MonoBehaviour
             return false;
         }
         if (_workAI == false)
+        {
+            return false;
+        }
+        if (_country.GetCountryRegions().Count == 0)
         {
             return false;
         }

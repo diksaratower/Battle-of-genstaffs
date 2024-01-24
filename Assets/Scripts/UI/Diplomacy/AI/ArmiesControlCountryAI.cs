@@ -9,6 +9,10 @@ public class ArmiesControlCountryAI
     private int _maxDivisionsCount;
     private float _cashedForceFactorInFront = 1.01f;
     private Province _spawnDivisonsProvince;
+    private DivisionTemplate _mainTemplate;
+    private List<TypedEquipmentCountIdPair> _cashedNeedEquipments = new List<TypedEquipmentCountIdPair>();
+
+    private const int _divisionsAtOneTime = 5;
 
 
     public ArmiesControlCountryAI(Country country, CountryAI countryAI)
@@ -17,15 +21,15 @@ public class ArmiesControlCountryAI
         _countryAI = countryAI;
         if (_country.CountryPreset.CountrySizeType == CountryAISizeData.Minor)
         {
-            _maxDivisionsCount = 4;
+            _maxDivisionsCount = 10;
         }
         if (_country.CountryPreset.CountrySizeType == CountryAISizeData.Middle)
         {
-            _maxDivisionsCount = 15;
+            _maxDivisionsCount = 30;
         }
         if (_country.CountryPreset.CountrySizeType == CountryAISizeData.Major)
         {
-            _maxDivisionsCount = 30;
+            _maxDivisionsCount = 100;
         }
     }
 
@@ -35,12 +39,13 @@ public class ArmiesControlCountryAI
         {
             UpdateArmies();
         };
-        _country.CountryDiplomacy.OnDeclaredWarToCountry += delegate 
+        _country.CountryDiplomacy.OnDeclaredWarToCountry += delegate
         {
             UpdateArmies();
         };
         _spawnDivisonsProvince = GetSpawnDivisionProvince();
-        SpawnDivisions();
+        CreateMainTemplate();
+        _cashedNeedEquipments = _mainTemplate.GetTemplateNeedEquipment();
         UpdateArmies();
     }
 
@@ -98,6 +103,75 @@ public class ArmiesControlCountryAI
             }
         }
         DivideDivisionsBetweenEnemies(divisions, enemies);
+    }
+
+    public void CreateDivisionsIfNeed()
+    {
+        var divisions = UnitsManager.Instance.Divisions.FindAll(division => division.CountyOwner == _country);
+        if (divisions.Count >= _maxDivisionsCount)
+        {
+            return;
+        }
+        if (_country.CreationDivisions.CreationQueue.Count > 0)
+        {
+            return;
+        }
+
+        if (_spawnDivisonsProvince.Owner != _country)
+        {
+            return;
+        }
+
+        if (_spawnDivisonsProvince == null)
+        {
+            if (GetSpawnDivisionProvince() == null)
+            {
+                return;
+            }
+            else
+            {
+                _spawnDivisonsProvince = GetSpawnDivisionProvince();
+            }
+        }
+
+        var haveEquipments = new List<TypedEquipmentCountIdPair>();
+        foreach (var equipment in _cashedNeedEquipments)
+        {
+            var equipmentCount = _country.EquipmentStorage.GetEquipmentCountWithDeficit(equipment.EqType);
+            if (equipmentCount <= 0)
+            {
+                return;
+            }
+            if (equipmentCount < equipment.Count)
+            {
+                return;
+            }
+            haveEquipments.Add(new TypedEquipmentCountIdPair(equipment.EqType, equipmentCount));
+        }
+        for (int i = 0; i < 5; i++)
+        {
+            _country.CreationDivisions.AddDivisionCreation(_mainTemplate, _spawnDivisonsProvince, $"division {divisions.Count + i}");
+            foreach (var needEquipment in _cashedNeedEquipments)
+            {
+                var haveThisTypeEquiemnet = haveEquipments.Find(eq => eq.EqType == needEquipment.EqType);
+                haveThisTypeEquiemnet.Count -= needEquipment.Count;
+                if (haveThisTypeEquiemnet.Count <= 0)
+                {
+                    return;
+                }
+            }
+        }
+    }
+
+    private void CreateMainTemplate()
+    {
+        var template = DivisionTemplateConstructorUI.GetAITemplate(4, 4);
+        if (_country.CountryPreset.CountrySizeType == CountryAISizeData.Major)
+        {
+            template = DivisionTemplateConstructorUI.GetAITemplate(5, 4);
+        }
+        _country.Templates.Templates.Add(template);
+        _mainTemplate = template;
     }
 
     private void DivideDivisionsBetweenEnemies(List<Division> divisions, List<Country> enemies)
@@ -174,29 +248,6 @@ public class ArmiesControlCountryAI
         {
             Country = country;
             Divisions = divisions;
-        }
-    }
-
-    private void SpawnDivisions()
-    {
-        if (UnitsManager.Instance.Divisions.FindAll(div => div.CountyOwner == _country).Count == _maxDivisionsCount)
-        {
-            return;
-        }
-        var template = DivisionTemplateConstructorUI.GetAITemplate(4, 4);
-        if (_country.CountryPreset.CountrySizeType == CountryAISizeData.Major)
-        {
-            template = DivisionTemplateConstructorUI.GetAITemplate(5, 4);
-        }
-        _country.Templates.DeleteAllTemplatesWithDivisions();
-        _country.Templates.Templates.Add(template);
-        if (UnitsManager.Instance.Divisions.FindAll(div => div.CountyOwner == _country).Count < _maxDivisionsCount && _spawnDivisonsProvince != null
-           && _spawnDivisonsProvince.Owner == _country)
-        {
-            for (int i = 0; i < _maxDivisionsCount; i++)
-            {
-                UnitsManager.Instance.AddDivision(_spawnDivisonsProvince, _country.Templates.Templates[0], _country);
-            }
         }
     }
 

@@ -1,38 +1,57 @@
 using System;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Collections.ObjectModel;
 
 
 public class CountryCreationDivisions
 {
     public Action OnAddedSlotToQueue;
     public Action OnRemovedSlotFromQueue;
-    public List<CreationDivisionsQueueSlot> CreationQueue = new List<CreationDivisionsQueueSlot>();
+    public ReadOnlyCollection<CreationDivisionsQueueSlot> CreationQueue => _creationQueue.AsReadOnly();
     public readonly int MaxQueueSlots = 20;
 
-    private readonly Country _country;
+    private List<CreationDivisionsQueueSlot> _creationQueue = new List<CreationDivisionsQueueSlot>();
+    private Country _country;
+
 
     public CountryCreationDivisions(Country country) 
     {
         _country = country;
         GameTimer.DayEnd += CalculateDivisionCreation;
+        _country.OnAnnexed += delegate 
+        {
+            ClearQueue();
+        };
+        _country.OnCapitulated += delegate 
+        {
+            ClearQueue();
+        };
     }
 
     public void AddDivisionCreation(DivisionTemplate divisionTemplate, Province divisionProvince, string divisionName)
     {
-        if (CreationQueue.Count > MaxQueueSlots)
+        if (_creationQueue.Count > MaxQueueSlots)
         {
             throw new TryToAddMoreMaxDivisionsToTheCreationException();
         }
         var slot = new CreationDivisionsQueueSlot(divisionTemplate, divisionProvince, divisionName);
-        CreationQueue.Add(slot);
+        _creationQueue.Add(slot);
         OnAddedSlotToQueue?.Invoke();
     }
 
     public void RemoveDivisionCreation(CreationDivisionsQueueSlot divisionsQueueSlot)
     {
-        CreationQueue.Remove(divisionsQueueSlot);
+        _creationQueue.Remove(divisionsQueueSlot);
         OnRemovedSlotFromQueue?.Invoke();
+    }
+
+    private void ClearQueue()
+    {
+        var queue = new List<CreationDivisionsQueueSlot>(_creationQueue);
+        foreach (var slot in queue)
+        {
+            RemoveDivisionCreation(slot);
+        }
     }
 
     private void CalculateDivisionCreation()
@@ -41,19 +60,23 @@ public class CountryCreationDivisions
 
         for (int i = 0; i < 10; i++)
         {
-            if (i == CreationQueue.Count || i > CreationQueue.Count)
+            if (i == _creationQueue.Count || i > _creationQueue.Count)
             {
                 break;
             }
-            CreationQueue[i].CreationProgressDays += 1;
-            if (CreationQueue[i].CreationProgressDays >= CreationQueue[i].CretionTimeDays || Cheats.InstantTraingDivision)
+            _creationQueue[i].CreationProgressDays += 1;
+            if (_creationQueue[i].CreationProgressDays >= _creationQueue[i].CretionTimeDays || Cheats.InstantTraingDivision)
             {
-                divisionsForCreate.Add(CreationQueue[i]);
+                divisionsForCreate.Add(_creationQueue[i]);
             }
         }
 
         foreach (var slot in divisionsForCreate)
         {
+            if (slot.DivisionProvince.Owner != _country)
+            {
+                throw new Exception("Try spawn divisions in stranger province.");
+            }
             var division = UnitsManager.Instance.AddDivision(slot.DivisionProvince, slot.DivisionTemplate, _country);
             if (slot.DivisionTemplate.Battalions.Count > 0)
             {

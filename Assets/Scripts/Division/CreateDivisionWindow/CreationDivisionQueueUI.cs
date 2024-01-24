@@ -36,7 +36,7 @@ public class CreationDivisionQueueUI : MonoBehaviour
         foreach (var slot in _country.CreationDivisions.CreationQueue)
         {
             var slotUI = Instantiate(_queueSlotUIPrefab, _queueSlotsParent);
-            slotUI.RefreshUI(slot);
+            slotUI.RefreshUI(slot, _country.CreationDivisions);
             _creationQueueSlotsUIs.Add(slotUI);
         }
     }
