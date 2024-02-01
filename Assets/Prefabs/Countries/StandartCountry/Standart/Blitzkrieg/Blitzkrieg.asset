@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: "\u0414\u043E\u043A\u0442\u0440\u0438\u043D\u0430 \u0431\u043B\u0438\u0446\u043A\u0440\u0438\u0433"
   Description: 
   ID: blitzkrieg
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: 1bcd546e0f5a6ff4fbd15d9e14474d90, type: 3}
   ExecutionDurationDay: 65
   NeedsForExecution:
   - {fileID: 11400000, guid: 97177267ebfa34847a671676bd356172, type: 2}

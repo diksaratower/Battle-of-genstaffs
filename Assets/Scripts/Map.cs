@@ -32,7 +32,7 @@ public class Map : MonoBehaviour, ISaveble
     public void InitializeMap()
     {
         Instance = this;
-        GenerateHexGrid(_gridSize);
+        GenerateHexGrid(_gridSize, true);
         _mainTexture = GenerateRandomTexture(_gridSize);
         GetComponent<MeshRenderer>().material.mainTexture = _mainTexture;
     }
@@ -130,7 +130,7 @@ public class Map : MonoBehaviour, ISaveble
         return null;
     }
 
-    private void GenerateHexGrid(Vector2Int size)
+    private void GenerateHexGrid(Vector2Int size, bool usePregenerated = false)
     {
         _provinces.Clear();
         _map = new Province[size.x, size.y];
@@ -156,29 +156,33 @@ public class Map : MonoBehaviour, ISaveble
                 {
                     continue;
                 }
-                var province = CreateProvince(provincePosition, hex, new Vector2Int(x, y), size, out CombineInstance comb);
-                
+                var province = CreateProvince(provincePosition, new Vector2Int(x, y));
+
                 _map[x, y] = province;
                 _provinces.Add(province);
-
-                combine.Add(comb);
+                
+                if (usePregenerated == false)
+                {
+                    var comb = CreateProvinceCombineInstance(province, hex, size, provincePosition);
+                    combine.Add(comb);
+                }
             }
         }
-        var mesh = GetComponent<MeshFilter>().mesh;
-        mesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
-        mesh.CombineMeshes(combine.ToArray());
-        
-        mesh.RecalculateTangents();
-        mesh.RecalculateNormals();
+        if (usePregenerated == false)
+        {
+            var mesh = GetComponent<MeshFilter>().mesh;
+            mesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
+            mesh.CombineMeshes(combine.ToArray());
+
+            mesh.RecalculateTangents();
+            mesh.RecalculateNormals();
+        }
     }
 
-    private Province CreateProvince(Vector3 provincePosition, List<Vector3> hex, Vector2Int positionInGrid,
-        Vector2Int size, out CombineInstance combineInstance)
+    private CombineInstance CreateProvinceCombineInstance(Province province, List<Vector3> hex, Vector2Int size, Vector3 provincePosition)
     {
         var provinceHeight = GetProvinceHeight(provincePosition);
-        var province = new Province(positionInGrid, _provinces.Count, provincePosition, new Vector3(provincePosition.x, provinceHeight, provincePosition.z));
-
-        var comb = new CombineInstance();
+        var combineInstane = new CombineInstance();
         var mesh = GetMeshFromHex(hex);
         SetUvToMesh(mesh, province.PositionInGrid, size.x, size.y);
 
@@ -187,18 +191,23 @@ public class Map : MonoBehaviour, ISaveble
         {
             eulerAngles = _meshesRotation
         };
-        comb.transform = Matrix4x4.Translate(provinceLocalPostion) * Matrix4x4.Scale(new Vector3(0.99f, 0.99f, 0.99f));//Matrix4x4.Scale(new Vector3(0.95f, 0.95f, 0.95f));
+        combineInstane.transform = Matrix4x4.Translate(provinceLocalPostion) * Matrix4x4.Scale(new Vector3(0.99f, 0.99f, 0.99f));//Matrix4x4.Scale(new Vector3(0.95f, 0.95f, 0.95f));
         mesh = UpdateMeshLandscapeTrue(hex, province.Position, Matrix4x4.Rotate(q));
         SetUvToMesh(mesh, province.PositionInGrid, size.x, size.y);
         hex.ForEach(ver =>
         {
-            Matrix4x4 m = Matrix4x4.Translate(new Vector3(provinceLocalPostion.x, provinceHeight, provinceLocalPostion.z)) 
+            Matrix4x4 m = Matrix4x4.Translate(new Vector3(provinceLocalPostion.x, provinceHeight, provinceLocalPostion.z))
             * Matrix4x4.Rotate(new Quaternion() { eulerAngles = new Vector3(0, 0, 90) });
             province.Vertices.Add(m.MultiplyPoint3x4(ver));
         });
-        comb.mesh = mesh;
+        combineInstane.mesh = mesh;
+        return combineInstane;
+    }
 
-        combineInstance = comb;
+    private Province CreateProvince(Vector3 provincePosition, Vector2Int positionInGrid)
+    {
+        var provinceHeight = GetProvinceHeight(provincePosition);
+        var province = new Province(positionInGrid, _provinces.Count, provincePosition, new Vector3(provincePosition.x, provinceHeight, provincePosition.z));
         return province;
     }
 
@@ -342,6 +351,15 @@ public class Map : MonoBehaviour, ISaveble
         return newmesh;
     }
 
+    private void ColoredProvincesFast(List<Province> forRecolor)
+    {
+        foreach (var province in forRecolor)
+        {
+            _mainTexture.SetPixel(province.PositionInTexture.x, province.PositionInTexture.y, province.Owner.ColorInMap);
+        }
+        _mainTexture.Apply();
+    }
+
     public void SetUvToMesh(Mesh mesh, Vector2Int pixcelPos, int texWidth, int texHeight)
     {
         List<Vector2> uvs = new List<Vector2>();
@@ -432,13 +450,16 @@ public class Map : MonoBehaviour, ISaveble
         public override void Load(object objTarget)
         {
             var map = (Map)objTarget;
+            var forRecolor = new List<Province>();
             foreach (var provinceSave in Provinces)
             {
                 var province = map.Provinces[Provinces.IndexOf(provinceSave)];//map.Provinces.Find(pr => pr.ID == provinceSave.ID);
-                province.SetOwner(map.GetCountryFromId(provinceSave.CountryOwnerID));
+                province.SetOwner(map.GetCountryFromId(provinceSave.CountryOwnerID), false);
                 province.ContactsIDs = provinceSave.ContactsIDs;
+                forRecolor.Add(province);
             }
-            
+            map.ColoredProvincesFast(forRecolor);
+
             foreach (var reg in Regions)
             {
                 map.MapRegions.Add(Region.LoadRegion(reg));

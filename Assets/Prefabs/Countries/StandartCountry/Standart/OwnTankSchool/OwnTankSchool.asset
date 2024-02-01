@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: "\u0422\u0430\u043D\u043A\u043E\u0432\u0430\u044F \u0448\u043A\u043E\u043B\u0430"
   Description: 
   ID: own_tank_school
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: dad1c0b8c914d694d86693dd959317c4, type: 3}
   ExecutionDurationDay: 65
   NeedsForExecution:
   - {fileID: 11400000, guid: e8f7ef9421271014e9150fead35a6610, type: 2}

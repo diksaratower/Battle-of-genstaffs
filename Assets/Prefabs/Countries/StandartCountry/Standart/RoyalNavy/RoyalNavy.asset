@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: "\u041A\u043E\u0440\u043E\u043B\u0435\u0432\u0441\u043A\u0438\u0439 \u0444\u043B\u043E\u0442"
   Description: 
   ID: royal_navy
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: adffebc3f3c1edc498f3594188ff34ce, type: 3}
   ExecutionDurationDay: 65
   NeedsForExecution:
   - {fileID: 11400000, guid: 808baa1f61b003f4bacc34ca7883b0c0, type: 2}

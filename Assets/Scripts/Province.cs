@@ -61,10 +61,13 @@ public class Province
         };
     }
 
-    public void SetOwner(Country newOwner)
+    public void SetOwner(Country newOwner, bool autoColored = true)
     {
         Owner = newOwner;
-        Map.Instance.ColoredProvince(this);
+        if (autoColored == true)
+        {
+            Map.Instance.ColoredProvince(this);
+        }
     }
 
     private List<Province> GetContacts()

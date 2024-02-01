@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: "\u0421\u0432\u043E\u044F \u0438\u043C\u043F\u0435\u0440\u0438\u044F"
   Description: 
   ID: own_empire
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: 17e1381059956804fae1e8808970bd0b, type: 3}
   ExecutionDurationDay: 65
   NeedsForExecution:
   - {fileID: 11400000, guid: c24b2cca3d28eff44a4f37bd9bffa278, type: 2}

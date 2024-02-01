@@ -77,6 +77,14 @@ pp_all_zero - всем полит власть на ноль");
             WriteTextToConsole("Скопированна информация о партиях.");
 #endif
         }
+        if (text.StartsWith("savemap"))
+        {
+#if UNITY_EDITOR
+            AssetDatabase.CreateAsset(Map.Instance.GetComponent<MeshFilter>().sharedMesh, "Assets/MAP.asset");
+            AssetDatabase.SaveAssets();
+#endif
+            WriteTextToConsole("Сохранена карта.");
+        }
         if (text.StartsWith("echo"))
         {
             WriteTextToConsole(text.Remove(0, 5));
