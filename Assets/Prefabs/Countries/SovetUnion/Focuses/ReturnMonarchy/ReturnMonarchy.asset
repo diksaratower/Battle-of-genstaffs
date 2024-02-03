@@ -17,6 +17,8 @@ MonoBehaviour:
   ID: return_monarchy
   Image: {fileID: 21300000, guid: 52f6d0de7ecc5e3448d624250cd80099, type: 3}
   ExecutionDurationDay: 65
-  NeedsForExecution: []
+  NeedsForExecution:
+  - {fileID: 11400000, guid: ea398e902d5deba429caa04cfdbd1bae, type: 2}
   ConflictWithFocuses: []
   FocusEffects: []
+  FocusConditions: []

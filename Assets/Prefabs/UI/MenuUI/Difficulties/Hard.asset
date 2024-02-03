@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: "\u0421\u043B\u043E\u0436\u043D\u043E"
   ID: hard
-  PolitPowerBonusPercent: -20
+  PolitPowerBonusPercent: -22
+  ResearchPointsBonusPercent: -25
   ProductionFactor: -0.2
+  AIBuffTrait: {fileID: 0}

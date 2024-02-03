@@ -17,6 +17,8 @@ MonoBehaviour:
   ID: kill_trockiy
   Image: {fileID: 21300000, guid: d8a81260e7604a54cbb673dd2c4c91de, type: 3}
   ExecutionDurationDay: 45
-  NeedsForExecution: []
+  NeedsForExecution:
+  - {fileID: 11400000, guid: 46660a5cd7bdf0a4aa60d55173894203, type: 2}
   ConflictWithFocuses: []
   FocusEffects: []
+  FocusConditions: []

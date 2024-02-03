@@ -17,6 +17,8 @@ MonoBehaviour:
   ID: dictatorship_the_workers
   Image: {fileID: 21300000, guid: 5c13a06b53bd93f4aaf2e71ab653cbdc, type: 3}
   ExecutionDurationDay: 55
-  NeedsForExecution: []
+  NeedsForExecution:
+  - {fileID: 11400000, guid: e1cfd9eac67ad1e469a3ec2160fb4031, type: 2}
   ConflictWithFocuses: []
   FocusEffects: []
+  FocusConditions: []

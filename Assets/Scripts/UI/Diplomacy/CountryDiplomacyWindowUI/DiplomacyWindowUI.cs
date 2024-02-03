@@ -17,6 +17,8 @@ public class DiplomacyWindowUI : MonoBehaviour
     [SerializeField] private Image _flagImage;
     [SerializeField] private DiplomacyIntelligenceDataViewUI _intelligenceDataViewUI;
     [SerializeField] private DiplomacyCountryViewUI _diplomacyViewUI;
+    [SerializeField] private CountryTraitsViewUI _countryTraitsViewUI;
+
 
     private void Start()
     {
@@ -50,5 +52,6 @@ public class DiplomacyWindowUI : MonoBehaviour
         {
             _leaderImage.sprite = targetCountry.Politics.CountryLeader.Portrait;
         }
+        _countryTraitsViewUI.Refresh(targetCountry);
     }
 }

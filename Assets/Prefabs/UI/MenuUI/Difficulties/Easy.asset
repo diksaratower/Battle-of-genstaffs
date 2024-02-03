@@ -15,4 +15,6 @@ MonoBehaviour:
   Name: "\u041B\u0435\u0433\u043A\u043E"
   ID: easy
   PolitPowerBonusPercent: 50
+  ResearchPointsBonusPercent: 20
   ProductionFactor: 0.3
+  AIBuffTrait: {fileID: 0}

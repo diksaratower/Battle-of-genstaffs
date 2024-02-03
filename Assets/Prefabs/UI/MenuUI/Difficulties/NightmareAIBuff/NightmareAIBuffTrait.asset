@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947d295a2d1be0248b795bdd0f7ecb45, type: 3}
+  m_Name: NightmareAIBuffTrait
+  m_EditorClassIdentifier: 
+  CountryTraitEffects:
+  - {fileID: 11400000, guid: 2f3560bcf8659a848aeabb170a147c8b, type: 2}
+  - {fileID: 11400000, guid: 3571746a5e435ad4496e77211cd4af09, type: 2}
+  Name: "\u042D\u0444\u0444\u0435\u043A\u0442 \u0441\u043B\u043E\u0436\u043D\u043E\u0441\u0442\u0438
+    \"\u043A\u043E\u0448\u043C\u0430\u0440\" \u0434\u043B\u044F \u0418\u0418"
+  TraitImage: {fileID: 21300000, guid: 61d5fa54c27ee2044af75b8c7060d705, type: 3}
+  TemporaryTrait: 0
+  WorkTime: 1

@@ -39,6 +39,10 @@ public class CountryAI : MonoBehaviour
         {
             _workAI = false;
         };
+        if (Player.CurrentDifficultie.AIBuffTrait != null)
+        {
+            _country.Politics.AddTrait(Player.CurrentDifficultie.AIBuffTrait);
+        }
     }
 
     private void Update()

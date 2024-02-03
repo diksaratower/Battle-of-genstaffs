@@ -18,6 +18,8 @@ MonoBehaviour:
   ID: support_worl_revolution
   Image: {fileID: 21300000, guid: 68e053b4914a2d84a9c12d9b1e37532e, type: 3}
   ExecutionDurationDay: 45
-  NeedsForExecution: []
+  NeedsForExecution:
+  - {fileID: 11400000, guid: 093be05959656da438e7ffa3b1767d3e, type: 2}
   ConflictWithFocuses: []
   FocusEffects: []
+  FocusConditions: []

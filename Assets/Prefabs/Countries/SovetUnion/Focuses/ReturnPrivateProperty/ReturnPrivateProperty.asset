@@ -18,6 +18,8 @@ MonoBehaviour:
   ID: return_private_property
   Image: {fileID: 21300000, guid: 1b3a7b149f54a7f4a9fd8409c94a6d12, type: 3}
   ExecutionDurationDay: 55
-  NeedsForExecution: []
+  NeedsForExecution:
+  - {fileID: 11400000, guid: 600efefc9502f17449ab51d53ad18314, type: 2}
   ConflictWithFocuses: []
   FocusEffects: []
+  FocusConditions: []

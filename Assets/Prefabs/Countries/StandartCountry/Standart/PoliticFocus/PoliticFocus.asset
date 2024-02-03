@@ -16,8 +16,9 @@ MonoBehaviour:
   Description: 
   ID: politic_focus
   Image: {fileID: 21300000, guid: 6a1ebd91e6e9b9f47a5b27eec4c1f1fd, type: 3}
-  ExecutionDurationDay: 30
+  ExecutionDurationDay: 50
   NeedsForExecution: []
   ConflictWithFocuses: []
   FocusEffects:
   - {fileID: 11400000, guid: ae88ef29f81a208479fdebdf035f29dc, type: 2}
+  FocusConditions: []

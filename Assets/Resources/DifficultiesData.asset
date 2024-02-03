@@ -16,5 +16,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f2e61498dc0070144a5e49f2f7dd3231, type: 2}
   - {fileID: 11400000, guid: c95bbe16455fc2648b8379bd89f0d5cf, type: 2}
   - {fileID: 11400000, guid: 1012a7da42b51834e8d813420163b841, type: 2}
+  - {fileID: 11400000, guid: ad440d3ee3f32bf43ae95247f213f375, type: 2}
   StandartDifficultie: {fileID: 11400000, guid: c95bbe16455fc2648b8379bd89f0d5cf,
     type: 2}

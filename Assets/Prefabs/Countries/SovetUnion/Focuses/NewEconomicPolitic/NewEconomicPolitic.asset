@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cff5c8c1db0a89478190a4e7ccae645, type: 3}
+  m_Name: NewEconomicPolitic
+  m_EditorClassIdentifier: 
+  Name: "\u041D\u043E\u0432\u044B\u0439 \u041D\u042D\u041F"
+  Description: 
+  ID: new_ecenomic_politics
+  Image: {fileID: 0}
+  ExecutionDurationDay: 65
+  NeedsForExecution:
+  - {fileID: 11400000, guid: ea398e902d5deba429caa04cfdbd1bae, type: 2}
+  ConflictWithFocuses: []
+  FocusEffects: []
+  FocusConditions: []

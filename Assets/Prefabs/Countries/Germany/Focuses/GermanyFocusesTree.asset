@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: GermanyFocusesTree
   m_EditorClassIdentifier: 
   NationalFocuses:
+  - {fileID: 11400000, guid: 346408a92856b3a4bbca4be6a55f2c37, type: 2}
+  - {fileID: 11400000, guid: a75f8ac8b3d0ebd4cacc138c6991d216, type: 2}
+  - {fileID: 11400000, guid: 459363e6aef716c49be9c9c7c9af9989, type: 2}
   - {fileID: 11400000, guid: 13c4d90ba4f35c54cbeec5cbb7dc9b99, type: 2}
   - {fileID: 11400000, guid: 402877fca2edbea4fad235c22773e17f, type: 2}
   - {fileID: 11400000, guid: 84f6efbb20b74174b92aa43c835e6c7d, type: 2}
   - {fileID: 11400000, guid: 07d5002c967bf2f43a00e4b6e8672e2c, type: 2}
   - {fileID: 11400000, guid: 30d1e5084cd269b42a6b3ff1d3cc379d, type: 2}
-  BaseFocus: {fileID: 11400000, guid: 13c4d90ba4f35c54cbeec5cbb7dc9b99, type: 2}
+  BaseFocus: {fileID: 11400000, guid: 346408a92856b3a4bbca4be6a55f2c37, type: 2}

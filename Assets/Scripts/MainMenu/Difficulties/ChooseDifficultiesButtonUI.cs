@@ -31,8 +31,17 @@ public class ChooseDifficultiesButtonUI : MonoBehaviour
         tooltip.Initialize((TooltipViewMenu menu) =>
         {
             menu.AddSimpleText($"Сложность {difficultie.Name}", false);
-            menu.AddSimpleText($"Прирост полит. {GameIU.FloatToStringAddPlus(difficultie.PolitPowerBonusPercent)}%");
-            menu.AddSimpleText($"Производство {GameIU.FloatToStringAddPlus(difficultie.ProductionFactor * 100)}%");
+            menu.AddSimpleText($"Прирост полит. {GameIU.FloatToStringAddPlus(difficultie.PolitPowerBonusPercent)}%", false);
+            menu.AddSimpleText($"Скорость исследования {GameIU.FloatToStringAddPlus(difficultie.ResearchPointsBonusPercent)}%", false);
+            menu.AddSimpleText($"Производство {GameIU.FloatToStringAddPlus(difficultie.ProductionFactor * 100)}%", false);
+            if (difficultie.AIBuffTrait != null)
+            {
+                menu.AddSimpleText("ИИ: ", false);
+                foreach (var effect in difficultie.AIBuffTrait.CountryTraitEffects)
+                {
+                    menu.AddSimpleText(effect.GetEffectDescription(), false);
+                }
+            }
         });
     }
 }
