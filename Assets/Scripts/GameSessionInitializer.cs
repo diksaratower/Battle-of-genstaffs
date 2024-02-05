@@ -17,6 +17,7 @@ public class GameSessionInitializer : MonoBehaviour, ISceneLoadHandler<GameEntry
 
     private void Awake()
     {
+        LoadingProcessor.Instance.ApplyLoadingModel(true);
         if (_gameInitialized == true)
         {
             return;
@@ -26,6 +27,10 @@ public class GameSessionInitializer : MonoBehaviour, ISceneLoadHandler<GameEntry
 
     public void OnSceneLoaded(GameEntryData entry)
     {
+        if (_gameInitialized == true)
+        {
+            return;
+        }
         InitializeGame(entry);
         SceneManager.sceneLoaded += UnloadMenu;
         _gameInitialized = true;
@@ -39,6 +44,10 @@ public class GameSessionInitializer : MonoBehaviour, ISceneLoadHandler<GameEntry
         if (entry.EntryType == GameEntryType.Continue)
         {
             _gameSave.QuickLoad();
+        }
+        if (entry.EntryType == GameEntryType.LoadSave)
+        {
+            _gameSave.Load(entry.SaveName);
         }
         if (entry.EntryType == GameEntryType.StartFromStandart)
         {
@@ -64,8 +73,9 @@ public class GameEntryData
     public GameEntryType EntryType { get; }
     public string CountryID { get; }
     public Difficultie Difficultie { get; }
+    public string SaveName { get; }
 
-    public GameEntryData(GameEntryType entryType, string countryID, Difficultie difficultie = null)
+    public GameEntryData(GameEntryType entryType, string countryID, Difficultie difficultie = null, string saveName = "")
     {
         EntryType = entryType;
         CountryID = countryID;
@@ -77,13 +87,15 @@ public class GameEntryData
         {
             Difficultie = DifficultiesData.GetInstance().StandartDifficultie;
         }
+        SaveName = saveName;
     }
 }
 
 public enum GameEntryType
 {
     Continue,
-    StartFromStandart
+    StartFromStandart,
+    LoadSave
 }
 
 

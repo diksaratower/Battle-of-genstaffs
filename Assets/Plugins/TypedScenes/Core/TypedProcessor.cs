@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using UnityEngine;
 
 namespace IJunior.TypedScenes
@@ -7,6 +8,7 @@ namespace IJunior.TypedScenes
     {
         private void Awake()
         {
+            Debug.Log("ApplyLoadingModel");
             foreach(var handler in FindObjectsOfType<MonoBehaviour>().OfType<ITypedAwakeHandler>())
             {
                 handler.OnSceneAwake();

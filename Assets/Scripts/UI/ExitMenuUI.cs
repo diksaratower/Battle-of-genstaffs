@@ -8,8 +8,12 @@ public class ExitMenuUI : MonoBehaviour
     [SerializeField] private Button _exitButton;
     [SerializeField] private Button _openDebugConsoleButton;
     [SerializeField] private Button _openSettingsButton;
+    [SerializeField] private Button _openSavesMenuButton;
+    [SerializeField] private Button _openLoadMenuButton;
     [SerializeField] private DebugConsoleUI _debugConsoleUI;
     [SerializeField] private SettingsMenu _settingsMenu;
+    [SerializeField] private SavesMenuUI _savesMenu;
+    [SerializeField] private LoadSavesMenuUI _loadMenu;
 
 
     private void Start()
@@ -30,6 +34,16 @@ public class ExitMenuUI : MonoBehaviour
         _openSettingsButton.onClick.AddListener(delegate 
         {
             _settingsMenu.gameObject.SetActive(true);
+        });
+        _openSavesMenuButton.onClick.AddListener(delegate 
+        {
+            _savesMenu.gameObject.SetActive(true);
+            _savesMenu.RefreshUI();
+        });
+        _openLoadMenuButton.onClick.AddListener(delegate 
+        {
+            _loadMenu.gameObject.SetActive(true); 
+            _loadMenu.RefreshUI();
         });
     }
 }

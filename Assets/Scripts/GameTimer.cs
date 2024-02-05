@@ -51,6 +51,13 @@ public class GameTimer : MonoBehaviour, ISaveble
         }
     }
 
+    private void OnDestroy()
+    {
+        Instance = null;
+        HourEnd = null;
+        DayEnd = null;
+    }
+
     private void CalculateDays()
     {
         if (Days != DTime.Day)

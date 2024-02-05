@@ -50,7 +50,7 @@ public class GameSave : MonoBehaviour
     {
         if (Directory.Exists(saveName) == false)
         {
-            Directory.CreateDirectory(saveName);
+            Directory.CreateDirectory("./Saves/" + saveName);
         }
         foreach (var sv in _savebles)
         {
@@ -132,6 +132,30 @@ public class GameSave : MonoBehaviour
             result.Add(Path.GetFileName(directories[i]));
         }
         return result;
+    }
+
+    public static List<SaveSlotData> GetSavesData()
+    {
+        var directories = Directory.GetDirectories("./Saves");
+        var result = new List<SaveSlotData>();
+        for (int i = 0; i < directories.Length; i++)
+        {
+            var saveName = Path.GetFileName(directories[i]);
+            result.Add(new SaveSlotData(saveName, GetSavePlayerCountryID(saveName)));
+        }
+        return result;
+    }
+
+    public class SaveSlotData
+    {
+        public string SaveName { get; }
+        public string CountryID { get; }
+
+        public SaveSlotData(string saveName, string countryID)
+        {
+            SaveName = saveName;
+            CountryID = countryID;
+        }
     }
 
     public void DeleteSave(string saveName)

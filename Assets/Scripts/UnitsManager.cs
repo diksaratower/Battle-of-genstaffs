@@ -21,6 +21,16 @@ public class UnitsManager : MonoBehaviour, ISaveble
         Instance = this;
     }
 
+    private void OnDestroy()
+    {
+        Instance = null;
+        OnDivisionEnterToProvince = null;
+        OnCreateAviationDivision = null;
+        OnRemoveAviationDivision = null;
+        OnCreateDivision = null;
+        OnRemoveDivision = null;
+    }
+
     public Division AddDivision(Province province, DivisionTemplate template, Country owner)
     {
         return AddDivision(province.Position, template, owner);

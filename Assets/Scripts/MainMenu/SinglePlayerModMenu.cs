@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using IJunior;
 using IJunior.TypedScenes;
 using UnityEngine.SceneManagement;
+
 
 public class SinglePlayerModMenu : MonoBehaviour
 {
@@ -40,6 +38,17 @@ public class SinglePlayerModMenu : MonoBehaviour
         }
     }
 
+    public void LoadGameSceneLoadSave(string saveName)
+    {
+        if (_isLoadingScene)//чтобы избежать двойной загрузки
+        {
+            return;
+        }
+        _isLoadingScene = true;
+        var operation = Main.LoadAsync(new GameEntryData(GameEntryType.LoadSave, "", null, saveName), LoadSceneMode.Additive);
+        _loadScreen.StartMonitoringLoading(operation);
+    }
+
     public void LoadGameSceneUpdateQuick(string id, Difficultie difficultie)
     {
         if (_isLoadingScene)//чтобы избежать двойной загрузки
@@ -51,7 +60,7 @@ public class SinglePlayerModMenu : MonoBehaviour
         _loadScreen.StartMonitoringLoading(operation);
     }
 
-    private void LoadGameSceneContinue()
+    public void LoadGameSceneContinue()
     {
         if (_isLoadingScene)//чтобы избежать двойной загрузки
         {
