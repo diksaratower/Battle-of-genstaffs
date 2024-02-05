@@ -58,26 +58,32 @@ public class Division : SupplyUnit
         if (Combats.Count > 0) return;
         if (MovePath[0].DivisionsInProvince.Count > 0)
         {
-            var divsForBattels = MovePath[0].DivisionsInProvince.FindAll(d => (CountyOwner.CountryDivsCanFightWithDiv(d)
+            var divisionsForBattels = MovePath[0].DivisionsInProvince.FindAll(d => (CountyOwner.CountryDivsCanFightWithDiv(d)
             && d.DivisionState != DivisionAnimState.StepBack));
-            if(divsForBattels.Count > 0)
+            if(divisionsForBattels.Count > 0)
             {
                 if(DivisionCombat.TryFindBattleInProv(MovePath[0], out DivisionCombat comb))
                 {
-                    comb.Attackers.Add(this);
+                    //comb._attackers.Add(this);
+                    comb.AddAtacker(this);
                     EnterToCombat(comb);
                     return;
                 }
                 else
                 {
-                    var c = new DivisionCombat(this);
-                    c.Attackers.Add(this);
-                    c.Defenders.AddRange(divsForBattels);
-                    foreach (var div in divsForBattels)
+                    var combat = DivisionCombat.CreateCombat();
+                    combat.AddAtacker(this);
+                    foreach (var division in divisionsForBattels)
                     {
-                        div.EnterToCombat(c);
+                        combat.AddDefenser(division);
                     }
-                    EnterToCombat(c);
+                    //combat..Add(this);
+                    //combat._defenders.AddRange(divisionsForBattels);
+                    foreach (var division in divisionsForBattels)
+                    {
+                        division.EnterToCombat(combat);
+                    }
+                    EnterToCombat(combat);
                     return;
                 }    
             }
@@ -301,7 +307,7 @@ public class Division : SupplyUnit
 
     public void ExitFromCombat(DivisionCombat combat, bool stopDivision = true)
     {
-        combat.RemoveDivisionFromCombat(this);
+        combat.RemoveDivisionFromCombatIfExist(this);
         SetState(DivisionAnimState.Empty);
         if (stopDivision)
         {

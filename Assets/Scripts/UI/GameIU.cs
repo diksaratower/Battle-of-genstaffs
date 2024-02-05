@@ -164,7 +164,7 @@ public class GameIU : MonoBehaviour
             _combatsUI.Remove(combatUIToDestoy);
             Destroy(combatUIToDestoy.gameObject);
         }
-        foreach (var combat in DivisionCombat.Combats)
+        foreach (var combat in UnitsManager.Instance.Combats)
         {
             if (!_combatsUI.Exists(cUI => cUI.Target == combat))
             {

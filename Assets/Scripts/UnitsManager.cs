@@ -1,12 +1,15 @@
 using System;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 
 public class UnitsManager : MonoBehaviour, ISaveble
 {
     public static Action<Division, Province> OnDivisionEnterToProvince;
+    public static System.Random CombatRandom = new System.Random();
 
+    public List<DivisionCombat> Combats = new List<DivisionCombat>();
     public List<Division> Divisions = new List<Division>();
     public List<AviationDivision> AviationDivisions = new List<AviationDivision>();
     public Action<AviationDivision> OnCreateAviationDivision;
@@ -29,6 +32,7 @@ public class UnitsManager : MonoBehaviour, ISaveble
         OnRemoveAviationDivision = null;
         OnCreateDivision = null;
         OnRemoveDivision = null;
+        Combats.Clear();
     }
 
     public Division AddDivision(Province province, DivisionTemplate template, Country owner)
@@ -82,7 +86,7 @@ public class UnitsManager : MonoBehaviour, ISaveble
         }
         foreach (var combat in division.Combats)
         {
-            combat.RemoveDivisionFromCombat(division);
+            combat.RemoveDivisionFromCombatIfExist(division);
         }
         OnRemoveDivision?.Invoke(division);
         division.DivisionProvince.DivisionsInProvince.Remove(division);

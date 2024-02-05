@@ -1,38 +1,56 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using UnityEngine;
 
 
 [Serializable]
 public class DivisionCombat
 {
-    public static List<DivisionCombat> Combats = new List<DivisionCombat>();
-    public static System.Random CombatRandom = new System.Random();
+    public ReadOnlyCollection<Division> Attackers => _attackers.AsReadOnly();
+    public ReadOnlyCollection<Division> Defenders => _defenders.AsReadOnly();
 
-    public List<Division> Attackers = new List<Division>();
-    public List<Division> Defenders = new List<Division>();
+    private List<Division> _attackers = new List<Division>();
+    private List<Division> _defenders = new List<Division>();
     public Action OnEnd;
 
-    public DivisionCombat(Division division)//этот division тут не просто так, так надо.//ѕроверено второй раз он реально не просто так, даже не думай его удал€ть
-    {
-        Combats.Add(this);
-        GameTimer.HourEnd += CalculateBattel;
-        foreach (var attacker in Attackers)
-        {
-            attacker.OnDivisionRemove += delegate { RemoveDivisionFromCombat(attacker); };
-        }
-        foreach (var defender in Defenders)
-        {
-            defender.OnDivisionRemove += delegate { RemoveDivisionFromCombat(defender); };
-        }
-    }
     
+    private DivisionCombat() 
+    {
+    }
+
+    public static DivisionCombat CreateCombat()
+    {
+        var combat = new DivisionCombat();
+        UnitsManager.Instance.Combats.Add(combat);
+        GameTimer.HourEnd += combat.CalculateBattel;
+        return combat;
+    }
+
+    public void AddAtacker(Division division)
+    {
+        _attackers.Add(division);
+        division.OnDivisionRemove += delegate
+        {
+            RemoveDivisionFromCombatIfExist(division);
+        };
+    }
+
+    public void AddDefenser(Division division)
+    {
+        _defenders.Add(division);
+        division.OnDivisionRemove += delegate
+        {
+            RemoveDivisionFromCombatIfExist(division);
+        };
+    }
+
     public void End()
     {
-        Combats.Remove(this);
+        UnitsManager.Instance.Combats.Remove(this);
         var divisions = new List<Division>();
-        divisions.AddRange(Attackers);
-        divisions.AddRange(Defenders);
+        divisions.AddRange(_attackers);
+        divisions.AddRange(_defenders);
         foreach (var division in divisions)
         {
             division.ExitFromCombat(this, false);
@@ -43,12 +61,12 @@ public class DivisionCombat
 
     public Province GetCombatProvince()
     {
-        return Defenders[0].DivisionProvince;
+        return _defenders[0].DivisionProvince;
     }
     
     public static bool TryFindBattleInProv(Province province, out DivisionCombat combat)
     {
-        foreach (var comb in Combats)
+        foreach (var comb in UnitsManager.Instance.Combats)
         {
             if(comb.GetCombatProvince() == province)
             {
@@ -63,7 +81,7 @@ public class DivisionCombat
     private float GetAttackersAttack()
     {
         float attack = 0;
-        foreach (var attacker in Attackers)
+        foreach (var attacker in _attackers)
         {
             var politicsAttackCoof = attacker.CountyOwner.Politics.GetPoliticCooficentDivisionAttack();
             attack += (attacker.GetAttack() * GetAviationEffectPercent(attacker) * politicsAttackCoof);
@@ -74,7 +92,7 @@ public class DivisionCombat
     private float GetDefendersDefend() 
     {
         float def = 0;
-        foreach (var defender in Defenders)
+        foreach (var defender in _defenders)
         {
             def += (defender.GetDefense() * GetAviationEffectPercent(defender));
         }
@@ -83,35 +101,35 @@ public class DivisionCombat
 
     public void CalculateBattel()
     {
-        var rmAttackers = Attackers.FindAll(atk => atk.Organization <= 0);
+        var rmAttackers = _attackers.FindAll(atk => atk.Organization <= 0);
         foreach (var attacker in rmAttackers)
         {
             attacker.ExitFromCombat(this);
         }
-        var rmDefenders = Defenders.FindAll(df => df.Organization <= 0);
+        var rmDefenders = _defenders.FindAll(df => df.Organization <= 0);
         foreach (var defender in rmDefenders)
         {
             defender.StepBackFromCombatDefender(this);
         }
-        rmAttackers.ForEach(attacker => RemoveDivisionFromCombat(attacker));
-        rmDefenders.ForEach(defender => RemoveDivisionFromCombat(defender));
+        rmAttackers.ForEach(attacker => RemoveDivisionFromCombatIfExist(attacker));
+        rmDefenders.ForEach(defender => RemoveDivisionFromCombatIfExist(defender));
 
 
-        if(Defenders.Count == 0 || Attackers.Count == 0)
+        if(_defenders.Count == 0 || _attackers.Count == 0)
         {
             End();
             return;
         }
 
-        foreach(var defender in Defenders)
+        foreach(var defender in _defenders)
         {
-            defender.GiveDamageToOrganization((GetAttackersAttack() / Attackers.Count) / defender.GetDivisionStrength());
+            defender.GiveDamageToOrganization((GetAttackersAttack() / _attackers.Count) / defender.GetDivisionStrength());
             IncurLosses(defender, 0.166f);
             
         }
-        foreach (var attacker in Attackers)
+        foreach (var attacker in _attackers)
         {
-            attacker.GiveDamageToOrganization((GetDefendersDefend() / Defenders.Count) / attacker.GetDivisionStrength());
+            attacker.GiveDamageToOrganization((GetDefendersDefend() / _defenders.Count) / attacker.GetDivisionStrength());
             IncurLosses(attacker, 0.5f);
         }
     }
@@ -119,9 +137,9 @@ public class DivisionCombat
     public static List<DivisionCombat> GetDivisionCombats(Division division)
     {
         var result = new List<DivisionCombat>();
-        foreach (var combat in Combats)
+        foreach (var combat in UnitsManager.Instance.Combats)
         {
-            if (combat.Defenders.Contains(division) || combat.Attackers.Contains(division))
+            if (combat._defenders.Contains(division) || combat._attackers.Contains(division))
             {
                 result.Add(combat);
             }
@@ -129,17 +147,17 @@ public class DivisionCombat
         return result;
     }
 
-    public void RemoveDivisionFromCombat(Division division)
+    public void RemoveDivisionFromCombatIfExist(Division division)
     {
-        if (Attackers.Contains(division))
+        if (_attackers.Contains(division))
         {
-            Attackers.Remove(division);
+            _attackers.Remove(division);
         }
-        if (Defenders.Contains(division))
+        if (_defenders.Contains(division))
         {
-            Defenders.Remove(division);
+            _defenders.Remove(division);
         }
-        if(Defenders.Count == 0 || Attackers.Count == 0)
+        if(_defenders.Count == 0 || _attackers.Count == 0)
         {
             End();
         }
@@ -154,22 +172,22 @@ public class DivisionCombat
     {
         leader = null;
         var procent = 0f;
-        var defendersOrganization = GetAverageOrganization(Defenders);
-        var attackerOrganization = GetAverageOrganization(Attackers);
+        var defendersOrganization = GetAverageOrganization(_defenders);
+        var attackerOrganization = GetAverageOrganization(_attackers);
         if(defendersOrganization < attackerOrganization)
         {
             procent = defendersOrganization / attackerOrganization;
-            if (Attackers.Count > 0)
+            if (_attackers.Count > 0)
             {
-                leader = Attackers[0].CountyOwner;
+                leader = _attackers[0].CountyOwner;
             }
         }
         if (attackerOrganization < defendersOrganization)
         {
             procent = attackerOrganization / defendersOrganization;
-            if (Defenders.Count > 0)
+            if (_defenders.Count > 0)
             {
-                leader = Defenders[0].CountyOwner;
+                leader = _defenders[0].CountyOwner;
             }
         }
 
@@ -182,11 +200,11 @@ public class DivisionCombat
 
     private void IncurLosses(Division division, float lossesProcent)
     {
-        var manpowerLosses = CombatRandom.Next(0, 7);
+        var manpowerLosses = UnitsManager.CombatRandom.Next(0, 7);
         IncurLossesToEquipmentType(division, EquipmentType.Manpower, manpowerLosses);
         division.CountyOwner.OnManpowerLosses?.Invoke(manpowerLosses);
-        IncurLossesToEquipmentType(division, EquipmentType.Rifle, CombatRandom.Next(0, 3));
-        IncurLossesToEquipmentType(division, EquipmentType.Tank, CombatRandom.Next(0, 1));
+        IncurLossesToEquipmentType(division, EquipmentType.Rifle, UnitsManager.CombatRandom.Next(0, 3));
+        IncurLossesToEquipmentType(division, EquipmentType.Tank, UnitsManager.CombatRandom.Next(0, 1));
     }
 
     private void IncurLossesToEquipmentType(Division division, EquipmentType equipmentType, int lossCount)
@@ -233,7 +251,7 @@ public class DivisionCombat
 
     public List<string> GetDivisionEffectDescription(Division division)
     {
-        if (Attackers.Contains(division) == false && Defenders.Contains(division) == false)
+        if (_attackers.Contains(division) == false && _defenders.Contains(division) == false)
         {
             throw new ArgumentOutOfRangeException();
         }
