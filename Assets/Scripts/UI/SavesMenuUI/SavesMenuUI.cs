@@ -1,19 +1,14 @@
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 
-public class SavesMenuUI : MonoBehaviour
+public class SavesMenuUI : SavesMenuBase
 {
     [SerializeField] private TMP_InputField _saveNameDropdown;
     [SerializeField] private Button _saveButton;
     [SerializeField] private Button _closeButton;
-    [SerializeField] private SavesMenuSaveSlotUI _saveSlotPrefab;
-    [SerializeField] private Transform _slotsParent;
-    [SerializeField] private GameSave _gameSave;
-
-    private List<SavesMenuSaveSlotUI> _slotsUI = new List<SavesMenuSaveSlotUI>();
+    [SerializeField] protected GameSave _gameSave;
 
 
     private void Update()
@@ -39,18 +34,14 @@ public class SavesMenuUI : MonoBehaviour
         });
     }
 
-    private void UpdateSavesSlots()
+    protected override void UpdateSavesSlots()
     {
-        _slotsUI.ForEach(slot => 
+        DeleteSlots();
+        var saves = GameSave.GetSavesData().FindAll(slot => slot.SaveName != "standard");
+        foreach (var save in saves)
         {
-            Destroy(slot.gameObject);
-        });
-        _slotsUI.Clear();
-        var saves = GameSave.GetSavesData();
-        foreach (var save in saves) 
-        {
-            var slotUI = Instantiate(_saveSlotPrefab, _slotsParent);
-            slotUI.RefreshUI(save);
+            var slotUI = Instantiate(_slotPrefab as SavesMenuSaveSlotUI, _slotsParent);
+            slotUI.RefreshUI(save, this, _countriesData);
             _slotsUI.Add(slotUI);
         }
     }

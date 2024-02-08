@@ -1,1 +1,1 @@
-{"CountryID":"fra","DifficultieID":"normal"}
+{"CountryID":"ita","DifficultieID":""}

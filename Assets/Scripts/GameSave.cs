@@ -32,11 +32,6 @@ public class GameSave : MonoBehaviour
         Load(_quickSaveDirectory);
     }
 
-    public void AsyncQuickLoad()
-    {
-        StartCoroutine(LoadAsync(_quickSaveDirectory));
-    }
-
     public void UpdateQuickSaveFromStandart()
     {
         if (Directory.Exists("./Saves/" + _quickSaveDirectory) == true)
@@ -74,24 +69,6 @@ public class GameSave : MonoBehaviour
             {
                 Debug.LogError("File not found error.");
             }
-        }
-        OnLoad?.Invoke();
-    }
-
-    public IEnumerator LoadAsync(string saveName)
-    {
-        yield return null;
-        foreach (var sv in _savebles)
-        {
-            yield return null;
-            ProcentOffAsyncLoad = (((float)_savebles.IndexOf(sv)) / ((float)_savebles.Count));
-            var fileName = "./Saves/" + saveName + "/" + (sv as ISaveble).GetFileName() + ".txt";
-            if (File.Exists(fileName))
-            {
-                var str = File.ReadAllText(fileName);
-                (sv as ISaveble).Load(str);
-            }
-
         }
         OnLoad?.Invoke();
     }
@@ -158,7 +135,7 @@ public class GameSave : MonoBehaviour
         }
     }
 
-    public void DeleteSave(string saveName)
+    public static void DeleteSave(string saveName)
     {
         if (Directory.Exists("./Saves/" + saveName) == false)
         {

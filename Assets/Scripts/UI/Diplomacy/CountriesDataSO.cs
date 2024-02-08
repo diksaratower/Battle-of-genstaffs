@@ -6,4 +6,10 @@ using UnityEngine;
 public class CountriesDataSO : ScriptableObject
 {
     public List<CountrySO> Countries = new List<CountrySO>();
+
+    
+    public CountrySO GetCountrySOFromID(string id)
+    {
+        return Countries.Find(countrySO => countrySO.ID == id);
+    }
 }

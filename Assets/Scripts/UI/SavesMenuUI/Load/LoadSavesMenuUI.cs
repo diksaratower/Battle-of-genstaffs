@@ -1,23 +1,18 @@
-using IJunior.TypedScenes;
 using System;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
-public class LoadSavesMenuUI : MonoBehaviour
+public class LoadSavesMenuUI : SavesMenuBase
 {
     public Action<LoadMenuSaveSlotUI> OnChangeSelected;
 
     [SerializeField] private Button _loadButton;
     [SerializeField] private Button _closeButton;
-    [SerializeField] private LoadMenuSaveSlotUI _saveSlotPrefab;
-    [SerializeField] private Transform _slotsParent;
-    [SerializeField] private GameSave _gameSave;
+    [SerializeField] private bool _menuMod;
+    [SerializeField] private SinglePlayerModMenu _singlePlayerModMenu;
 
     private bool _isLoadingScene = false;
-    private List<LoadMenuSaveSlotUI> _slotsUI = new List<LoadMenuSaveSlotUI>();
     private LoadMenuSaveSlotUI _seletedSlot;
 
 
@@ -32,12 +27,19 @@ public class LoadSavesMenuUI : MonoBehaviour
         _loadButton.onClick.RemoveAllListeners();
         _loadButton.onClick.AddListener(delegate
         {
-            if (_isLoadingScene == true)
+            if (_menuMod == true)
             {
-                return;
+                _singlePlayerModMenu.LoadGameSceneLoadSave(_seletedSlot.SaveSlotName);
             }
-            _isLoadingScene = true;
-            MainMenu.LoadMenuAsync(new MenuEntryData(MenuLoadType.Hub, _seletedSlot.SaveSlotName));
+            else
+            {
+                if (_isLoadingScene == true)
+                {
+                    return;
+                }
+                _isLoadingScene = true;
+                MainMenu.LoadMenuAsync(new MenuEntryData(MenuLoadType.Hub, _seletedSlot.SaveSlotName));
+            }
         });
         _closeButton.onClick.RemoveAllListeners();
         _closeButton.onClick.AddListener(delegate 
@@ -57,17 +59,14 @@ public class LoadSavesMenuUI : MonoBehaviour
         OnChangeSelected?.Invoke(newSelectedSlotUI);
     }
 
-    private void UpdateSavesSlots()
+    protected override void UpdateSavesSlots()
     {
-        _slotsUI.ForEach(slot =>
-        {
-            Destroy(slot.gameObject);
-        });
-        var saves = GameSave.GetSavesData();
+        DeleteSlots();
+        var saves = GameSave.GetSavesData().FindAll(slot => slot.SaveName != "standard");
         foreach (var save in saves)
         {
-            var slotUI = Instantiate(_saveSlotPrefab, _slotsParent);
-            slotUI.RefreshUI(save, this);
+            var slotUI = Instantiate(_slotPrefab as LoadMenuSaveSlotUI, _slotsParent);
+            slotUI.RefreshUI(save, this, _countriesData);
             _slotsUI.Add(slotUI);
         }
     }

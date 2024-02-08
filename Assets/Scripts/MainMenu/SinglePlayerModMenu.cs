@@ -7,35 +7,35 @@ using UnityEngine.SceneManagement;
 public class SinglePlayerModMenu : MonoBehaviour
 {
     [SerializeField] private Button _continueGameButon;
+    [SerializeField] private Button _loadSaveButton;
     [SerializeField] private Image _continueGameCountryFlagImage;
     [SerializeField] private Button _exitFromMenu;
     [SerializeField] private LoadScreen _loadScreen;
     [SerializeField] private CountriesDataSO _countriesData;
+    [SerializeField] private LoadSavesMenuUI _loadSavesMenuUI;
 
     private bool _isLoadingScene;
 
+
     private void Awake()
     {
-        _exitFromMenu.onClick.AddListener(delegate 
+        _exitFromMenu.onClick.AddListener(delegate
         {
             gameObject.SetActive(false);
         });
-        _continueGameButon.onClick.AddListener(delegate 
+        _continueGameButon.onClick.AddListener(delegate
         {
             if (GameSave.GetSaves().Exists(save => save == "quicksave"))
             {
                 LoadGameSceneContinue();
             }
         });
-        if (GameSave.GetSaves().Exists(save => save == "quicksave") == false)
+        _loadSaveButton.onClick.AddListener(delegate
         {
-            _continueGameButon.interactable = false;
-            _continueGameCountryFlagImage.gameObject.SetActive(false);
-        }
-        else
-        {
-            _continueGameCountryFlagImage.sprite = _countriesData.Countries.Find(country => country.ID == GameSave.GetSavePlayerCountryID("quicksave")).CountryFlag;
-        }
+            _loadSavesMenuUI.gameObject.SetActive(true);
+            _loadSavesMenuUI.RefreshUI();
+        });
+        RefreshContinueButton();
     }
 
     public void LoadGameSceneLoadSave(string saveName)
@@ -70,5 +70,18 @@ public class SinglePlayerModMenu : MonoBehaviour
         _isLoadingScene = true;
         var operation = Main.LoadAsync(new GameEntryData(GameEntryType.Continue, ""), LoadSceneMode.Additive);
         _loadScreen.StartMonitoringLoading(operation);
+    }
+
+    private void RefreshContinueButton()
+    {
+        if (GameSave.GetSaves().Exists(save => save == "quicksave") == false)
+        {
+            _continueGameButon.interactable = false;
+            _continueGameCountryFlagImage.gameObject.SetActive(false);
+        }
+        else
+        {
+            _continueGameCountryFlagImage.sprite = _countriesData.Countries.Find(country => country.ID == GameSave.GetSavePlayerCountryID("quicksave")).CountryFlag;
+        }
     }
 }

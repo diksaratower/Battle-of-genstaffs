@@ -14,13 +14,16 @@ public class ExitMenuUI : MonoBehaviour
     [SerializeField] private SettingsMenu _settingsMenu;
     [SerializeField] private SavesMenuUI _savesMenu;
     [SerializeField] private LoadSavesMenuUI _loadMenu;
+    [SerializeField] private OkCancelWindowUI _okCancelWindowPrefab;
+
+    private OkCancelWindowUI _exitOkCancelWindow;
 
 
     private void Start()
     {
         _exitButton.onClick.AddListener(delegate 
         {
-            Application.Quit();
+            OpenExitOkCancelWindow();
         });
         _continueButton.onClick.AddListener(delegate 
         {
@@ -44,6 +47,19 @@ public class ExitMenuUI : MonoBehaviour
         {
             _loadMenu.gameObject.SetActive(true); 
             _loadMenu.RefreshUI();
+        });
+    }
+
+    private void OpenExitOkCancelWindow()
+    {
+        if (_exitOkCancelWindow != null)
+        {
+            Destroy(_exitOkCancelWindow.gameObject);
+        }
+        _exitOkCancelWindow = Instantiate(_okCancelWindowPrefab, transform);
+        _exitOkCancelWindow.RefreshUI("Вы уверены, что хотите выйти? Весь не сохранённый прогресс будет утерен.", delegate 
+        {
+            Application.Quit();
         });
     }
 }
