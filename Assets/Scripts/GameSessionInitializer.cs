@@ -54,8 +54,8 @@ public class GameSessionInitializer : MonoBehaviour, ISceneLoadHandler<GameEntry
             _gameSave.UpdateQuickSaveFromStandart();
             GameSave.SetSavePlayerCountryIDInQuickSave(entry.CountryID);
             _gameSave.QuickLoad();
+            Player.CurrentDifficultie = entry.Difficultie;
         }
-        Player.CurrentDifficultie = entry.Difficultie;
         _gameTimer.StartTimer();
     }
 
