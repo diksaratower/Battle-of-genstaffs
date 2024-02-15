@@ -156,7 +156,7 @@ public class Map : MonoBehaviour, ISaveble
                 {
                     continue;
                 }
-                var province = CreateProvince(provincePosition, new Vector2Int(x, y));
+                var province = CreateProvince(provincePosition, new Vector2Int(x, y), hex);
 
                 _map[x, y] = province;
                 _provinces.Add(province);
@@ -204,10 +204,17 @@ public class Map : MonoBehaviour, ISaveble
         return combineInstane;
     }
 
-    private Province CreateProvince(Vector3 provincePosition, Vector2Int positionInGrid)
+    private Province CreateProvince(Vector3 provincePosition, Vector2Int positionInGrid, List<Vector3> hex)
     {
         var provinceHeight = GetProvinceHeight(provincePosition);
         var province = new Province(positionInGrid, _provinces.Count, provincePosition, new Vector3(provincePosition.x, provinceHeight, provincePosition.z));
+        var provinceLocalPostion = provincePosition - transform.position;
+        hex.ForEach(ver =>
+        {
+            Matrix4x4 m = Matrix4x4.Translate(new Vector3(provinceLocalPostion.x, provinceHeight, provinceLocalPostion.z))
+            * Matrix4x4.Rotate(new Quaternion() { eulerAngles = new Vector3(0, 0, 90) });
+            province.Vertices.Add(m.MultiplyPoint3x4(ver));
+        });
         return province;
     }
 

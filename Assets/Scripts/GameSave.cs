@@ -1,8 +1,9 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
+
 
 public class GameSave : MonoBehaviour
 {
@@ -111,9 +112,15 @@ public class GameSave : MonoBehaviour
         return result;
     }
 
-    public static List<SaveSlotData> GetSavesData()
+    public static List<SaveSlotData> GetSavesData(bool sortByDate = true)
     {
         var directories = Directory.GetDirectories("./Saves");
+        if (sortByDate == true)
+        {
+            DirectoryInfo info = new DirectoryInfo("./Saves");
+            DirectoryInfo[] directoriesSorted = info.GetDirectories().OrderBy(p => p.CreationTime).ToArray();
+            directories = directories.Cast<string>().ToArray();
+        }
         var result = new List<SaveSlotData>();
         for (int i = 0; i < directories.Length; i++)
         {

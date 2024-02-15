@@ -1,13 +1,15 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 
 public class CountryArmies
 {
-    public List<Army> Armies => GetArmies();
+    public ReadOnlyCollection<Army> Armies => _armies.AsReadOnly();
     public Action OnArmiesChanged;
 
     private List<Army> _armies = new List<Army>();
+
 
     public CountryArmies()
     {
@@ -48,11 +50,6 @@ public class CountryArmies
     {
         _armies.Remove(army);
         OnArmiesChanged?.Invoke();
-    }
-
-    private List<Army> GetArmies()
-    {
-        return new List<Army>(_armies);
     }
 
     public bool IsDivisionsAttachedWithArmy(Division division)

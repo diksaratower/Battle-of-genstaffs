@@ -45,9 +45,9 @@ public class ArmyUI : MonoBehaviour
         });
         TargetArmy.OnAddedPlan += delegate 
         {
-            if (TargetArmy.Plans.Find(pl => pl is FrontPlan) != null)
+            if (TargetArmy.Plans.ToList().Find(pl => pl is FrontPlan) != null)
             {
-                var plan = (FrontPlan)TargetArmy.Plans.Find(pl => pl is FrontPlan);
+                var plan = (FrontPlan)TargetArmy.Plans.ToList().Find(pl => pl is FrontPlan);
                 plan.OnRecalculatedFront += (List<FrontPlan.FrontData> frontDates)  =>
                 {
                     AsyncUpdateFront(plan, frontDates);
@@ -68,7 +68,7 @@ public class ArmyUI : MonoBehaviour
     private void Update()
     {
         _selectionOutline.enabled = Selected;
-        _divisionCountText.text = TargetArmy.DivisionsCount + "/" + TargetArmy.MaxDivisionsCount;
+        _divisionCountText.text = TargetArmy.Divisions.Count + "/" + TargetArmy.MaxDivisionsCount;
         if (CreationFrontUI && Selected)
         {
             CreatingNewFrontLine();
@@ -232,6 +232,6 @@ public class ArmyUI : MonoBehaviour
         Selected = !Selected;
         var gUI = FindObjectOfType<GameIU>();
         gUI.DeselectedAllDivisions();
-        gUI.SelectDivisions(TargetArmy.Divisions);
+        gUI.SelectDivisions(TargetArmy.Divisions.ToList());
     }
 }

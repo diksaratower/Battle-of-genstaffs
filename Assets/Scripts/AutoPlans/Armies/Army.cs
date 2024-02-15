@@ -1,20 +1,20 @@
 using System;
 using System.Collections.Generic;
-using static FrontPlan;
+using System.Collections.ObjectModel;
 
 
 public class Army 
 {
+    public DoPlanType DoPlanType = DoPlanType.Defense;
     public Action<PlanBase> OnAddedPlan;
     public int MaxDivisionsCount { get; private set; } = 50;
-    public int DivisionsCount { get => Divisions.Count; }
-    public List<PlanBase> Plans => new List<PlanBase>(_plans);
-    public List<Division> Divisions = new List<Division>();
-    public DoPlanType DoPlanType = DoPlanType.Defense;
     public float CashedForceFactorInFront { get; private set; }
+    public ReadOnlyCollection<PlanBase> Plans => _plans.AsReadOnly();
+    public ReadOnlyCollection<Division> Divisions => _divisions.AsReadOnly();
 
+    private List<Division> _divisions = new List<Division>();
     private List<PlanBase> _plans = new List<PlanBase>();
-    private CountryArmies _countryArmies;
+    private CountryArmies _countryArmies { get; }
 
 
     public Army(CountryArmies countryArmies)
@@ -24,7 +24,7 @@ public class Army
 
     public void StopWorkArmy()
     {
-        Divisions.Clear();
+        _divisions.Clear();
     }
 
     public void DoPlans()
@@ -74,7 +74,7 @@ public class Army
         {
             division.OnDivisionRemove += delegate
             {
-                Divisions.Remove(division);
+                _divisions.Remove(division);
                 if (Divisions.Count == 0)
                 {
                     StopWorkArmy();
@@ -82,7 +82,7 @@ public class Army
                 }
             };
         }
-        Divisions.AddRange(divisions);
+        _divisions.AddRange(divisions);
     }
 
     public class TryRemoveOutOfArmyPlan : Exception
